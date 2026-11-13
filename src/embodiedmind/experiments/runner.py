@@ -11,7 +11,7 @@ from embodiedmind.control.controller import PrimitiveController
 from embodiedmind.memory.episodic import Event
 from embodiedmind.memory.spatial import Odometry
 from embodiedmind.environments.factory import make_environment
-from embodiedmind.reasoning.action_validator import parse_action
+from embodiedmind.reasoning.action_validator import ActionDecision, parse_action
 from embodiedmind.reasoning.prompts import SYSTEM, prompt_for
 
 
@@ -42,14 +42,15 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals):
     observation = initial
     frames = []
     previous_action = moved = None
-    prompt_tokens = completion_tokens = invalid = unsupported = stale = 0
+    calls = prompt_tokens = completion_tokens = invalid = unsupported = stale = 0
+    prefix = limits.get("scripted_prefix", [])
     inference_seconds = reward = 0.0
     terminated = truncated = False
     contradicted_at = None
     recovered_at = None
     seen_facts = {}
     last_view = {}
-    invalidated = set()
+    invalidated = {}
     scoring_odometry = Odometry()
 
     def frame():
@@ -62,13 +63,19 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals):
 
     frame()
     with (path / "trajectory.jsonl").open("w", encoding="utf-8") as trace:
-        for index in range(min(limits["max_steps"], limits["max_calls"])):
+        for index in range(min(limits["max_steps"], limits["max_calls"] + len(prefix))):
             agent.observe(observation, index, previous_action, moved)
             context = agent.context(observation, limits["memory_bytes"])
             audit = agent.audit()
-            request = model.request(SYSTEM, prompt_for(observation, context), job["seed"] * 1000 + index)
-            raw, elapsed = model.generate(request)
-            decision = parse_action(raw["response"])
+            scripted = index < len(prefix)
+            if scripted:
+                request, raw, elapsed = None, {}, 0.0
+                decision = ActionDecision(prefix[index], "", True)
+            else:
+                request = model.request(SYSTEM, prompt_for(observation, context), job["seed"] * 1000 + index)
+                raw, elapsed = model.generate(request)
+                decision = parse_action(raw["response"])
+                calls += 1
             if raw.get("done_reason") == "length" and not decision.valid:
                 audit = {**audit, "generation_hit_output_limit": True}
             refs = {item["id"]: item for item in audit.get("selected_facts", [])}
@@ -89,9 +96,12 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals):
                 appearance = (fact["object"], fact["color"], fact["state"])
                 cell = (fact["segment"], tuple(fact["position"]))
                 if visible.get(cell, appearance) != appearance or fact.get("status") == "CONTRADICTED":
-                    invalidated.add(ref)
+                    invalidated[ref] = index
+                elif fact["last_verified_step"] > invalidated.get(ref, index):
+                    invalidated.pop(ref)
             unsupported_reference = (
-                decision.valid and decision.evidence not in {"visible", "explore"} and decision.evidence not in refs
+                not scripted and decision.valid and decision.evidence not in {"visible", "explore"}
+                and decision.evidence not in refs
             )
             stale_reference = decision.valid and decision.evidence in invalidated
             result = controller.step(decision.action)
@@ -99,7 +109,8 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals):
                 "step": index, "observation": asdict(observation),
                 "next_observation": asdict(result.observation), "memory": audit,
                 "request": request, "response": raw, "inference_seconds": elapsed,
-                "decision": asdict(decision), "executed_action": decision.action, "moved": result.moved,
+                "decision": asdict(decision), "scripted_prefix": scripted,
+                "executed_action": decision.action, "moved": result.moved,
                 "unsupported_reference": unsupported_reference, "stale_reference": stale_reference,
                 "reward": result.reward, "terminated": result.terminated, "truncated": result.truncated,
             })
@@ -133,25 +144,10 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals):
         **job, "status": "completed", "mission": initial.mission, "success": success,
         "outcome": "success" if success else ("terminated_failure" if terminated else
                     "environment_timeout" if truncated else "budget_timeout"),
-        "steps": steps, "calls": steps, "prompt_tokens": prompt_tokens,
+        "steps": steps, "calls": calls, "prompt_tokens": prompt_tokens,
         "completion_tokens": completion_tokens, "inference_seconds": inference_seconds,
         "invalid_actions": invalid, "unsupported_claims": unsupported, "stale_actions": stale,
         "post_contradiction_recovered": None if contradicted_at is None else recovered_at is not None,
         "steps_to_recovery": recovered_at, "reward": reward,
         "intervention_applied": any(event.get("applied") is True for event in interventions),
     }
-
-
-def _contradicts(fact, audit, observation):
-    """Score a cited structured fact only when current allowed evidence contradicts it."""
-    event = audit.get("event") or {}
-    position, origin = fact.get("position"), event.get("position")
-    if position is None or origin is None or event.get("segment") != fact.get("segment"):
-        return False
-    east, south = position[0] - origin[0], position[1] - origin[1]
-    headings = ((1, 0), (0, 1), (-1, 0), (0, -1))
-    dx, dy = headings[observation.direction]
-    current = observation.cell(east * dx + south * dy, -east * dy + south * dx)
-    return current is not None and (
-        current.object, current.color, current.state
-    ) != (fact.get("object"), fact.get("color"), fact.get("state"))
