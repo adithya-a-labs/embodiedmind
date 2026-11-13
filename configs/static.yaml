@@ -1,0 +1,6 @@
+split: static
+environments: [MiniGrid-DoorKey-8x8-v0, BabyAI-GoToObjMazeS7-v0]
+variants: [B0, B1, B2, B3]
+seed_start: 1000
+seed_count: 30
+interventions: [none]

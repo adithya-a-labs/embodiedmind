@@ -1,0 +1,5 @@
+split: pilot
+environments: [MiniGrid-DoorKey-8x8-v0, BabyAI-GoToObjMazeS7-v0]
+variants: [B0, B1, B2, B3]
+seeds: [0, 1, 2, 3, 4]
+interventions: [none]

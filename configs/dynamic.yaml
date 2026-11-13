@@ -1,0 +1,4 @@
+# Freeze the custom environment and seed roster after development validation.
+split: dynamic
+variants: [B1, B2, B3]
+interventions: [none, dropout, relocation]
