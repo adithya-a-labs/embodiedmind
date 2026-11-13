@@ -437,7 +437,12 @@ def _write_report(path, manifests, rows, summary, comparisons, plots, argv_examp
         "- Estimates apply to the frozen local model, configured action/prompt budgets and abstract 2D worlds. "
         "The study concerns planning in simulation.",
         "- A small paired sample and sparse contradiction events can yield imprecise estimates. "
-        "Stale-action and recovery figures depend on the evidence reference instrumentation and permitted re-observations.",
+        "The stale-action measure requires an explicit evidence ID and misses uncited intent. "
+        "Unsupported references are missing, invalid or unprovided IDs, a narrower observation than all model hallucinations.",
+        "- B3 adds belief revision, aging warnings and working memory to structured memory. "
+        "The contrast with B2 evaluates that bundle. The B1 result applies to the specified bounded factual history.",
+        "- A hidden relocation can be missed when either cell is visible or a policy changes the world before the trigger. "
+        "Assigned-arm results include these no-ops. Equal measured rates with rare cited contradictions give limited evidence about revision.",
         "- Traces record prompt usage, which can vary by memory treatment under a shared ceiling. "
         "Shorter paths and higher success may compete with greater inference cost.",
         "- The observation encoder and model use symbolic features. Navigation depends on the shared controller "

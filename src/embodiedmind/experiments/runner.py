@@ -8,9 +8,9 @@ from PIL import Image
 
 from embodiedmind.agents import make_agent
 from embodiedmind.control.controller import PrimitiveController
+from embodiedmind.environments.factory import make_environment
 from embodiedmind.memory.episodic import Event
 from embodiedmind.memory.spatial import Odometry
-from embodiedmind.environments.factory import make_environment
 from embodiedmind.reasoning.action_validator import ActionDecision, parse_action
 from embodiedmind.reasoning.prompts import SYSTEM, prompt_for
 

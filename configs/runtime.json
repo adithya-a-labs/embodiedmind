@@ -1,0 +1,10 @@
+{
+  "parallel": 1,
+  "version": "0.40.16",
+  "runner": "llamacpp",
+  "context": 4096,
+  "queue_max_active": 1,
+  "require_full_gpu": true,
+  "calibration": "12 development fixtures; both profiles valid; one slot had higher measured throughput and three exact response differences versus two slots. One slot frozen.",
+  "measurements": "results/runs/embodiedmind-20261114-0428-ist/calibration-serial.json, calibration-parallel.json, and calibration-final-profile.json"
+}

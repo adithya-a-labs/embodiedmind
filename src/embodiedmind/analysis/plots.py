@@ -23,7 +23,7 @@ PLOT_GROUPS = {
     ),
     "belief": (
         ("stale_action_rate", "Actions based on contradicted evidence", "Share of actions"),
-        ("unsupported_claims", "Unsupported claims", "Count per episode"),
+        ("unsupported_claims", "Unsupported evidence references", "Count per episode"),
         ("post_contradiction_recovered", "Recovery after contradiction", "Share of eligible episodes"),
         ("steps_to_recovery", "Steps to recovery", "Steps among recovered episodes"),
     ),

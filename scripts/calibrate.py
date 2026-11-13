@@ -1,8 +1,10 @@
 """Measure local development inference with one and two concurrent clients."""
 
 import argparse
+import contextlib
 import json
 import subprocess
+import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 
@@ -20,7 +22,8 @@ def main():
     parser.add_argument("--endpoint", required=True)
     parser.add_argument("--parallel", type=int, required=True, choices=(1, 2))
     args = parser.parse_args()
-    cfg = yaml.safe_load(open("configs/models.yaml", encoding="utf-8"))
+    with open("configs/models.yaml", encoding="utf-8") as handle:
+        cfg = yaml.safe_load(handle)
     cfg.pop("temperature")
     cfg["endpoint"] = args.endpoint
     model = Ollama(**cfg)
@@ -28,10 +31,11 @@ def main():
     requests = []
     env = make_environment("BabyAI-GoToObjMazeS7-v0")
     try:
-        for seed in range(12):
-            obs = adapt_observation(env.reset(seed=seed)[0])
-            padding = "f9.8 last observed green key at local (-1,2). " * 18
-            requests.append(model.request(SYSTEM, prompt_for(obs, padding), seed))
+        with contextlib.redirect_stdout(sys.stderr):
+            for seed in range(12):
+                obs = adapt_observation(env.reset(seed=seed)[0])
+                padding = "f9.8 last observed green key at local (-1,2). " * 18
+                requests.append(model.request(SYSTEM, prompt_for(obs, padding), seed))
     finally:
         env.close()
     model.generate(requests[0])

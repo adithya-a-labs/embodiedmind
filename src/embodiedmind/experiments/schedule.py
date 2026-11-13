@@ -71,13 +71,25 @@ def build_manifest(config, model_config, model, info, slots, profile):
     dirty = git("status", "--porcelain")
     if guarded and dirty:
         raise ValueError("scored runs require the frozen clean commit")
-    if cfg["split"] == "static" and len(jobs) != 240:
-        raise ValueError("static benchmark requires 240 registered episodes")
+    if guarded:
+        _verify_roster(cfg, jobs)
+        if "BABYAI_DONE_ACTIONS" in os.environ:
+            raise ValueError("frozen BabyAI success semantics require BABYAI_DONE_ACTIONS to be unset")
     if guarded and (not profile or not profile.is_file()):
         raise ValueError("scored runs require a calibrated runtime profile")
     approved = load_json(profile) if profile else {}
     if profile and (approved["parallel"] != slots or approved["version"] != info["version"]):
         raise ValueError("live model/version or slot limit differs from the approved runtime profile")
+    if guarded:
+        model.generate(model.request(
+            "Return one JSON action.", "Choose action 1 with evidence 'explore'.", 42,
+        ))
+        active = next((record for record in model.call("/api/ps")["models"]
+                       if record["digest"] == model.digest), None)
+        if not active or active["runner"] != approved["runner"] or active["context_length"] != approved["context"]:
+            raise ValueError("loaded runner does not match the frozen runtime profile")
+        if approved["require_full_gpu"] and active["size_vram"] != active["size"]:
+            raise ValueError("Ollama model is not fully resident on the GPU")
     return {
         "split": cfg["split"], "commit": commit, "dirty": bool(dirty), "settings": cfg,
         "config": str(config), "config_sha256": digest(config),
@@ -88,6 +100,23 @@ def build_manifest(config, model_config, model, info, slots, profile):
         "packages": {name: version(name) for name in ("minigrid", "gymnasium", "numpy", "matplotlib")},
         "jobs": jobs,
     }
+
+
+def _verify_roster(cfg, jobs):
+    if cfg["split"] == "static":
+        expected = (
+            {"MiniGrid-DoorKey-8x8-v0", "BabyAI-GoToObjMazeS7-v0"},
+            set(range(1000, 1030)), {"none"}, {"B0", "B1", "B2", "B3"}, {0},
+        )
+    else:
+        expected = (
+            {"EmbodiedMind-GoToShift-v0"}, set(range(2000, 2030)),
+            {"no_change", "dropout", "relocation"}, {"B1", "B2", "B3"}, {0},
+        )
+    keys = ("environment", "seed", "intervention", "variant", "replicate")
+    observed = {tuple(job[key] for key in keys) for job in jobs}
+    if observed != set(product(*expected)):
+        raise ValueError("scored roster differs from the preregistered design")
 
 
 def complete(episodes, job_id):
@@ -132,6 +161,8 @@ def execute(root, job, limits, model, visuals):
 
 
 def run(config, root, model_config, slots, profile, limit_jobs):
+    if limit_jobs is not None and limit_jobs < 1:
+        raise ValueError("a job limit must be positive")
     if slots not in (1, 2):
         raise ValueError("supported calibrated slot count is one or two")
     model_values = yaml.safe_load(model_config.read_text(encoding="utf-8"))
@@ -192,8 +223,16 @@ def supervise(root, manifest, model, stop, limit_jobs):
                 atomic_json(output, {**run_state, "status": "running", "at": now(), "active": list(active.values())})
                 finished, _ = wait(active, timeout=10, return_when=FIRST_COMPLETED)
                 for future in finished:
-                    active.pop(future)
-                    result = future.result()
+                    job_id = active.pop(future)
+                    try:
+                        result = future.result()
+                    except Exception as exc:
+                        stop.set()
+                        error = {"id": job_id, "error": str(exc)}
+                        write_event(journal, {"at": now(), **error})
+                        atomic_json(output, {**run_state, "status": "blocked", "at": now(),
+                                             "active": list(active.values()), **error})
+                        raise
                     errors += "error" in result
                     checked += "error" not in result
                     run_state.update(completed=checked, errors=errors)

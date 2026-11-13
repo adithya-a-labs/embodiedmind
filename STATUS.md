@@ -1,7 +1,10 @@
 # EmbodiedMind status
 
 Run: embodiedmind-20261114-0428-ist
-Target: complete the paired development pilot, both held-out benchmarks and reproducible final report.
-Gate 0 PASS: scaffold commit `9265972a3ca72a7c65c01ae980bbd2e58fa0f51d`. Fresh isolated environment, dependency lock, package imports, CLI help and staged diff verified.
-Evidence: `results/runs/embodiedmind-20261114-0428-ist/gate0-setup.log`.
-Next: verify the three stock environments and the observation/action boundary.
+Target: full development pilot, static and dynamic held-out benchmarks, and reproducible final report.
+
+- Gates 0–2 verified. Scaffold `9265972`; seeded environments and evaluator isolation `afcbd8a`.
+- Gates 3–4 verified. Memory variants `465a81a`; complete four-variant integration traces under the seeded GoToObj task.
+- Paired stock pilot: 40 valid episodes, 8 successes, 32 valid task failures. Checkpoint and resume verified. Dynamic development records and remaining gates are tracked in the live Notion guide and private run directory.
+- One Ollama inference slot selected. Local service settings remain as measured and verified by the guarded runner.
+- Study evidence: `results/runs/embodiedmind-20261114-0428-ist/`. See the live roadmap for current held-out counts and gate state.

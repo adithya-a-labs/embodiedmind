@@ -1,4 +1,13 @@
-# Freeze the custom environment and seed roster after development validation.
 split: dynamic
+environments: [EmbodiedMind-GoToShift-v0]
 variants: [B1, B2, B3]
-interventions: [none, dropout, relocation]
+seed_start: 2000
+seed_count: 30
+interventions: [no_change, dropout, relocation]
+limits:
+  max_steps: 24
+  max_calls: 24
+  memory_bytes: 768
+  infrastructure_retries: 2
+  scripted_prefix: [0, 0]
+  dynamics: {step: 2, dropout_until: 9, dropout_probability: 0.25}
