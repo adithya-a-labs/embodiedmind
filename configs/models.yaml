@@ -1,4 +1,8 @@
 model: "qwen2.5:3b-instruct"
+digest: "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b"
+quantization: "Q4_K_M"
 endpoint: "http://127.0.0.1:11434"
 context: 4096
+output_tokens: 48
 temperature: 0
+timeout: 90
