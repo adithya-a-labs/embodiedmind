@@ -1,3 +1,4 @@
+import json
 from collections import deque
 
 from minigrid.core.constants import OBJECT_TO_IDX
@@ -72,6 +73,7 @@ def test_hidden_relocation_preserves_public_view_and_follows_target(seed):
             assert mstep.agent == cstep.agent
             assert not mstep.terminated
         assert moved_env.intervention_log[-1]["applied"]
+        assert json.loads(json.dumps(moved_env.intervention_log))[-1]["new_position"] == list(new)
         assert moved_env.grid.get(*old) is None
         assert moved_env.grid.get(*new) is target
         assert moved_env.instrs.desc.obj_poss == [new]

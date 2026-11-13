@@ -114,7 +114,8 @@ class DynamicGoToObject(RoomGridLevel):
         return False
 
     def _relocate(self, step: int) -> bool:
-        old, new = self._original_pos, self._destination
+        old = tuple(map(int, self._original_pos))
+        new = tuple(map(int, self._destination))
         event = {
             "intervention": "relocation", "step": step, "applied": False,
             "old_position": old, "planned_position": new,
