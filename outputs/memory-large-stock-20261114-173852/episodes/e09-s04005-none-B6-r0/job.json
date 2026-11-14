@@ -1,0 +1,9 @@
+{
+  "id": "e09-s04005-none-B6-r0",
+  "environment": "MiniGrid-Dynamic-Obstacles-8x8-v0",
+  "seed": 4005,
+  "variant": "B6",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-14T13:41:39+00:00"
+}

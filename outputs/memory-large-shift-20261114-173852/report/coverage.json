@@ -1,0 +1,167 @@
+{
+  "planned": 150,
+  "attempted": 150,
+  "unattempted": 0,
+  "attempt_records": 150,
+  "valid": 150,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "development",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "dropout",
+      "planned": 50,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "development",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "no_change",
+      "planned": 50,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "development",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "relocation",
+      "planned": 50,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

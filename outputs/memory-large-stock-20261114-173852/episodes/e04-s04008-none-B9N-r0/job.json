@@ -1,0 +1,9 @@
+{
+  "id": "e04-s04008-none-B9N-r0",
+  "environment": "MiniGrid-MemoryS17Random-v0",
+  "seed": 4008,
+  "variant": "B9N",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-14T12:45:31+00:00"
+}

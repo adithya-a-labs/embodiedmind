@@ -1,0 +1,12 @@
+{
+  "evaluator-steps.jsonl": "cbd1deaa68d3cf82d913bdae192c0311b5d9786c268d421bb4dab384e7379d01",
+  "evaluator.json": "cff25cd3144f6365440e4b7fb69bfeeabb871dad0c8922d1a28b882967544487",
+  "frames/000000.png": "58425c27eb6ca34632dace0286a7c26cbdeb5cbbd71ed1eab79fd09454260d14",
+  "frames/000001.png": "9e63672c1fc31832c9eb28f8865c8ba7b75e12e451fe99b70ed50fee87b9f17d",
+  "frames/000002.png": "6cd684d94ed7bd1b702f97bf2daace7fd63d52d050cc42d40e2f4113fcab161e",
+  "frames/000003.png": "860d38ad64433320f0e1951c801485267c9ab246787476d54e6ad39ab227bfb9",
+  "job.json": "2afc725b8ade23f4d5e91ac7090b5c99c261aecd202ea9d9d8fc7a3acc0862cb",
+  "step-events.jsonl": "2b8bbed43180b13c3cb324792d43300e7d1ab89c9663d3f70271e90e40e0b69d",
+  "summary.json": "0b91968128a4b4250869bab7c1558b80fc1ad08f1b4c474b7942e74febc5dd58",
+  "trajectory.jsonl": "6968d3e72837dafd1912d4b052ff6abb96d84f1cfbfe4848eb441d13ecb7fab8"
+}

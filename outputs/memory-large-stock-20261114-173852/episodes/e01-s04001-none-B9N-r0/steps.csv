@@ -1,0 +1,25 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,explore,progress_aware_explore,Find key,visible,,0.0,False,False,402,26,0.2897066339937737
+1,0,2,explore,progress_aware_explore,Find key,explore,,0.0,False,False,418,27,0.294798978997278
+2,2,4,approach,,Find key,f2.16,True,0.0,False,False,440,30,0.34496422699885443
+3,2,4,approach,,Find key,f2.16,True,0.0,False,False,439,30,0.3147327929982566
+4,2,4,approach,,Find key,f2.16,True,0.0,False,False,428,30,0.32174513100471813
+5,3,4,approach,,Find key,f2.16,,0.0,False,False,427,30,0.2857216420015902
+6,0,6,approach,,Find and cross door,f1.8,,0.0,False,False,432,29,0.3033819129996118
+7,0,2,explore,progress_aware_explore,Find and cross door,f1.8,,0.0,False,False,428,29,0.31172324799990747
+8,2,4,approach,forward_burst,Find and cross door,f1.8,True,0.0,False,False,432,29,0.35324457299429923
+9,2,4,approach,forward_burst,Find and cross door,f1.8,True,0.0,False,False,431,29,0.3230825549981091
+10,0,6,approach,,Find and cross door,f1.8,,0.0,False,False,431,29,0.3340286210004706
+11,2,6,approach,,Find and cross door,f1.8,True,0.0,False,False,430,29,0.3047245680063497
+12,2,6,approach,,Find and cross door,f1.8,True,0.0,False,False,430,29,0.34581019199686125
+13,0,4,verify,verify_target_visible,Find and cross door,f1.8,,0.0,False,False,430,28,0.3823706890034373
+14,1,3,approach,,Find and cross door,f1.8,,0.0,False,False,434,29,0.36950897600036114
+15,0,4,verify,verify_target_visible,Find and cross door,f1.8,,0.0,False,False,430,28,0.3271188290018472
+16,1,6,approach,,Find and cross door,f1.8,,0.0,False,False,434,29,0.33905317499738885
+17,1,4,verify,progress_aware_explore,Find and cross door,f1.8,,0.0,False,False,430,28,0.3508889160002582
+18,0,6,approach,,Find and cross door,f1.8,,0.0,False,False,428,29,0.2918199880004977
+19,5,6,approach,,Find and cross door,f1.8,,0.0,False,False,430,29,0.3613616500006174
+20,2,6,approach,progress_aware_explore,Find and cross door,f20.14,True,0.0,False,False,441,31,0.349683869004366
+21,2,6,approach,,Reach goal,f20.16,True,0.0,False,False,430,31,0.39648464800120564
+22,1,6,approach,,Reach goal,f20.16,,0.0,False,False,428,31,0.3343916470039403
+23,2,6,approach,,Reach goal,f20.16,True,0.96625,True,False,438,31,0.34695975099748466
