@@ -1,0 +1,27 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,choose_frontier_route,Find and pick up key,explore,,0.0,False,False,402,27,0.2987931789975846
+1,0,6,explore,route_to_mission_target,Pick up doorway blocker,f1.7,,0.0,False,False,436,29,0.3101119920029305
+2,2,2,explore,route_to_mission_target,Pick up doorway blocker,f1.7,True,0.0,False,False,437,29,0.29774510698916856
+3,3,0,explore,verified_pickup_precondition,Pick up doorway blocker,f1.7,,0.0,False,False,431,29,0.32272715801082086
+4,0,2,explore,route_to_drop_position,Relocate the doorway blocker,f1.3,,0.0,False,False,430,29,0.306913791995612
+5,4,2,explore,verified_drop_precondition,Relocate the doorway blocker,f1.3,,0.0,False,False,420,29,0.2872160260012606
+6,1,6,explore,route_to_mission_target,Find matching key,f1.5,,0.0,False,False,421,29,0.3374395949940663
+7,2,2,explore,route_to_mission_target,Find matching key,f1.5,True,0.0,False,False,436,29,0.31261341700155754
+8,1,6,explore,route_to_mission_target,Find matching key,f1.5,,0.0,False,False,420,29,0.2901684599928558
+9,2,2,explore,route_to_mission_target,Find matching key,f1.5,True,0.0,False,False,423,29,0.34009840300132055
+10,3,6,explore,verified_pickup_precondition,Find matching key,f1.5,,0.0,False,False,409,29,0.29142255800252315
+11,0,2,explore,route_to_mission_target,Unlock matching door,f1.3,,0.0,False,False,408,29,0.2999734199984232
+12,0,0,explore,route_to_mission_target,Unlock matching door,f1.3,,0.0,False,False,413,29,0.3044578000117326
+13,2,6,explore,route_to_mission_target,Unlock matching door,f1.3,True,0.0,False,False,428,29,0.3129800220049219
+14,1,2,explore,route_to_mission_target,Unlock matching door,f1.3,,0.0,False,False,427,29,0.27664753700082656
+15,5,0,explore,verified_toggle_precondition,Unlock matching door,f1.3,,0.0,False,False,413,29,0.2832366210059263
+16,0,6,approach,route_to_drop_position,Free carrying slot,f16.8,,0.0,False,False,452,30,0.34860643499996513
+17,4,3,approach,verified_drop_precondition,Free carrying slot,f16.8,,0.0,False,False,447,30,0.36548106400005054
+18,1,3,approach,route_to_mission_target,Pick up target box,f16.8,,0.0,False,False,450,30,0.35686973099655006
+19,2,4,approach,route_to_mission_target,Pick up target box,f16.8,True,0.0,False,False,461,30,0.37157148199912626
+20,2,4,approach,route_to_mission_target,Pick up target box,f16.8,True,0.0,False,False,443,30,0.3854037869896274
+21,2,4,approach,route_to_mission_target,Pick up target box,f16.8,True,0.0,False,False,441,30,0.3539457919978304
+22,2,2,explore,route_to_mission_target,Pick up target box,f16.8,True,0.0,False,False,440,31,0.38731789401208516
+23,2,2,explore,route_to_mission_target,Pick up target box,f16.8,True,0.0,False,False,439,31,0.3725584500061814
+24,0,3,approach,route_to_mission_target,Pick up target box,f16.8,,0.0,False,False,433,30,0.3098068279941799
+25,3,3,approach,verified_pickup_precondition,Pick up target box,f16.8,,0.959375,True,False,435,30,0.328969517009682

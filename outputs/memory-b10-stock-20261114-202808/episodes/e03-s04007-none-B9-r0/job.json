@@ -1,0 +1,9 @@
+{
+  "id": "e03-s04007-none-B9-r0",
+  "environment": "MiniGrid-MemoryS13-v0",
+  "seed": 4007,
+  "variant": "B9",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-14T15:10:30+00:00"
+}

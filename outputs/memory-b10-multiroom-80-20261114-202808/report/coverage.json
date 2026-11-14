@@ -1,0 +1,41 @@
+{
+  "planned": 20,
+  "attempted": 20,
+  "unattempted": 0,
+  "attempt_records": 20,
+  "valid": 20,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "development",
+      "environment": "MiniGrid-MultiRoom-N6-v0",
+      "intervention": "none",
+      "planned": 20,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

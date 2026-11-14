@@ -1,0 +1,13 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,explore,choose_frontier_route,go to the grey ball,explore,True,0.0,False,False,414,27,0.2884835010045208
+1,2,2,explore,continue_frontier_route,go to the grey ball,explore,True,0.0,False,False,413,27,0.28998614200099837
+2,2,0,explore,continue_frontier_route,go to the grey ball,explore,True,0.0,False,False,412,27,0.3020066909957677
+3,5,0,explore,verified_toggle_precondition,go to the grey ball,explore,,0.0,False,False,406,28,0.34208900300291134
+4,2,2,explore,choose_frontier_route,go to the grey ball,explore,True,0.0,False,False,425,27,0.26122746799956076
+5,2,2,explore,choose_frontier_route,go to the grey ball,explore,True,0.0,False,False,426,27,0.28949418300180696
+6,2,2,explore,continue_frontier_route,go to the grey ball,explore,True,0.0,False,False,424,27,0.2575869030042668
+7,2,2,explore,continue_frontier_route,go to the grey ball,explore,True,0.0,False,False,423,27,0.259425686999748
+8,1,2,explore,continue_frontier_route,go to the grey ball,explore,,0.0,False,False,422,27,0.3243678799990448
+9,5,0,explore,verified_toggle_precondition,go to the grey ball,explore,,0.0,False,False,414,28,0.32154290600010427
+10,2,4,approach,route_to_mission_target,go to the grey ball,f10.24,True,0.0,False,False,474,31,0.38669425200350815
+11,2,4,approach,route_to_mission_target,go to the grey ball,f10.24,True,0.9755102040816327,True,False,465,31,0.3525914760029991

@@ -1,0 +1,563 @@
+{
+  "split": "development",
+  "commit": "de575670145da13267b9296bdd088cf4ae4bea0d",
+  "dirty": true,
+  "settings": {
+    "split": "development",
+    "environments": [
+      "EmbodiedMind-GoToShift-v0"
+    ],
+    "variants": [
+      "B9",
+      "B10"
+    ],
+    "seed_start": 4001,
+    "seed_count": 10,
+    "interventions": [
+      "no_change",
+      "dropout",
+      "relocation"
+    ],
+    "limits": {
+      "max_steps": 48,
+      "max_calls": 48,
+      "memory_bytes": 768,
+      "infrastructure_retries": 2,
+      "scripted_prefix": [
+        0,
+        0
+      ],
+      "dynamics": {
+        "step": 2,
+        "dropout_until": 9,
+        "dropout_probability": 0.25
+      }
+    }
+  },
+  "config": "configs/memory-b10-shift-dev.yaml",
+  "config_sha256": "ce0a1d59c6943930126c5e2f02530e836b3668d82dc74fcb0ebb1c34268de5a5",
+  "model_config": "configs/models.yaml",
+  "model_config_sha256": "e27bbcc2d8433cfc7c7a1740e70fc2ea14957cf7615a5db4802ccbb8033f35fe",
+  "lock_sha256": "d59d6219f23927e1567c5543d485f302747bf568cc0f2cc1914933cad2ccf4bb",
+  "model": {
+    "version": "0.40.16",
+    "model": {
+      "name": "qwen2.5:3b-instruct",
+      "model": "qwen2.5:3b-instruct",
+      "modified_at": "2026-11-14T04:03:52.366085552+05:30",
+      "size": 1929912432,
+      "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 2048,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    }
+  },
+  "endpoint": "http://127.0.0.1:11434",
+  "profile": {},
+  "parallel": 1,
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "3.12.16",
+  "packages": {
+    "minigrid": "3.2.0",
+    "gymnasium": "1.4.0",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2"
+  },
+  "jobs": [
+    {
+      "id": "e00-s04001-no_change-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4001,
+      "variant": "B9",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04001-no_change-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4001,
+      "variant": "B10",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04001-dropout-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4001,
+      "variant": "B9",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04001-dropout-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4001,
+      "variant": "B10",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04001-relocation-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4001,
+      "variant": "B9",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04001-relocation-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4001,
+      "variant": "B10",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04002-no_change-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4002,
+      "variant": "B9",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04002-no_change-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4002,
+      "variant": "B10",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04002-dropout-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4002,
+      "variant": "B9",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04002-dropout-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4002,
+      "variant": "B10",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04002-relocation-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4002,
+      "variant": "B9",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04002-relocation-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4002,
+      "variant": "B10",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04003-no_change-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4003,
+      "variant": "B9",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04003-no_change-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4003,
+      "variant": "B10",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04003-dropout-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4003,
+      "variant": "B9",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04003-dropout-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4003,
+      "variant": "B10",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04003-relocation-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4003,
+      "variant": "B9",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04003-relocation-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4003,
+      "variant": "B10",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04004-no_change-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4004,
+      "variant": "B9",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04004-no_change-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4004,
+      "variant": "B10",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04004-dropout-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4004,
+      "variant": "B9",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04004-dropout-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4004,
+      "variant": "B10",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04004-relocation-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4004,
+      "variant": "B9",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04004-relocation-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4004,
+      "variant": "B10",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04005-no_change-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4005,
+      "variant": "B9",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04005-no_change-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4005,
+      "variant": "B10",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04005-dropout-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4005,
+      "variant": "B9",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04005-dropout-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4005,
+      "variant": "B10",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04005-relocation-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4005,
+      "variant": "B9",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04005-relocation-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4005,
+      "variant": "B10",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04006-no_change-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4006,
+      "variant": "B9",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04006-no_change-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4006,
+      "variant": "B10",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04006-dropout-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4006,
+      "variant": "B9",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04006-dropout-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4006,
+      "variant": "B10",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04006-relocation-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4006,
+      "variant": "B9",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04006-relocation-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4006,
+      "variant": "B10",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04007-no_change-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4007,
+      "variant": "B9",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04007-no_change-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4007,
+      "variant": "B10",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04007-dropout-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4007,
+      "variant": "B9",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04007-dropout-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4007,
+      "variant": "B10",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04007-relocation-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4007,
+      "variant": "B9",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04007-relocation-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4007,
+      "variant": "B10",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04008-no_change-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4008,
+      "variant": "B9",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04008-no_change-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4008,
+      "variant": "B10",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04008-dropout-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4008,
+      "variant": "B9",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04008-dropout-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4008,
+      "variant": "B10",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04008-relocation-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4008,
+      "variant": "B9",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04008-relocation-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4008,
+      "variant": "B10",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04009-no_change-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4009,
+      "variant": "B9",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04009-no_change-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4009,
+      "variant": "B10",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04009-dropout-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4009,
+      "variant": "B9",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04009-dropout-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4009,
+      "variant": "B10",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04009-relocation-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4009,
+      "variant": "B9",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04009-relocation-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4009,
+      "variant": "B10",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04010-no_change-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4010,
+      "variant": "B9",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04010-no_change-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4010,
+      "variant": "B10",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04010-dropout-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4010,
+      "variant": "B9",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04010-dropout-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4010,
+      "variant": "B10",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04010-relocation-B9-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4010,
+      "variant": "B9",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s04010-relocation-B10-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 4010,
+      "variant": "B10",
+      "intervention": "relocation",
+      "replicate": 0
+    }
+  ],
+  "created": "2026-11-14T15:33:00+00:00"
+}

@@ -1,0 +1,18 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,1,explore,explore_for_subgoal,Find and pick up source,explore,,0.0,False,False,400,27,0.2735284360096557
+1,0,0,explore,explore_for_subgoal,Find and pick up source,explore,,0.0,False,False,401,27,0.26113814700511284
+2,2,4,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,493,30,0.3502535599982366
+3,2,3,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,490,30,0.36433899801340885
+4,2,4,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,480,30,0.36544098499871325
+5,2,3,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,470,30,0.33320214800187387
+6,2,3,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,468,30,0.39752855100960005
+7,2,3,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,466,30,0.3307095380005194
+8,0,3,approach,route_to_subgoal,Find and pick up source,f2.12,,0.0,False,False,460,30,0.3594221800012747
+9,3,0,explore,attempt_subgoal_interaction,Find and pick up source,f2.12,,0.0,False,False,462,30,0.32799348200205714
+10,2,6,explore,route_to_placement,Place beside reference,f2.12,True,0.0,False,False,446,31,0.40382444199349266
+11,0,0,explore,route_to_placement,Place beside reference,f2.12,,0.0,False,False,440,31,0.32723405500291847
+12,2,2,explore,route_to_placement,Place beside reference,f2.12,True,0.0,False,False,474,31,0.3796138290053932
+13,2,2,explore,route_to_placement,Place beside reference,f2.12,True,0.0,False,False,463,31,0.343762993987184
+14,2,2,explore,route_to_placement,Place beside reference,f2.12,True,0.0,False,False,461,31,0.38262485299492255
+15,2,2,explore,route_to_placement,Place beside reference,f2.12,True,0.0,False,False,459,31,0.38486382699920796
+16,4,2,explore,attempt_verified_placement,Place beside reference,f2.12,,0.9235,True,False,457,31,0.40290920599363744

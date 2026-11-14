@@ -1,0 +1,2 @@
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-b10-stock-dev.yaml","--output","outputs/memory-b10-stock-20261114-202808","--parallel","1","--monitor"],"started":"2026-11-14T15:02:10+00:00"}
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-b10-stock-dev.yaml","--output","outputs/memory-b10-stock-20261114-202808","--parallel","1","--monitor"],"started":"2026-11-14T15:02:10+00:00","finished":"2026-11-14T15:32:06+00:00","status":"complete"}
