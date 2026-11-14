@@ -20,10 +20,13 @@ checkpoints/
 *.safetensors
 *.gguf
 
-# Generated experiment data
-results/
-logs/
+# Legacy experiment data and logs
+/results/
+/logs/
 *.log
+!/outputs/**/*.log
+# Runtime lock used to coordinate writers, rather than run evidence
+/outputs/**/supervisor.lock
 
 # OS and editors
 .DS_Store
