@@ -97,7 +97,8 @@ def compare(episodes, draws: int = 4000):
         contrasts = (("B3", "B1"), ("B3", "B2"), ("B0G", "B0"), ("B3", "B0"),
                      ("B3G", "B3"), ("B3G", "B0G"), ("B4", "B3G"), ("B5", "B4"),
                      ("B6", "B5"), ("B7", "B5"), ("B6", "B7"),
-                     ("B8", "B5"), ("B8", "B0"))
+                     ("B8", "B5"), ("B8", "B0"), ("B9N", "B8"),
+                     ("B9", "B9N"), ("B9", "B8"))
         for treatment, control in contrasts:
             if not {treatment, control} <= variants or treatment == "B3" and control == "B0" and "B0G" not in variants:
                 continue

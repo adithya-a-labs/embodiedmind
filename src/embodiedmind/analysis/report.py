@@ -386,7 +386,7 @@ def _comparison_table(comparisons):
             item.split == "dynamic" and item.metric == "stale_action_rate" and item.control == "B2"
         )
         development_comparison = (item.split == "development" and item.treatment in
-                                  {"B0G", "B3G", "B4", "B5", "B6", "B7", "B8"} and
+                                  {"B0G", "B3G", "B4", "B5", "B6", "B7", "B8", "B9N", "B9"} and
                                   item.metric in {"success", "blocked_actions", "verification_requests"})
         if not (primary or development_comparison):
             continue

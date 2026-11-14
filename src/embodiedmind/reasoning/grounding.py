@@ -6,6 +6,7 @@ from dataclasses import dataclass
 
 from embodiedmind.memory.spatial import DIRECTION_VECTORS
 from embodiedmind.reasoning.action_validator import ActionDecision, _unique_object, parse_action
+from embodiedmind.reasoning.progress import route as progress_route, task_action
 from embodiedmind.reasoning.prompts import (
     DYNAMIC_OBSTACLES_MISSION,
     GOTO_INSTRUCTIONS,
@@ -16,8 +17,8 @@ from embodiedmind.reasoning.prompts import (
     prompt_for,
 )
 
-GUARDED = {"B0G", "B3G", "B4", "B5", "B6", "B7", "B8"}
-AGENTIC = {"B5", "B6", "B7", "B8"}
+GUARDED = {"B0G", "B3G", "B4", "B5", "B6", "B7", "B8", "B9N", "B9"}
+AGENTIC = {"B5", "B6", "B7", "B8", "B9N", "B9"}
 GOALS = ("primitive", "approach", "verify", "explore")
 GOAL_SCHEMA = {
     "type": "object",
@@ -192,6 +193,21 @@ def resolve_response(raw, observation, agent, variant):
         override = _cue_memory_action(agent, observation, goal, proposed.valid, route)
         if override is not None:
             action, reason, route = override
+    elif variant in {"B9N", "B9"}:
+        if variant == "B9" and agent.phase:
+            override = task_action(agent, observation)
+        else:
+            override = _cue_memory_action(agent, observation, goal, proposed.valid, route)
+        if override is not None:
+            action, reason, route = override
+        if (override is None or reason == "forward_burst") and (
+            goal == "explore" or agent.visits[
+                agent.odometry.segment, agent.odometry.position, agent.odometry.direction
+            ] >= 3 and action in (0, 1, 2, 6)
+        ):
+            path = progress_route(agent)
+            if path:
+                action, reason, route = path[0], "progress_aware_explore", path
 
     cell = observation.cell(1, 0)
     if observation.mission == DYNAMIC_OBSTACLES_MISSION and action > 2:
