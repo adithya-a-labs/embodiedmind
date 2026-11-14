@@ -1,5 +1,12 @@
 # EmbodiedMind agent instructions
 
+## Record every Codex run
+
+- Before the final reply, write one Markdown record under the repo-root `codex-runs/` directory. Use `YYYY-MM-DD-HHMMSS-short-task.md` with a timestamp in the user's time zone. Continue the same record if resuming the same run. Record read-only, interrupted, and blocked runs too.
+- Record the user objective, every file or external record changed, and what changed in each. Include the branch and relevant commit hashes, or identify changes still in the working tree. For an unchanged run, record the result and any pending work.
+- Document the rationale for material decisions with the evidence, assumptions, alternatives considered, and trade-offs that affected the choice. Include verification commands and outcomes, observed failures and fixes, and anything still unverified. Keep credentials and private data out of the record.
+- Keep these records eligible for Git. Use `outputs/` for raw experiment data and link to the relevant archive from the Markdown record.
+
 ## Archive every run
 
 - Use one repo-root `outputs/<run-id>/` directory for every new EmbodiedMind run, including smoke tests, calibration, pilots, benchmarks, and saved exploratory runs. Use explicit output paths with the current tools. For interactive runs, save exploratory evidence in its own archive. Resume under the original run ID and preserve earlier attempts.
