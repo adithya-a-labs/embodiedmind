@@ -385,7 +385,10 @@ def _comparison_table(comparisons):
         primary = (item.split == "static" and item.metric == "success" and item.control == "B1") or (
             item.split == "dynamic" and item.metric == "stale_action_rate" and item.control == "B2"
         )
-        if not primary:
+        development_comparison = (item.split == "development" and item.treatment in
+                                  {"B0G", "B3G", "B4", "B5", "B6"} and
+                                  item.metric in {"success", "blocked_actions", "verification_requests"})
+        if not (primary or development_comparison):
             continue
         interval = "—"
         if item.lower_95 is not None and item.upper_95 is not None:

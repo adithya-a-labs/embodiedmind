@@ -1,6 +1,6 @@
 from embodiedmind.agents import make_agent
 from embodiedmind.environments.observation_adapter import Cell, Observation
-from embodiedmind.reasoning.grounding import resolve_response
+from embodiedmind.reasoning.grounding import action_request, resolve_response
 
 
 def view(cells, direction=0, mission="go to the purple ball", carrying=None):
@@ -45,3 +45,12 @@ def test_doorkey_recall_switches_from_key_to_door():
     context = agent.context(holding, 768)
     assert "Find and cross door" in context and "yellow door" in context
     assert "yellow key" not in context
+
+
+def test_goal_requests_constrain_the_schema_to_retrieved_evidence():
+    class Model:
+        def request(self, system, prompt, seed):
+            return {"system": system, "prompt": prompt, "seed": seed}
+
+    request = action_request(Model(), view([]), "f0.0", 7, "B5", [{"id": "f0.0"}])
+    assert request["format"]["properties"]["evidence"]["enum"] == ["visible", "explore", "f0.0"]

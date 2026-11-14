@@ -102,6 +102,7 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
             scripted = index < len(prefix)
             request = None if scripted else action_request(
                 model, observation, context, job["seed"] * 1000 + index, job["variant"],
+                audit.get("selected_facts", ()),
             )
             write_event(events, {
                 "phase": "before_action", "step": index, "at_ns": time_ns(),

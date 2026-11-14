@@ -183,7 +183,8 @@ class ViewerData:
             model = Ollama(**model_values)
             model.verify()
             context = agent.context(observation, limits["memory_bytes"])
-            request = action_request(model, observation, context, (job["seed"] * 1000 + index) % (2**31), variant)
+            request = action_request(model, observation, context, (job["seed"] * 1000 + index) % (2**31),
+                                     variant, agent.audit()["selected_facts"])
             raw, elapsed = model.generate(request)
             resolved = resolve_response(raw["response"], observation, agent, variant)
             selected = resolved.proposed

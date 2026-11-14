@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 from embodiedmind.memory.spatial import DIRECTION_VECTORS
 from embodiedmind.reasoning.action_validator import ActionDecision, _unique_object, parse_action
-from embodiedmind.reasoning.prompts import SYSTEM, prompt_for
+from embodiedmind.reasoning.prompts import SYSTEM, _route_hint, prompt_for
 
 GUARDED = {"B0G", "B3G", "B4", "B5", "B6"}
 AGENTIC = {"B5", "B6"}
@@ -32,7 +32,7 @@ class Resolution:
     route: tuple[int, ...] = ()
 
 
-def action_request(model, observation, context, seed, variant):
+def action_request(model, observation, context, seed, variant, facts=()):
     system = SYSTEM
     if variant in AGENTIC:
         system = (
@@ -49,7 +49,10 @@ def action_request(model, observation, context, seed, variant):
                                 "Return one JSON goal, action, and evidence.")
     request = model.request(system, prompt, seed)
     if variant in AGENTIC:
-        request["format"] = GOAL_SCHEMA
+        allowed = ["visible", "explore", *(fact["id"] for fact in facts)]
+        request["format"] = {**GOAL_SCHEMA, "properties": {
+            **GOAL_SCHEMA["properties"], "evidence": {"type": "string", "enum": allowed},
+        }}
     return request
 
 
@@ -60,6 +63,11 @@ def passable(cell):
 
 def local_alternative(observation):
     return 0 if passable(observation.cell(0, -1)) else 1
+
+
+def _visible_objective_action(observation):
+    hint = _route_hint(observation)
+    return int(hint[-2]) if hint.startswith("Route to visible objective") else None
 
 
 def _route(agent, target=None):
@@ -80,7 +88,7 @@ def _route(agent, target=None):
         neighbors = [(point, (heading - 1) % 4, 0), (point, (heading + 1) % 4, 1)]
         cell = cells.get(ahead)
         if ahead == position or cell and (cell.appearance[0] in {"empty", "floor", "goal"}
-                                         or cell.appearance == ("door", cell.appearance[1], "open")):
+                                         or cell.appearance[0] == "door" and cell.appearance[2] == "open"):
             neighbors.append((ahead, heading, 2))
         for next_cell, next_heading, action in neighbors:
             if (next_cell, next_heading) not in seen:
@@ -125,7 +133,9 @@ def resolve_response(raw, observation, agent, variant):
                 action = frontier[0] if frontier else local_alternative(observation)
                 reason = "verify_target_visible" if route == () else "no_known_route"
         else:
-            action, reason = local_alternative(observation), "unknown_fact_reference"
+            visible_action = _visible_objective_action(observation)
+            action = local_alternative(observation) if visible_action is None else visible_action
+            reason = "unknown_fact_reference"
 
     cell = observation.cell(1, 0)
     if variant in GUARDED and action == 2 and cell is not None and not passable(cell):

@@ -29,6 +29,7 @@ def learn_doorkey(run, output):
                          for cell in row["observation"]["cells"])]
         if pickups and opens and pickups[0] < opens[0] and rows[-1]["reward"] > 0:
             sources.append({"job": job["id"], "seed": job["seed"],
+                            "pickup_step": pickups[0], "unlock_step": opens[0],
                             "trajectory_sha256": hashlib.sha256(raw).hexdigest()})
     if not sources:
         raise ValueError("No successful development episode demonstrated key pickup, unlock, and goal.")

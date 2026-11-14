@@ -7,21 +7,29 @@
       {
         "job": "e00-s00004-none-B0-r0",
         "seed": 4,
+        "pickup_step": 3,
+        "unlock_step": 5,
         "trajectory_sha256": "a32c2478b3552202f3ed64fe88c4e65d3acdfe0bb5adaa9b9dcada7e7ed98f7f"
       },
       {
         "job": "e00-s00004-none-B1-r0",
         "seed": 4,
+        "pickup_step": 3,
+        "unlock_step": 5,
         "trajectory_sha256": "724d2643ad27256aa351855d28d955a947e88a010dfe294457c689aabceb6ffd"
       },
       {
         "job": "e00-s00004-none-B2-r0",
         "seed": 4,
+        "pickup_step": 3,
+        "unlock_step": 5,
         "trajectory_sha256": "123104877d567ac0033f540b3b6e0e5c9114a3a664d27637a727433a89a3241b"
       },
       {
         "job": "e00-s00004-none-B3-r0",
         "seed": 4,
+        "pickup_step": 3,
+        "unlock_step": 5,
         "trajectory_sha256": "583abf32a829bf8330097bad160d889b41638134d11bc090c0de771fe2422106"
       }
     ],
