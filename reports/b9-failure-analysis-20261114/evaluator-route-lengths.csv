@@ -1,0 +1,41 @@
+game,seed,modeled_actions,within_48,relaxed_wall_only_actions,modeled_route,source
+DoorKey,4001,18,True,,0 0 2 2 2 3 0 0 2 2 0 2 2 5 2 2 1 2,outputs/memory-large-stock-20261114-173852/episodes/e01-s04001-none-B9-r0
+DoorKey,4002,11,True,,3 1 5 2 2 2 2 2 1 2 2,outputs/memory-large-stock-20261114-173852/episodes/e01-s04002-none-B9-r0
+DoorKey,4003,21,True,,2 2 3 0 0 2 2 2 1 5 2 2 2 2 2 1 2 2 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e01-s04003-none-B9-r0
+DoorKey,4004,14,True,,0 2 2 0 3 0 0 2 5 2 2 1 2 2,outputs/memory-large-stock-20261114-173852/episodes/e01-s04004-none-B9-r0
+DoorKey,4005,16,True,,0 0 2 0 3 0 2 2 2 0 5 2 2 1 2 2,outputs/memory-large-stock-20261114-173852/episodes/e01-s04005-none-B9-r0
+DoorKey,4006,14,True,,3 2 2 2 0 5 2 2 2 2 2 1 2 2,outputs/memory-large-stock-20261114-173852/episodes/e01-s04006-none-B9-r0
+DoorKey,4007,16,True,,2 2 3 0 0 2 0 2 2 5 2 2 2 1 2 2,outputs/memory-large-stock-20261114-173852/episodes/e01-s04007-none-B9-r0
+DoorKey,4008,18,True,,1 2 2 2 2 1 3 2 2 5 2 2 2 1 2 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e01-s04008-none-B9-r0
+DoorKey,4009,20,True,,0 2 1 2 2 2 2 3 0 0 2 1 2 2 5 2 2 1 2 2,outputs/memory-large-stock-20261114-173852/episodes/e01-s04009-none-B9-r0
+DoorKey,4010,16,True,,1 2 2 1 3 0 2 2 0 5 2 2 2 2 1 2,outputs/memory-large-stock-20261114-173852/episodes/e01-s04010-none-B9-r0
+GoToObj Maze,4001,12,True,10,2 2 2 5 2 2 2 2 1 5 2 2,outputs/memory-large-stock-20261114-173852/episodes/e02-s04001-none-B9-r0
+GoToObj Maze,4002,13,True,12,2 2 0 2 2 2 2 5 2 2 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e02-s04002-none-B9-r0
+GoToObj Maze,4003,20,True,18,2 1 2 2 2 5 2 2 2 2 2 2 5 2 2 2 1 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e02-s04003-none-B9-r0
+GoToObj Maze,4004,2,True,2,0 2,outputs/memory-large-stock-20261114-173852/episodes/e02-s04004-none-B9-r0
+GoToObj Maze,4005,32,True,29,1 2 2 2 2 5 2 2 0 5 2 2 1 2 2 2 2 0 2 2 2 2 5 2 2 2 2 2 0 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e02-s04005-none-B9-r0
+GoToObj Maze,4006,18,True,16,2 0 2 2 2 5 2 2 2 2 1 2 2 2 5 2 2 0,outputs/memory-large-stock-20261114-173852/episodes/e02-s04006-none-B9-r0
+GoToObj Maze,4007,21,True,19,0 0 2 0 5 2 2 2 2 0 2 2 2 2 5 2 2 2 2 1 2,outputs/memory-large-stock-20261114-173852/episodes/e02-s04007-none-B9-r0
+GoToObj Maze,4008,29,True,26,1 2 1 2 2 2 2 5 2 2 2 0 2 5 2 2 2 2 2 1 2 2 2 5 2 2 2 2 0,outputs/memory-large-stock-20261114-173852/episodes/e02-s04008-none-B9-r0
+GoToObj Maze,4009,5,True,5,2 1 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e02-s04009-none-B9-r0
+GoToObj Maze,4010,50,False,44,2 2 0 2 2 2 5 2 2 2 2 2 2 5 2 2 2 2 2 2 0 2 2 2 2 5 2 2 0 2 1 2 2 2 2 5 2 2 0 2 2 2 5 2 2 0 5 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e02-s04010-none-B9-r0
+MultiRoom,4001,47,True,,2 5 2 2 2 0 2 2 5 2 2 1 2 2 0 2 2 2 2 2 2 5 2 2 0 2 2 1 2 2 2 5 2 2 2 0 2 2 5 2 2 2 2 2 1 2 2,outputs/memory-large-stock-20261114-173852/episodes/e05-s04001-none-B9-r0
+MultiRoom,4002,40,True,,2 1 5 2 2 1 2 2 2 0 2 2 5 2 2 0 2 1 2 2 5 2 2 2 2 2 0 2 5 2 2 2 2 2 2 2 0 5 2 2,outputs/memory-large-stock-20261114-173852/episodes/e05-s04002-none-B9-r0
+MultiRoom,4003,48,True,,0 2 2 1 2 2 5 2 2 0 2 2 2 1 2 2 5 2 2 0 2 2 1 2 5 2 2 2 1 2 2 2 2 5 2 2 0 2 2 2 5 2 2 2 0 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e05-s04003-none-B9-r0
+MultiRoom,4004,50,False,,0 0 2 0 2 5 2 2 2 2 2 2 1 2 2 2 2 2 5 2 2 2 2 2 2 0 5 2 2 2 2 1 2 5 2 2 2 2 1 2 5 2 2 2 2 2 2 2 1 2,outputs/memory-large-stock-20261114-173852/episodes/e05-s04004-none-B9-r0
+MultiRoom,4005,46,True,,2 5 2 2 2 2 2 0 2 2 5 2 2 2 2 2 5 2 2 0 2 2 2 1 2 2 2 5 2 2 2 2 2 2 2 0 2 2 5 2 2 2 2 2 1 2,outputs/memory-large-stock-20261114-173852/episodes/e05-s04005-none-B9-r0
+MultiRoom,4006,48,True,,1 2 1 2 5 2 2 1 2 2 0 2 2 2 2 2 5 2 2 2 2 2 0 2 2 2 5 2 2 2 2 2 2 0 5 2 2 0 2 2 1 2 2 5 2 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e05-s04006-none-B9-r0
+MultiRoom,4007,49,False,,1 2 2 2 5 2 2 2 2 2 2 2 0 2 2 2 2 2 5 2 2 0 2 2 2 1 2 2 5 2 2 0 2 2 2 5 2 2 2 2 2 2 2 0 5 2 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e05-s04007-none-B9-r0
+MultiRoom,4008,49,False,,2 1 5 2 2 1 2 2 2 2 2 5 2 2 2 1 2 2 2 5 2 2 0 2 2 2 1 2 2 2 5 2 2 0 2 2 2 1 2 2 2 2 5 2 2 2 1 2 2,outputs/memory-large-stock-20261114-173852/episodes/e05-s04008-none-B9-r0
+MultiRoom,4009,51,False,,2 2 1 2 2 5 2 2 2 2 2 2 0 2 2 2 5 2 2 0 2 2 1 2 2 2 2 2 2 5 2 2 0 2 2 5 2 2 2 2 2 2 2 2 5 2 2 2 1 2 2,outputs/memory-large-stock-20261114-173852/episodes/e05-s04009-none-B9-r0
+MultiRoom,4010,45,True,,2 1 2 2 2 5 2 2 0 2 1 2 2 2 2 5 2 2 1 2 0 2 5 2 2 1 2 2 2 2 2 5 2 2 1 2 0 2 2 5 2 2 2 2 2,outputs/memory-large-stock-20261114-173852/episodes/e05-s04010-none-B9-r0
+Blocked Unlock Pickup,4001,25,True,,2 2 1 2 0 3 0 4 0 3 0 0 2 5 2 2 2 2 4 0 2 2 2 1 3,outputs/memory-large-stock-20261114-173852/episodes/e07-s04001-none-B9-r0
+Blocked Unlock Pickup,4002,22,True,,0 2 2 0 2 2 3 0 2 4 1 3 2 1 2 5 1 4 0 2 2 3,outputs/memory-large-stock-20261114-173852/episodes/e07-s04002-none-B9-r0
+Blocked Unlock Pickup,4003,22,True,,1 2 3 0 0 2 4 1 2 3 1 2 2 1 2 5 2 2 2 4 1 3,outputs/memory-large-stock-20261114-173852/episodes/e07-s04003-none-B9-r0
+Blocked Unlock Pickup,4004,23,True,,2 2 2 0 3 0 4 1 2 0 3 1 5 2 2 0 2 2 4 1 2 2 3,outputs/memory-large-stock-20261114-173852/episodes/e07-s04004-none-B9-r0
+Blocked Unlock Pickup,4005,23,True,,0 2 2 2 1 3 1 4 1 3 0 0 2 0 5 2 2 2 4 0 2 2 3,outputs/memory-large-stock-20261114-173852/episodes/e07-s04005-none-B9-r0
+Blocked Unlock Pickup,4006,20,True,,0 0 2 1 3 1 4 1 3 0 0 2 5 2 2 4 1 2 2 3,outputs/memory-large-stock-20261114-173852/episodes/e07-s04006-none-B9-r0
+Blocked Unlock Pickup,4007,21,True,,2 1 2 2 3 0 0 2 4 0 3 0 2 2 5 2 2 4 0 2 3,outputs/memory-large-stock-20261114-173852/episodes/e07-s04007-none-B9-r0
+Blocked Unlock Pickup,4008,20,True,,0 0 2 2 3 0 0 2 4 0 3 0 2 2 5 0 4 1 2 3,outputs/memory-large-stock-20261114-173852/episodes/e07-s04008-none-B9-r0
+Blocked Unlock Pickup,4009,24,True,,1 2 2 3 0 0 4 1 2 2 3 0 0 2 2 0 2 5 2 2 4 0 2 3,outputs/memory-large-stock-20261114-173852/episodes/e07-s04009-none-B9-r0
+Blocked Unlock Pickup,4010,25,True,,0 0 2 3 0 4 1 2 1 2 3 0 0 2 1 5 2 2 2 2 4 0 2 1 3,outputs/memory-large-stock-20261114-173852/episodes/e07-s04010-none-B9-r0
