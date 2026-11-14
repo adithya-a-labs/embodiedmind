@@ -1,0 +1,11 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,Remembered cells,True,0.0,False,False,389,14,0.2673490050001419
+1,2,2,primitive,,,f0.19,True,0.0,False,False,446,16,0.21178682499885326
+2,2,2,primitive,,,"f0.19 empty (-2, 1) observed at step 0",True,0.0,False,False,498,28,0.3952593909998541
+3,2,2,primitive,,,"f0.12 empty (-2, 0) observed at step 0",True,0.0,False,False,551,27,0.30883461099438136
+4,2,2,primitive,,,"f0.12 empty (-3, 0) observed at step 0",True,0.0,False,False,604,27,0.3331465900046169
+5,2,2,primitive,,,f0.15,True,0.0,False,False,656,15,0.28601114400225924
+6,2,2,primitive,,,f0.8,True,0.0,False,False,671,14,0.21818484899995383
+7,2,2,primitive,,,visible,False,0.0,False,False,681,14,0.2722652590018697
+8,0,0,primitive,,,"f0.7 empty (-1, 0) observed at step 4",,0.0,False,False,681,29,0.36737351099873194
+9,2,2,primitive,,,"f1.22 green key (-2, 0) observed at step 8",True,0.9893491124260355,True,False,695,28,0.4527998830017168

@@ -1,0 +1,16 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,scan_start_cue,Find mission target,explore,,0.0,False,False,442,27,0.2936501000003773
+1,0,2,explore,scan_start_cue,Find mission target,f1.4,,0.0,False,False,460,29,0.3008117700010189
+2,0,2,explore,scan_start_cue,Find mission target,f1.4,,0.0,False,False,462,29,0.28654297799948836
+3,0,2,explore,scan_start_cue,Find mission target,f1.4,,0.0,False,False,453,29,0.27110001900291536
+4,2,2,explore,forward_burst,Find mission target,f1.4,True,0.0,False,False,465,29,0.27567303799878573
+5,2,2,explore,forward_burst,Find mission target,f1.4,True,0.0,False,False,465,29,0.2594322689983528
+6,2,2,explore,forward_burst,Find mission target,f1.4,True,0.0,False,False,466,29,0.27243546699901344
+7,2,2,explore,approach_matching_branch,Find mission target,f7.1,True,0.0,False,False,495,29,0.33985743499943055
+8,2,2,explore,approach_matching_branch,Find mission target,f7.1,True,0.0,False,False,492,29,0.31457718199817464
+9,2,2,explore,approach_matching_branch,Find mission target,f7.1,True,0.0,False,False,490,29,0.31635721000202466
+10,2,2,explore,approach_matching_branch,Find mission target,f7.1,True,0.0,False,False,488,29,0.3399673290041392
+11,2,2,explore,approach_matching_branch,Find mission target,f7.1,True,0.0,False,False,486,29,0.32168204000481637
+12,2,2,explore,approach_matching_branch,Find mission target,f7.1,True,0.0,False,False,484,29,0.2884443389993976
+13,0,6,explore,approach_matching_branch,Find mission target,f7.1,,0.0,False,False,477,29,0.30555197300418513
+14,2,2,explore,approach_matching_branch,Find mission target,f7.1,True,0.9840236686390532,True,False,485,29,0.3593404429993825
