@@ -1,0 +1,28 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,o0,True,0.0,False,False,382,15,0.1966916149976896
+3,2,2,primitive,,,o2,True,0.0,False,False,408,12,0.1849417019984685
+4,2,2,primitive,,,o3,True,0.0,False,False,435,12,0.1472756329967524
+5,2,2,primitive,,,o4,True,0.0,False,False,453,12,0.17112314100086223
+6,2,2,primitive,,,o5,True,0.0,False,False,473,12,0.14073827299580444
+7,2,2,primitive,,,o4,True,0.0,False,False,486,12,0.1458717730056378
+8,0,0,primitive,,,o7,,0.0,False,False,498,12,0.17468873700272525
+9,2,2,primitive,,,o0,True,0.0,False,False,527,12,0.1842470260016853
+10,2,2,primitive,,,o4,True,0.0,False,False,542,12,0.14879442999517778
+11,2,2,primitive,,,o4,True,0.0,False,False,559,12,0.16036771999642951
+12,2,2,primitive,,,o4,True,0.0,False,False,576,12,0.1704851959948428
+13,2,2,primitive,,,o4,True,0.0,False,False,593,12,0.2185273529976257
+14,0,0,primitive,,,o0,,0.0,False,False,605,13,0.2900976310047554
+15,2,2,primitive,,,o1,True,0.0,False,False,642,12,0.19585032099712407
+16,2,2,primitive,,,o1,True,0.0,False,False,663,12,0.19363781699939864
+17,5,5,primitive,,,"o1 step 1 prev=0 facing=1: blue ball@2,3",,0.0,False,False,661,28,0.32159775399486534
+18,2,2,primitive,,,o14 step 14 prev=2 facing=3: no named objects,True,0.0,False,False,663,27,0.3083848929964006
+19,2,2,primitive,,,o4,True,0.0,False,False,658,12,0.23791533799521858
+20,2,2,primitive,,,"o1 step 1 prev=0 facing=1: blue ball@2,3",True,0.0,False,False,672,28,0.3849126269997214
+21,2,2,primitive,,,"o20 step 20 prev=2 facing=2: red key@6,-1; purple key@0,-2",True,0.0,False,False,665,37,0.4615568540029926
+22,2,2,primitive,,,"o21 step 21 prev=2 facing=2: red key@5,-1",True,0.0,False,False,648,30,0.3330784370045876
+23,2,2,primitive,,,"o22 step 22 prev=2 facing=2: red key@4,-1",True,0.0,False,False,649,30,0.3435570270012249
+24,2,2,primitive,,,"o23 step 23 prev=2 facing=2: red key@3,-1",True,0.0,False,False,672,31,0.3564200760010863
+25,2,2,primitive,,,"o24 step 24 prev=2 facing=2: red key@2,-1",True,0.0,False,False,676,31,0.4008459609976853
+26,0,0,primitive,,,"o25 step 25 prev=2 facing=2: red key@1,-1",,0.892,True,False,677,31,0.34900625900627347
