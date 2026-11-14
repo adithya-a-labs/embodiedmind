@@ -1,0 +1,14 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,Find mission target,,,0.0,False,False,,,0.0
+1,0,0,primitive,,Find mission target,,,0.0,False,False,,,0.0
+2,0,3,approach,,Find mission target,f0.27,,0.0,False,False,429,30,0.33900490200176137
+3,2,6,approach,,Find mission target,f0.27,True,0.0,False,False,420,30,0.33117158000095515
+4,0,6,approach,,Find mission target,f0.27,,0.0,False,False,420,30,0.30966981800156645
+5,2,2,explore,,Find mission target,explore,True,0.0,False,False,412,27,0.3017051540009561
+6,2,2,explore,,Find mission target,explore,True,0.0,False,False,412,27,0.25768396200146526
+7,2,2,explore,,Find mission target,explore,True,0.0,False,False,413,27,0.24455853499966906
+8,2,2,explore,,Find mission target,explore,True,0.0,False,False,414,27,0.28836307199526345
+9,1,2,explore,,Find mission target,explore,,0.0,False,False,408,27,0.300195032999909
+10,2,4,approach,,Find mission target,f10.23,True,0.0,False,False,432,31,0.3003889169995091
+11,2,4,approach,,Find mission target,f10.23,True,0.0,False,False,432,31,0.3092251429989119
+12,2,4,approach,,Find mission target,f10.23,True,0.948,True,False,432,31,0.3094846960011637

@@ -1,0 +1,2 @@
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-relocation-dev.yaml","--output","outputs/memory-relocation-live-20261114-120338","--monitor"],"started":"2026-11-14T06:33:38+00:00"}
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-relocation-dev.yaml","--output","outputs/memory-relocation-live-20261114-120338","--monitor"],"started":"2026-11-14T06:33:38+00:00","finished":"2026-11-14T06:34:17+00:00","status":"complete"}
