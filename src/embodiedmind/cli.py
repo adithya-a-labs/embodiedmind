@@ -27,6 +27,7 @@ def main():
     viewer.add_argument("--sandbox-output", type=Path, default=Path("results/sandbox"))
     viewer.add_argument("--models", type=Path, default=Path("configs/models.yaml"))
     viewer.add_argument("--port", type=int, default=8765)
+    viewer.add_argument("--tunnel-origin", help="exact HTTPS origin of a private Microsoft Dev Tunnel")
     for name in ("status", "evaluate", "stop"):
         sub = commands.add_parser(name)
         sub.add_argument("run_dir", type=Path)
@@ -58,7 +59,7 @@ def main():
     elif args.command == "viewer":
         from embodiedmind.viewer.server import serve
 
-        serve(args.runs, args.sandbox_output, args.models, args.port)
+        serve(args.runs, args.sandbox_output, args.models, args.port, args.tunnel_origin)
 
 
 def _smoke(args):

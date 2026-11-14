@@ -1,8 +1,21 @@
 import json
 
+import pytest
+
 from embodiedmind.control.controller import PrimitiveController
 from embodiedmind.environments.visual_state import viewer_environment
 from embodiedmind.viewer.data import ViewerData, public_json
+from embodiedmind.viewer.server import viewer_origins
+
+
+def test_private_tunnel_allows_only_the_configured_https_origin():
+    url = "https://viewer-8765.usw2.devtunnels.ms"
+    origins = viewer_origins(8765, url + "/")
+    assert origins["http://localhost:8765"] == {"localhost:8765"}
+    assert origins[url] == {"localhost:8765", "127.0.0.1:8765", "viewer-8765.usw2.devtunnels.ms"}
+    assert "https://other.devtunnels.ms" not in origins
+    with pytest.raises(ValueError):
+        viewer_origins(8765, url + ".example.org")
 
 
 def test_replay_reconstructs_view_and_sandbox_forks_without_changing_trace(tmp_path):

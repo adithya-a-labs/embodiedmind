@@ -1,6 +1,7 @@
 """Serve the browser viewer and its local JSON endpoints."""
 
 import json
+import re
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
@@ -18,7 +19,21 @@ ASSETS = {
 }
 
 
-def serve(runs, sandbox_output, models, port):
+def viewer_origins(port, tunnel_origin=None):
+    local = {f"localhost:{port}", f"127.0.0.1:{port}"}
+    origins = {f"http://{host}": {host} for host in local}
+    if tunnel_origin:
+        match = re.fullmatch(r"https://([a-z0-9-]+(?:\.[a-z0-9-]+)*\.devtunnels\.ms)/?", tunnel_origin)
+        if not match:
+            raise ValueError("Use the exact HTTPS address of your private devtunnels.ms port.")
+        host = match[1]
+        # A relay can preserve the public Host or rewrite it to the local listener.
+        origins[f"https://{host}"] = local | {host}
+    return origins
+
+
+def serve(runs, sandbox_output, models, port, tunnel_origin=None):
+    viewer_origins(port, tunnel_origin)
     data = ViewerData(runs, sandbox_output, models)
     assets = Path(__file__).with_name("static")
 
@@ -52,8 +67,8 @@ def serve(runs, sandbox_output, models, port):
             try:
                 if method == "POST" and parsed.path == "/api/sandbox":
                     origin = self.headers.get("Origin")
-                    if origin and origin != "http://" + self.headers["Host"]:
-                        self.payload(403, {"error": "This request must come from the local viewer."})
+                    if self.headers["Host"] not in origins.get(origin, set()):
+                        self.payload(403, {"error": "Open Sandbox from an approved viewer address."})
                         return
                     if self.headers.get_content_type() != "application/json":
                         raise ValueError("Expected JSON sandbox controls.")
@@ -95,7 +110,8 @@ def serve(runs, sandbox_output, models, port):
             self.dispatch("POST")
 
     with ThreadingHTTPServer(("127.0.0.1", port), Handler) as server:
-        accepted_hosts = {f"{host}:{server.server_port}" for host in ("127.0.0.1", "localhost")}
+        origins = viewer_origins(server.server_port, tunnel_origin)
+        accepted_hosts = set().union(*origins.values())
         print(f"EmbodiedMind viewer: http://127.0.0.1:{server.server_port}", flush=True)
         try:
             server.serve_forever()

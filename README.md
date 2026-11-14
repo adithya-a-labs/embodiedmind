@@ -68,4 +68,16 @@ from either side of a replay. Use the buttons or arrow keys to move and turn.
 **Agent move** and **Auto-play** use the configured local Ollama model. Saved
 exploratory sessions go under `results/sandbox/` by default.
 
+For access from another device, forward only port 8765 through a **private**
+Microsoft Dev Tunnel. Restart the viewer with the exact HTTPS address printed
+for the forwarded port:
+
+```sh
+.venv/bin/embodiedmind viewer --tunnel-origin https://your-forwarded-host.devtunnels.ms
+```
+
+Open that address on your phone and sign in with the tunnel owner's account.
+Keep the laptop awake, the viewer running, and the tunnel connected. Keep
+Ollama on loopback and leave port 11434 out of the tunnel.
+
 See the [held-out results summary](reports/technical_report.md) and [final run status](STATUS.md).
