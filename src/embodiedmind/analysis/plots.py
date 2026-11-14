@@ -12,7 +12,8 @@ from matplotlib import pyplot as plt
 from .statistics import numeric, stratify
 
 
-COLORS = {"B0": "#64748b", "B1": "#31736b", "B2": "#b47035", "B3": "#344e90"}
+COLORS = {"B0": "#64748b", "B1": "#31736b", "B2": "#b47035", "B3": "#344e90",
+          "B0G": "#723e59", "B3G": "#566826", "B4": "#296074", "B5": "#735e18", "B6": "#734e8d"}
 PLOT_GROUPS = {
     "success": (("success", "Mission success", "Share of episodes"),),
     "efficiency": (
@@ -26,6 +27,11 @@ PLOT_GROUPS = {
         ("unsupported_claims", "Unsupported evidence references", "Count per episode"),
         ("post_contradiction_recovered", "Recovery after contradiction", "Share of eligible episodes"),
         ("steps_to_recovery", "Steps to recovery", "Steps among recovered episodes"),
+    ),
+    "grounding": (
+        ("blocked_proposals", "Blocked forward proposals", "Proposals per episode"),
+        ("blocked_actions", "Executed blocked moves", "Moves per episode"),
+        ("verification_requests", "Verification requests", "Requests per episode"),
     ),
 }
 

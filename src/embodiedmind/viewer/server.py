@@ -32,9 +32,9 @@ def viewer_origins(port, tunnel_origin=None):
     return origins
 
 
-def serve(runs, sandbox_output, models, port, tunnel_origin=None):
+def serve(runs, sandbox_output, models, port, tunnel_origin=None, workflows=None):
     viewer_origins(port, tunnel_origin)
-    data = ViewerData(runs, sandbox_output, models)
+    data = ViewerData(runs, sandbox_output, models, workflows)
     assets = Path(__file__).with_name("static")
 
     class Handler(BaseHTTPRequestHandler):

@@ -20,6 +20,7 @@ from threading import Event
 import yaml
 
 from embodiedmind.experiments.runner import episode, write_event
+from embodiedmind.agents import VARIANTS
 from embodiedmind.reasoning.llm_client import InferenceUnavailable, Ollama
 
 
@@ -52,9 +53,18 @@ def git(*args):
 def build_manifest(config, model_config, model, info, slots, profile):
     cfg = yaml.safe_load(config.read_text(encoding="utf-8"))
     limits = cfg["limits"]
+    if set(cfg["variants"]) - VARIANTS.keys():
+        raise ValueError("The config names an unknown memory variant")
+    if "B6" in cfg["variants"]:
+        path = config.parent / cfg["workflows"]
+        limits["workflows"] = load_json(path)
+        limits["workflow_sha256"] = digest(path)
+        source_seeds = {episode["seed"] for workflow in limits["workflows"] for episode in workflow["episodes"]}
     if any(type(limits[k]) is not int or limits[k] < 1 for k in ("max_steps", "max_calls", "memory_bytes")):
         raise ValueError("each episode limit must be a positive integer")
     seeds = cfg["seeds"] if "seeds" in cfg else range(cfg["seed_start"], cfg["seed_start"] + cfg["seed_count"])
+    if "B6" in cfg["variants"] and source_seeds.intersection(seeds):
+        raise ValueError("Workflow training and evaluation seeds must be disjoint")
     jobs = [
         {
             "id": f"e{e:02}-s{seed:05}-{intervention}-{variant}-r{replicate}",

@@ -11,11 +11,12 @@ from PIL import Image
 from embodiedmind.agents import make_agent
 from embodiedmind.control.controller import PrimitiveController
 from embodiedmind.environments.factory import make_environment
+from embodiedmind.environments.observation_adapter import front_move_outcome
 from embodiedmind.environments.visual_state import board_snapshot
 from embodiedmind.memory.episodic import Event
 from embodiedmind.memory.spatial import Odometry
-from embodiedmind.reasoning.action_validator import ActionDecision, parse_action
-from embodiedmind.reasoning.prompts import SYSTEM, prompt_for
+from embodiedmind.reasoning.action_validator import ActionDecision
+from embodiedmind.reasoning.grounding import Resolution, action_request, resolve_response
 
 
 def write_event(stream, value):
@@ -34,7 +35,8 @@ def episode(job, limits, model, path: Path, keep_visuals=True, monitor=None):
     else:
         env = make_environment(job["environment"], render_mode="rgb_array" if keep_visuals else None)
     try:
-        return _run_episode(env, make_agent(job["variant"]), job, limits, model, path, keep_visuals, monitor)
+        agent = make_agent(job["variant"], limits.get("workflows", ()))
+        return _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor)
     finally:
         env.close()
 
@@ -55,6 +57,11 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
     invalidated = {}
     scoring_odometry = Odometry()
     last_action = None
+    blocked_proposals = blocked_actions = verification_requests = 0
+    checked_old_target = found_new_target = None
+    target_cells = set()
+    target_type = observation.mission.split()[-1]
+    target_color = observation.mission.split()[-2]
 
     def publish(phase, step, observation, decision=None):
         if monitor is not None:
@@ -93,8 +100,8 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
             context = agent.context(observation, limits["memory_bytes"])
             audit = agent.audit()
             scripted = index < len(prefix)
-            request = None if scripted else model.request(
-                SYSTEM, prompt_for(observation, context), job["seed"] * 1000 + index,
+            request = None if scripted else action_request(
+                model, observation, context, job["seed"] * 1000 + index, job["variant"],
             )
             write_event(events, {
                 "phase": "before_action", "step": index, "at_ns": time_ns(),
@@ -102,14 +109,22 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
             })
             if scripted:
                 request, raw, elapsed = None, {}, 0.0
-                decision = ActionDecision(prefix[index], "", True)
+                resolved = Resolution(ActionDecision(prefix[index], "", True), prefix[index])
             else:
                 publish("thinking", index, observation, last_action)
                 raw, elapsed = model.generate(request)
                 write_event(events, {"phase": "model_response", "step": index, "at_ns": time_ns(),
                                      "response": raw, "inference_seconds": elapsed})
-                decision = parse_action(raw["response"])
+                resolved = resolve_response(raw["response"], observation, agent, job["variant"])
                 calls += 1
+            decision = resolved.proposed
+            executed = resolved.action
+            planning = {"goal": resolved.goal, "reason": resolved.reason, "route": resolved.route}
+            blocked_proposals += (
+                not scripted and decision.valid and resolved.goal == "primitive"
+                and decision.action == 2 and front_move_outcome(observation) is False
+            )
+            verification_requests += resolved.goal == "verify" and decision.valid
             if raw.get("done_reason") == "length" and not decision.valid:
                 audit = {**audit, "generation_hit_output_limit": True}
             refs = {item["id"]: item for item in audit.get("selected_facts", [])}
@@ -119,6 +134,20 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
                     (cell.object, cell.color, cell.state)
                 for cell in observation.cells
             }
+            if job["intervention"] == "relocation":
+                matching = {cell for cell, appearance in visible.items()
+                            if appearance[:2] == (target_type, target_color)}
+                applied = next((row for row in getattr(env, "intervention_log", ())
+                                if row.get("intervention") == "relocation" and row.get("applied")), None)
+                if applied:
+                    if checked_old_target is None and any(
+                        cell in visible and cell not in matching for cell in target_cells
+                    ):
+                        checked_old_target = index
+                    if found_new_target is None and matching - target_cells:
+                        found_new_target = index
+                else:
+                    target_cells.update(matching)
             if contradicted_at is None and any(
                 previous[0] in {"ball", "key", "box", "door"} and visible.get(cell, previous) != previous
                 for cell, previous in last_view.items()
@@ -139,10 +168,14 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
             )
             stale_reference = decision.valid and decision.evidence in invalidated
             write_event(events, {"phase": "decision", "step": index, "at_ns": time_ns(),
-                                 "decision": asdict(decision)})
-            result = controller.step(decision.action)
+                                 "decision": asdict(decision), "planning": planning,
+                                 "executed_action": executed})
+            result = controller.step(executed)
+            blocked_actions += result.moved is False
             last_action = {
-                **asdict(decision), "moved": result.moved, "reward": result.reward,
+                **asdict(decision), "action": executed, "proposed_action": decision.action,
+                "planning": planning, "subgoal": audit.get("subgoal"),
+                "moved": result.moved, "reward": result.reward,
                 "terminated": result.terminated, "truncated": result.truncated,
                 "inference_seconds": elapsed,
             }
@@ -154,14 +187,14 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
                 "next_observation": asdict(result.observation), "memory": audit,
                 "request": request, "response": raw, "inference_seconds": elapsed,
                 "decision": asdict(decision), "scripted_prefix": scripted,
-                "executed_action": decision.action, "moved": result.moved,
+                "executed_action": executed, "planning": planning, "moved": result.moved,
                 "unsupported_reference": unsupported_reference, "stale_reference": stale_reference,
                 "reward": result.reward, "terminated": result.terminated, "truncated": result.truncated,
             })
             capture(evaluator, index + 1)
             publish("acted", index + 1, result.observation, last_action)
             if hasattr(agent, "record_decision"):
-                agent.record_decision(decision.action)
+                agent.record_decision(executed)
             prompt_tokens += int(raw.get("prompt_eval_count") or 0)
             completion_tokens += int(raw.get("eval_count") or 0)
             invalid += not decision.valid
@@ -169,7 +202,7 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
             stale += stale_reference
             inference_seconds += elapsed
             observation, moved = result.observation, result.moved
-            previous_action = decision.action
+            previous_action = executed
             reward += float(result.reward)
             terminated, truncated = result.terminated, result.truncated
             if terminated or truncated:
@@ -189,6 +222,9 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
         "steps": steps, "calls": calls, "prompt_tokens": prompt_tokens,
         "completion_tokens": completion_tokens, "inference_seconds": inference_seconds,
         "invalid_actions": invalid, "unsupported_claims": unsupported, "stale_actions": stale,
+        "blocked_proposals": blocked_proposals, "blocked_actions": blocked_actions,
+        "verification_requests": verification_requests,
+        "old_target_rechecked_step": checked_old_target, "new_target_seen_step": found_new_target,
         "post_contradiction_recovered": None if contradicted_at is None else recovered_at is not None,
         "steps_to_recovery": recovered_at, "reward": reward,
         "intervention_applied": any(event.get("applied") is True for event in interventions),

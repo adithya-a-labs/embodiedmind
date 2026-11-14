@@ -1,0 +1,12 @@
+split: development
+environments: [EmbodiedMind-GoToShift-v0]
+variants: [B4, B5]
+seeds: [5, 6, 7, 8, 9]
+interventions: [relocation]
+limits:
+  max_steps: 24
+  max_calls: 24
+  memory_bytes: 768
+  infrastructure_retries: 2
+  scripted_prefix: [0, 0]
+  dynamics: {step: 2, dropout_until: 9, dropout_probability: 0.25}

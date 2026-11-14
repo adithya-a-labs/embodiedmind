@@ -1,7 +1,9 @@
 "use strict";
 
 const $ = (id) => document.getElementById(id);
-const variants = {B0:"Reactive", B1:"Text history", B2:"Structured", B3:"Hybrid"};
+const variants = {B0:"Reactive", B1:"Text history", B2:"Structured", B3:"Hybrid",
+  B0G:"Guarded reactive", B3G:"Guarded hybrid", B4:"Subgoal memory",
+  B5:"Agentic memory", B6:"Agentic memory + workflows"};
 const actions = ["Turn left","Turn right","Forward","Pick up","Drop","Toggle door","Done"];
 const headings = ["east","south","west","north"];
 const colors = {red:"#e06652",green:"#65ba83",blue:"#70a7df",purple:"#b690da",yellow:"#e3c971",grey:"#a1aaa5"};
@@ -125,6 +127,13 @@ function boardCard({title, status, failed, frame, replay, action, intervention})
       (_, id) => " ("+actions[id].toLowerCase()+").");
     field(stats,"Hint",hint || (event.scripted?"Scripted turn":"—"));
     field(stats,"Action",actions[event.action] || "—");
+    if(event.subgoal) field(stats,"Subgoal",event.subgoal);
+    if(event.planning?.goal && event.planning.goal!=="primitive") field(stats,"Intent",event.planning.goal);
+    const proposed=event.decision?.proposed_action ?? event.decision?.action;
+    if(event.planning?.goal==="primitive" && proposed!==undefined && proposed!==event.action) {
+      field(stats,"Proposed",actions[proposed]);
+    }
+    if(event.planning?.reason) field(stats,"Controller",outcome(event.planning.reason));
     field(stats,"Outcome",event.moved === false ? "Blocked · stayed in place" : event.reward > 0 ?
       "Mission completed" : event.moved === true ? "Moved one tile" : "Action applied",event.moved === false?"blocked":"");
     const evidence=event.decision?.evidence;
@@ -339,7 +348,8 @@ async function sandboxRequest({action,agent=false,save=false}={}) {
     $("branch").textContent=session.branch?"Forked before action "+(session.branch.step+1)+" · "+session.branch.job:
       worlds[session.environment]+" · Seed "+session.seed;
     $("sandbox-board").replaceChildren(boardCard({title:state.observation.mission,
-      status:state.done?(state.reward>0?"Success":"Ended"):state.step+" actions applied", frame:state}));
+      status:state.done?(state.reward>0?"Success":"Ended"):state.step+" actions applied",
+      frame:{...state,event:state.decision ? {...state.decision,moved:state.moved,reward:state.reward,decision:state.decision}:null}}));
     $("sandbox-status").textContent=state.saved?"Saved in sandbox output as "+state.saved:
       state.decision ? "Agent chose "+actions[state.decision.action]+(state.moved===false?" · blocked":""):
       action!==undefined ? actions[action]+(state.moved===false?" · blocked":"") : "Ready";
@@ -399,4 +409,5 @@ document.addEventListener("keydown",event=>{
   const keyActions={ArrowLeft:0,ArrowRight:1,ArrowUp:2,p:3,d:4,t:5};
   if(keyActions[event.key]!==undefined){event.preventDefault();sandboxRequest({action:keyActions[event.key]});}
 });
+options($("sandbox-variant"),Object.entries(variants).map(([id,label])=>[id,id+" · "+label]),"B5");
 safe(async()=>{await refreshCatalog();await openRun(true);})();

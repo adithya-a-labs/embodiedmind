@@ -28,6 +28,10 @@ def main():
     viewer.add_argument("--sandbox-output", type=Path, default=Path("results/sandbox"))
     viewer.add_argument("--models", type=Path, default=Path("configs/models.yaml"))
     viewer.add_argument("--port", type=int, default=8765)
+    viewer.add_argument("--workflows", type=Path, default=Path("configs/workflows.json"))
+    learn = commands.add_parser("learn-workflows", help="extract verified routines from a development archive")
+    learn.add_argument("run_dir", type=Path)
+    learn.add_argument("--output", type=Path, required=True)
     viewer.add_argument("--tunnel-origin", help="exact HTTPS origin of a private Microsoft Dev Tunnel")
     for name in ("status", "evaluate", "stop"):
         sub = commands.add_parser(name)
@@ -76,10 +80,14 @@ def main():
         with (args.run_dir / "supervisor.lock").open("a") as lock:
             fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
             print(package_run(args.run_dir))
+    elif args.command == "learn-workflows":
+        from embodiedmind.memory.workflows import learn_doorkey
+
+        learn_doorkey(args.run_dir, args.output)
     elif args.command == "viewer":
         from embodiedmind.viewer.server import serve
 
-        serve(args.runs, args.sandbox_output, args.models, args.port, args.tunnel_origin)
+        serve(args.runs, args.sandbox_output, args.models, args.port, args.tunnel_origin, args.workflows)
 
 
 def _smoke(args):

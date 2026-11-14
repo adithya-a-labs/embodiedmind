@@ -1,0 +1,144 @@
+"""Resolve model choices using only observations and the agent's own map."""
+
+import json
+from collections import deque
+from dataclasses import dataclass
+
+from embodiedmind.memory.spatial import DIRECTION_VECTORS
+from embodiedmind.reasoning.action_validator import ActionDecision, _unique_object, parse_action
+from embodiedmind.reasoning.prompts import SYSTEM, prompt_for
+
+GUARDED = {"B0G", "B3G", "B4", "B5", "B6"}
+AGENTIC = {"B5", "B6"}
+GOALS = ("primitive", "approach", "verify", "explore")
+GOAL_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "goal": {"type": "string", "enum": GOALS},
+        "action": {"type": "integer", "minimum": 0, "maximum": 6},
+        "evidence": {"type": "string", "maxLength": 120},
+    },
+    "required": ["goal", "action", "evidence"],
+    "additionalProperties": False,
+}
+
+
+@dataclass(frozen=True)
+class Resolution:
+    proposed: ActionDecision
+    action: int
+    goal: str = "primitive"
+    reason: str | None = None
+    route: tuple[int, ...] = ()
+
+
+def action_request(model, observation, context, seed, variant):
+    system = SYSTEM
+    if variant in AGENTIC:
+        system = (
+            SYSTEM.split("Return JSON", 1)[0] + " Return JSON with goal, action, and evidence. "
+            "Choose primitive to execute action directly; "
+            "approach to route to the supplied fact ID in evidence; verify to look at a last-seen "
+            "fact again; or explore to navigate toward unknown space. Use action 0 as a placeholder "
+            "for non-primitive goals. Cite visible or explore if you do not cite a fact. "
+            "An unknown cell can be observed before entering it."
+        )
+    prompt = prompt_for(observation, context)
+    if variant in AGENTIC:
+        prompt = prompt.replace("Return one JSON action with a source citation.",
+                                "Return one JSON goal, action, and evidence.")
+    request = model.request(system, prompt, seed)
+    if variant in AGENTIC:
+        request["format"] = GOAL_SCHEMA
+    return request
+
+
+def passable(cell):
+    return cell is not None and (cell.object in {"empty", "floor", "goal"}
+                                 or cell.object == "door" and cell.state == "open")
+
+
+def local_alternative(observation):
+    return 0 if passable(observation.cell(0, -1)) else 1
+
+
+def _route(agent, target=None):
+    odometry = agent.odometry
+    facts = agent.index.recall(odometry.segment)
+    cells = {fact.position: fact for fact in facts}
+    position, heading = odometry.position, odometry.direction
+    queue = deque([(position, heading, ())])
+    seen = {(position, heading)}
+    while queue:
+        point, heading, path = queue.popleft()
+        dx, dy = DIRECTION_VECTORS[heading]
+        ahead = point[0] + dx, point[1] + dy
+        if target is not None and ahead == target:
+            return path
+        if target is None and path and ahead not in cells and ahead != position:
+            return path
+        neighbors = [(point, (heading - 1) % 4, 0), (point, (heading + 1) % 4, 1)]
+        cell = cells.get(ahead)
+        if ahead == position or cell and (cell.appearance[0] in {"empty", "floor", "goal"}
+                                         or cell.appearance == ("door", cell.appearance[1], "open")):
+            neighbors.append((ahead, heading, 2))
+        for next_cell, next_heading, action in neighbors:
+            if (next_cell, next_heading) not in seen:
+                seen.add((next_cell, next_heading))
+                queue.append((next_cell, next_heading, (*path, action)))
+    return None
+
+
+def _goal_response(raw):
+    try:
+        value = json.loads(raw, object_pairs_hook=_unique_object)
+        goal = value.pop("goal")
+        if goal not in GOALS:
+            raise ValueError
+        return goal, parse_action(json.dumps(value))
+    except (ValueError, TypeError, AttributeError, KeyError):
+        return "primitive", ActionDecision(1, "", False, "invalid_goal")
+
+
+def resolve_response(raw, observation, agent, variant):
+    goal, proposed = _goal_response(raw) if variant in AGENTIC else ("primitive", parse_action(raw))
+    action, reason, route = proposed.action, None, ()
+    if goal != "primitive" and proposed.valid:
+        refs = {fact["id"]: tuple(fact["position"]) for fact in agent.audit()["selected_facts"]
+                if "position" in fact}
+        if goal == "explore":
+            route = _route(agent)
+            # At the frontier, turn to gather another view. Unknown is not an obstacle.
+            action = 2 if observation.cell(1, 0) is None else (
+                route[0] if route else local_alternative(observation)
+            )
+        elif proposed.evidence in refs:
+            target = refs[proposed.evidence]
+            route = _route(agent, target)
+            if route:
+                action = route[0]
+            elif route == () and goal == "approach":
+                cell = observation.cell(1, 0)
+                action = _interact(agent, observation, cell)
+            else:
+                frontier = _route(agent)
+                action = frontier[0] if frontier else local_alternative(observation)
+                reason = "verify_target_visible" if route == () else "no_known_route"
+        else:
+            action, reason = local_alternative(observation), "unknown_fact_reference"
+
+    cell = observation.cell(1, 0)
+    if variant in GUARDED and action == 2 and cell is not None and not passable(cell):
+        action, reason = local_alternative(observation), f"blocked_by_visible_{cell.object}"
+    return Resolution(proposed, action, goal, reason, route or ())
+
+
+def _interact(agent, observation, cell):
+    subgoal = agent.audit()["subgoal"]
+    if cell and cell.object == "key" and subgoal == "Find key" and not observation.carrying:
+        return 3
+    if cell and cell.object == "door" and subgoal == "Find and cross door":
+        return 2 if cell.state == "open" else 5
+    if cell and cell.object == "goal":
+        return 2
+    return 6 if cell and cell.object in {"key", "ball", "box"} else local_alternative(observation)

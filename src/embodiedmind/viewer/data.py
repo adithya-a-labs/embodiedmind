@@ -9,16 +9,14 @@ from uuid import uuid4
 
 import yaml
 
-from embodiedmind.agents import make_agent
+from embodiedmind.agents import VARIANTS, make_agent
 from embodiedmind.control.controller import PrimitiveController
 from embodiedmind.environments.dynamic_world import DYNAMIC_ENV_ID, INTERVENTIONS
 from embodiedmind.environments.factory import OFFICIAL_ENVIRONMENTS
 from embodiedmind.environments.visual_state import board_snapshot, viewer_environment
-from embodiedmind.reasoning.action_validator import ACTION_NAMES, parse_action
+from embodiedmind.reasoning.action_validator import ACTION_NAMES
+from embodiedmind.reasoning.grounding import action_request, resolve_response
 from embodiedmind.reasoning.llm_client import Ollama
-from embodiedmind.reasoning.prompts import SYSTEM, prompt_for
-
-VARIANTS = ("B0", "B1", "B2", "B3")
 MAX_ACTIONS = 256
 
 
@@ -36,6 +34,7 @@ def event_from_trace(row):
         "scripted": row["scripted_prefix"], "facts": row["memory"].get("selected_facts", []),
         "revisions": row["memory"].get("revisions", []),
         "inference_seconds": row["inference_seconds"],
+        "planning": row.get("planning"), "subgoal": row["memory"].get("subgoal"),
     }
 
 
@@ -44,12 +43,13 @@ def public_json(observation):
 
 
 class ViewerData:
-    def __init__(self, runs, sandbox_output, models):
+    def __init__(self, runs, sandbox_output, models, workflows=None):
         self.runs = {"": runs.resolve()} if runs is not None else {
             "": Path("results/runs").resolve(), "outputs/": Path("outputs").resolve(),
         }
         self.sandbox_output = sandbox_output.resolve()
         self.models = models
+        self.workflows = workflows
 
     def catalog(self):
         return [{"id": prefix + path.parent.relative_to(root).as_posix(), "split": read_json(path)["split"]}
@@ -154,7 +154,12 @@ class ViewerData:
             env.close()
 
     def _play(self, env, job, limits, prefix, actions, variant, branch, body):
-        controller, agent = PrimitiveController(env), make_agent(variant)
+        workflows = limits.get("workflows")
+        if variant == "B6" and not workflows:
+            if self.workflows is None or not self.workflows.is_file():
+                raise ValueError("B6 needs a verified workflow library. Set --workflows when starting the viewer.")
+            workflows = read_json(self.workflows)
+        controller, agent = PrimitiveController(env), make_agent(variant, workflows or ())
         observation = controller.reset(job["seed"])
         previous = moved = result = decision = None
         records = []
@@ -177,15 +182,18 @@ class ViewerData:
             model_values["endpoint"] = os.environ.get("OLLAMA_HOST", model_values["endpoint"])
             model = Ollama(**model_values)
             model.verify()
-            request = model.request(SYSTEM, prompt_for(observation, agent.context(observation, limits["memory_bytes"])),
-                                    (job["seed"] * 1000 + index) % (2**31))
+            context = agent.context(observation, limits["memory_bytes"])
+            request = action_request(model, observation, context, (job["seed"] * 1000 + index) % (2**31), variant)
             raw, elapsed = model.generate(request)
-            selected = parse_action(raw["response"])
-            result = controller.step(selected.action)
+            resolved = resolve_response(raw["response"], observation, agent, variant)
+            selected = resolved.proposed
+            result = controller.step(resolved.action)
             observation = result.observation
-            actions = actions + [selected.action]
-            decision = {**asdict(selected), "inference_seconds": elapsed}
-            records.append({"action": selected.action, "moved": result.moved, "reward": result.reward,
+            actions = actions + [resolved.action]
+            decision = {**asdict(selected), "action": resolved.action, "proposed_action": selected.action,
+                        "inference_seconds": elapsed, "subgoal": agent.audit().get("subgoal"),
+                        "planning": {"goal": resolved.goal, "reason": resolved.reason, "route": resolved.route}}
+            records.append({"action": resolved.action, "moved": result.moved, "reward": result.reward,
                             "decision": decision})
             done = result.terminated or result.truncated
         state = {"board": board_snapshot(env), "observation": asdict(observation),

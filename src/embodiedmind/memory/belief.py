@@ -15,7 +15,8 @@ CHANGEABLE = frozenset({"ball", "box", "door", "key"})
 
 
 class BeliefLedger:
-    def __init__(self) -> None:
+    def __init__(self, *, age_after: int | None = STALE_AFTER_STEPS) -> None:
+        self.age_after = age_after
         self.active: dict[tuple[int, Geometry], Fact] = {}
         self.history: list[Fact] = []
 
@@ -43,7 +44,8 @@ class BeliefLedger:
             if (
                 fact.status == "OBSERVED"
                 and fact.appearance[0] in CHANGEABLE
-                and event.step - fact.last_verified_step >= STALE_AFTER_STEPS
+                and self.age_after is not None
+                and event.step - fact.last_verified_step >= self.age_after
             ):
                 stale = replace(fact, status="STALE")
                 self.active[key] = stale

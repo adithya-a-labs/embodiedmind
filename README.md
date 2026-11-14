@@ -108,3 +108,23 @@ Keep the laptop awake, the viewer running, and the tunnel connected. Keep
 Ollama on loopback and leave port 11434 out of the tunnel.
 
 See the [held-out results summary](reports/technical_report.md) and [final run status](STATUS.md).
+
+### Memory development modes
+
+The original B0–B3 conditions still use the frozen action interface. B0G and
+B3G add the same visible-obstacle guard to B0 and B3. B4 retrieves evidence
+for the current subgoal. B5 adds `approach`, `verify`, and `explore` decisions
+that resolve to a single primitive action using the observed map. B6 adds an
+episode-independent DoorKey routine validated against successful development traces.
+
+```sh
+.venv/bin/embodiedmind run --config configs/memory-doorkey-dev.yaml --monitor
+.venv/bin/embodiedmind run --config configs/memory-relocation-dev.yaml --monitor
+```
+
+The viewer lists the new archives under **Replay** and **Live monitor**. The same
+variants are available in **Sandbox**. B6 uses `configs/workflows.json` by
+default. To build a library from another development archive, use
+`embodiedmind learn-workflows RUN_DIR --output NEW_LIBRARY.json`. Keep the
+source seeds disjoint from the evaluation seeds. The library contains routines
+and provenance, with no source-world coordinates in the agent's prompt.

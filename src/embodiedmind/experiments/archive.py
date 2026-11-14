@@ -17,7 +17,8 @@ def package_episode(directory):
         with trace.open(encoding="utf-8") as source, (directory / "steps.csv").open(
             "w", encoding="utf-8", newline="",
         ) as output:
-            fields = ("step", "action", "evidence", "moved", "reward", "terminated", "truncated",
+            fields = ("step", "action", "proposed_action", "goal", "controller_reason", "subgoal",
+                      "evidence", "moved", "reward", "terminated", "truncated",
                       "prompt_tokens", "completion_tokens", "inference_seconds")
             writer = csv.DictWriter(output, fieldnames=fields)
             writer.writeheader()
@@ -31,6 +32,10 @@ def package_episode(directory):
                 writer.writerow({
                     **{name: row.get(name) for name in fields if name in row},
                     "action": row["executed_action"], "evidence": row["decision"]["evidence"],
+                    "proposed_action": row["decision"]["action"],
+                    "goal": row.get("planning", {}).get("goal"),
+                    "controller_reason": row.get("planning", {}).get("reason"),
+                    "subgoal": row.get("memory", {}).get("subgoal"),
                     "prompt_tokens": response.get("prompt_eval_count"),
                     "completion_tokens": response.get("eval_count"),
                 })

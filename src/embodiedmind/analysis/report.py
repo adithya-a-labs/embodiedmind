@@ -9,6 +9,8 @@ from dataclasses import asdict, fields
 from pathlib import Path
 from statistics import fmean
 
+from embodiedmind.agents import VARIANTS as KNOWN_VARIANTS
+
 from .statistics import METRICS, Comparison, compare, numeric, stratify
 
 
@@ -21,7 +23,6 @@ EPISODE_FIELDS = (
 )
 SPLIT_NAMES = {"dev": "development", "pilot": "development", "test": "static"}
 COVERAGE_STATUSES = ("valid", "excluded", "failed", "pending", "invalid")
-KNOWN_VARIANTS = {"B0", "B1", "B2", "B3"}
 VISUAL_TYPES = {".gif": "replay", ".mp4": "replay", ".png": "image", ".webp": "image"}
 
 
