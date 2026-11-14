@@ -20,7 +20,7 @@ def write_event(stream, value):
     stream.flush()
 
 
-def episode(job, limits, model, path: Path, keep_visuals=False):
+def episode(job, limits, model, path: Path, keep_visuals=False, monitor=None):
     if job["intervention"] != "none" or job["environment"].startswith("EmbodiedMind-"):
         from embodiedmind.environments.dynamic_world import InterventionConfig, make_dynamic_environment
 
@@ -31,12 +31,12 @@ def episode(job, limits, model, path: Path, keep_visuals=False):
     else:
         env = make_environment(job["environment"], render_mode="rgb_array" if keep_visuals else None)
     try:
-        return _run_episode(env, make_agent(job["variant"]), job, limits, model, path, keep_visuals)
+        return _run_episode(env, make_agent(job["variant"]), job, limits, model, path, keep_visuals, monitor)
     finally:
         env.close()
 
 
-def _run_episode(env, agent, job, limits, model, path, keep_visuals):
+def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=None):
     controller = PrimitiveController(env)
     initial = controller.reset(job["seed"])
     observation = initial
@@ -52,6 +52,16 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals):
     last_view = {}
     invalidated = {}
     scoring_odometry = Odometry()
+    last_action = None
+
+    def publish(phase, step, observation, decision=None):
+        if monitor is not None:
+            from embodiedmind.environments.visual_state import board_snapshot
+
+            monitor({
+                "phase": phase, "step": step, "observation": asdict(observation),
+                "board": board_snapshot(env), "decision": decision,
+            })
 
     def frame():
         if keep_visuals:
@@ -62,6 +72,7 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals):
                 frames.append(image)
 
     frame()
+    publish("started", 0, initial)
     with (path / "trajectory.jsonl").open("w", encoding="utf-8") as trace:
         for index in range(min(limits["max_steps"], limits["max_calls"] + len(prefix))):
             agent.observe(observation, index, previous_action, moved)
@@ -73,6 +84,7 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals):
                 decision = ActionDecision(prefix[index], "", True)
             else:
                 request = model.request(SYSTEM, prompt_for(observation, context), job["seed"] * 1000 + index)
+                publish("thinking", index, observation, last_action)
                 raw, elapsed = model.generate(request)
                 decision = parse_action(raw["response"])
                 calls += 1
@@ -105,6 +117,15 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals):
             )
             stale_reference = decision.valid and decision.evidence in invalidated
             result = controller.step(decision.action)
+            last_action = {
+                **asdict(decision), "moved": result.moved, "reward": result.reward,
+                "terminated": result.terminated, "truncated": result.truncated,
+                "inference_seconds": elapsed,
+            }
+            if monitor is not None and request:
+                last_action["hint"] = next((line for line in request["prompt"].splitlines()
+                                            if line.startswith(("Route to visible objective", "No visible route"))), "")
+            publish("acted", index + 1, result.observation, last_action)
             write_event(trace, {
                 "step": index, "observation": asdict(observation),
                 "next_observation": asdict(result.observation), "memory": audit,
@@ -140,6 +161,7 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals):
     with (path / "evaluator.json").open("w", encoding="utf-8") as private_data:
         json.dump({"events": interventions, "terminated": terminated, "truncated": truncated}, private_data)
     success = reward > 0 and bool(terminated)
+    publish("finished", steps, observation, {**last_action, "success": success})
     return {
         **job, "status": "completed", "mission": initial.mission, "success": success,
         "outcome": "success" if success else ("terminated_failure" if terminated else

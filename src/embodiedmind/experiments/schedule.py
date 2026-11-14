@@ -133,15 +133,21 @@ def complete(episodes, job_id):
     return True
 
 
-def execute(root, job, limits, model, visuals):
+def execute(root, job, limits, model, visuals, monitor=False):
     attempts = root / "attempts" / job["id"]
     attempts.mkdir(parents=True, exist_ok=True)
     for retry in range(limits.get("infrastructure_retries", 2) + 1):
         attempt = attempts / f"{time.time_ns()}-{retry}"
         attempt.mkdir()
         atomic_json(attempt / "job.json", {**job, "started": now()})
+
+        def publish(event):
+            atomic_json(root / "live" / f"{job['id']}.json", {
+                **event, "job": job, "at": now(), "attempt": attempt.name,
+            })
+
         try:
-            summary = episode(job, limits, model, attempt, visuals)
+            summary = episode(job, limits, model, attempt, visuals, publish if monitor else None)
             summary.update({"attempt": attempt.name, "completed": now()})
             atomic_json(attempt / "summary.json", summary)
             atomic_json(attempt / "integrity.json", {
@@ -151,16 +157,21 @@ def execute(root, job, limits, model, visuals):
             return {"id": job["id"], "attempt": attempt.name, "success": summary["success"]}
         except InferenceUnavailable as exc:
             atomic_json(attempt / "error.json", {"kind": "infrastructure", "at": now(), "error": str(exc)})
+            if monitor:
+                publish({"phase": "retrying" if retry < limits.get("infrastructure_retries", 2)
+                         else "failed", "error": str(exc)})
             if retry == limits.get("infrastructure_retries", 2):
                 return {"id": job["id"], "error": str(exc)}
             time.sleep(2 ** retry)
         except Exception as exc:
             atomic_json(attempt / "error.json", {"kind": "execution", "at": now(), "error": str(exc)})
+            if monitor:
+                publish({"phase": "failed", "error": str(exc)})
             raise
     raise AssertionError("retry loop did not return")
 
 
-def run(config, root, model_config, slots, profile, limit_jobs):
+def run(config, root, model_config, slots, profile, limit_jobs, monitor=False):
     if limit_jobs is not None and limit_jobs < 1:
         raise ValueError("a job limit must be positive")
     if slots not in (1, 2):
@@ -173,6 +184,8 @@ def run(config, root, model_config, slots, profile, limit_jobs):
     with (root / "supervisor.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         (root / "episodes").mkdir(exist_ok=True)
+        if monitor:
+            (root / "live").mkdir(exist_ok=True)
         manifest = build_manifest(config, model_config, model, model.verify(), slots, profile)
         path = root / "manifest.json"
         if path.exists():
@@ -187,13 +200,13 @@ def run(config, root, model_config, slots, profile, limit_jobs):
         stop = Event()
         previous = {sig: signal.signal(sig, lambda *_: stop.set()) for sig in (signal.SIGINT, signal.SIGTERM)}
         try:
-            return supervise(root, manifest, model, stop, limit_jobs)
+            return supervise(root, manifest, model, stop, limit_jobs, monitor)
         finally:
             for sig, handler in previous.items():
                 signal.signal(sig, handler)
 
 
-def supervise(root, manifest, model, stop, limit_jobs):
+def supervise(root, manifest, model, stop, limit_jobs, monitor=False):
     all_jobs = manifest["jobs"]
     planned = len(all_jobs)
     pending = [job for job in all_jobs if not complete(root / "episodes", job["id"])]
@@ -215,7 +228,7 @@ def supervise(root, manifest, model, stop, limit_jobs):
                     if job is None:
                         return
                     visuals = job["seed"] == all_jobs[0]["seed"] or manifest["split"] == "smoke"
-                    future = pool.submit(execute, root, job, settings["limits"], model, visuals)
+                    future = pool.submit(execute, root, job, settings["limits"], model, visuals, monitor)
                     active[future] = job["id"]
 
             top_up()

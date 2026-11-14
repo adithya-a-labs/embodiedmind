@@ -35,4 +35,37 @@ The report, manifest, checksummed raw logs, screenshots and replays live under t
 
 ## Results
 
+### Experiment viewer
+
+From the Ubuntu checkout, start the viewer and open <http://127.0.0.1:8765>.
+
+```sh
+.venv/bin/embodiedmind viewer
+```
+
+With the original study files under `results/runs/`, Replay opens DoorKey seed 1015
+with B0 and B2 side by side, immediately before action 8. The boards show the
+evaluator state and the logged agent observation separately. The action inspector
+shows the hint, chosen action and outcome. Open **Model input and memory** and
+select a spatial fact to locate it on the evaluator board. Replaying uses the
+saved actions and checks the reconstructed observations and outcomes against
+the trace. It does not call Ollama. Use `viewer --runs PATH` for another archive.
+
+To see a live run, keep the viewer open and start a monitored run in another
+terminal. Use a fresh directory for this development example:
+
+```sh
+.venv/bin/embodiedmind run --config configs/smoke.yaml \
+  --output results/runs/viewer-smoke --monitor
+```
+
+Select **Live monitor**, refresh runs, and select `viewer-smoke`. The runner
+publishes evaluator snapshots alongside the run and continues if you close
+the browser. Use `--monitor` with `resume` to monitor a resumed run.
+
+In **Sandbox**, start a seeded environment or use **Take over before action**
+from either side of a replay. Use the buttons or arrow keys to move and turn.
+**Agent move** and **Auto-play** use the configured local Ollama model. Saved
+exploratory sessions go under `results/sandbox/` by default.
+
 See the [held-out results summary](reports/technical_report.md) and [final run status](STATUS.md).

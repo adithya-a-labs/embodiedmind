@@ -21,6 +21,12 @@ def main():
         queue.add_argument("--profile", type=Path)
         queue.add_argument("--parallel", type=int, default=1)
         queue.add_argument("--limit-jobs", type=int)
+        queue.add_argument("--monitor", action="store_true", help="publish evaluator snapshots for the local viewer")
+    viewer = commands.add_parser("viewer", help="open the local experiment viewer")
+    viewer.add_argument("--runs", type=Path, default=Path("results/runs"))
+    viewer.add_argument("--sandbox-output", type=Path, default=Path("results/sandbox"))
+    viewer.add_argument("--models", type=Path, default=Path("configs/models.yaml"))
+    viewer.add_argument("--port", type=int, default=8765)
     for name in ("status", "evaluate", "stop"):
         sub = commands.add_parser(name)
         sub.add_argument("run_dir", type=Path)
@@ -33,7 +39,7 @@ def main():
     elif args.command in {"run", "resume"}:
         from embodiedmind.experiments.schedule import run
 
-        result = run(args.config, args.output, args.models, args.parallel, args.profile, args.limit_jobs)
+        result = run(args.config, args.output, args.models, args.parallel, args.profile, args.limit_jobs, args.monitor)
         print(json.dumps(result, sort_keys=True))
         if result["status"] == "blocked":
             raise SystemExit(1)
@@ -49,6 +55,10 @@ def main():
         from embodiedmind.analysis.report import generate_combined_report
 
         print(generate_combined_report(args.run_dirs, args.output))
+    elif args.command == "viewer":
+        from embodiedmind.viewer.server import serve
+
+        serve(args.runs, args.sandbox_output, args.models, args.port)
 
 
 def _smoke(args):
