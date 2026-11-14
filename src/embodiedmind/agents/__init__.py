@@ -3,6 +3,7 @@
 from embodiedmind.agents.base import Agent
 from embodiedmind.agents.cue_memory import CueMemory
 from embodiedmind.agents.hybrid import Hybrid
+from embodiedmind.agents.mission_memory import MissionMemory
 from embodiedmind.agents.grounded import GroundedMemory
 from embodiedmind.agents.reactive import Reactive
 from embodiedmind.agents.structured import Structured
@@ -13,7 +14,7 @@ from embodiedmind.memory.workflows import HANDWRITTEN
 VARIANTS = {"B0": Reactive, "B1": TextMemory, "B2": Structured, "B3": Hybrid,
             "B0G": Reactive, "B3G": Hybrid, "B4": GroundedMemory,
             "B5": GroundedMemory, "B6": GroundedMemory, "B7": GroundedMemory, "B8": CueMemory,
-            "B9N": ProgressMemory, "B9": TaskMemory}
+            "B9N": ProgressMemory, "B9": TaskMemory, "B10": MissionMemory}
 
 
 def make_agent(variant: str, workflows=()) -> Agent:

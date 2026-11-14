@@ -6,6 +6,7 @@ from dataclasses import dataclass
 
 from embodiedmind.memory.spatial import DIRECTION_VECTORS
 from embodiedmind.reasoning.action_validator import ActionDecision, _unique_object, parse_action
+from embodiedmind.reasoning.mission_control import mission_action
 from embodiedmind.reasoning.progress import route as progress_route, task_action
 from embodiedmind.reasoning.prompts import (
     DYNAMIC_OBSTACLES_MISSION,
@@ -17,8 +18,8 @@ from embodiedmind.reasoning.prompts import (
     prompt_for,
 )
 
-GUARDED = {"B0G", "B3G", "B4", "B5", "B6", "B7", "B8", "B9N", "B9"}
-AGENTIC = {"B5", "B6", "B7", "B8", "B9N", "B9"}
+GUARDED = {"B0G", "B3G", "B4", "B5", "B6", "B7", "B8", "B9N", "B9", "B10"}
+AGENTIC = {"B5", "B6", "B7", "B8", "B9N", "B9", "B10"}
 GOALS = ("primitive", "approach", "verify", "explore")
 GOAL_SCHEMA = {
     "type": "object",
@@ -189,7 +190,13 @@ def resolve_response(raw, observation, agent, variant):
             action = local_alternative(observation) if visible_action is None else visible_action
             reason = "unknown_fact_reference"
 
-    if variant == "B8":
+    if variant == "B10":
+        override = mission_action(agent, observation)
+        if observation.mission == DYNAMIC_OBSTACLES_MISSION:
+            override = _cue_memory_action(agent, observation, goal, proposed.valid, route)
+        if override is not None:
+            action, reason, route = override
+    elif variant == "B8":
         override = _cue_memory_action(agent, observation, goal, proposed.valid, route)
         if override is not None:
             action, reason, route = override

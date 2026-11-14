@@ -14,7 +14,7 @@ from .statistics import numeric, stratify
 
 COLORS = {"B0": "#64748b", "B1": "#31736b", "B2": "#b47035", "B3": "#344e90",
           "B0G": "#723e59", "B3G": "#566826", "B4": "#296074", "B5": "#735e18", "B6": "#734e8d",
-          "B7": "#9b5240", "B8": "#32655a", "B9N": "#69449c", "B9": "#2064a0"}
+          "B7": "#9b5240", "B8": "#32655a", "B9N": "#69449c", "B9": "#2064a0", "B10": "#b65d27"}
 PLOT_GROUPS = {
     "success": (("success", "Mission success", "Share of episodes"),),
     "efficiency": (

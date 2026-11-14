@@ -113,6 +113,38 @@ def test_b9_completes_public_observation_subgoals(game, seed, required_reasons):
     assert required_reasons <= reasons
 
 
+@pytest.mark.parametrize("game, seed, cap, interactions", [
+    ("MiniGrid-DoorKey-8x8-v0", 4002, 48, {"pickup", "toggle"}),
+    ("BabyAI-BlockedUnlockPickup-v0", 4003, 48, {"pickup", "drop", "toggle"}),
+    ("MiniGrid-MultiRoom-N6-v0", 4004, 80, {"toggle"}),
+])
+def test_b10_advances_verified_interactions_under_repeated_verify(game, seed, cap, interactions):
+    raw = '{"goal":"verify","action":0,"evidence":"visible"}'
+    env = make_environment(game)
+    controller = PrimitiveController(env)
+    agent = make_agent("B10")
+    observed_effects = set()
+    previous = moved = None
+    try:
+        observation = controller.reset(seed)
+        for step in range(cap):
+            agent.observe(observation, step, previous, moved)
+            agent.context(observation, 768)
+            if effect := agent.audit().get("verified_interaction"):
+                observed_effects.add(effect)
+            decision = resolve_response(raw, observation, agent, "B10")
+            result = controller.step(decision.action)
+            if result.terminated or result.truncated:
+                assert result.terminated and result.reward > 0
+                break
+            observation, previous, moved = result.observation, decision.action, result.moved
+        else:
+            pytest.fail("B10 reached its cap")
+    finally:
+        env.close()
+    assert interactions <= observed_effects
+
+
 @pytest.mark.parametrize("seed", [11, 14, 21, 36])
 def test_b8_reaches_the_matching_branch_even_with_repeated_explore(seed):
     raw = '{"goal":"explore","action":0,"evidence":"explore"}'
