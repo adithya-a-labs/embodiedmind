@@ -49,6 +49,10 @@ def test_replay_reconstructs_view_and_sandbox_forks_without_changing_trace(tmp_p
     (path / "summary.json").write_text(json.dumps({"steps": 1, **job}))
     (path / "evaluator.json").write_text('{"events":[]}')
     data = ViewerData(runs, tmp_path / "sandbox", tmp_path / "models.yaml")
+    assert data.catalog(include_coverage=True)[0]["coverage"] == {job["environment"]: ["B2"]}
+    (path / "summary.json").unlink()
+    assert data.catalog(include_coverage=True)[0]["coverage"] == {}
+    (path / "summary.json").write_text(json.dumps({"steps": 1, **job}))
 
     replay = data.replay("static", job["id"])
     assert replay["frames"][0]["event"]["action"] == 0

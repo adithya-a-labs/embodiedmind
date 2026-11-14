@@ -20,6 +20,10 @@
     <div class="heading"><div><p class="eyebrow" id="mode-label">Recorded episodes</p><h1 id="title">DoorKey comparison</h1><p id="subtitle">Seed 1015 · B0 Reactive vs B2 Structured</p></div></div>
     <p id="error" role="alert" hidden></p>
     <section id="replay" aria-label="Replay">
+      <div class="toolbar replay-filters" aria-label="Filter saved runs" role="group">
+        <label>Game<select id="replay-game"></select></label>
+        <label>Agent in replay<select id="replay-agent"></select></label>
+      </div>
       <div class="toolbar">
         <label>Run<select id="replay-run"></select></label>
         <label>Scenario<select id="scenario"></select></label>

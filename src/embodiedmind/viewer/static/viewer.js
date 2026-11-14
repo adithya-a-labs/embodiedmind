@@ -17,7 +17,7 @@ const worlds = {"MiniGrid-DoorKey-8x8-v0":"DoorKey","BabyAI-GoToObjMazeS7-v0":"G
   "BabyAI-BlockedUnlockPickup-v0":"Blocked Unlock Pickup","BabyAI-PutNextS5N2-v0":"Put Next",
   "MiniGrid-Dynamic-Obstacles-8x8-v0":"Dynamic Obstacles","BabyAI-SynthS5R2-v0":"Synth"};
 const defaultRun = "embodiedmind-20261114-0428-ist/static";
-const model = {mode:"replay", runs:[], jobs:[], episodes:[], position:7, request:0, play:null,
+const model = {mode:"replay", runs:[], replayRuns:[], jobs:[], episodes:[], position:7, request:0, play:null,
   liveTimer:null, liveRequest:0, liveCatalogAt:0, followLive:true,
   sandbox:null, sandboxTimer:null, sandboxBusy:false};
 
@@ -31,6 +31,7 @@ function labelRun(run) {
   return run.id.replace("embodiedmind-20261114-0428-ist/", "Study / ");
 }
 function labelWorld(id) { return worlds[id] ?? id; }
+function labelVariant(id) { return variants[id] ? id+" · "+variants[id] : id; }
 function options(select, entries, previous = select.value) {
   select.replaceChildren(...entries.map(([value, label]) => new Option(label, value)));
   if (entries.some(([value]) => value === previous)) select.value = previous;
@@ -214,8 +215,15 @@ function setHeading(label,title,subtitle) {
   $("mode-label").textContent=label; $("title").textContent=title; $("subtitle").textContent=subtitle;
 }
 const scenario = (job) => [job.environment,job.intervention,job.replicate].join("|");
+function replayRuns(preferred = $("replay-run").value) {
+  const game=$("replay-game").value, agent=$("replay-agent").value;
+  const matches=model.replayRuns.filter(run=>Object.entries(run.coverage).some(([world, agents])=>
+    (!game || game===world) && (!agent || agents.includes(agent))));
+  options($("replay-run"),matches.map(run=>[run.id,labelRun(run)]),preferred);
+}
 function updateSeeds(seed) {
-  const jobs=model.jobs.filter(j=>scenario(j)===$("scenario").value);
+  const agent=$("replay-agent").value;
+  const jobs=model.jobs.filter(j=>scenario(j)===$("scenario").value && (!agent || j.variant===agent));
   options($("seed"),[...new Set(jobs.map(j=>j.seed))].sort((a,b)=>a-b).map(n=>[String(n),n]),seed);
 }
 async function openRun(initial=false) {
@@ -226,29 +234,36 @@ async function openRun(initial=false) {
   const jobs=run ? await api("jobs",{run}) : [];
   if (token!==model.request) return;
   model.jobs=jobs;
-  const unique=new Map(model.jobs.map(j=>[scenario(j),labelWorld(j.environment)+" · "+j.intervention.replaceAll("_"," ")
+  const game=$("replay-game").value, agent=$("replay-agent").value;
+  const filtered=jobs.filter(j=>(!game || j.environment===game) && (!agent || j.variant===agent));
+  const unique=new Map(filtered.map(j=>[scenario(j),labelWorld(j.environment)+" · "+j.intervention.replaceAll("_"," ")
     +(j.replicate ? " · repeat "+(j.replicate+1):"")]));
   options($("scenario"),[...unique],initial?"MiniGrid-DoorKey-8x8-v0|none|0":"");
   updateSeeds(initial?"1015":"");
-  await loadPair(initial ? 7 : 0, initial);
+  await loadPair(initial ? 7 : 0, initial, agent);
 }
-async function loadPair(position, initial=false) {
+async function loadPair(position, initial=false, agent=$("replay-agent").value) {
   const token=++model.request;
   stopReplay(); error("");
   const match = model.jobs.filter(j=>scenario(j)===$("scenario").value && j.seed===Number($("seed").value));
-  const entries=match.map(j=>[j.variant,j.variant+" · "+variants[j.variant]]).sort();
-  options($("left"),entries,initial?"B0":$("left").value);
+  const entries=match.map(j=>[j.variant,labelVariant(j.variant)])
+    .sort(([a],[b])=>a.localeCompare(b,undefined,{numeric:true}));
+  options($("left"),entries,initial?"B0":agent||$("left").value);
   const right=$("right").value;
-  options($("right"),entries,initial?"B2":right);
-  if (!initial && !right && entries.length>1) $("right").selectedIndex=1;
+  options($("right"),entries.length===1?[]:entries,initial?"B2":right);
+  if (!initial && (!right || agent) && $("right").value===$("left").value && entries.length>1)
+    $("right").selectedIndex=entries.findIndex(([id])=>id!==$("left").value);
+  for (const key of ["replay-run","scenario","seed","left","right"]) $(key).disabled=!$(key).options.length;
   model.episodes=[];
   renderReplay();
-  $("comparison").textContent=match.length?"Loading saved episodes…":"No completed episodes in this run.";
+  $("comparison").textContent=match.length?"Loading saved episodes…":
+    "No saved episodes match. Change the filters or open Sandbox to try this combination.";
   if (!match.length) return;
   const run=$("replay-run").value;
   let pair;
   try {
-    pair=await Promise.all(["left","right"].map(key=>api("replay",{run,job:match.find(j=>j.variant===$(key).value).id})));
+    const sides=entries.length===1?["left"]:["left","right"];
+    pair=await Promise.all(sides.map(key=>api("replay",{run,job:match.find(j=>j.variant===$(key).value).id})));
   } catch (failure) {
     if (token!==model.request) return;
     error(failure.message);
@@ -269,13 +284,13 @@ const milestones = {
 function milestone(key) {
   const indexes=model.episodes.map(({frames})=>frames.findIndex((frame,index)=>milestones[key](frame,frames[index+1])))
     .filter(index=>index>=0);
-  return key==="blocked" ? model.episodes[1]?.frames.findIndex(f=>isBlocked(f.event)) ?? -1 :
+  return key==="blocked" ? (model.episodes[1] ?? model.episodes[0])?.frames.findIndex(f=>isBlocked(f.event)) ?? -1 :
     indexes.length ? Math.min(...indexes) : -1;
 }
 function renderReplay() {
   if(model.mode!=="replay") return;
   const [first,second]=model.episodes;
-  const end=first?Math.max(first.summary.steps,second.summary.steps):0;
+  const end=first?Math.max(first.summary.steps,second?.summary.steps ?? 0):0;
   model.position=Math.min(end,Math.max(0,model.position));
   $("step").max=end; $("step").value=model.position;
   $("step-label").textContent=first && model.position===end?"Final state":"Action "+(model.position+1);
@@ -287,13 +302,13 @@ function renderReplay() {
     $("comparison").textContent="No episodes loaded.";
     return;
   }
-  setHeading("Recorded episodes",labelWorld(first.summary.environment)+" comparison",
+  setHeading("Recorded episodes",labelWorld(first.summary.environment)+(second?" comparison":" replay"),
     "Seed "+first.summary.seed+" · "+first.summary.mission);
   $("comparison").replaceChildren(...model.episodes.map(episode=>{
     const {summary,frames}=episode;
     const at=Math.min(model.position,frames.length-1);
     return boardCard({
-      title:summary.variant+" · "+variants[summary.variant],
+      title:labelVariant(summary.variant),
       status:summary.success?"Success · "+summary.steps+" actions":outcome(summary.outcome)+" · "+summary.steps+" actions",
       failed:!summary.success, frame:frames[at], action:at+1,
       intervention:episode.interventions.find(event=>event.step===at),
@@ -301,14 +316,17 @@ function renderReplay() {
     });
   }));
 }
-async function refreshCatalog() {
-  const catalog=await api("catalog");
+async function refreshCatalog(preferred = $("replay-run").value || defaultRun) {
+  const catalog=await api("catalog",{coverage:1});
   model.runs=catalog.runs;
-  const list=model.runs.map(r=>[r.id,labelRun(r)]);
-  options($("replay-run"),list,$("replay-run").value||defaultRun);
+  model.replayRuns=catalog.runs;
+  options($("replay-game"),[["","All games"],...catalog.environments.map(id=>[id,labelWorld(id)])]);
+  options($("replay-agent"),[["","All agents"],...catalog.variants.map(id=>[id,labelVariant(id)])]);
+  replayRuns(preferred);
   updateLiveOptions();
-  options($("sandbox-env"),catalog.environments.map(v=>[v,labelWorld(v)]), "MiniGrid-DoorKey-8x8-v0");
+  options($("sandbox-env"),catalog.environments.map(v=>[v,labelWorld(v)]), $("sandbox-env").value||"MiniGrid-DoorKey-8x8-v0");
   options($("sandbox-intervention"),catalog.interventions.map(v=>[v,v.replaceAll("_"," ")]));
+  options($("sandbox-variant"),catalog.variants.map(id=>[id,labelVariant(id)]), $("sandbox-variant").value||"B5");
 }
 function updateLiveOptions() {
   const selected=$("live-run").value;
@@ -421,9 +439,11 @@ async function autoAgent() {
 function safe(fn) { return (...args)=>Promise.resolve().then(()=>fn(...args)).catch(e=>error(e.message)); }
 
 document.querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>setMode(b.dataset.mode));
+for (const key of ["replay-game","replay-agent"]) $(key).onchange=safe(()=>{replayRuns();return openRun();});
 $("replay-run").onchange=safe(()=>openRun());
 $("scenario").onchange=safe(()=>{updateSeeds("");return loadPair(0);});
-for(const key of ["seed","left","right"]) $(key).onchange=safe(()=>loadPair(model.position));
+$("seed").onchange=safe(()=>loadPair(model.position));
+for(const key of ["left","right"]) $(key).onchange=safe(()=>loadPair(model.position,false,""));
 $("step").oninput=()=>{model.position=Number($("step").value);renderReplay();};
 $("prev").onclick=()=>{model.position--;renderReplay();}; $("next").onclick=()=>{model.position++;renderReplay();};
 for(const key of Object.keys(milestones)) $(key).onclick=()=>{model.position=milestone(key);renderReplay();};
@@ -450,7 +470,9 @@ $("follow-live").onclick=()=>{
 $("refresh-live").onclick=()=>updateLive(true);
 $("replay-live").onclick=safe(async()=>{
   const run=$("live-run").value;
-  options($("replay-run"),model.runs.map(item=>[item.id,labelRun(item)]),run);
+  $("replay-game").value="";
+  $("replay-agent").value="";
+  await refreshCatalog(run);
   setMode("replay");
   await openRun();
 });
@@ -473,5 +495,4 @@ document.addEventListener("keydown",event=>{
   const keyActions={ArrowLeft:0,ArrowRight:1,ArrowUp:2,p:3,d:4,t:5};
   if(keyActions[event.key]!==undefined){event.preventDefault();sandboxRequest({action:keyActions[event.key]});}
 });
-options($("sandbox-variant"),Object.entries(variants).map(([id,label])=>[id,id+" · "+label]),"B5");
-safe(async()=>{await refreshCatalog();if(location.hash==="#live") setMode("live"); else await openRun(true);})();
+safe(async()=>{await refreshCatalog();if(location.hash==="#live") setMode("live");await openRun(true);})();

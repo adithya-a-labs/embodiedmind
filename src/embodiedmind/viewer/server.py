@@ -6,6 +6,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 
+from embodiedmind.agents import VARIANTS
 from embodiedmind.reasoning.llm_client import InferenceUnavailable
 from embodiedmind.environments.dynamic_world import DYNAMIC_ENV_ID, INTERVENTIONS
 from embodiedmind.environments.factory import OFFICIAL_ENVIRONMENTS
@@ -84,8 +85,9 @@ def serve(runs, sandbox_output, models, port, tunnel_origin=None, workflows=None
                     self.send(204, "image/x-icon", b"")
                     return
                 elif method == "GET" and parsed.path == "/api/catalog":
-                    value = {"runs": data.catalog(), "environments": [*OFFICIAL_ENVIRONMENTS, DYNAMIC_ENV_ID],
-                             "interventions": INTERVENTIONS}
+                    value = {"runs": data.catalog(include_coverage=params.get("coverage") == ["1"]),
+                             "environments": [*OFFICIAL_ENVIRONMENTS, DYNAMIC_ENV_ID],
+                             "variants": list(VARIANTS), "interventions": INTERVENTIONS}
                 elif method == "GET" and parsed.path == "/api/jobs":
                     value = data.jobs(params["run"][0])
                 elif method == "GET" and parsed.path == "/api/replay":

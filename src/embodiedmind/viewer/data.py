@@ -65,15 +65,22 @@ class ViewerData:
         self.models = models
         self.workflows = workflows
 
-    def catalog(self):
+    def catalog(self, *, include_coverage=False):
         runs = []
         for prefix, root in self.runs.items():
             for path in sorted(root.glob("**/manifest.json")):
                 heartbeat = self.heartbeat(path.parent)
-                runs.append({
-                    "id": prefix + path.parent.relative_to(root).as_posix(), "split": read_json(path)["split"],
+                manifest = read_json(path)
+                run = {
+                    "id": prefix + path.parent.relative_to(root).as_posix(), "split": manifest["split"],
                     "status": live_status(heartbeat),
-                })
+                }
+                if include_coverage:
+                    coverage = {}
+                    for job in self.completed_jobs(path.parent, manifest):
+                        coverage.setdefault(job["environment"], set()).add(job["variant"])
+                    run["coverage"] = {env: sorted(variants) for env, variants in coverage.items()}
+                runs.append(run)
         return runs
 
     @staticmethod
@@ -93,7 +100,11 @@ class ViewerData:
 
     def jobs(self, run):
         root = self.run_path(run)
-        return [job for job in read_json(root / "manifest.json")["jobs"]
+        return self.completed_jobs(root, read_json(root / "manifest.json"))
+
+    @staticmethod
+    def completed_jobs(root, manifest):
+        return [job for job in manifest.get("jobs", [])
                 if (root / "episodes" / job["id"] / "summary.json").is_file()]
 
     def source(self, run, job_id):

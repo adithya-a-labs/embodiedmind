@@ -23,6 +23,7 @@ h1{font-family:"Instrument Sans",system-ui,sans-serif;font-size:clamp(2rem,4vw,3
 .toolbar,.timeline,.sandbox-actions{display:flex;gap:12px;align-items:end;flex-wrap:wrap}
 .toolbar label{display:grid;gap:4px;min-width:86px;font-size:.8rem;font-weight:700;color:var(--muted)}
 .toolbar select,.toolbar input{max-width:100%;color:var(--ink)}
+.replay-filters{margin-bottom:12px}
 #replay-run,#live-run{max-width:min(290px,80vw)}
 .timeline{background:var(--mint);border:1px solid #cad8ca;border-radius:9px;padding:10px;align-items:center}
 .scrubber{display:flex;flex:1;min-width:185px;align-items:center;gap:12px;padding-inline:6px;font:650 .82rem "IBM Plex Mono",monospace}
