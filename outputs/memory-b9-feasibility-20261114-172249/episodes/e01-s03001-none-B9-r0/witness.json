@@ -1,0 +1,92 @@
+{
+  "actions": [
+    2,
+    0,
+    2,
+    3,
+    0,
+    1,
+    2,
+    0,
+    2,
+    2,
+    2,
+    4
+  ],
+  "method": "fixed_explore",
+  "planning": [
+    {
+      "step": 0,
+      "phase": "Find and pick up source",
+      "reason": "route_to_subgoal",
+      "action": 2
+    },
+    {
+      "step": 1,
+      "phase": "Find and pick up source",
+      "reason": "route_to_subgoal",
+      "action": 0
+    },
+    {
+      "step": 2,
+      "phase": "Find and pick up source",
+      "reason": "route_to_subgoal",
+      "action": 2
+    },
+    {
+      "step": 3,
+      "phase": "Find and pick up source",
+      "reason": "attempt_subgoal_interaction",
+      "action": 3
+    },
+    {
+      "step": 4,
+      "phase": "Place beside reference",
+      "reason": "explore_for_subgoal",
+      "action": 0
+    },
+    {
+      "step": 5,
+      "phase": "Place beside reference",
+      "reason": "route_to_placement",
+      "action": 1
+    },
+    {
+      "step": 6,
+      "phase": "Place beside reference",
+      "reason": "route_to_placement",
+      "action": 2
+    },
+    {
+      "step": 7,
+      "phase": "Place beside reference",
+      "reason": "route_to_placement",
+      "action": 0
+    },
+    {
+      "step": 8,
+      "phase": "Place beside reference",
+      "reason": "route_to_placement",
+      "action": 2
+    },
+    {
+      "step": 9,
+      "phase": "Place beside reference",
+      "reason": "route_to_placement",
+      "action": 2
+    },
+    {
+      "step": 10,
+      "phase": "Place beside reference",
+      "reason": "route_to_placement",
+      "action": 2
+    },
+    {
+      "step": 11,
+      "phase": "Place beside reference",
+      "reason": "attempt_verified_placement",
+      "action": 4
+    }
+  ],
+  "recorded_at": "2026-11-14T11:57:34.308208+00:00"
+}

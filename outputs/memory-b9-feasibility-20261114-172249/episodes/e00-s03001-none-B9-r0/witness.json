@@ -1,0 +1,204 @@
+{
+  "actions": [
+    0,
+    0,
+    2,
+    0,
+    5,
+    0,
+    0,
+    5,
+    2,
+    2,
+    0,
+    5,
+    0,
+    0,
+    5,
+    2,
+    3,
+    2,
+    1,
+    5,
+    2,
+    2,
+    5,
+    1,
+    4,
+    0,
+    2,
+    3
+  ],
+  "method": "fixed_explore",
+  "planning": [
+    {
+      "step": 0,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 0
+    },
+    {
+      "step": 1,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 0
+    },
+    {
+      "step": 2,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 2
+    },
+    {
+      "step": 3,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 0
+    },
+    {
+      "step": 4,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 5
+    },
+    {
+      "step": 5,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 0
+    },
+    {
+      "step": 6,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 0
+    },
+    {
+      "step": 7,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 5
+    },
+    {
+      "step": 8,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 2
+    },
+    {
+      "step": 9,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 2
+    },
+    {
+      "step": 10,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 0
+    },
+    {
+      "step": 11,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 5
+    },
+    {
+      "step": 12,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 0
+    },
+    {
+      "step": 13,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 0
+    },
+    {
+      "step": 14,
+      "phase": "Find and pick up key",
+      "reason": "explore_for_subgoal",
+      "action": 5
+    },
+    {
+      "step": 15,
+      "phase": "Find and pick up key",
+      "reason": "route_to_subgoal",
+      "action": 2
+    },
+    {
+      "step": 16,
+      "phase": "Find and pick up key",
+      "reason": "attempt_subgoal_interaction",
+      "action": 3
+    },
+    {
+      "step": 17,
+      "phase": "Unlock matching door",
+      "reason": "route_to_subgoal",
+      "action": 2
+    },
+    {
+      "step": 18,
+      "phase": "Unlock matching door",
+      "reason": "route_to_subgoal",
+      "action": 1
+    },
+    {
+      "step": 19,
+      "phase": "Unlock matching door",
+      "reason": "route_to_subgoal",
+      "action": 5
+    },
+    {
+      "step": 20,
+      "phase": "Unlock matching door",
+      "reason": "route_to_subgoal",
+      "action": 2
+    },
+    {
+      "step": 21,
+      "phase": "Unlock matching door",
+      "reason": "route_to_subgoal",
+      "action": 2
+    },
+    {
+      "step": 22,
+      "phase": "Unlock matching door",
+      "reason": "attempt_subgoal_interaction",
+      "action": 5
+    },
+    {
+      "step": 23,
+      "phase": "Pick up target ball",
+      "reason": "find_key_drop_tile",
+      "action": 1
+    },
+    {
+      "step": 24,
+      "phase": "Pick up target ball",
+      "reason": "release_key_after_unlock",
+      "action": 4
+    },
+    {
+      "step": 25,
+      "phase": "Pick up target ball",
+      "reason": "route_to_subgoal",
+      "action": 0
+    },
+    {
+      "step": 26,
+      "phase": "Pick up target ball",
+      "reason": "route_to_subgoal",
+      "action": 2
+    },
+    {
+      "step": 27,
+      "phase": "Pick up target ball",
+      "reason": "attempt_subgoal_interaction",
+      "action": 3
+    }
+  ],
+  "recorded_at": "2026-11-14T11:57:33.258556+00:00"
+}

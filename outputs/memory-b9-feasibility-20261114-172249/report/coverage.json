@@ -1,0 +1,87 @@
+{
+  "planned": 25,
+  "attempted": 25,
+  "unattempted": 0,
+  "attempt_records": 25,
+  "valid": 25,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "feasibility",
+      "environment": "BabyAI-KeyCorridorS3R3-v0",
+      "intervention": "none",
+      "planned": 10,
+      "planned_matched_cells": 5,
+      "matched_cells": 5,
+      "matched_seeds": 5,
+      "variants": {
+        "B0": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "feasibility",
+      "environment": "BabyAI-PutNextS5N2-v0",
+      "intervention": "none",
+      "planned": 10,
+      "planned_matched_cells": 5,
+      "matched_cells": 5,
+      "matched_seeds": 5,
+      "variants": {
+        "B0": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "feasibility",
+      "environment": "MiniGrid-MemoryS17Random-v0",
+      "intervention": "none",
+      "planned": 5,
+      "planned_matched_cells": 5,
+      "matched_cells": 5,
+      "matched_seeds": 5,
+      "variants": {
+        "B9": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

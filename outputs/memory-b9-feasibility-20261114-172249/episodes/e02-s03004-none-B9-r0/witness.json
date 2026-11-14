@@ -1,0 +1,64 @@
+{
+  "actions": [
+    0,
+    0,
+    0,
+    0,
+    2,
+    2,
+    0,
+    2
+  ],
+  "method": "fixed_explore",
+  "planning": [
+    {
+      "step": 0,
+      "phase": "Find start-room cue",
+      "reason": "inspect_toward_start_room",
+      "action": 0
+    },
+    {
+      "step": 1,
+      "phase": "Find start-room cue",
+      "reason": "inspect_toward_start_room",
+      "action": 0
+    },
+    {
+      "step": 2,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 0
+    },
+    {
+      "step": 3,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 0
+    },
+    {
+      "step": 4,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 5,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 6,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 0
+    },
+    {
+      "step": 7,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    }
+  ],
+  "recorded_at": "2026-11-14T11:57:35.478527+00:00"
+}

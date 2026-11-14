@@ -1,0 +1,148 @@
+{
+  "actions": [
+    0,
+    1,
+    2,
+    0,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    0,
+    2
+  ],
+  "method": "fixed_explore",
+  "planning": [
+    {
+      "step": 0,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 0
+    },
+    {
+      "step": 1,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 1
+    },
+    {
+      "step": 2,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 2
+    },
+    {
+      "step": 3,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 0
+    },
+    {
+      "step": 4,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 1
+    },
+    {
+      "step": 5,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 2
+    },
+    {
+      "step": 6,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 2
+    },
+    {
+      "step": 7,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 2
+    },
+    {
+      "step": 8,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 2
+    },
+    {
+      "step": 9,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 2
+    },
+    {
+      "step": 10,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 2
+    },
+    {
+      "step": 11,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 2
+    },
+    {
+      "step": 12,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 13,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 14,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 15,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 16,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 17,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 18,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 0
+    },
+    {
+      "step": 19,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    }
+  ],
+  "recorded_at": "2026-11-14T11:57:35.276294+00:00"
+}
