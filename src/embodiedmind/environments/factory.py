@@ -12,6 +12,7 @@ OFFICIAL_ENVIRONMENTS = (
     "BabyAI-GoToObjS6-v1",
     "MiniGrid-DoorKey-8x8-v0",
     "BabyAI-GoToObjMazeS7-v0",
+    "MiniGrid-MemoryS13-v0",
 )
 
 

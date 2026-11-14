@@ -6,7 +6,14 @@ from dataclasses import dataclass
 
 from embodiedmind.memory.spatial import DIRECTION_VECTORS
 from embodiedmind.reasoning.action_validator import ActionDecision, _unique_object, parse_action
-from embodiedmind.reasoning.prompts import SYSTEM, _route_hint, prompt_for
+from embodiedmind.reasoning.prompts import (
+    GOTO_INSTRUCTIONS,
+    MEMORY_INSTRUCTIONS,
+    MEMORY_MISSION,
+    SYSTEM,
+    _route_hint,
+    prompt_for,
+)
 
 GUARDED = {"B0G", "B3G", "B4", "B5", "B6", "B7"}
 AGENTIC = {"B5", "B6", "B7"}
@@ -34,9 +41,11 @@ class Resolution:
 
 def action_request(model, observation, context, seed, variant, facts=()):
     system = SYSTEM
+    if observation.mission == MEMORY_MISSION:
+        system = system.replace(GOTO_INSTRUCTIONS, MEMORY_INSTRUCTIONS)
     if variant in AGENTIC:
         system = (
-            SYSTEM.split("Return JSON", 1)[0] + " Return JSON with goal, action, and evidence. "
+            system.split("Return JSON", 1)[0] + " Return JSON with goal, action, and evidence. "
             "Choose primitive to execute action directly; "
             "approach to route to the supplied fact ID in evidence; verify to look at a last-seen "
             "fact again; or explore to navigate toward unknown space. Use action 0 as a placeholder "

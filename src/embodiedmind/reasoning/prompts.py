@@ -6,6 +6,14 @@ import re
 from embodiedmind.environments.observation_adapter import PASSABLE
 
 
+MEMORY_MISSION = "go to the matching object at the end of the hallway"
+GOTO_INSTRUCTIONS = "A GoTo succeeds when you face the matching object in an adjacent cell. Do not pick up that target."
+MEMORY_INSTRUCTIONS = (
+    "Inspect the object in the starting room. At the fork, walk onto the floor tile "
+    "next to the object of the same type. Entering the other branch ends the episode. "
+    "Do not pick up either object or use done."
+)
+
 SYSTEM = """You control a MiniGrid agent. Complete the mission using the current view and any memory. Choose one primitive: 0 turn left, 1 turn right, 2 move forward, 3 pick up the object directly ahead, 4 drop ahead, 5 toggle the door directly ahead, 6 done. A GoTo succeeds when you face the matching object in an adjacent cell. Do not pick up that target. For DoorKey, collect the key, toggle the locked door, then walk onto the green goal. Follow the visible route hint when it applies. To explore, move forward on known safe tiles when possible. If blocked, turn toward a free side or turn around. Avoid repeatedly rotating in open space. Memory offsets are relative to your current view when stated. Return JSON with integer action and one short evidence citation. Use 'visible', one exact supplied memory ID, or 'explore'. Do not invent IDs."""
 
 
