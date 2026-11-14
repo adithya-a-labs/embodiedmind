@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,remembered,True,0.0,False,False,360,12,0.2684247150027659
+1,1,1,primitive,,,f0.8,,0.0,False,False,431,17,0.2014714839970111
+2,1,1,primitive,,,visible,,0.0,False,False,507,14,0.2093379299985827
+3,2,2,primitive,,,f0.0,True,0.0,False,False,486,14,0.3105580650008051
+4,2,2,primitive,,,f0.7,True,0.0,False,False,566,14,0.1689656670059776
+5,2,2,primitive,,,"f0.7 blue ball (-2, 1) observed at step 3",True,0.0,False,False,653,27,0.5793466429968248
+6,2,2,primitive,,,"f0.7 blue ball (-3, 1) observed at step 3",True,0.0,False,False,662,27,0.4868637530016713
+7,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,655,27,0.4021832110011019
+8,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,655,27,0.632669808997889
+9,2,2,primitive,,,"f0.7 blue ball (-4, 1) observed at step 3",False,0.0,False,False,655,27,0.20816544300032547
+10,2,2,primitive,,,"f0.7 blue ball (-4, 1) observed at step 3",False,0.0,False,False,655,27,0.20537623999553034
+11,2,2,primitive,,,"f0.7 blue ball (-4, 1) observed at step 3",False,0.0,False,False,655,27,0.22164112799509894
+12,2,2,primitive,,,"f0.7 blue ball (-4, 1) observed at step 3",False,0.0,False,False,655,27,0.20180660400365014
+13,2,2,primitive,,,"f0.7 blue ball (-4, 1) observed at step 3",False,0.0,False,False,655,27,0.21326350099843694
+14,2,2,primitive,,,"f0.7 blue ball (-4, 1) observed at step 3",False,0.0,False,False,655,27,0.21558680700400146
+15,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,659,27,0.3014809559972491
+16,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,659,27,0.2163949349996983
+17,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.2491163449958549
+18,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.19922480099921813
+19,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.2135491320004803
+20,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.21027903200592846
+21,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.21968337999715004
+22,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.20410579800227424
+23,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.21011563800129807
+24,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.21102283200161764
+25,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.2219308059939067
+26,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.2009246890011127
+27,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.21195118600007845
+28,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.19927920200279914
+29,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.21442409100563964
+30,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.20708739300607704
+31,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.22271440400072606
+32,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.20306502300081775
+33,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.23954421700182138
+34,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.20771054999931948
+35,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.2184573949998594
+36,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.1993384680026793
+37,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.2153173879996757
+38,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.2079469699965557
+39,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.22471698899607873
+40,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.20501508400047896
+41,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.21625140000105603
+42,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.2047032630071044
+43,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.21594926599937025
+44,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.2011957849972532
+45,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.21874940199631965
+46,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.2035248350002803
+47,2,2,primitive,,,"f0.10 empty (-4, 0) observed at step 0",False,0.0,False,False,663,27,0.22509618600452086

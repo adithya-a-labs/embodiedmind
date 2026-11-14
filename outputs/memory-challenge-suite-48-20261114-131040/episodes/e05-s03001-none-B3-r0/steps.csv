@@ -1,0 +1,12 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible0,,0.0,False,False,288,13,0.23326016099599656
+1,2,2,primitive,,,visible,,0.0,False,False,301,12,0.21679505499923835
+2,2,2,primitive,,,visible,,0.0,False,False,301,12,0.23928362200240372
+3,2,2,primitive,,,visible 5,,0.0,False,False,293,14,0.22320610799943097
+4,2,2,primitive,,,visible,,0.0,False,False,301,12,0.21461014399392297
+5,1,1,primitive,,,visible 6,,0.0,False,False,288,16,0.22759704499912914
+6,2,2,primitive,,,"f5.13 grey wall (-2, 0) observed at step 5",,0.0,False,False,602,29,0.4245290289982222
+7,2,2,primitive,,,visible 4,,0.0,False,False,300,13,0.27045782799541485
+8,2,2,primitive,,,visible 2,,0.0,False,False,320,15,0.28958203500224045
+9,2,2,primitive,,,visible,,0.0,False,False,310,12,0.20502306100388523
+10,2,2,primitive,,,visible,,0.961328125,True,False,308,12,0.2533152699979837

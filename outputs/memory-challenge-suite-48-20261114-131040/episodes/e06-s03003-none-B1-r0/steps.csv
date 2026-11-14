@@ -1,0 +1,14 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,378,11,0.15366783500212478
+1,2,2,primitive,,,o0,True,0.0,False,False,396,12,0.1522740509972209
+2,1,1,primitive,,,o1,,0.0,False,False,424,12,0.14004384299914818
+3,5,5,primitive,,,o2,,0.0,False,False,451,13,0.1841902050000499
+4,6,6,primitive,,,o3,,0.0,False,False,478,13,0.1688639160056482
+5,2,2,primitive,,,o4,False,0.0,False,False,505,12,0.15847562500130152
+6,6,6,primitive,,,o5,,0.0,False,False,532,13,0.1863472679979168
+7,2,2,primitive,,,o6,False,0.0,False,False,559,12,0.20107575700239977
+8,3,3,primitive,,,o7,,0.0,False,False,586,12,0.18769335000251886
+9,5,5,primitive,,,"o8 step 8 prev=2 facing=2: blue door closed@2,0; grey key@1,0",,0.0,False,False,610,36,0.38518825299979653
+10,5,5,primitive,,,o9,,0.0,False,False,630,12,0.185927744001674
+11,2,2,primitive,,,"o10 step 10 prev=5 facing=2: blue door closed@2,0",True,0.0,False,False,652,31,0.28422898999997415
+12,5,5,primitive,,,"o1 step 1 prev=2 facing=1: blue door closed@1,2; grey key@1,-1; grey key@1,1",,0.922,True,False,629,44,0.4494425550001324

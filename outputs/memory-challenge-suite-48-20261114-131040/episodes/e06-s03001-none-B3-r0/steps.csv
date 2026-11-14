@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,365,11,0.435549034998985
+1,1,1,primitive,,,f0,,0.0,False,False,436,12,0.14858820399967954
+2,2,2,primitive,,,f0.0,False,0.0,False,False,513,14,0.32547895099560264
+3,2,2,primitive,,,f0.0,False,0.0,False,False,514,14,0.1874925880038063
+4,2,2,primitive,,,f0.0,False,0.0,False,False,514,14,0.11033029400277883
+5,2,2,primitive,,,f0.0,False,0.0,False,False,514,14,0.10689146999357035
+6,2,2,primitive,,,f0.0,False,0.0,False,False,514,14,0.1154025600044406
+7,2,2,primitive,,,f0.0,False,0.0,False,False,514,14,0.11248981599783292
+8,2,2,primitive,,,f0.0,False,0.0,False,False,514,14,0.11461544199846685
+9,2,2,primitive,,,f0.0,False,0.0,False,False,514,14,0.11268755600031
+10,2,2,primitive,,,f0.0,False,0.0,False,False,514,14,0.10806384699390037
+11,2,2,primitive,,,f0.0,False,0.0,False,False,514,14,0.10920853500283556
+12,2,2,primitive,,,f0.0,False,0.0,False,False,514,14,0.10764385500078788
+13,2,2,primitive,,,"f0.0 green goal (0, 0) observed at step 0",False,0.0,False,False,518,27,0.23417835799773457
+14,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.188725161999173
+15,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.190794788999483
+16,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19304771300085122
+17,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19150773600267712
+18,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.18882527999812737
+19,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19182127899694024
+20,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.1898071930045262
+21,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19825174700235948
+22,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19089812700258335
+23,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19452812000236008
+24,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.18926505800482119
+25,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19212148799852002
+26,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.18677481600025203
+27,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.1944781000056537
+28,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.18965585899422877
+29,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19326546599768335
+30,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.1907421729993075
+31,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19412217500212137
+32,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.1924549730028957
+33,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.20041081499948632
+34,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.18864463500358397
+35,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19220844300434692
+36,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19036511100421194
+37,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19239562599977944
+38,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19395709699892905
+39,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19622264499776065
+40,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.1887089739975636
+41,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19364367100206437
+42,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19085922399972333
+43,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.20077413100079866
+44,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19551952199981315
+45,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19483306499751052
+46,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19284663700091187
+47,2,2,primitive,,,"f0.0 green goal (-3, -1) observed at step 0",False,0.0,False,False,518,27,0.19522700399829773

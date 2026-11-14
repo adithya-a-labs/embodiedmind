@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,visible,,0.0,False,False,346,14,0.18917009299912024
+1,2,2,primitive,,,o0,True,0.0,False,False,387,12,0.1770975570034352
+2,2,2,primitive,,,o1,True,0.0,False,False,412,12,0.1604094950016588
+3,1,1,primitive,,,o2,,0.0,False,False,434,12,0.15990905799844768
+4,3,3,primitive,,,o3,,0.0,False,False,450,13,0.2256153540001833
+5,6,6,primitive,,,o4,,0.0,False,False,470,14,0.22103789699758636
+6,6,6,primitive,,,o5,,0.0,False,False,490,13,0.19268304500292288
+7,2,2,primitive,,,o6,False,0.0,False,False,510,12,0.17251537599804578
+8,6,6,primitive,,,o7,,0.0,False,False,530,13,0.18225040200195508
+9,2,2,primitive,,,o8,False,0.0,False,False,550,12,0.18261408699618187
+10,2,2,primitive,,,o9,False,0.0,False,False,570,12,0.18652505899808602
+11,2,2,primitive,,,o10,False,0.0,False,False,592,13,0.20500919299956877
+12,2,2,primitive,,,"o1 step 1 prev=0 facing=1: blue door closed@1,-2; red door closed@1,2",False,0.0,False,False,614,37,0.38125833599769976
+13,2,2,primitive,,,"o1 step 1 prev=0 facing=1: blue door closed@1,-2; red door closed@1,2",False,0.0,False,False,636,37,0.423498586002097
+14,6,6,primitive,,,o1,,0.0,False,False,633,13,0.24841011099488242
+15,2,2,primitive,,,"o10 step 10 prev=2 facing=2: green door closed@1,0",False,0.0,False,False,644,31,0.36000365500513
+16,2,2,primitive,,,"o10 step 10 prev=2 facing=2: green door closed@1,0",False,0.0,False,False,641,31,0.3214936910007964
+17,6,6,primitive,,,"o16 step 16 prev=2 facing=2: green door closed@1,0",,0.0,False,False,635,32,0.7368348210002296
+18,2,2,primitive,,,o1,False,0.0,False,False,654,12,0.2169804769946495
+19,5,5,primitive,,,"o10 step 10 prev=2 facing=2: green door closed@1,0",,0.0,False,False,651,31,0.5489085509980214
+20,2,2,primitive,,,"o10 step 10 prev=2 facing=2: green door closed@1,0",True,0.0,False,False,670,31,0.9478958979962044
+21,1,1,primitive,,,o20,,0.0,False,False,667,13,0.6281130369970924
+22,5,5,primitive,,,"o21 step 21 prev=2 facing=2: blue key@1,0",,0.0,False,False,703,31,0.7669976480028708
+23,1,1,primitive,,,,,0.0,False,False,688,48,0.9257109750033123
+24,2,2,primitive,,,o23,True,0.0,False,False,669,13,0.4474214219953865
+25,1,1,primitive,,,,,0.0,False,False,670,48,0.6677766319990042
+26,2,2,primitive,,,"o24 step 24 prev=1 facing=0: blue door locked@2,0; blue door closed@2,-2",False,0.0,False,False,660,39,0.9737102729995968
+27,3,3,primitive,,,"o26 step 26 prev=1 facing=1: blue door locked@0,-1; green door open@0,1; blue key@0,2",,0.0,False,False,675,47,0.510922205998213
+28,3,3,primitive,,,"o26 step 26 prev=1 facing=1: blue door locked@0,-1; green door open@0,1; blue key@0,2",,0.0,False,False,668,46,0.6642223880044185
+29,3,3,primitive,,,"o28 step 28 prev=3 facing=1: blue door locked@0,-1; green door open@0,1; blue key@0,2",,0.0,False,False,661,46,0.6463223140017362
+30,3,3,primitive,,,"o29 step 29 prev=3 facing=1: blue door locked@0,-1; green door open@0,1; blue key@0,2",,0.0,False,False,669,46,0.6329725039977347
+31,3,3,primitive,,,"o21 step 21 prev=2 facing=2: blue key@1,0",,0.0,False,False,661,30,0.5216347269961261
+32,3,3,primitive,,,o20 step 20,,0.0,False,False,682,17,0.2531457130025956
+33,1,1,primitive,,,o30,,0.0,False,False,669,13,0.661494981002761
+34,2,2,primitive,,,"o25 step 25 prev=2 facing=0: blue door locked@1,0; blue door closed@1,-2",True,0.0,False,False,676,39,1.0692038249981124
+35,2,2,primitive,,,"o30 step 30 prev=3 facing=1: blue door locked@0,-1; green door open@0,1; blue key@0,2",False,0.0,False,False,663,46,1.0644256430023233
+36,1,1,primitive,,,"o30 step 30 prev=3 facing=1: blue key@0,2",,0.0,False,False,668,30,0.3574183919990901
+37,0,0,primitive,,,"o33 step 33 prev=3 facing=1: blue door locked@0,-1; green door open@0,1; blue key@0,2",,0.0,False,False,703,46,0.6636845249959151
+38,1,1,primitive,,,o34 step 34 prev=1 facing=2,,0.0,False,False,669,23,0.4650170309978421
+39,2,2,primitive,,,"o30 step 30 prev=3 facing=1: blue door locked@0,-1; green door open@0,1; blue key@0,2",False,0.0,False,False,716,46,0.7071672050005873
+40,2,2,primitive,,,o39 step 39,False,0.0,False,False,703,17,0.3268512780050514
+41,0,0,primitive,,,o35 step 35,,0.0,False,False,704,17,0.2503115780054941
+42,2,2,primitive,,,"o34 step 34 prev=1 facing=2: green door open@1,0; blue key@2,0",False,0.0,False,False,668,38,0.4252759299997706
+43,2,2,primitive,,,o34,False,0.0,False,False,668,13,0.26077003899990814
+44,2,2,primitive,,,o43,False,0.0,False,False,673,13,0.2169607769974391
+45,2,2,primitive,,,"o40 step 40 prev=2 facing=3: blue key@1,0",False,0.0,False,False,673,30,0.388382883000304
+46,2,2,primitive,,,o41,False,0.0,False,False,686,13,0.6398341559979599
+47,2,2,primitive,,,o42,False,0.0,False,False,686,13,0.2284858510029153

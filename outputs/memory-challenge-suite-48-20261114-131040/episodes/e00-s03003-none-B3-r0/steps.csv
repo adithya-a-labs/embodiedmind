@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,Remembered cells,True,0.0,False,False,395,14,0.2503466269990895
+1,2,2,primitive,,,"f0.10 green key (-1, -1) observed at step 0",True,0.0,False,False,468,28,0.3339429330007988
+2,2,2,primitive,,,"f0.10 green key (-2, -1) observed at step 0",True,0.0,False,False,558,28,0.2900403550011106
+3,2,2,primitive,,,"f0.10 green key (-3, -1) observed at step 0",True,0.0,False,False,686,28,0.4197235770043335
+4,2,2,primitive,,,"f0.10 green key (-4, -1) observed at step 0",True,0.0,False,False,686,28,0.2930972929971176
+5,2,2,primitive,,,"f0.10 green key (-5, -1) observed at step 0",True,0.0,False,False,687,28,0.30555249500321224
+6,2,2,primitive,,,"f0.10 green key (-6, -1) observed at step 0",True,0.0,False,False,687,28,0.31786811600613873
+7,2,2,primitive,,,visible 0,True,0.0,False,False,670,13,0.1824372169940034
+8,2,2,primitive,,,"f0.10 green key (-8, -1) observed at step 0",True,0.0,False,False,685,28,0.3690865960015799
+9,2,2,primitive,,,"f0.10 green key (-9, -1) observed at step 0",True,0.0,False,False,699,28,0.3137845810051658
+10,2,2,primitive,,,"f0.10 green key (-10, -1) observed at step 0",True,0.0,False,False,697,29,0.36573982299887575
+11,2,2,primitive,,,"f0.10 green key (-11, -1) observed at step 0",True,0.0,False,False,678,29,0.33333743000548566
+12,2,2,primitive,,,"f0.10 green key (-12, -1) STALE",True,0.0,False,False,682,26,0.31389371599652804
+13,2,2,primitive,,,"f0.10 green key (-13, -1) STALE; reobserve at step 0",True,0.0,False,False,682,33,0.43327457099803723
+14,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.35221688199817436
+15,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.34577781499683624
+16,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2837803759975941
+17,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.270172050994006
+18,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.22800481800368289
+19,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.23990527800197015
+20,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.22980643199844053
+21,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.25203531899751397
+22,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.23322032899886835
+23,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.25650589499855414
+24,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2462528679971001
+25,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.23649806100002024
+26,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.23649127899989253
+27,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2604087899962906
+28,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.24601371800235938
+29,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.23774256400065497
+30,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.22771550500328885
+31,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.24321803799830377
+32,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2629067589950864
+33,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2522807420027675
+34,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.28467259300668957
+35,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2592401060028351
+36,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2428149300030782
+37,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2737186899976223
+38,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2771029319992522
+39,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.24397475200385088
+40,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.267538482999953
+41,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.256254751002416
+42,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2594496829988202
+43,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.27854047100117896
+44,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2574032720003743
+45,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.2541788369999267
+46,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.27777347800292773
+47,2,2,primitive,,,"f0.10 green key (-14, -1) STALE",False,0.0,False,False,677,27,0.30606422999699134

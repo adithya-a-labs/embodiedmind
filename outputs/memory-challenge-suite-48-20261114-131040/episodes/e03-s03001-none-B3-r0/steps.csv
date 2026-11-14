@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,False,0.0,False,False,346,11,0.10487629899580497
+1,0,0,primitive,,,visible,,0.0,False,False,352,14,0.21487952199822757
+2,2,2,primitive,,,"f0.6 grey key (-1, 0) observed at step 1",True,0.0,False,False,478,27,0.2611221850020229
+3,2,2,primitive,,,"f0.6 grey key (-2, 0) observed at step 1",False,0.0,False,False,541,27,0.2805553230064106
+4,2,2,primitive,,,"f0.6 grey key (-2, 0) observed at step 1",False,0.0,False,False,541,27,0.3289640859948122
+5,2,2,primitive,,,"f0.6 grey key (-2, 0) observed at step 1",False,0.0,False,False,541,27,0.24574150400439976
+6,2,2,primitive,,,"f0.6 grey key (-2, 0) observed at step 1",False,0.0,False,False,541,27,0.24784421300137183
+7,2,2,primitive,,,"f0.6 grey key (-2, 0) observed at step 1",False,0.0,False,False,541,27,0.24290634100179886
+8,2,2,primitive,,,"f0.6 grey key (-2, 0) observed at step 1",False,0.0,False,False,541,27,0.27714673899754416
+9,2,2,primitive,,,"f0.6 grey key (-2, 0) observed at step 1",False,0.0,False,False,541,27,0.24620498399599455
+10,2,2,primitive,,,"f0.6 grey key (-2, 0) observed at step 1",False,0.0,False,False,541,27,0.23455074400408193
+11,2,2,primitive,,,"f0.6 grey key (-2, 0) observed at step 1",False,0.0,False,False,541,27,0.23526854399824515
+12,2,2,primitive,,,"f0.6 grey key (-2, 0) observed at step 1",False,0.0,False,False,541,27,0.2814246389971231
+13,0,0,primitive,,,visible,,0.0,False,False,545,14,0.178205888994853
+14,2,2,primitive,,,visible,True,0.0,False,False,506,11,0.2854834980025771
+15,4,4,primitive,,,"f0.6 grey key (-1, -2) observed at step 14",,0.0,False,False,585,28,0.3350254090037197
+16,0,0,primitive,,,f0.6,,0.0,False,False,584,17,0.23124317100155167
+17,2,2,primitive,,,visible,True,0.0,False,False,485,11,0.31934540899965214
+18,2,2,primitive,,,"f2.7 empty (-1, 0) observed at step 14",True,0.0,False,False,589,27,0.2698813130045892
+19,2,2,primitive,,,"f2.8 empty (-1, 0) observed at step 17",True,0.0,False,False,643,27,0.558343740995042
+20,0,0,primitive,,,visible,,0.0,False,False,646,14,0.3623193439998431
+21,2,2,primitive,,,visible,True,0.0,False,False,652,14,0.267681037003058
+22,1,1,primitive,,,"f2.4 red ball (-2, -3) observed at step 17",,0.0,False,False,644,28,0.30373163900367217
+23,1,1,primitive,,,visible,,0.0,False,False,646,14,0.25862091499584494
+24,2,2,primitive,,,"f2.3 grey ball visible (2, 3) observed at step 16",True,0.0,False,False,577,29,0.6179413300051237
+25,2,2,primitive,,,"f0.6 grey key (-1, 1) observed at step 24",True,0.0,False,False,643,28,0.5964860059975763
+26,2,2,primitive,,,"f0.6 grey key (-2, 1) observed at step 24",True,0.0,False,False,643,28,0.30234154500067234
+27,0,0,primitive,,,"f2.4 red ball (-1, 3) observed at step 26",,0.0,False,False,632,29,0.4229114629997639
+28,0,0,primitive,,,"f2.4 red ball (-3, -1) observed at step 26",,0.0,False,False,636,31,0.6077075430002878
+29,2,2,primitive,,,"f2.3 grey door locked (1, -4) STALE; reobserve at step 16",True,0.0,False,False,593,33,0.3819151019997662
+30,2,2,primitive,,,"f14.1 empty (-1, 0) observed at step 26",True,0.0,False,False,650,28,0.3979306490000454
+31,2,2,primitive,,,"f14.6 empty (-2, -1) observed at step 29",True,0.0,False,False,654,28,0.672053018999577
+32,1,1,primitive,,,"f2.4 red ball (-2, -3) observed at step 30",,0.0,False,False,648,28,0.301211477999459
+33,0,0,primitive,,,"f2.3 grey door locked (-4, 2) STALE; reobserve at step 16",,0.0,False,False,631,34,0.36399261300539365
+34,1,1,primitive,,,"f2.4 red ball (-2, -3) observed at step 30",,0.0,False,False,647,28,0.2962670760025503
+35,2,2,primitive,,,"f2.5 empty (-2, 2) observed at step 30",False,0.0,False,False,631,27,0.28207976900012
+36,2,2,primitive,,,"f2.5 empty (-2, 2) observed at step 30",False,0.0,False,False,632,27,0.3034702639997704
+37,2,2,primitive,,,"f2.5 empty (-2, 2) observed at step 30",False,0.0,False,False,632,27,0.21676692199980607
+38,2,2,primitive,,,"f2.5 empty (-2, 2) observed at step 30",False,0.0,False,False,632,27,0.22584335199644556
+39,2,2,primitive,,,"f2.5 empty (-2, 2) observed at step 30",False,0.0,False,False,632,27,0.21864120399550302
+40,2,2,primitive,,,"f2.5 empty (-2, 2) observed at step 30",False,0.0,False,False,632,27,0.24719602999539347
+41,2,2,primitive,,,"f2.5 empty (-2, 2) observed at step 30",False,0.0,False,False,632,27,0.22245052400103305
+42,1,1,primitive,,,visible,,0.0,False,False,636,14,0.24205259600421414
+43,2,2,primitive,,,"f2.3 grey ball visible (2, 3) at step 16",True,0.0,False,False,581,28,0.743903804999718
+44,2,2,primitive,,,f2.3,True,0.0,False,False,647,14,0.19218960400030483
+45,2,2,primitive,,,f2.3,True,0.0,False,False,647,14,0.308189969000523
+46,0,0,primitive,,,"f2.3 grey door locked (-1, 4) STALE; reobserve at step 16",,0.0,False,False,636,34,0.35540022700297413
+47,0,0,primitive,,,"f2.3 grey door locked (-4, -1) STALE; reobserve at step 16",,0.0,False,False,636,33,0.32136731899663573

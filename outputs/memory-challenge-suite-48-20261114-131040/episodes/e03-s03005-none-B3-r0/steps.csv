@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,remembered,True,0.0,False,False,374,12,0.49269707000348717
+1,2,2,primitive,,,"f0.23 green key (-1, 2) observed at step 0",True,0.0,False,False,462,28,0.2759117410023464
+2,2,2,primitive,,,"f0.13 empty (-1, 0) observed at step 0",True,0.0,False,False,569,27,0.29055190100189066
+3,0,0,primitive,,,f0.23,,0.0,False,False,651,18,0.23610516099870438
+4,2,2,primitive,,,"f0.23 green key (-2, -3) observed at step 0",True,0.0,False,False,631,28,0.6393028999955277
+5,0,0,primitive,,,"f0.14 green door locked (-2, 1) observed at step 3",,0.0,False,False,623,30,0.5276631289962097
+6,2,2,primitive,,,f0.14,True,0.0,False,False,558,15,0.44916206799825886
+7,2,2,primitive,,,"f0.14 green door locked (-2, -2) observed at step 3",True,0.0,False,False,639,29,0.3006335360041703
+8,2,2,primitive,,,"f0.14 green door locked (-3, -2) observed at step 3",True,0.0,False,False,632,29,0.5913679340010276
+9,2,2,primitive,,,"f0.14 green door locked (-4, -2) observed at step 3",False,0.0,False,False,642,29,0.6375164080018294
+10,2,2,primitive,,,"f0.14 green door locked (-4, -2) observed at step 3",False,0.0,False,False,642,29,0.6215825360050076
+11,2,2,primitive,,,"f0.14 green door locked (-4, -2) observed at step 3",False,0.0,False,False,642,29,0.2127412180052488
+12,2,2,primitive,,,"f0.14 green door locked (-4, -2) observed at step 3",False,0.0,False,False,642,29,0.21505373599939048
+13,2,2,primitive,,,"f0.14 green door locked (-4, -2) observed at step 3",False,0.0,False,False,642,29,0.21222263199888403
+14,2,2,primitive,,,"f0.14 green door locked (-4, -2) observed at step 3",False,0.0,False,False,642,29,0.2021966890024487
+15,2,2,primitive,,,"f0.14 green door locked (-4, -2) STALE; reobserve at step 3",False,0.0,False,False,627,33,0.37888514999940526
+16,2,2,primitive,,,"f0.14 green door locked (-4, -2) STALE; reobserve at step 3",False,0.0,False,False,627,33,0.283935023995582
+17,2,2,primitive,,,"f0.14 green door locked (-4, -2) STALE; reobserve at step 3",False,0.0,False,False,627,33,0.28819593099615304
+18,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.2609983229995123
+19,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.20828835500287823
+20,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.2064152950042626
+21,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.19976843400218058
+22,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.1987250509992009
+23,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.19486491400311934
+24,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.19710625299921958
+25,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.19348665999859804
+26,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.1941694679990178
+27,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.1955429709996679
+28,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.19622518499818398
+29,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.2070086120002088
+30,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.20673630099918228
+31,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.20432632300071418
+32,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.2162585050027701
+33,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.21743633099686122
+34,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.2159257380044437
+35,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.20800423299806425
+36,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.2162873139968724
+37,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.20760292000340996
+38,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.19892808399890782
+39,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.2000031380011933
+40,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.1983733610031777
+41,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.20021849800104974
+42,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.23183792099735
+43,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.2198241220030468
+44,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.19591103799757548
+45,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.19853889600199182
+46,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.19602481300535146
+47,2,2,primitive,,,"f0.14 green door locked (-4, -2)",False,0.0,False,False,631,24,0.19918151199817657

@@ -1,0 +1,7 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,Remembered cells,,0.0,False,False,315,14,0.36399160899600247
+1,2,2,primitive,,,visible,,0.0,False,False,306,12,0.15136459800123703
+2,2,2,primitive,,,visible0,,0.0,False,False,315,13,0.16818257400154835
+3,2,2,primitive,,,Remembered cells,,0.0,False,False,303,14,0.17637116300466005
+4,2,2,primitive,,,visible,,0.0,False,False,305,12,0.1615726839954732
+5,2,2,primitive,,,visible,,-1.0,True,False,290,13,0.14341725599661004
