@@ -1,0 +1,5 @@
+# Group the study closeout and B9–B10 records
+
+- Objective — Review pending changes, write messages, stage and commit them locally on embodiedmind-experiment.
+- Changes — Grouped the study and roadmap closeout in 1df6343b, the B9 architecture and broad-run notes in c1e1262a, the six failure analysis artifacts and supporting note in b0b1c23b, and the B10 evaluation note in c8aac2af. Added this group record separately. Normalized note line endings and removed an extra trailing line from route_bounds.py. No external records changed.
+- Verification — Read the pending file list and note objectives, confirmed an empty initial index, and checked each staged group with CSV-aware Git whitespace settings. Retried the analysis group after removing the flagged trailing blank line. Verified final status. No new experiment ran.
