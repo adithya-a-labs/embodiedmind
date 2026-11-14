@@ -1,0 +1,321 @@
+{
+  "paths_relative_to": "..",
+  "hash_algorithm": "sha256",
+  "files": [
+    {
+      "path": "config.yaml",
+      "kind": "yaml",
+      "size_bytes": 183,
+      "sha256": "e9208ee600586f77fd6778522d79188a62470f2b829279b1ccac671ea494c2ea",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/artifact-status.json",
+      "kind": "json",
+      "size_bytes": 284,
+      "sha256": "e54c4acb29da4ddcb4ab9b479cc4390484181d9f1ce392486bd3cc8ade9cf5f4",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/evaluator-steps.jsonl",
+      "kind": "private-evaluator",
+      "size_bytes": 10288,
+      "sha256": "3c5b71592ca6dfc224edc90cac3122b7e1d044f8db2946dfbeb32d1414be9d11",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/evaluator.json",
+      "kind": "private-evaluator",
+      "size_bytes": 54,
+      "sha256": "cff25cd3144f6365440e4b7fb69bfeeabb871dad0c8922d1a28b882967544487",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/finish.png",
+      "kind": "image",
+      "size_bytes": 1083,
+      "sha256": "a17ad03ade881a7e072fb6837e48365255b0386ceae36898a49bedca4c0c8bfa",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/frames/000000.png",
+      "kind": "image",
+      "size_bytes": 1083,
+      "sha256": "dfb19ce558c48f33de09eba9e53b2dadadabdcb1b3522599a03c9cf9994f2461",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/frames/000001.png",
+      "kind": "image",
+      "size_bytes": 1087,
+      "sha256": "5ea166cec3f1ba9155aee5be8528b252bee03f5554c34ead807408775dcab948",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/frames/000002.png",
+      "kind": "image",
+      "size_bytes": 1087,
+      "sha256": "78862d4dd3bbe833adf70edb47e78bcb7fe9fec4d837fa0a28fe80b554c0e14c",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/frames/000003.png",
+      "kind": "image",
+      "size_bytes": 1069,
+      "sha256": "39d7132623cd64b6ed1a05dc5fff5959a18c4eb92062c7fc688124a427a5e2b5",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/frames/000004.png",
+      "kind": "image",
+      "size_bytes": 1060,
+      "sha256": "1a9b0beb94ddad3188f097e948030ebe7f92cec86ac05b03b16f2a6e885608d8",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/frames/000005.png",
+      "kind": "image",
+      "size_bytes": 1074,
+      "sha256": "8372c544cb08e27c387f58edb64b643f40d7d0de0eccc9902c3acf7639b998b8",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/frames/000006.png",
+      "kind": "image",
+      "size_bytes": 1084,
+      "sha256": "731ae3e4cec7288af254acb96e3ad40a5d625c13de42c16b6d5ab2c25c470ab7",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/frames/000007.png",
+      "kind": "image",
+      "size_bytes": 1083,
+      "sha256": "a17ad03ade881a7e072fb6837e48365255b0386ceae36898a49bedca4c0c8bfa",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/integrity.json",
+      "kind": "json",
+      "size_bytes": 1263,
+      "sha256": "8be0ea228c145e674b91186a7cb90fb9b6021a8af392d993d09322eceeb4bc0f",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/job.json",
+      "kind": "json",
+      "size_bytes": 195,
+      "sha256": "0dc8136d7b483db547ed2501537e0f28eea64422c754dd000a0dd4354ea6529e",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/replay.gif",
+      "kind": "replay",
+      "size_bytes": 7721,
+      "sha256": "48e65a481603a2a4bcf1256f71a847a4333089e889fdfed96c4af3e2741d49be",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/start.png",
+      "kind": "image",
+      "size_bytes": 1083,
+      "sha256": "dfb19ce558c48f33de09eba9e53b2dadadabdcb1b3522599a03c9cf9994f2461",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/step-events.jsonl",
+      "kind": "jsonl",
+      "size_bytes": 37837,
+      "sha256": "27a7ddada178bef5ccd3c6b2537639adbfc2961fdb63e908a58593e300cd00de",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/steps.csv",
+      "kind": "csv",
+      "size_bytes": 527,
+      "sha256": "0267e663fd97d359bf02a7a4faca80d2f13d094b3bc3629f4bf362fda9970e8b",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/summary.json",
+      "kind": "json",
+      "size_bytes": 656,
+      "sha256": "f03a1b213c9a432458424e031d7383a9838bc9f2ee6fb8fdda00a9e1c6347184",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/e00-s00042-none-B0-r0/trajectory.jsonl",
+      "kind": "trajectory",
+      "size_bytes": 44020,
+      "sha256": "5c9ab7f6f217330401f7962ea4ee6a2de95e90284e7c94bd1f6e166329d26527",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "e00-s00042-none-B0-r0",
+      "visibility": "private"
+    },
+    {
+      "path": "heartbeat.json",
+      "kind": "json",
+      "size_bytes": 145,
+      "sha256": "a37937a1b640307a09ba4a0d134e0a739252f8ccc3e45ae0470fedcb6acbc060",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "private"
+    },
+    {
+      "path": "invocations.jsonl",
+      "kind": "jsonl",
+      "size_bytes": 283,
+      "sha256": "013cdc160199921e9303b583948b482b75c466c8381adfff808cdd760bc114cd",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "private"
+    },
+    {
+      "path": "journal.jsonl",
+      "kind": "jsonl",
+      "size_bytes": 113,
+      "sha256": "f65c497ef0b409021624626a3225dc7a508f90d1ed60dab165cb14fc310bf699",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "private"
+    },
+    {
+      "path": "manifest.json",
+      "kind": "manifest",
+      "size_bytes": 2015,
+      "sha256": "74fb776bd2e6ff555449ab7649c87ef30aa04cc899b6020b8974795af250fdd8",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "private"
+    },
+    {
+      "path": "models.yaml",
+      "kind": "yaml",
+      "size_bytes": 221,
+      "sha256": "e27bbcc2d8433cfc7c7a1740e70fc2ea14957cf7615a5db4802ccbb8033f35fe",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "private"
+    },
+    {
+      "path": "report/application-summary.md",
+      "kind": "md",
+      "size_bytes": 806,
+      "sha256": "e8bee452a47deb3a145c6e198838afe1c3c5262656bbf5cdcacf67402db416b5",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/comparisons.csv",
+      "kind": "csv",
+      "size_bytes": 145,
+      "sha256": "1523301ec5cff14f15ac0cd62315415a504cf13b1d965ee1d3733c5d5ee27cb3",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/coverage.json",
+      "kind": "json",
+      "size_bytes": 613,
+      "sha256": "7cfa03d7d3a5beb592b90fa710c4e065e82ba134772df0f36e24d2600ab27dbf",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/figures/belief.png",
+      "kind": "image",
+      "size_bytes": 63115,
+      "sha256": "8379f629ab150c189e9d6ca20001bfd526c8ea0bf9ab310400c23b67c6671c16",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/figures/efficiency.png",
+      "kind": "image",
+      "size_bytes": 112090,
+      "sha256": "33dfa03128682df0a8f63a0760fa8d9ab91ff5727d249252182c9c5d2371aae7",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/figures/success.png",
+      "kind": "image",
+      "size_bytes": 29658,
+      "sha256": "d02e284b2acff6cf4e1e92ea8ee41f2f18e40c2f3a31d709b58264eb051f9365",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/metrics.csv",
+      "kind": "csv",
+      "size_bytes": 1293,
+      "sha256": "6fc8b5f2482b4afa62c8dc7ba82c8a4614ea2cb9b528880b5ed201d1b8d7d843",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/report.md",
+      "kind": "md",
+      "size_bytes": 3827,
+      "sha256": "9b63a9ed8265c79e60ce7808e60b0eeef27e4d5e3a0c62fe44b19cc88cc91f8d",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "uv.lock",
+      "kind": "lock",
+      "size_bytes": 47140,
+      "sha256": "d59d6219f23927e1567c5543d485f302747bf568cc0f2cc1914933cad2ccf4bb",
+      "run_id": "smoke-20261114T054937Z-e8e9ddfe",
+      "job_id": "",
+      "visibility": "private"
+    }
+  ]
+}
