@@ -79,6 +79,40 @@ def test_dynamic_obstacles_limits_model_and_executed_actions(variant):
     assert result.reason == "action_unavailable"
 
 
+@pytest.mark.parametrize("game, seed, required_reasons", [
+    ("BabyAI-KeyCorridorS3R3-v0", 3003, {"release_key_after_unlock", "attempt_subgoal_interaction"}),
+    ("BabyAI-PutNextS5N2-v0", 3001, {"attempt_subgoal_interaction", "attempt_verified_placement"}),
+    ("MiniGrid-MemoryS17Random-v0", 3001, {"approach_matching_branch"}),
+])
+def test_b9_completes_public_observation_subgoals(game, seed, required_reasons):
+    raw = '{"goal":"explore","action":0,"evidence":"explore"}'
+    env = make_environment(game)
+    control = PrimitiveController(env)
+    agent = make_agent("B9")
+    reasons = set()
+    previous_action = moved = None
+    try:
+        obs = control.reset(seed)
+        for step in range(48):
+            agent.observe(obs, step, previous_action, moved)
+            agent.context(obs, 768)
+            decision = resolve_response(raw, obs, agent, "B9")
+            reasons.add(decision.reason)
+            result = control.step(decision.action)
+            if result.terminated or result.truncated:
+                assert result.terminated and result.reward > 0
+                break
+            obs, previous_action, moved = result.observation, decision.action, result.moved
+        else:
+            pytest.fail("B9 did not finish within 48 actions")
+        if game == "MiniGrid-MemoryS17Random-v0":
+            assert agent.cue["position"][1] == -1
+            assert abs(agent.branch["position"][1]) == 2
+    finally:
+        env.close()
+    assert required_reasons <= reasons
+
+
 @pytest.mark.parametrize("seed", [11, 14, 21, 36])
 def test_b8_reaches_the_matching_branch_even_with_repeated_explore(seed):
     raw = '{"goal":"explore","action":0,"evidence":"explore"}'
