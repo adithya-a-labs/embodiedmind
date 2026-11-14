@@ -1,0 +1,37 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,1,3,approach,unknown_fact_reference,Find key,yellow door locked,,0.0,False,False,427,28,0.28990362499826006
+1,1,3,approach,unknown_fact_reference,Find key,yellow door locked,,0.0,False,False,432,28,0.3089197749977757
+2,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and carried",,0.0,False,False,464,35,0.34839889599970775
+3,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,453,35,0.33152034700106014
+4,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key visible and carried",,0.0,False,False,464,34,0.34779881999929785
+5,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,453,35,0.34133638499770314
+6,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and carried",,0.0,False,False,464,35,0.3845072610019997
+7,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,453,35,0.3998601620005502
+8,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and carried",,0.0,False,False,464,35,0.38254220099770464
+9,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,453,35,0.3302080599969486
+10,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key visible and carried",,0.0,False,False,465,34,0.38872527300190995
+11,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.36877705300139496
+12,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and carried",,0.0,False,False,465,35,0.39264636900043115
+13,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.3718485810022685
+14,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and carried",,0.0,False,False,465,35,0.40577033199951984
+15,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.3837391919987567
+16,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key visible and carried",,0.0,False,False,465,34,0.35681676500098547
+17,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.37401342899829615
+18,0,3,approach,unknown_fact_reference,Find key,"(4,0) yellow key visible and carried",,0.0,False,False,465,34,0.39493425299951923
+19,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.3592586199993093
+20,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and carried",,0.0,False,False,465,35,0.35513190700294217
+21,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.3805804809999245
+22,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and carried",,0.0,False,False,465,35,0.37233909999849857
+23,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.3775926550006261
+24,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and carried",,0.0,False,False,465,35,0.3714773209976556
+25,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.3598847419998492
+26,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and carried",,0.0,False,False,465,35,0.38085240500004147
+27,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.3461652480000339
+28,0,4,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and carried",,0.0,False,False,465,35,0.36607178399935947
+29,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.3452205440007674
+30,0,3,approach,unknown_fact_reference,Find key,"(4,0) yellow key visible and carried",,0.0,False,False,465,34,0.3750394939997932
+31,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.3535027630023251
+32,0,3,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and can be picked up",,0.0,False,False,465,38,0.43811389400070766
+33,1,3,approach,unknown_fact_reference,Find key,"(3,0)=yellow door locked",,0.0,False,False,454,32,0.3398530970007414
+34,0,3,approach,unknown_fact_reference,Find key,"(4,0) yellow key is visible and can be picked up",,0.0,False,False,465,38,0.40290852500038454
+35,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 4) last_seen",,0.0,False,False,454,35,0.3912225349995424

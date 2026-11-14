@@ -1,0 +1,37 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,explore,,Find key,memory has no better clue,,0.0,False,False,418,30,0.31498645299870986
+1,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 1",,0.0,False,False,425,39,0.36619856800098205
+2,0,3,approach,unknown_fact_reference,Find key,"yellow key (f1.7, f1.8) last_seen; verified at 1",,0.0,False,False,438,45,0.4713023920012347
+3,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 3",,0.0,False,False,425,39,0.39072716800001217
+4,0,3,approach,unknown_fact_reference,Find key,"yellow key (f1.7, f1.8) last_seen",,0.0,False,False,438,40,0.39414366200071527
+5,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 5",,0.0,False,False,425,39,0.4339938510020147
+6,0,3,approach,unknown_fact_reference,Find key,"yellow key (f1.7, f1.8) last_seen",,0.0,False,False,438,40,0.4292823950017919
+7,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 7",,0.0,False,False,425,39,0.40169421500104363
+8,0,3,approach,unknown_fact_reference,Find key,yellow key (f1.7),,0.0,False,False,438,32,0.3495106929985923
+9,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 9",,0.0,False,False,425,39,0.37581132899867953
+10,0,3,approach,unknown_fact_reference,Find key,"yellow key (f1.7, f1.8) last_seen",,0.0,False,False,438,40,0.39842547200169065
+11,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 11",,0.0,False,False,426,40,0.3333710330007307
+12,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.32857183599844575
+13,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 13",,0.0,False,False,426,40,0.3327637029979087
+14,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.35751021499891067
+15,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 15",,0.0,False,False,426,40,0.35156907700002193
+16,0,3,approach,unknown_fact_reference,Find key,"yellow key (f1.7, f1.8) last_seen",,0.0,False,False,439,40,0.4021813090002979
+17,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 17",,0.0,False,False,426,40,0.3769367870008864
+18,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.3471718239998154
+19,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 19",,0.0,False,False,426,40,0.371206292998977
+20,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.38655674799883855
+21,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 21",,0.0,False,False,426,40,0.3320692199995392
+22,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.391556833001232
+23,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 23",,0.0,False,False,426,40,0.3500096419993497
+24,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.37071108400050434
+25,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 25",,0.0,False,False,426,40,0.3842955500003882
+26,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.3774284430000989
+27,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 27",,0.0,False,False,426,40,0.39002581000022474
+28,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.3757668980033486
+29,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible",,0.0,False,False,426,34,0.301208618999226
+30,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.3941544209992571
+31,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 31",,0.0,False,False,426,40,0.3811931740019645
+32,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.38867707299868925
+33,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 33",,0.0,False,False,426,40,0.4161933319992386
+34,0,3,approach,unknown_fact_reference,Find key,"f1.7 yellow key (-1, 0) last_seen",,0.0,False,False,439,39,0.40385136600161786
+35,1,6,approach,unknown_fact_reference,Find key,"yellow key (0, -1) visible; verified at 35",,0.0,False,False,426,40,0.3568025660024432

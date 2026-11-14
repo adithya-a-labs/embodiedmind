@@ -1,0 +1,33 @@
+{
+  "planned": 1,
+  "attempted": 1,
+  "unattempted": 0,
+  "attempt_records": 1,
+  "valid": 1,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "sandbox",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "intervention": "none",
+      "planned": 1,
+      "planned_matched_cells": 1,
+      "matched_cells": 1,
+      "matched_seeds": 1,
+      "variants": {
+        "B5": {
+          "planned": 1,
+          "valid": 1,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

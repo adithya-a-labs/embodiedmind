@@ -1,0 +1,25 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,350,12,0.18832281299910392
+1,2,2,primitive,,,"f0.26 grey wall (-1, 3) observed at step 0",True,0.0,False,False,464,29,0.27803099199809367
+2,0,0,primitive,,,f0,,0.0,False,False,589,13,0.19054824200065923
+3,3,3,primitive,,,f0.15,,0.0,False,False,596,16,0.24043211999742198
+4,2,2,primitive,,,f0.20,True,0.0,False,False,609,15,0.2579116749984678
+5,0,0,primitive,,,"f0.12 grey wall (-1, 1) observed at step 4",,0.0,False,False,658,29,0.3895066869990842
+6,2,2,primitive,,,f0.23,True,0.0,False,False,562,15,0.3010700689992518
+7,2,2,primitive,,,visible,True,0.0,False,False,632,11,0.20406344000002719
+8,5,5,primitive,,,visible,,0.0,False,False,646,11,0.2703977359997225
+9,2,2,primitive,,,f3.10,True,0.0,False,False,654,15,0.28305159299998195
+10,2,2,primitive,,,"f0.14 empty (-2, -1) observed at step 7",True,0.0,False,False,642,27,0.3230558530012786
+11,2,2,primitive,,,visible,True,0.0,False,False,645,11,0.26289903500219225
+12,2,2,primitive,,,"f9.17 empty (-1, 0) observed at step 10",False,0.0,False,False,653,28,0.3837979549971351
+13,2,2,primitive,,,"f9.17 empty (-1, 0) observed at step 10",False,0.0,False,False,653,28,0.3593885810005304
+14,2,2,primitive,,,"f9.17 empty (-1, 0) observed at step 10",False,0.0,False,False,653,28,0.2453836679997039
+15,2,2,primitive,,,"f9.17 empty (-1, 0) observed at step 10",False,0.0,False,False,653,28,0.23465915499764378
+16,2,2,primitive,,,"f9.17 empty (-1, 0) observed at step 10",False,0.0,False,False,653,28,0.23432835700077703
+17,2,2,primitive,,,"f9.17 empty (-1, 0) observed at step 10",False,0.0,False,False,653,28,0.25627115899987984
+18,2,2,primitive,,,"f9.17 empty (-1, 0) observed at step 10",False,0.0,False,False,653,28,0.24090987500312622
+19,2,2,primitive,,,"f9.17 empty (-1, 0) observed at step 10",False,0.0,False,False,653,28,0.29158271299820626
+20,2,2,primitive,,,"f9.17 empty (-1, 0) observed at step 10",False,0.0,False,False,653,28,0.23850500100161298
+21,1,1,primitive,,,"f9.17 empty (-1, 0) observed at step 10",,0.0,False,False,639,28,0.29131163800047943
+22,2,2,primitive,,,visible,True,0.0,False,False,664,11,0.24599531500280136
+23,2,2,primitive,,,"f9.1 empty (-4, 0) observed at step 21",True,0.96625,True,False,662,27,0.33348397499867133

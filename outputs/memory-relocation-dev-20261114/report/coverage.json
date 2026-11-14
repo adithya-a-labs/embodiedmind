@@ -1,0 +1,41 @@
+{
+  "planned": 10,
+  "attempted": 10,
+  "unattempted": 0,
+  "attempt_records": 10,
+  "valid": 10,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "development",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "relocation",
+      "planned": 10,
+      "planned_matched_cells": 5,
+      "matched_cells": 5,
+      "matched_seeds": 5,
+      "variants": {
+        "B4": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

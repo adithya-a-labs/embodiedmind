@@ -1,0 +1,451 @@
+{
+  "split": "development",
+  "commit": "7139195042f97cbf2b519e1359c342acfbb4c0e4",
+  "dirty": true,
+  "settings": {
+    "split": "development",
+    "environments": [
+      "MiniGrid-DoorKey-8x8-v0"
+    ],
+    "variants": [
+      "B0",
+      "B0G",
+      "B3",
+      "B3G",
+      "B4",
+      "B5",
+      "B6",
+      "B7"
+    ],
+    "seeds": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "interventions": [
+      "none"
+    ],
+    "workflows": "workflows.json",
+    "limits": {
+      "max_steps": 36,
+      "max_calls": 36,
+      "memory_bytes": 768,
+      "infrastructure_retries": 2,
+      "workflows": [
+        {
+          "task": "doorkey",
+          "source": "pilot",
+          "source_commit": "4a4480844c6558793a975530118a897b94fff108",
+          "episodes": [
+            {
+              "job": "e00-s00004-none-B0-r0",
+              "seed": 4,
+              "pickup_step": 3,
+              "unlock_step": 5,
+              "trajectory_sha256": "a32c2478b3552202f3ed64fe88c4e65d3acdfe0bb5adaa9b9dcada7e7ed98f7f"
+            },
+            {
+              "job": "e00-s00004-none-B1-r0",
+              "seed": 4,
+              "pickup_step": 3,
+              "unlock_step": 5,
+              "trajectory_sha256": "724d2643ad27256aa351855d28d955a947e88a010dfe294457c689aabceb6ffd"
+            },
+            {
+              "job": "e00-s00004-none-B2-r0",
+              "seed": 4,
+              "pickup_step": 3,
+              "unlock_step": 5,
+              "trajectory_sha256": "123104877d567ac0033f540b3b6e0e5c9114a3a664d27637a727433a89a3241b"
+            },
+            {
+              "job": "e00-s00004-none-B3-r0",
+              "seed": 4,
+              "pickup_step": 3,
+              "unlock_step": 5,
+              "trajectory_sha256": "583abf32a829bf8330097bad160d889b41638134d11bc090c0de771fe2422106"
+            }
+          ],
+          "observed_outcomes": {
+            "advance_after_unlock": 4,
+            "goal_visible_after_unlock": 4
+          },
+          "steps": {
+            "Find key": "Approach a matching key; pick it up and confirm it is carried.",
+            "Find and cross door": "With the key, face the locked door and toggle. Step through the open doorway if the tile ahead is traversable.",
+            "Reach goal": "Route toward the visible green goal."
+          }
+        }
+      ],
+      "workflow_sha256": "b7ffad547ba832293ef8a8d0d16d96780d95010a1f778e8f92df291b7dd542d9"
+    }
+  },
+  "config": "configs/memory-doorkey-dev.yaml",
+  "config_sha256": "fe8fc95d5c4411d4892bee1aa20690646b18bcc7395a76b0fb714a50fe1125eb",
+  "model_config": "configs/models.yaml",
+  "model_config_sha256": "e27bbcc2d8433cfc7c7a1740e70fc2ea14957cf7615a5db4802ccbb8033f35fe",
+  "lock_sha256": "d59d6219f23927e1567c5543d485f302747bf568cc0f2cc1914933cad2ccf4bb",
+  "model": {
+    "version": "0.40.16",
+    "model": {
+      "name": "qwen2.5:3b-instruct",
+      "model": "qwen2.5:3b-instruct",
+      "modified_at": "2026-11-14T04:03:52.366085552+05:30",
+      "size": 1929912432,
+      "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 2048,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    }
+  },
+  "endpoint": "http://127.0.0.1:11434",
+  "profile": {},
+  "parallel": 1,
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "3.12.16",
+  "packages": {
+    "minigrid": "3.2.0",
+    "gymnasium": "1.4.0",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2"
+  },
+  "jobs": [
+    {
+      "id": "e00-s00005-none-B0-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 5,
+      "variant": "B0",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00005-none-B0G-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 5,
+      "variant": "B0G",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00005-none-B3-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 5,
+      "variant": "B3",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00005-none-B3G-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 5,
+      "variant": "B3G",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00005-none-B4-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 5,
+      "variant": "B4",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00005-none-B5-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 5,
+      "variant": "B5",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00005-none-B6-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 5,
+      "variant": "B6",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00005-none-B7-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 5,
+      "variant": "B7",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00006-none-B0-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 6,
+      "variant": "B0",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00006-none-B0G-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 6,
+      "variant": "B0G",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00006-none-B3-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 6,
+      "variant": "B3",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00006-none-B3G-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 6,
+      "variant": "B3G",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00006-none-B4-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 6,
+      "variant": "B4",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00006-none-B5-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 6,
+      "variant": "B5",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00006-none-B6-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 6,
+      "variant": "B6",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00006-none-B7-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 6,
+      "variant": "B7",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00007-none-B0-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 7,
+      "variant": "B0",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00007-none-B0G-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 7,
+      "variant": "B0G",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00007-none-B3-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 7,
+      "variant": "B3",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00007-none-B3G-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 7,
+      "variant": "B3G",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00007-none-B4-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 7,
+      "variant": "B4",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00007-none-B5-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 7,
+      "variant": "B5",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00007-none-B6-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 7,
+      "variant": "B6",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00007-none-B7-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 7,
+      "variant": "B7",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00008-none-B0-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 8,
+      "variant": "B0",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00008-none-B0G-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 8,
+      "variant": "B0G",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00008-none-B3-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 8,
+      "variant": "B3",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00008-none-B3G-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 8,
+      "variant": "B3G",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00008-none-B4-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 8,
+      "variant": "B4",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00008-none-B5-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 8,
+      "variant": "B5",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00008-none-B6-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 8,
+      "variant": "B6",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00008-none-B7-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 8,
+      "variant": "B7",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00009-none-B0-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 9,
+      "variant": "B0",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00009-none-B0G-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 9,
+      "variant": "B0G",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00009-none-B3-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 9,
+      "variant": "B3",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00009-none-B3G-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 9,
+      "variant": "B3G",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00009-none-B4-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 9,
+      "variant": "B4",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00009-none-B5-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 9,
+      "variant": "B5",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00009-none-B6-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 9,
+      "variant": "B6",
+      "intervention": "none",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s00009-none-B7-r0",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 9,
+      "variant": "B7",
+      "intervention": "none",
+      "replicate": 0
+    }
+  ],
+  "created": "2026-11-14T06:17:28+00:00"
+}
