@@ -1,0 +1,13 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,explore,explore_for_subgoal,Find and pick up source,explore,,0.0,False,False,402,28,0.31684395499905804
+1,2,6,explore,route_to_subgoal,Find and pick up source,f1.9,True,0.0,False,False,433,29,0.348583441998926
+2,2,2,explore,route_to_subgoal,Find and pick up source,f1.9,True,0.0,False,False,432,29,0.33728193300339626
+3,0,6,explore,route_to_subgoal,Find and pick up source,f1.9,,0.0,False,False,427,29,0.2862552649967256
+4,3,0,explore,attempt_subgoal_interaction,Find and pick up source,f4.23,,0.0,False,False,489,30,0.3518938090055599
+5,0,3,approach,route_to_placement,Place beside reference,f4.23,,0.0,False,False,474,30,0.3879989859997295
+6,2,6,approach,route_to_placement,Place beside reference,f4.23,True,0.0,False,False,442,30,0.39370305000193184
+7,1,3,approach,route_to_placement,Place beside reference,f4.23,,0.0,False,False,435,30,0.32749558900104603
+8,2,6,approach,route_to_placement,Place beside reference,f4.23,True,0.0,False,False,473,30,0.3925308039979427
+9,2,6,approach,route_to_placement,Place beside reference,f4.23,True,0.0,False,False,471,30,0.3725566850043833
+10,2,6,approach,route_to_placement,Place beside reference,f4.23,True,0.0,False,False,470,30,0.4289391150014126
+11,4,3,approach,attempt_verified_placement,Place beside reference,f4.23,,0.946,True,False,459,30,0.40193550800177036

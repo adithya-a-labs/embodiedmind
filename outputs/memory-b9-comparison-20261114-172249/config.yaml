@@ -1,0 +1,6 @@
+split: development
+environments: [BabyAI-KeyCorridorS3R3-v0, BabyAI-PutNextS5N2-v0, MiniGrid-MemoryS17Random-v0]
+variants: [B8, B9N, B9]
+seeds: [3001, 3002, 3003, 3004, 3005]
+interventions: [none]
+limits: {max_steps: 48, max_calls: 48, memory_bytes: 768, infrastructure_retries: 2}

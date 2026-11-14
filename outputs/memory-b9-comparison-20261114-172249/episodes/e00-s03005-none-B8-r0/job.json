@@ -1,0 +1,9 @@
+{
+  "id": "e00-s03005-none-B8-r0",
+  "environment": "BabyAI-KeyCorridorS3R3-v0",
+  "seed": 3005,
+  "variant": "B8",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-14T11:59:00+00:00"
+}
