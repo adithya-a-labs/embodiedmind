@@ -1,6 +1,7 @@
 """Construct a fresh, isolated memory condition for each episode."""
 
 from embodiedmind.agents.base import Agent
+from embodiedmind.agents.cue_memory import CueMemory
 from embodiedmind.agents.hybrid import Hybrid
 from embodiedmind.agents.grounded import GroundedMemory
 from embodiedmind.agents.reactive import Reactive
@@ -10,7 +11,7 @@ from embodiedmind.memory.workflows import HANDWRITTEN
 
 VARIANTS = {"B0": Reactive, "B1": TextMemory, "B2": Structured, "B3": Hybrid,
             "B0G": Reactive, "B3G": Hybrid, "B4": GroundedMemory,
-            "B5": GroundedMemory, "B6": GroundedMemory, "B7": GroundedMemory}
+            "B5": GroundedMemory, "B6": GroundedMemory, "B7": GroundedMemory, "B8": CueMemory}
 
 
 def make_agent(variant: str, workflows=()) -> Agent:

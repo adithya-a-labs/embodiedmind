@@ -15,8 +15,8 @@ from embodiedmind.reasoning.prompts import (
     prompt_for,
 )
 
-GUARDED = {"B0G", "B3G", "B4", "B5", "B6", "B7"}
-AGENTIC = {"B5", "B6", "B7"}
+GUARDED = {"B0G", "B3G", "B4", "B5", "B6", "B7", "B8"}
+AGENTIC = {"B5", "B6", "B7", "B8"}
 GOALS = ("primitive", "approach", "verify", "explore")
 GOAL_SCHEMA = {
     "type": "object",
@@ -117,6 +117,33 @@ def _goal_response(raw):
         return "primitive", ActionDecision(1, "", False, "invalid_goal")
 
 
+def _cue_memory_action(agent, observation, goal, valid, exploration_route):
+    if goal == "explore" and valid:
+        agent.explore_streak += 1
+    else:
+        agent.explore_streak = 0
+
+    if observation.mission == MEMORY_MISSION:
+        if agent.scanning:
+            return 0, "scan_start_cue", ()
+        if agent.branch and agent.branch["segment"] == agent.odometry.segment:
+            route = _route(agent, tuple(agent.branch["position"]))
+            if route:
+                return route[0], "approach_matching_branch", route
+
+    front = observation.cell(1, 0)
+    if agent.explore_streak >= 3 or (valid and goal == "explore" and not exploration_route):
+        if agent.forward_remaining == 0 and passable(front):
+            agent.forward_remaining = 3
+            agent.explore_streak = 0
+    if agent.forward_remaining:
+        if passable(front):
+            agent.forward_remaining -= 1
+            return 2, "forward_burst", ()
+        agent.forward_remaining = 0
+    return None
+
+
 def resolve_response(raw, observation, agent, variant):
     goal, proposed = _goal_response(raw) if variant in AGENTIC else ("primitive", parse_action(raw))
     action, reason, route = proposed.action, None, ()
@@ -145,6 +172,11 @@ def resolve_response(raw, observation, agent, variant):
             visible_action = _visible_objective_action(observation)
             action = local_alternative(observation) if visible_action is None else visible_action
             reason = "unknown_fact_reference"
+
+    if variant == "B8":
+        override = _cue_memory_action(agent, observation, goal, proposed.valid, route)
+        if override is not None:
+            action, reason, route = override
 
     cell = observation.cell(1, 0)
     if variant in GUARDED and action == 2 and cell is not None and not passable(cell):

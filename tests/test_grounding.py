@@ -1,4 +1,8 @@
+import pytest
+
 from embodiedmind.agents import make_agent
+from embodiedmind.control.controller import PrimitiveController
+from embodiedmind.environments.factory import make_environment
 from embodiedmind.environments.observation_adapter import Cell, Observation
 from embodiedmind.reasoning.grounding import action_request, resolve_response
 
@@ -54,3 +58,32 @@ def test_goal_requests_constrain_the_schema_to_retrieved_evidence():
 
     request = action_request(Model(), view([]), "f0.0", 7, "B5", [{"id": "f0.0"}])
     assert request["format"]["properties"]["evidence"]["enum"] == ["visible", "explore", "f0.0"]
+
+
+@pytest.mark.parametrize("seed", [11, 14, 21, 36])
+def test_b8_reaches_the_matching_branch_even_with_repeated_explore(seed):
+    raw = '{"goal":"explore","action":0,"evidence":"explore"}'
+    env = make_environment("MiniGrid-MemoryS13-v0")
+    controller = PrimitiveController(env)
+    agent = make_agent("B8")
+    reasons = set()
+    previous_action = moved = None
+    try:
+        observation = controller.reset(seed)
+        for step in range(48):
+            agent.observe(observation, step, previous_action, moved)
+            context = agent.context(observation, 768)
+            decision = resolve_response(raw, observation, agent, "B8")
+            reasons.add(decision.reason)
+            result = controller.step(decision.action)
+            if result.terminated or result.truncated:
+                assert result.terminated and result.reward > 0
+                assert "Start-room cue" in context and "Matching branch" in context
+                assert agent.audit()["hallway_cue"]["object"] == agent.audit()["hallway_branch"]["object"]
+                break
+            observation, previous_action, moved = result.observation, decision.action, result.moved
+        else:
+            pytest.fail("B8 did not reach the matching branch within 48 actions")
+    finally:
+        env.close()
+    assert {"scan_start_cue", "forward_burst", "approach_matching_branch"} <= reasons
