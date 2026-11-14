@@ -12873,6 +12873,15 @@
       "visibility": "derived"
     },
     {
+      "path": "report/hallway-trace-observations.md",
+      "kind": "markdown",
+      "size_bytes": 2866,
+      "sha256": "fdbd232fd94ba7011700185afc430e4d369882aae2ebb831edf08148599037a2",
+      "run_id": "memory-hallway-all-48-20261114-123128",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
       "path": "report/metrics.csv",
       "kind": "csv",
       "size_bytes": 69891,
