@@ -1,0 +1,84 @@
+{
+  "planned": 10,
+  "attempted": 4,
+  "unattempted": 6,
+  "attempt_records": 4,
+  "valid": 4,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 6,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "development",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "relocation",
+      "planned": 10,
+      "planned_matched_cells": 5,
+      "matched_cells": 2,
+      "matched_seeds": 2,
+      "variants": {
+        "B4": {
+          "planned": 5,
+          "valid": 2,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 3,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 5,
+          "valid": 2,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 3,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": [
+    {
+      "run_id": "live-follow-check-20261114",
+      "job_id": "e00-s00007-relocation-B4-r0",
+      "status": "pending",
+      "reason": "Episode never started",
+      "attempts": 0
+    },
+    {
+      "run_id": "live-follow-check-20261114",
+      "job_id": "e00-s00007-relocation-B5-r0",
+      "status": "pending",
+      "reason": "Episode never started",
+      "attempts": 0
+    },
+    {
+      "run_id": "live-follow-check-20261114",
+      "job_id": "e00-s00008-relocation-B4-r0",
+      "status": "pending",
+      "reason": "Episode never started",
+      "attempts": 0
+    },
+    {
+      "run_id": "live-follow-check-20261114",
+      "job_id": "e00-s00008-relocation-B5-r0",
+      "status": "pending",
+      "reason": "Episode never started",
+      "attempts": 0
+    },
+    {
+      "run_id": "live-follow-check-20261114",
+      "job_id": "e00-s00009-relocation-B4-r0",
+      "status": "pending",
+      "reason": "Episode never started",
+      "attempts": 0
+    },
+    {
+      "run_id": "live-follow-check-20261114",
+      "job_id": "e00-s00009-relocation-B5-r0",
+      "status": "pending",
+      "reason": "Episode never started",
+      "attempts": 0
+    }
+  ]
+}
