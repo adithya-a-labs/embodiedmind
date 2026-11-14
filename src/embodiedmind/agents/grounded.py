@@ -53,7 +53,7 @@ class GroundedMemory(Structured):
             if workflow["task"] == "doorkey" and {"key", "door", "goal"} <= mission_terms(obs.mission):
                 cue = workflow["steps"].get(self._audit["subgoal"])
                 if cue:
-                    yield f"Verified practice routine: {cue}", None
+                    yield f"DoorKey routine: {cue}", None
                     self._audit["workflow"] = workflow["source"]
         if self._audit["ruled_out"]:
             recent = self._audit["ruled_out"][-1]

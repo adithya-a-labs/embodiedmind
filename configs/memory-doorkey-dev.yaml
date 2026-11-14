@@ -1,6 +1,6 @@
 split: development
 environments: [MiniGrid-DoorKey-8x8-v0]
-variants: [B0, B0G, B3, B3G, B4, B5, B6]
+variants: [B0, B0G, B3, B3G, B4, B5, B6, B7]
 seeds: [5, 6, 7, 8, 9]
 interventions: [none]
 workflows: workflows.json

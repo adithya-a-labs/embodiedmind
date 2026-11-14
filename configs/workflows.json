@@ -33,10 +33,14 @@
         "trajectory_sha256": "583abf32a829bf8330097bad160d889b41638134d11bc090c0de771fe2422106"
       }
     ],
+    "observed_outcomes": {
+      "advance_after_unlock": 4,
+      "goal_visible_after_unlock": 4
+    },
     "steps": {
       "Find key": "Approach a matching key; pick it up and confirm it is carried.",
-      "Find and cross door": "With the key, face the locked door and toggle. Confirm open before crossing.",
-      "Reach goal": "Use the observed opening and approach the green goal. Replan if blocked."
+      "Find and cross door": "With the key, face the locked door and toggle. Step through the open doorway if the tile ahead is traversable.",
+      "Reach goal": "Route toward the visible green goal."
     }
   }
 ]

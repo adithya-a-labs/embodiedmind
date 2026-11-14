@@ -115,7 +115,8 @@ The original B0–B3 conditions still use the frozen action interface. B0G and
 B3G add the same visible-obstacle guard to B0 and B3. B4 retrieves evidence
 for the current subgoal. B5 adds `approach`, `verify`, and `explore` decisions
 that resolve to a single primitive action using the observed map. B6 adds an
-episode-independent DoorKey routine validated against successful development traces.
+episode-independent DoorKey routine extracted from successful development traces.
+B7 supplies a hand-written routine for comparison with B6.
 
 ```sh
 .venv/bin/embodiedmind run --config configs/memory-doorkey-dev.yaml --monitor
