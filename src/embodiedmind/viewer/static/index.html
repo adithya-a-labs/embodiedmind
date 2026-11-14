@@ -37,7 +37,12 @@
       <div id="comparison" class="comparison" aria-live="off"></div>
     </section>
     <section id="live" aria-label="Live monitor" hidden>
-      <div class="toolbar"><label>Run<select id="live-run"></select></label><button id="refresh-live" type="button">Refresh runs</button></div>
+      <div class="toolbar">
+        <label>Run<select id="live-run"></select></label>
+        <button id="follow-live" type="button" aria-pressed="true">Follow active run</button>
+        <button id="refresh-live" type="button">Refresh runs</button>
+        <button id="replay-live" type="button" hidden>Open in Replay</button>
+      </div>
       <div class="live-progress"><p id="live-status" role="status"></p><progress id="progress" aria-label="Episode progress" value="0" max="1"></progress></div>
       <div id="live-boards" class="comparison"></div>
     </section>

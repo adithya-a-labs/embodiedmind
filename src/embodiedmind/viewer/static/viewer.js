@@ -12,7 +12,8 @@ const worlds = {"MiniGrid-DoorKey-8x8-v0":"DoorKey","BabyAI-GoToObjMazeS7-v0":"G
   "BabyAI-GoToObjS6-v1":"GoToObj","EmbodiedMind-GoToShift-v0":"GoToShift"};
 const defaultRun = "embodiedmind-20261114-0428-ist/static";
 const model = {mode:"replay", runs:[], jobs:[], episodes:[], position:7, request:0, play:null,
-  liveTimer:null, sandbox:null, sandboxTimer:null, sandboxBusy:false};
+  liveTimer:null, liveRequest:0, liveCatalogAt:0, followLive:true,
+  sandbox:null, sandboxTimer:null, sandboxBusy:false};
 
 function node(tag, text, className) {
   const element = document.createElement(tag);
@@ -194,8 +195,8 @@ function setMode(mode) {
   clearTimeout(model.liveTimer);
   if (mode==="replay") renderReplay();
   if (mode==="live") {
-    setHeading("Live monitor","Experiment progress","Select a run to follow its current episode.");
-    updateLive();
+    setHeading("Live monitor","Experiment progress","Active experiments appear automatically.");
+    updateLive(true);
   }
   if(mode==="sandbox") {
     setHeading("Exploratory simulation","MiniGrid sandbox","Manual control and local agent moves");
@@ -289,22 +290,47 @@ async function refreshCatalog() {
   model.runs=catalog.runs;
   const list=model.runs.map(r=>[r.id,labelRun(r)]);
   options($("replay-run"),list,$("replay-run").value||defaultRun);
-  options($("live-run"),list,$("live-run").value||defaultRun);
+  updateLiveOptions();
   options($("sandbox-env"),catalog.environments.map(v=>[v,worlds[v]]), "MiniGrid-DoorKey-8x8-v0");
   options($("sandbox-intervention"),catalog.interventions.map(v=>[v,v.replaceAll("_"," ")]));
 }
-async function updateLive() {
+function updateLiveOptions() {
+  const selected=$("live-run").value;
+  const active=model.runs.filter(run=>run.status==="running");
+  const preferred=model.followLive ? active.find(run=>run.id===selected) || active.at(-1) : null;
+  const runs=[...active,...model.runs.filter(run=>run.status!=="running")];
+  options($("live-run"),[["","Select a run"],...runs.map(run=>[
+    run.id,labelRun(run)+(run.status ? " · "+outcome(run.status) : ""),
+  ])],preferred?.id ?? selected);
+}
+async function updateLive(refresh=false) {
   clearTimeout(model.liveTimer);
   if(model.mode!=="live") return;
-  const run=$("live-run").value;
-  if (!run) { $("live-status").textContent="No runs found. Refresh runs after launching a monitored run."; return; }
+  const request=++model.liveRequest;
+  const current=()=>model.mode==="live"&&request===model.liveRequest;
   try {
-    const {heartbeat,snapshots}=await api("live",{run});
-    if(model.mode!=="live"||run!==$("live-run").value) return;
+    if(refresh || Date.now()-model.liveCatalogAt>2500) {
+      const catalog=await api("catalog");
+      if(!current()) return;
+      model.runs=catalog.runs;
+      model.liveCatalogAt=Date.now();
+      updateLiveOptions();
+    }
+    const run=$("live-run").value;
+    if(!run) {
+      $("live-status").textContent="Waiting for an active experiment.";
+      $("progress").value=0;
+      $("replay-live").hidden=true;
+      $("live-boards").textContent="Start an experiment with --monitor or select a saved run.";
+      return;
+    }
+    const {heartbeat,status,snapshots}=await api("live",{run});
+    if(!current()) return;
     const h=$("progress"); h.max=heartbeat.planned||1; h.value=heartbeat.completed||0;
-    $("live-status").textContent=(heartbeat.status ?
-      outcome(heartbeat.status)+" · "+(heartbeat.completed||0)+"/"+(heartbeat.planned||0)+" episodes · "+(heartbeat.errors||0)+" errors" :
-      "Waiting for the run to start") + (heartbeat.at ? " · "+new Date(heartbeat.at).toLocaleTimeString():"");
+    $("live-status").textContent=(status ?
+      outcome(status)+" · "+(heartbeat.completed||0)+"/"+(heartbeat.planned||0)+" episodes · "+(heartbeat.errors||0)+" errors" :
+      "Saved run") + (heartbeat.at ? " · "+new Date(heartbeat.at).toLocaleTimeString():"");
+    $("replay-live").hidden=!(heartbeat.completed || model.runs.find(item=>item.id===run)?.split==="sandbox");
     error("");
     $("live-boards").replaceChildren(...snapshots.map(s=>boardCard({
       title:s.job.variant+" · Seed "+s.job.seed,
@@ -312,9 +338,13 @@ async function updateLive() {
       failed:!!s.error,frame:{board:s.board,observation:s.observation,
         event:s.decision?.action !== undefined ? {...s.decision, decision:s.decision}:null},
     })));
-    if(!snapshots.length) $("live-boards").textContent="No live board snapshots. Start a run with --monitor.";
-  } catch(e){ error(e.message); }
-  if(model.mode==="live" && run===$("live-run").value) model.liveTimer=setTimeout(updateLive,650);
+    if(!snapshots.length) {
+      $("live-boards").textContent=status==="running" ?
+        "Waiting for a board snapshot. The run must use --monitor." :
+        "This run has no live snapshots. Open Replay to watch saved episodes.";
+    }
+  } catch(e){ if(current()) error(e.message); }
+  finally { if(current()) model.liveTimer=setTimeout(updateLive,650); }
 }
 function stopAgent() {
   clearTimeout(model.sandboxTimer); model.sandboxTimer=null; $("agent-run").textContent="Auto-play";
@@ -391,8 +421,23 @@ $("play").onclick=()=>{
     if(model.position>=Number($("step").max)) stopReplay();
   },420);
 };
-$("live-run").onchange=updateLive;
-$("refresh-live").onclick=safe(async()=>{await refreshCatalog();await updateLive();});
+$("live-run").onchange=()=>{
+  model.followLive=false;
+  $("follow-live").setAttribute("aria-pressed","false");
+  updateLive();
+};
+$("follow-live").onclick=()=>{
+  model.followLive=true;
+  $("follow-live").setAttribute("aria-pressed","true");
+  updateLive(true);
+};
+$("refresh-live").onclick=()=>updateLive(true);
+$("replay-live").onclick=safe(async()=>{
+  const run=$("live-run").value;
+  options($("replay-run"),model.runs.map(item=>[item.id,labelRun(item)]),run);
+  setMode("replay");
+  await openRun();
+});
 $("sandbox-form").onsubmit=(event)=>{event.preventDefault();startSandbox();};
 $("sandbox-env").onchange=()=>{$("intervention-field").hidden=$("sandbox-env").value!=="EmbodiedMind-GoToShift-v0";};
 for(const [action,name] of actions.entries()){
@@ -413,4 +458,4 @@ document.addEventListener("keydown",event=>{
   if(keyActions[event.key]!==undefined){event.preventDefault();sandboxRequest({action:keyActions[event.key]});}
 });
 options($("sandbox-variant"),Object.entries(variants).map(([id,label])=>[id,id+" · "+label]),"B5");
-safe(async()=>{await refreshCatalog();await openRun(true);})();
+safe(async()=>{await refreshCatalog();if(location.hash==="#live") setMode("live"); else await openRun(true);})();

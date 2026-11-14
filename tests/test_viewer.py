@@ -4,7 +4,7 @@ import pytest
 
 from embodiedmind.control.controller import PrimitiveController
 from embodiedmind.environments.visual_state import viewer_environment
-from embodiedmind.viewer.data import ViewerData, public_json
+from embodiedmind.viewer.data import ViewerData, live_status, public_json
 from embodiedmind.viewer.server import viewer_origins
 
 
@@ -74,3 +74,23 @@ def test_live_snapshot_uses_active_job(tmp_path):
     (live / "finished.json").write_text('{"phase":"finished","step":20}')
     data = ViewerData(tmp_path, tmp_path / "sandbox", tmp_path / "models.yaml")
     assert data.live("example")["snapshots"] == [{"phase": "thinking", "step": 7}]
+
+
+def test_catalog_distinguishes_live_completed_and_stalled_runs(tmp_path):
+    from datetime import datetime, timezone
+
+    now = datetime.now(timezone.utc).isoformat()
+    for name, heartbeat in (
+        ("active", {"status": "running", "at": now}),
+        ("old", {"status": "complete"}),
+        ("stale", {"status": "running", "at": "2020-01-01T00:00:00+00:00"}),
+    ):
+        root = tmp_path / name
+        root.mkdir()
+        (root / "manifest.json").write_text('{"split":"development"}')
+        (root / "heartbeat.json").write_text(json.dumps(heartbeat))
+    data = ViewerData(tmp_path, tmp_path / "sandbox", tmp_path / "models.yaml")
+    assert {run["id"]: run["status"] for run in data.catalog()} == {
+        "active": "running", "old": "complete", "stale": "stalled",
+    }
+    assert live_status({"status": "running", "at": "invalid"}) == "stalled"

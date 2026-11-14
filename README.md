@@ -86,7 +86,10 @@ terminal. Use a fresh directory for this development example:
   --output outputs/viewer-smoke --monitor
 ```
 
-Select **Live monitor**, refresh runs, and select `outputs/viewer-smoke`. The runner
+Open **Live monitor** or add `#live` to the viewer URL. It automatically
+discovers and follows an active run. Select a run manually to pin it and use
+**Follow active run** to resume automatic selection. Open completed runs in
+**Replay**. The runner
 publishes evaluator snapshots alongside the run and continues if you close
 the browser. Use `--monitor` with `resume` to monitor a resumed run.
 

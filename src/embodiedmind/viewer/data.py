@@ -3,6 +3,7 @@
 import json
 import os
 from dataclasses import asdict
+from datetime import datetime, timedelta, timezone
 from functools import lru_cache
 from pathlib import Path
 
@@ -43,6 +44,18 @@ def public_json(observation):
     return json.loads(json.dumps(asdict(observation)))
 
 
+def live_status(heartbeat):
+    status = heartbeat.get("status")
+    if status == "running":
+        try:
+            updated = datetime.fromisoformat(heartbeat["at"])
+            if datetime.now(timezone.utc) - updated > timedelta(seconds=45):
+                return "stalled"
+        except (KeyError, ValueError, TypeError):
+            return "stalled"
+    return status
+
+
 class ViewerData:
     def __init__(self, runs, sandbox_output, models, workflows=None):
         self.runs = {"": runs.resolve()} if runs is not None else {
@@ -53,8 +66,22 @@ class ViewerData:
         self.workflows = workflows
 
     def catalog(self):
-        return [{"id": prefix + path.parent.relative_to(root).as_posix(), "split": read_json(path)["split"]}
-                for prefix, root in self.runs.items() for path in sorted(root.glob("**/manifest.json"))]
+        runs = []
+        for prefix, root in self.runs.items():
+            for path in sorted(root.glob("**/manifest.json")):
+                heartbeat = self.heartbeat(path.parent)
+                runs.append({
+                    "id": prefix + path.parent.relative_to(root).as_posix(), "split": read_json(path)["split"],
+                    "status": live_status(heartbeat),
+                })
+        return runs
+
+    @staticmethod
+    def heartbeat(root):
+        try:
+            return read_json(root / "heartbeat.json")
+        except FileNotFoundError:
+            return {}
 
     def run_path(self, run):
         prefix = "outputs/" if "outputs/" in self.runs and run.startswith("outputs/") else ""
@@ -113,11 +140,11 @@ class ViewerData:
 
     def live(self, run):
         root = self.run_path(run)
-        path = root / "heartbeat.json"
-        heartbeat = read_json(path) if path.is_file() else {}
+        heartbeat = self.heartbeat(root)
         snapshots = sorted((root / "live").glob("*.json"), key=lambda file: file.stat().st_mtime_ns, reverse=True)
         selected = [file for file in snapshots if file.stem in heartbeat.get("active", [])] or snapshots[:1]
-        return {"heartbeat": heartbeat, "snapshots": [read_json(file) for file in selected]}
+        return {"heartbeat": heartbeat, "status": live_status(heartbeat),
+                "snapshots": [read_json(file) for file in selected]}
 
     def sandbox(self, body):
         if not isinstance(body, dict):
