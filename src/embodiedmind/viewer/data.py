@@ -45,17 +45,21 @@ def public_json(observation):
 
 class ViewerData:
     def __init__(self, runs, sandbox_output, models):
-        self.runs = runs.resolve()
+        self.runs = {"": runs.resolve()} if runs is not None else {
+            "": Path("results/runs").resolve(), "outputs/": Path("outputs").resolve(),
+        }
         self.sandbox_output = sandbox_output.resolve()
         self.models = models
 
     def catalog(self):
-        return [{"id": path.parent.relative_to(self.runs).as_posix(), "split": read_json(path)["split"]}
-                for path in sorted(self.runs.glob("**/manifest.json"))]
+        return [{"id": prefix + path.parent.relative_to(root).as_posix(), "split": read_json(path)["split"]}
+                for prefix, root in self.runs.items() for path in sorted(root.glob("**/manifest.json"))]
 
     def run_path(self, run):
-        root = (self.runs / run).resolve()
-        if not root.is_relative_to(self.runs) or not (root / "manifest.json").is_file():
+        prefix = "outputs/" if "outputs/" in self.runs and run.startswith("outputs/") else ""
+        base = self.runs[prefix]
+        root = (base / run.removeprefix(prefix)).resolve()
+        if not root.is_relative_to(base) or not (root / "manifest.json").is_file():
             raise FileNotFoundError("Run manifest unavailable.")
         return root
 

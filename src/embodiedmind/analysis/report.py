@@ -127,7 +127,9 @@ def _validate_integrity(directory, required):
     if not {"summary.json", "trajectory.jsonl", "evaluator.json"} <= hashes.keys():
         raise ValueError("Integrity record is missing required episode files")
     for name, expected in hashes.items():
-        if Path(name).name != name or not isinstance(expected, str):
+        artifact = Path(name)
+        if (artifact.is_absolute() or ".." in artifact.parts or not isinstance(expected, str)
+                or not (directory / artifact).resolve().is_relative_to(directory.resolve())):
             raise ValueError("Malformed integrity record")
         if _digest(directory / name) != expected:
             raise ValueError(f"Episode file checksum failed: {name}")
@@ -182,7 +184,7 @@ def _load_episode(run_dir, run_id, default_split, job, root, integrity_required)
     attempts = _attempt_paths(run_dir, directory, job_id)
     row["attempts"] = len(attempts)
     if not summary_path.is_file():
-        row["reason"] = "No finalized episode summary"
+        row["reason"] = ("An attempt ended before finalizing" if attempts else "Episode never started")
         errors = []
         for path in attempts:
             error_path = path / "error.json"
@@ -340,7 +342,8 @@ def _artifact_index(run_dirs, out, metadata):
     seen = set()
     for tree in [*run_dirs, out]:
         for path in sorted(tree.rglob("*")):
-            if not path.is_file() or path.is_symlink() or path.name in {"artifact-index.json", ".gitkeep"} or path in seen:
+            if (not path.is_file() or path.is_symlink()
+                    or path.name in {"artifact-index.json", ".gitkeep", "supervisor.lock"} or path in seen):
                 continue
             seen.add(path)
             run_id = job_id = ""

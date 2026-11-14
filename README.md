@@ -35,6 +35,33 @@ The report, manifest, checksummed raw logs, screenshots and replays live under t
 
 ## Results
 
+### Automatic run archives
+
+```sh
+.venv/bin/embodiedmind run --config configs/smoke.yaml
+.venv/bin/embodiedmind package outputs/<run-id>
+```
+
+`run` prints its new archive path under `outputs/`. Use `--output` to select
+another path. Resume with the same config and the original path passed to
+`resume --output`.
+
+Each finalized episode has a directory under `episodes/`. Failed and
+interrupted attempts remain under `attempts/<episode-id>/<attempt-id>/`.
+The runner records request and response events separately from completed steps
+so a failed model call still has its inputs. Evaluator snapshots and native-size
+frames are saved separately from the policy's observations.
+
+After completion, a checkpoint, or an execution error, the runner builds
+per-step CSVs, episode screenshots and GIFs, and a report with episode metrics,
+coverage, comparisons, figures, and a SHA-256 index. Partial attempts get visuals
+for the frames they captured. Use `package` to rebuild the report and visuals
+from saved evidence without Ollama. A hard kill leaves the already-written raw
+files available for packaging or resume.
+
+`outputs/` is eligible for Git, including archives and logs. Review the files
+before staging them. The viewer discovers both `outputs/` and `results/runs/`.
+
 ### Experiment viewer
 
 From the Ubuntu checkout, start the viewer and open <http://127.0.0.1:8765>.
@@ -56,10 +83,10 @@ terminal. Use a fresh directory for this development example:
 
 ```sh
 .venv/bin/embodiedmind run --config configs/smoke.yaml \
-  --output results/runs/viewer-smoke --monitor
+  --output outputs/viewer-smoke --monitor
 ```
 
-Select **Live monitor**, refresh runs, and select `viewer-smoke`. The runner
+Select **Live monitor**, refresh runs, and select `outputs/viewer-smoke`. The runner
 publishes evaluator snapshots alongside the run and continues if you close
 the browser. Use `--monitor` with `resume` to monitor a resumed run.
 

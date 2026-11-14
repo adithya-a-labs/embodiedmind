@@ -1,14 +1,17 @@
 """Execute a single seeded episode and write a private replayable trace."""
 
 import json
+from contextlib import ExitStack
 from dataclasses import asdict
 from pathlib import Path
+from time import time_ns
 
 from PIL import Image
 
 from embodiedmind.agents import make_agent
 from embodiedmind.control.controller import PrimitiveController
 from embodiedmind.environments.factory import make_environment
+from embodiedmind.environments.visual_state import board_snapshot
 from embodiedmind.memory.episodic import Event
 from embodiedmind.memory.spatial import Odometry
 from embodiedmind.reasoning.action_validator import ActionDecision, parse_action
@@ -20,7 +23,7 @@ def write_event(stream, value):
     stream.flush()
 
 
-def episode(job, limits, model, path: Path, keep_visuals=False, monitor=None):
+def episode(job, limits, model, path: Path, keep_visuals=True, monitor=None):
     if job["intervention"] != "none" or job["environment"].startswith("EmbodiedMind-"):
         from embodiedmind.environments.dynamic_world import InterventionConfig, make_dynamic_environment
 
@@ -40,7 +43,6 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
     controller = PrimitiveController(env)
     initial = controller.reset(job["seed"])
     observation = initial
-    frames = []
     previous_action = moved = None
     calls = prompt_tokens = completion_tokens = invalid = unsupported = stale = 0
     prefix = limits.get("scripted_prefix", [])
@@ -56,36 +58,56 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
 
     def publish(phase, step, observation, decision=None):
         if monitor is not None:
-            from embodiedmind.environments.visual_state import board_snapshot
-
             monitor({
                 "phase": phase, "step": step, "observation": asdict(observation),
                 "board": board_snapshot(env), "decision": decision,
             })
 
-    def frame():
+    def capture(evaluator, step):
+        write_event(evaluator, {
+            "step": step, "board": board_snapshot(env),
+            "interventions": list(getattr(env, "intervention_log", ())),
+        })
         if keep_visuals:
-            pixels = env.render()
-            if pixels is not None:
-                image = Image.fromarray(pixels)
-                image.thumbnail((360, 360))
-                frames.append(image)
+            image = env.render()
+            if image is not None:
+                target = path / "frames" / f"{step:06}.png"
+                temporary = target.with_suffix(".tmp")
+                Image.fromarray(image).save(temporary, format="PNG")
+                temporary.replace(target)
 
-    frame()
-    publish("started", 0, initial)
-    with (path / "trajectory.jsonl").open("w", encoding="utf-8") as trace:
+    if keep_visuals:
+        (path / "frames").mkdir()
+    with ExitStack() as stack:
+        def stream(name):
+            return stack.enter_context((path / name).open("w", encoding="utf-8"))
+
+        trace = stream("trajectory.jsonl")
+        events = stream("step-events.jsonl")
+        evaluator = stream("evaluator-steps.jsonl")
+        write_event(events, {"phase": "reset", "at_ns": time_ns(), "observation": asdict(initial)})
+        capture(evaluator, 0)
+        publish("started", 0, initial)
         for index in range(min(limits["max_steps"], limits["max_calls"] + len(prefix))):
             agent.observe(observation, index, previous_action, moved)
             context = agent.context(observation, limits["memory_bytes"])
             audit = agent.audit()
             scripted = index < len(prefix)
+            request = None if scripted else model.request(
+                SYSTEM, prompt_for(observation, context), job["seed"] * 1000 + index,
+            )
+            write_event(events, {
+                "phase": "before_action", "step": index, "at_ns": time_ns(),
+                "observation": asdict(observation), "memory": audit, "request": request,
+            })
             if scripted:
                 request, raw, elapsed = None, {}, 0.0
                 decision = ActionDecision(prefix[index], "", True)
             else:
-                request = model.request(SYSTEM, prompt_for(observation, context), job["seed"] * 1000 + index)
                 publish("thinking", index, observation, last_action)
                 raw, elapsed = model.generate(request)
+                write_event(events, {"phase": "model_response", "step": index, "at_ns": time_ns(),
+                                     "response": raw, "inference_seconds": elapsed})
                 decision = parse_action(raw["response"])
                 calls += 1
             if raw.get("done_reason") == "length" and not decision.valid:
@@ -116,6 +138,8 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
                 and decision.evidence not in refs
             )
             stale_reference = decision.valid and decision.evidence in invalidated
+            write_event(events, {"phase": "decision", "step": index, "at_ns": time_ns(),
+                                 "decision": asdict(decision)})
             result = controller.step(decision.action)
             last_action = {
                 **asdict(decision), "moved": result.moved, "reward": result.reward,
@@ -125,9 +149,8 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
             if monitor is not None and request:
                 last_action["hint"] = next((line for line in request["prompt"].splitlines()
                                             if line.startswith(("Route to visible objective", "No visible route"))), "")
-            publish("acted", index + 1, result.observation, last_action)
             write_event(trace, {
-                "step": index, "observation": asdict(observation),
+                "step": index, "at_ns": time_ns(), "observation": asdict(observation),
                 "next_observation": asdict(result.observation), "memory": audit,
                 "request": request, "response": raw, "inference_seconds": elapsed,
                 "decision": asdict(decision), "scripted_prefix": scripted,
@@ -135,6 +158,8 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
                 "unsupported_reference": unsupported_reference, "stale_reference": stale_reference,
                 "reward": result.reward, "terminated": result.terminated, "truncated": result.truncated,
             })
+            capture(evaluator, index + 1)
+            publish("acted", index + 1, result.observation, last_action)
             if hasattr(agent, "record_decision"):
                 agent.record_decision(decision.action)
             prompt_tokens += int(raw.get("prompt_eval_count") or 0)
@@ -147,16 +172,11 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
             previous_action = decision.action
             reward += float(result.reward)
             terminated, truncated = result.terminated, result.truncated
-            frame()
             if terminated or truncated:
                 if reward > 0 and contradicted_at is not None:
                     recovered_at = index - contradicted_at
                 break
     steps = index + 1
-    if frames:
-        frames[0].save(path / "start.png")
-        frames[-1].save(path / "finish.png")
-        frames[0].save(path / "replay.gif", save_all=True, append_images=frames[1:], duration=210, loop=0)
     interventions = list(getattr(env, "intervention_log", ()))
     with (path / "evaluator.json").open("w", encoding="utf-8") as private_data:
         json.dump({"events": interventions, "terminated": terminated, "truncated": truncated}, private_data)
