@@ -26,13 +26,7 @@ OFFICIAL_ENVIRONMENTS = (
 
 def make_environment(env_id: str, *, render_mode: str | None = None) -> gym.Env:
     if env_id not in OFFICIAL_ENVIRONMENTS or env_id not in gym.registry:
-        candidates = sorted(
-            name for name in gym.registry if name.startswith(("BabyAI-", "MiniGrid-"))
-        )
-        raise ValueError(
-            f"Unsupported MiniGrid task {env_id!r} in MiniGrid {minigrid.__version__}. "
-            f"Registered tasks: {', '.join(candidates)}"
-        )
+        raise ValueError(f"Unsupported MiniGrid task {env_id!r} in this build (MiniGrid {minigrid.__version__}).")
     return gym.make(env_id, render_mode=render_mode)
 
 

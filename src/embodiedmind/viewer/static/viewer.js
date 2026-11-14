@@ -10,7 +10,11 @@ const headings = ["east","south","west","north"];
 const colors = {red:"#e06652",green:"#65ba83",blue:"#70a7df",purple:"#b690da",yellow:"#e3c971",grey:"#a1aaa5"};
 const front = [[1,0],[0,1],[-1,0],[0,-1]];
 const worlds = {"MiniGrid-DoorKey-8x8-v0":"DoorKey","BabyAI-GoToObjMazeS7-v0":"GoToObjMaze",
-  "BabyAI-GoToObjS6-v1":"GoToObj","EmbodiedMind-GoToShift-v0":"GoToShift"};
+  "BabyAI-GoToObjS6-v1":"GoToObj","EmbodiedMind-GoToShift-v0":"GoToShift",
+  "MiniGrid-MemoryS13-v0":"Hallway Memory","MiniGrid-MemoryS17Random-v0":"Randomized Memory",
+  "MiniGrid-MultiRoom-N6-v0":"MultiRoom","BabyAI-KeyCorridorS3R3-v0":"Key Corridor",
+  "BabyAI-BlockedUnlockPickup-v0":"Blocked Unlock Pickup","BabyAI-PutNextS5N2-v0":"Put Next",
+  "MiniGrid-Dynamic-Obstacles-8x8-v0":"Dynamic Obstacles","BabyAI-SynthS5R2-v0":"Synth"};
 const defaultRun = "embodiedmind-20261114-0428-ist/static";
 const model = {mode:"replay", runs:[], jobs:[], episodes:[], position:7, request:0, play:null,
   liveTimer:null, liveRequest:0, liveCatalogAt:0, followLive:true,
@@ -25,6 +29,7 @@ function node(tag, text, className) {
 function labelRun(run) {
   return run.id.replace("embodiedmind-20261114-0428-ist/", "Study / ");
 }
+function labelWorld(id) { return worlds[id] ?? id; }
 function options(select, entries, previous = select.value) {
   select.replaceChildren(...entries.map(([value, label]) => new Option(label, value)));
   if (entries.some(([value]) => value === previous)) select.value = previous;
@@ -220,7 +225,7 @@ async function openRun(initial=false) {
   const jobs=run ? await api("jobs",{run}) : [];
   if (token!==model.request) return;
   model.jobs=jobs;
-  const unique=new Map(model.jobs.map(j=>[scenario(j),worlds[j.environment]+" · "+j.intervention.replaceAll("_"," ")
+  const unique=new Map(model.jobs.map(j=>[scenario(j),labelWorld(j.environment)+" · "+j.intervention.replaceAll("_"," ")
     +(j.replicate ? " · repeat "+(j.replicate+1):"")]));
   options($("scenario"),[...unique],initial?"MiniGrid-DoorKey-8x8-v0|none|0":"");
   updateSeeds(initial?"1015":"");
@@ -236,10 +241,19 @@ async function loadPair(position, initial=false) {
   options($("right"),entries,initial?"B2":right);
   if (!initial && !right && entries.length>1) $("right").selectedIndex=1;
   model.episodes=[];
+  renderReplay();
   $("comparison").textContent=match.length?"Loading saved episodes…":"No completed episodes in this run.";
-  if (!match.length) {renderReplay();return;}
+  if (!match.length) return;
   const run=$("replay-run").value;
-  const pair=await Promise.all(["left","right"].map(key=>api("replay",{run,job:match.find(j=>j.variant===$(key).value).id})));
+  let pair;
+  try {
+    pair=await Promise.all(["left","right"].map(key=>api("replay",{run,job:match.find(j=>j.variant===$(key).value).id})));
+  } catch (failure) {
+    if (token!==model.request) return;
+    error(failure.message);
+    $("comparison").textContent="Replay unavailable. Choose another episode to retry.";
+    return;
+  }
   if (token!==model.request) return;
   model.episodes=pair; model.position=position; renderReplay();
 }
@@ -272,7 +286,7 @@ function renderReplay() {
     $("comparison").textContent="No episodes loaded.";
     return;
   }
-  setHeading("Recorded episodes",worlds[first.summary.environment]+" comparison",
+  setHeading("Recorded episodes",labelWorld(first.summary.environment)+" comparison",
     "Seed "+first.summary.seed+" · "+first.summary.mission);
   $("comparison").replaceChildren(...model.episodes.map(episode=>{
     const {summary,frames}=episode;
@@ -292,7 +306,7 @@ async function refreshCatalog() {
   const list=model.runs.map(r=>[r.id,labelRun(r)]);
   options($("replay-run"),list,$("replay-run").value||defaultRun);
   updateLiveOptions();
-  options($("sandbox-env"),catalog.environments.map(v=>[v,worlds[v]]), "MiniGrid-DoorKey-8x8-v0");
+  options($("sandbox-env"),catalog.environments.map(v=>[v,labelWorld(v)]), "MiniGrid-DoorKey-8x8-v0");
   options($("sandbox-intervention"),catalog.interventions.map(v=>[v,v.replaceAll("_"," ")]));
 }
 function updateLiveOptions() {
@@ -380,7 +394,7 @@ async function sandboxRequest({action,agent=false,save=false}={}) {
     session.actions=state.actions; session.done=state.done;
     if(state.model_record) (session.model_steps ??= []).push(state.model_record);
     $("branch").textContent=session.branch?"Forked before action "+(session.branch.step+1)+" · "+session.branch.job:
-      worlds[session.environment]+" · Seed "+session.seed;
+      labelWorld(session.environment)+" · Seed "+session.seed;
     $("sandbox-board").replaceChildren(boardCard({title:state.observation.mission,
       status:state.done?(state.reward>0?"Success":"Ended"):state.step+" actions applied",
       frame:{...state,event:state.decision ? {...state.decision,moved:state.moved,reward:state.reward,decision:state.decision}:null}}));

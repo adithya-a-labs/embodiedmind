@@ -20,7 +20,7 @@ def test_seeded_official_environments_complete_smoke(env_id):
 
 
 def test_unrecognized_environment_is_not_substituted():
-    with pytest.raises(ValueError, match="Registered tasks"):
+    with pytest.raises(ValueError, match="Unsupported MiniGrid task 'Unregistered-v0'"):
         make_environment("Unregistered-v0")
 
 
