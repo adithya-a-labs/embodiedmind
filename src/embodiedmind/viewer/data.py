@@ -5,9 +5,9 @@ import os
 from dataclasses import asdict
 from functools import lru_cache
 from pathlib import Path
-from uuid import uuid4
 
 import yaml
+from PIL import Image
 
 from embodiedmind.agents import VARIANTS, make_agent
 from embodiedmind.control.controller import PrimitiveController
@@ -17,6 +17,7 @@ from embodiedmind.environments.visual_state import board_snapshot, viewer_enviro
 from embodiedmind.reasoning.action_validator import ACTION_NAMES
 from embodiedmind.reasoning.grounding import action_request, resolve_response
 from embodiedmind.reasoning.llm_client import Ollama
+from embodiedmind.viewer.sandbox_archive import save_sandbox
 MAX_ACTIONS = 256
 
 
@@ -147,13 +148,15 @@ class ViewerData:
                    "intervention": intervention if environment == DYNAMIC_ENV_ID else "none"}
             limits = {"memory_bytes": 768, "dynamics": {"step": 2, "dropout_until": 9, "dropout_probability": 0.25}}
             prefix = [0, 0] if environment == DYNAMIC_ENV_ID else []
-        env = viewer_environment(job, limits)
+        env = viewer_environment(job, limits, render_mode="rgb_array" if body.get("save") is True else None)
         try:
             return self._play(env, job, limits, prefix, actions, variant, branch, body)
         finally:
             env.close()
 
     def _play(self, env, job, limits, prefix, actions, variant, branch, body):
+        if body.get("save") is True and (body.get("agent_step") is True or not prefix and not actions):
+            raise ValueError("Apply at least one action before saving the sandbox.")
         workflows = limits.get("workflows")
         if variant == "B6" and not workflows:
             if self.workflows is None or not self.workflows.is_file():
@@ -162,15 +165,47 @@ class ViewerData:
         controller, agent = PrimitiveController(env), make_agent(variant, workflows or ())
         observation = controller.reset(job["seed"])
         previous = moved = result = decision = None
-        records = []
+        records, states, frames = [], [], []
+        saving = body.get("save") is True
+        model_record = None
+        supplied = body.get("model_steps", [])
+        if not isinstance(supplied, list) or len(supplied) > len(actions):
+            raise ValueError("Invalid sandbox model history.")
+        model_steps = {}
+        for item in supplied:
+            offset = item["offset"]
+            if type(offset) is not int or not 0 <= offset < len(actions) or item["executed_action"] != actions[offset]:
+                raise ValueError("Sandbox model history does not match the executed actions.")
+            model_steps[offset] = item
+
+        def capture(step):
+            if saving:
+                states.append({"step": step, "board": board_snapshot(env),
+                               "interventions": list(getattr(env, "intervention_log", ()))})
+                frames.append(Image.fromarray(env.render()))
+
+        capture(0)
         for index, action in enumerate(prefix + actions):
             if result and (result.terminated or result.truncated):
                 raise ValueError("The sandbox episode has already ended.")
             agent.observe(observation, index, previous, moved)
+            before = observation
             result = controller.step(action)
             previous, moved, observation = action, result.moved, result.observation
-            if index >= len(prefix):
-                records.append({"action": action, "moved": moved, "reward": result.reward})
+            if saving:
+                record = {
+                    "step": index, "observation": asdict(before), "next_observation": asdict(observation),
+                    "executed_action": action, "moved": moved, "reward": result.reward,
+                    "terminated": result.terminated, "truncated": result.truncated,
+                    "scripted_prefix": index < len(prefix), "inference_seconds": 0,
+                    "decision": {"action": action, "evidence": "", "source": "reconstructed"},
+                    "memory": agent.audit(), "request": None, "response": {},
+                }
+                if evidence := model_steps.get(index - len(prefix)):
+                    for name in ("request", "response", "memory", "decision", "planning", "inference_seconds"):
+                        record[name] = evidence[name]
+                records.append(record)
+            capture(index + 1)
         done = bool(result and (result.terminated or result.truncated))
         if body.get("agent_step") is True:
             if done or len(actions) >= MAX_ACTIONS:
@@ -181,7 +216,7 @@ class ViewerData:
             model_values.pop("temperature")
             model_values["endpoint"] = os.environ.get("OLLAMA_HOST", model_values["endpoint"])
             model = Ollama(**model_values)
-            model.verify()
+            model_info = model.verify()
             context = agent.context(observation, limits["memory_bytes"])
             request = action_request(model, observation, context, (job["seed"] * 1000 + index) % (2**31),
                                      variant, agent.audit()["selected_facts"])
@@ -194,18 +229,17 @@ class ViewerData:
             decision = {**asdict(selected), "action": resolved.action, "proposed_action": selected.action,
                         "inference_seconds": elapsed, "subgoal": agent.audit().get("subgoal"),
                         "planning": {"goal": resolved.goal, "reason": resolved.reason, "route": resolved.route}}
-            records.append({"action": resolved.action, "moved": result.moved, "reward": result.reward,
-                            "decision": decision})
+            model_record = {"offset": len(actions) - 1, "executed_action": resolved.action,
+                            "request": request, "response": raw, "memory": agent.audit(),
+                            "decision": asdict(selected), "planning": decision["planning"],
+                            "inference_seconds": elapsed, "model": model_info, "variant": variant}
             done = result.terminated or result.truncated
         state = {"board": board_snapshot(env), "observation": asdict(observation),
                  "step": len(prefix) + len(actions), "actions": actions, "done": done,
                  "reward": result.reward if result else 0, "moved": result.moved if result else None,
-                 "decision": decision}
-        if body.get("save") is True:
-            self.sandbox_output.mkdir(exist_ok=True, parents=True)
-            filename = f"sandbox-{uuid4().hex[:12]}.json"
-            with (self.sandbox_output / filename).open("x", encoding="utf-8") as stream:
-                json.dump({"split": "sandbox", "job": job, "limits": limits, "variant": variant,
-                           "branch": branch, "prefix": prefix, "records": records, **state}, stream, indent=2)
-            state["saved"] = filename
+                 "decision": decision, "model_record": model_record}
+        if saving:
+            state["saved"] = save_sandbox(self.sandbox_output, job, limits, variant, branch,
+                                          records, states, frames, done,
+                                          [item["model"] for item in model_steps.values()])
         return state

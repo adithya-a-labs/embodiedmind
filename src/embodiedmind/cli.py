@@ -25,7 +25,7 @@ def main():
         queue.add_argument("--monitor", action="store_true", help="publish evaluator snapshots for the local viewer")
     viewer = commands.add_parser("viewer", help="open the local experiment viewer")
     viewer.add_argument("--runs", type=Path, help="archive to browse instead of outputs and results/runs")
-    viewer.add_argument("--sandbox-output", type=Path, default=Path("results/sandbox"))
+    viewer.add_argument("--sandbox-output", type=Path, default=Path("outputs"))
     viewer.add_argument("--models", type=Path, default=Path("configs/models.yaml"))
     viewer.add_argument("--port", type=int, default=8765)
     viewer.add_argument("--workflows", type=Path, default=Path("configs/workflows.json"))

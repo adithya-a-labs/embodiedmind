@@ -73,7 +73,7 @@ def serve(runs, sandbox_output, models, port, tunnel_origin=None, workflows=None
                     if self.headers.get_content_type() != "application/json":
                         raise ValueError("Expected JSON sandbox controls.")
                     length = int(self.headers.get("Content-Length", 0))
-                    if not 0 < length <= 65536:
+                    if not 0 < length <= 2 * 1024 * 1024:
                         raise ValueError("Invalid sandbox request size.")
                     value = data.sandbox(json.loads(self.rfile.read(length)))
                 elif method == "GET" and parsed.path in ASSETS:

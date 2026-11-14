@@ -93,7 +93,9 @@ the browser. Use `--monitor` with `resume` to monitor a resumed run.
 In **Sandbox**, start a seeded environment or use **Take over before action**
 from either side of a replay. Use the buttons or arrow keys to move and turn.
 **Agent move** and **Auto-play** use the configured local Ollama model. Saved
-exploratory sessions go under `results/sandbox/` by default.
+exploratory sessions go under `outputs/sandbox-…/` by default and can be
+opened from Replay. The archive reconstructs manual and branch-prefix actions
+and preserves model requests made in that browser session.
 
 For access from another device, forward only port 8765 through a **private**
 Microsoft Dev Tunnel. Restart the viewer with the exact HTTPS address printed

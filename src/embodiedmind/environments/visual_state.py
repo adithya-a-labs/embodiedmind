@@ -8,12 +8,12 @@ from embodiedmind.environments.dynamic_world import (
 from embodiedmind.environments.factory import make_environment
 
 
-def viewer_environment(job, limits):
+def viewer_environment(job, limits, *, render_mode=None):
     if job["environment"] == DYNAMIC_ENV_ID:
         return make_dynamic_environment(
-            job["intervention"], config=InterventionConfig(**limits.get("dynamics", {})),
+            job["intervention"], config=InterventionConfig(**limits.get("dynamics", {})), render_mode=render_mode,
         )
-    return make_environment(job["environment"])
+    return make_environment(job["environment"], render_mode=render_mode)
 
 
 def board_snapshot(env):

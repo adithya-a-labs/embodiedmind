@@ -58,8 +58,10 @@ def test_replay_reconstructs_view_and_sandbox_forks_without_changing_trace(tmp_p
                           "actions": [1], "save": True})
     assert state["observation"]["direction"] == (initial.direction + 1) % 4
     assert trace.read_text() == json.dumps(row)
-    saved = json.loads((tmp_path / "sandbox" / state["saved"]).read_text())
-    assert saved["split"] == "sandbox" and saved["actions"] == [1]
+    archive = tmp_path / "sandbox" / state["saved"]
+    saved = json.loads((archive / "manifest.json").read_text())
+    assert saved["split"] == "sandbox"
+    assert (archive / "report" / "artifact-index.json").is_file()
 
 
 def test_live_snapshot_uses_active_job(tmp_path):

@@ -335,7 +335,9 @@ async function sandboxRequest({action,agent=false,save=false}={}) {
   if(!model.sandbox || model.sandboxBusy) return;
   model.sandboxBusy=true; error("");
   const session=model.sandbox;
-  const body={...session, variant:$("sandbox-variant").value,agent_step:agent,save};
+  const {model_steps,...requestState}=session;
+  const body={...requestState, variant:$("sandbox-variant").value,agent_step:agent,save};
+  if(save && model_steps) body.model_steps=model_steps;
   if(action!==undefined) body.actions=[...session.actions,action];
   const buttons=[...$("sandbox").querySelectorAll("button")].filter(b=>b.id!=="agent-run");
   buttons.forEach(b=>b.disabled=true);
@@ -345,6 +347,7 @@ async function sandboxRequest({action,agent=false,save=false}={}) {
     state=await api("sandbox",null,body);
     if(model.sandbox!==session) return;
     session.actions=state.actions; session.done=state.done;
+    if(state.model_record) (session.model_steps ??= []).push(state.model_record);
     $("branch").textContent=session.branch?"Forked before action "+(session.branch.step+1)+" · "+session.branch.job:
       worlds[session.environment]+" · Seed "+session.seed;
     $("sandbox-board").replaceChildren(boardCard({title:state.observation.mission,
