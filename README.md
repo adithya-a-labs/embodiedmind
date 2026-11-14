@@ -32,3 +32,7 @@ The report, manifest, checksummed raw logs, screenshots and replays live under t
 ```sh
 .venv/bin/embodiedmind report "$run/pilot" "$run/static" "$run/dynamic" --output "$run/final-report"
 ```
+
+## Results
+
+See the [held-out results summary](reports/technical_report.md) and [final run status](STATUS.md).
