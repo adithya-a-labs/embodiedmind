@@ -1,0 +1,12 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,3,6,approach,,Find key,f0.10,,0.0,False,False,454,30,0.41685175499878824
+1,2,6,approach,,Find and cross door,f0.2,True,0.0,False,False,451,29,0.37325152099947445
+2,0,6,approach,,Find and cross door,f0.2,,0.0,False,False,448,29,0.32566774500446627
+3,2,6,approach,,Find and cross door,f0.2,True,0.0,False,False,443,29,0.39220652800577227
+4,5,6,approach,,Find and cross door,f0.2,,0.0,False,False,443,29,0.3615786969967303
+5,2,6,approach,,Find and cross door,f5.22,True,0.0,False,False,453,30,0.39703448000364006
+6,2,6,approach,,Reach goal,f5.24,True,0.0,False,False,438,30,0.38982383300026413
+7,2,6,approach,,Reach goal,f5.24,True,0.0,False,False,436,30,0.40985859999636887
+8,2,6,approach,,Reach goal,f5.24,True,0.0,False,False,436,30,0.3773272079997696
+9,1,6,approach,,Reach goal,f5.24,,0.0,False,False,436,30,0.3552965970011428
+10,2,6,approach,,Reach goal,f5.24,True,0.98453125,True,False,448,30,0.3678396269970108

@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,353,14,0.17838893099542474
+1,2,2,primitive,,,o0,True,0.0,False,False,367,12,0.17515510699740844
+2,2,2,primitive,,,o1,True,0.0,False,False,386,12,0.14656689300318249
+3,2,2,primitive,,,o0,True,0.0,False,False,398,12,0.16589530400233343
+4,6,6,primitive,,,o2,,0.0,False,False,408,13,0.19591366199892946
+5,2,2,primitive,,,o2,False,0.0,False,False,424,15,0.17835034299787367
+6,6,6,primitive,,,o5,,0.0,False,False,440,13,0.20350418700400041
+7,6,6,primitive,,,o0,,0.0,False,False,456,13,0.342635936998704
+8,6,6,primitive,,,o0,,0.0,False,False,472,13,0.23303268399467925
+9,0,0,primitive,,,o0,,0.0,False,False,488,15,0.24021655900287442
+10,2,2,primitive,,,o2,True,0.0,False,False,511,12,0.22407916100200964
+11,2,2,primitive,,,o0,True,0.0,False,False,528,12,0.1912043780030217
+12,0,0,primitive,,,o0,,0.0,False,False,540,13,0.23400893199868733
+13,2,2,primitive,,,o0,True,0.0,False,False,568,12,0.23289962299895706
+14,2,2,primitive,,,o0,True,0.0,False,False,588,12,0.24563634899823228
+15,2,2,primitive,,,o0,True,0.0,False,False,608,12,0.27559820899477927
+16,2,2,primitive,,,o1,True,0.0,False,False,628,12,0.21702160999848275
+17,2,2,primitive,,,o1,True,0.0,False,False,648,12,0.2282454609958222
+18,0,0,primitive,,,o1,,0.0,False,False,647,13,0.24582675200508675
+19,2,2,primitive,,,"o14 step 14 prev=2 facing=1: yellow key@4,-2",True,0.0,False,False,664,30,0.4171543109987397
+20,3,3,primitive,,,"o18 step 18 prev=2 facing=1: yellow key@0,-2",,0.0,False,False,656,31,0.3391565950005315
+21,0,0,primitive,,,o20 step 20 prev=2 facing=0,,0.0,False,False,661,24,0.3153395619956427
+22,2,2,primitive,,,"o21 step 21 prev=3 facing=0: yellow door locked@3,-3",True,0.0,False,False,653,31,0.4286050559967407
+23,2,2,primitive,,,o20,True,0.0,False,False,658,13,0.24682892699638614
+24,2,2,primitive,,,o12 step 12 prev=2 facing=2: no named objects,True,0.0,False,False,663,27,0.3403469549957663
+25,2,2,primitive,,,o20,True,0.0,False,False,668,13,0.3173982599982992
+26,2,2,primitive,,,o12 step 12 prev=2 facing=2: no named objects,True,0.0,False,False,671,27,0.39842728299845476
+27,3,3,primitive,,,o12 step 12,,0.0,False,False,665,20,0.3092320700015989
+28,3,3,primitive,,,"o14 step 14 prev=2 facing=1: yellow key@5,-2",,0.0,False,False,665,33,0.4090606179961469
+29,5,5,primitive,,,"o14 step 14 prev=2 facing=1: yellow key@4,-2",,0.0,False,False,662,31,0.4423524220037507
+30,2,2,primitive,,,"o16 step 16 prev=2 facing=1: yellow key@2,-2",False,0.0,False,False,659,30,0.3635711140013882
+31,2,2,primitive,,,o20,False,0.0,False,False,656,13,0.2400884099988616
+32,2,2,primitive,,,o20,False,0.0,False,False,653,13,0.24685159299406223
+33,2,2,primitive,,,o20,False,0.0,False,False,650,13,0.25465403999987757
+34,2,2,primitive,,,o20,False,0.0,False,False,647,13,0.2870086659968365
+35,6,6,primitive,,,"o25 step 25 prev=2 facing=3: yellow door locked@0,3",,0.0,False,False,636,32,0.40786431600281503
+36,2,2,primitive,,,"o25 step 25 prev=2 facing=3: yellow door locked@0,3",False,0.0,False,False,646,31,0.37525203399854945
+37,2,2,primitive,,,"o25 step 25 prev=2 facing=3: yellow door locked@0,3",False,0.0,False,False,643,31,0.36105193800176494
+38,2,2,primitive,,,"o25 step 25 prev=2 facing=3: yellow door locked@0,3",False,0.0,False,False,639,31,0.3754047019974678
+39,0,0,primitive,,,"o25 step 25 prev=2 facing=3: yellow door locked@0,3",,0.0,False,False,635,32,0.3983888200018555
+40,2,2,primitive,,,"o25 step 25 prev=2 facing=3: yellow door locked@0,3",True,0.0,False,False,638,31,0.45042207799997414
+41,5,5,primitive,,,o25,,0.0,False,False,628,14,0.26957050900091417
+42,0,0,primitive,,,o30,,0.0,False,False,624,14,0.21893592800188344
+43,2,2,primitive,,,o30 step 30 prev=5 facing=3: no named objects,True,0.0,False,False,634,28,0.3515532739984337
+44,2,2,primitive,,,o30,True,0.0,False,False,633,13,0.2044932169956155
+45,2,2,primitive,,,o30 step 30,True,0.0,False,False,632,18,0.24535404299967922
+46,2,2,primitive,,,o30,True,0.0,False,False,631,13,0.19552284000383224
+47,2,2,primitive,,,o31,True,0.0,False,False,630,14,0.22324359099729918
