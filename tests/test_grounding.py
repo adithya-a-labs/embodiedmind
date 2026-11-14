@@ -5,6 +5,7 @@ from embodiedmind.control.controller import PrimitiveController
 from embodiedmind.environments.factory import make_environment
 from embodiedmind.environments.observation_adapter import Cell, Observation
 from embodiedmind.reasoning.grounding import action_request, resolve_response
+from embodiedmind.reasoning.prompts import DYNAMIC_OBSTACLES_MISSION
 
 
 def view(cells, direction=0, mission="go to the purple ball", carrying=None):
@@ -58,6 +59,24 @@ def test_goal_requests_constrain_the_schema_to_retrieved_evidence():
 
     request = action_request(Model(), view([]), "f0.0", 7, "B5", [{"id": "f0.0"}])
     assert request["format"]["properties"]["evidence"]["enum"] == ["visible", "explore", "f0.0"]
+
+
+@pytest.mark.parametrize("variant", ["B0", "B8"])
+def test_dynamic_obstacles_limits_model_and_executed_actions(variant):
+    class Model:
+        def request(self, system, prompt, seed):
+            return {"system": system, "format": {"properties": {"action": {"maximum": 6}}}}
+
+    observation = view([], mission=DYNAMIC_OBSTACLES_MISSION)
+    request = action_request(Model(), observation, "", 7, variant)
+    assert "6 done" not in request["system"]
+    assert request["format"]["properties"]["action"]["maximum"] == 2
+    raw = '{"goal":"primitive","action":6,"evidence":"visible"}' if variant == "B8" else (
+        '{"action":6,"evidence":"visible"}'
+    )
+    result = resolve_response(raw, observation, make_agent(variant), variant)
+    assert result.action in (0, 1)
+    assert result.reason == "action_unavailable"
 
 
 @pytest.mark.parametrize("seed", [11, 14, 21, 36])

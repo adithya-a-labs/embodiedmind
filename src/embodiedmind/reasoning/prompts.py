@@ -7,6 +7,7 @@ from embodiedmind.environments.observation_adapter import PASSABLE
 
 
 MEMORY_MISSION = "go to the matching object at the end of the hallway"
+DYNAMIC_OBSTACLES_MISSION = "get to the green goal square"
 GOTO_INSTRUCTIONS = "A GoTo succeeds when you face the matching object in an adjacent cell. Do not pick up that target."
 MEMORY_INSTRUCTIONS = (
     "Inspect the object in the starting room. At the fork, walk onto the floor tile "

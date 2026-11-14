@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from embodiedmind.memory.spatial import DIRECTION_VECTORS
 from embodiedmind.reasoning.action_validator import ActionDecision, _unique_object, parse_action
 from embodiedmind.reasoning.prompts import (
+    DYNAMIC_OBSTACLES_MISSION,
     GOTO_INSTRUCTIONS,
     MEMORY_INSTRUCTIONS,
     MEMORY_MISSION,
@@ -41,8 +42,16 @@ class Resolution:
 
 def action_request(model, observation, context, seed, variant, facts=()):
     system = SYSTEM
+    dynamic_obstacles = observation.mission == DYNAMIC_OBSTACLES_MISSION
     if observation.mission == MEMORY_MISSION:
         system = system.replace(GOTO_INSTRUCTIONS, MEMORY_INSTRUCTIONS)
+    elif dynamic_obstacles:
+        system = system.replace(
+            "3 pick up the object directly ahead, 4 drop ahead, 5 toggle the door directly ahead, 6 done. "
+            + GOTO_INSTRUCTIONS
+            + " For DoorKey, collect the key, toggle the locked door, then walk onto the green goal.",
+            "and no interaction actions. Reach the green goal square without colliding with moving obstacles.",
+        )
     if variant in AGENTIC:
         system = (
             system.split("Return JSON", 1)[0] + " Return JSON with goal, action, and evidence. "
@@ -61,6 +70,12 @@ def action_request(model, observation, context, seed, variant, facts=()):
         allowed = ["visible", "explore", *(fact["id"] for fact in facts)]
         request["format"] = {**GOAL_SCHEMA, "properties": {
             **GOAL_SCHEMA["properties"], "evidence": {"type": "string", "enum": allowed},
+        }}
+    if dynamic_obstacles:
+        schema = request["format"]
+        properties = schema["properties"]
+        request["format"] = {**schema, "properties": {
+            **properties, "action": {**properties["action"], "maximum": 2},
         }}
     return request
 
@@ -179,6 +194,8 @@ def resolve_response(raw, observation, agent, variant):
             action, reason, route = override
 
     cell = observation.cell(1, 0)
+    if observation.mission == DYNAMIC_OBSTACLES_MISSION and action > 2:
+        action, reason = local_alternative(observation), "action_unavailable"
     if variant in GUARDED and action == 2 and cell is not None and not passable(cell):
         action, reason = local_alternative(observation), f"blocked_by_visible_{cell.object}"
     return Resolution(proposed, action, goal, reason, route or ())

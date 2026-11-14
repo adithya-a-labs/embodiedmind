@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 
 import gymnasium as gym
+from minigrid.envs import DynamicObstaclesEnv
 
 from embodiedmind.environments.observation_adapter import (
     Observation,
@@ -36,6 +37,7 @@ class StepResult:
 class PrimitiveController:
     def __init__(self, environment: gym.Env):
         self._environment = environment
+        self._moves_obstacles = isinstance(environment.unwrapped, DynamicObstaclesEnv)
         self._observation = None
         self._finished = True
 
@@ -50,7 +52,8 @@ class PrimitiveController:
             raise RuntimeError("reset before stepping a new episode")
         if type(action) is not int or not self._environment.action_space.contains(action):
             raise ValueError(f"illegal primitive action: {action!r}")
-        moved = front_move_outcome(self._observation) if action == 2 else None
+        # In Dynamic Obstacles the destination can change between the view and the action.
+        moved = front_move_outcome(self._observation) if action == 2 and not self._moves_obstacles else None
         raw, reward, terminated, truncated, _ = self._environment.step(action)
         self._observation = adapt_observation(raw)
         self._finished = bool(terminated or truncated)
