@@ -3,7 +3,8 @@
 const $ = (id) => document.getElementById(id);
 const variants = {B0:"Reactive", B1:"Text history", B2:"Structured", B3:"Hybrid",
   B0G:"Guarded reactive", B3G:"Guarded hybrid", B4:"Subgoal memory",
-  B5:"Agentic memory", B6:"Agentic memory + learned routine", B7:"Agentic memory + written routine"};
+  B5:"Agentic memory", B6:"Agentic memory + learned routine", B7:"Agentic memory + written routine",
+  B8:"Cue memory + forward bursts"};
 const actions = ["Turn left","Turn right","Forward","Pick up","Drop","Toggle door","Done"];
 const headings = ["east","south","west","north"];
 const colors = {red:"#e06652",green:"#65ba83",blue:"#70a7df",purple:"#b690da",yellow:"#e3c971",grey:"#a1aaa5"};
