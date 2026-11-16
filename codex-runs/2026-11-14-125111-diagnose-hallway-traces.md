@@ -1,7 +1,0 @@
-# Diagnose the hallway cue-matching traces
-
-- Objective — Explain B5–B7 hallway timeouts and contrast successful B0, B1 and B4 episodes.
-- Evidence — Compared all 24 saved episodes for these six variants on seeds 11, 14, 21 and 36 in the hallway archive, local evidence commit ca70ef2. Aligned policy observations and actions with separate evaluator poses and start-object coordinates. Read exploration routing, local fallback and subgoal retrieval source.
-- Findings — B5–B7 produced the same 48 explore decisions, planned routes and executed actions per seed. Each saw the start object at least once, but never retrieved it or reached the fork. At (6,6), the empty route handed control to a turn fallback, producing an east/south loop despite free space ahead when facing east. B0, B1 and B4 all reached the fork and never saw the start cue in their recorded inputs. Their north choices succeeded on 11 and 21. B1 delayed the choice with ineffective actions. On 14 B1 timed out at the fork and B0/B4 chose the wrong branch. All three chose the wrong branch on 36.
-- Verification — Used WSL Python to parse trajectory.jsonl, evaluator-steps.jsonl and summaries. Checked action/plan equality, fork arrival, cue visibility, evidence retrieval and a step-by-step turn loop. The study does not distinguish the cause of the north preference or establish that a fallback fix would solve cue matching.
-- Changes — Created this working-tree record on embodiedmind-experiment. No source, archive or external records changed. No new episodes were executed.
