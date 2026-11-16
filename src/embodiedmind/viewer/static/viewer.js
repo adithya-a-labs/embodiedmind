@@ -17,7 +17,7 @@ const worlds = {"MiniGrid-DoorKey-8x8-v0":"DoorKey","BabyAI-GoToObjMazeS7-v0":"G
   "BabyAI-BlockedUnlockPickup-v0":"Blocked Unlock Pickup","BabyAI-PutNextS5N2-v0":"Put Next",
   "MiniGrid-Dynamic-Obstacles-8x8-v0":"Dynamic Obstacles","BabyAI-SynthS5R2-v0":"Synth"};
 const defaultRun = "embodiedmind-20261114-0428-ist/static";
-const model = {mode:"replay", runs:[], replayRuns:[], jobs:[], episodes:[], position:7, request:0, play:null,
+const model = {mode:"replay", runs:[], replayRuns:[], jobs:[], loadedRun:null, episodes:[], position:7, request:0, play:null,
   liveTimer:null, liveRequest:0, liveCatalogAt:0, followLive:true,
   sandbox:null, sandboxTimer:null, sandboxBusy:false};
 
@@ -229,11 +229,27 @@ function updateSeeds(seed) {
 async function openRun(initial=false) {
   const token=++model.request;
   stopReplay(); error("");
+  model.loadedRun=null;
+  model.jobs=[];
+  for (const key of ["scenario","seed","left","right"]) {
+    options($(key),[]);
+    $(key).disabled=true;
+  }
   model.episodes=[]; renderReplay();
   const run=$("replay-run").value;
-  const jobs=run ? await api("jobs",{run}) : [];
-  if (token!==model.request) return;
+  if (run) $("comparison").textContent="Loading saved run…";
+  let jobs;
+  try {
+    jobs=run ? await api("jobs",{run}) : [];
+  } catch (failure) {
+    if (token!==model.request || run!==$("replay-run").value) return;
+    error(failure.message);
+    $("comparison").textContent="Could not load this run. Select a run to try again.";
+    return;
+  }
+  if (token!==model.request || run!==$("replay-run").value) return;
   model.jobs=jobs;
+  model.loadedRun=run;
   const game=$("replay-game").value, agent=$("replay-agent").value;
   const filtered=jobs.filter(j=>(!game || j.environment===game) && (!agent || j.variant===agent));
   const unique=new Map(filtered.map(j=>[scenario(j),labelWorld(j.environment)+" · "+j.intervention.replaceAll("_"," ")
@@ -243,6 +259,8 @@ async function openRun(initial=false) {
   await loadPair(initial ? 7 : 0, initial, agent);
 }
 async function loadPair(position, initial=false, agent=$("replay-agent").value) {
+  const run=$("replay-run").value;
+  if (model.loadedRun!==run) return;
   const token=++model.request;
   stopReplay(); error("");
   const match = model.jobs.filter(j=>scenario(j)===$("scenario").value && j.seed===Number($("seed").value));
@@ -259,7 +277,6 @@ async function loadPair(position, initial=false, agent=$("replay-agent").value) 
   $("comparison").textContent=match.length?"Loading saved episodes…":
     "No saved episodes match. Change the filters or open Sandbox to try this combination.";
   if (!match.length) return;
-  const run=$("replay-run").value;
   let pair;
   try {
     const sides=entries.length===1?["left"]:["left","right"];
