@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,RememberedCells,True,0.0,False,False,377,13,0.17640738499903819
+1,2,2,primitive,,,f0.28,True,0.0,False,False,448,15,0.18729963699661312
+2,2,2,primitive,,,f0,True,0.0,False,False,538,12,0.16578617499908432
+3,2,2,primitive,,,f0.9,False,0.0,False,False,621,14,0.20143596800335217
+4,2,2,primitive,,,f0.9,False,0.0,False,False,621,14,0.18450614799803589
+5,2,2,primitive,,,f0.9,False,0.0,False,False,621,14,0.139524665002682
+6,2,2,primitive,,,f0.9,False,0.0,False,False,621,14,0.1406873939995421
+7,2,2,primitive,,,f0.9,False,0.0,False,False,621,14,0.1393107379990397
+8,2,2,primitive,,,f0.9,False,0.0,False,False,621,14,0.136801774999185
+9,2,2,primitive,,,f0.9,False,0.0,False,False,621,14,0.14660258300136775
+10,2,2,primitive,,,f0.9,False,0.0,False,False,621,14,0.15717984699949739
+11,2,2,primitive,,,f0.9,False,0.0,False,False,621,14,0.14796172600108548
+12,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.25448097300250083
+13,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.20850737699947786
+14,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.20949113899769145
+15,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.2125169739992998
+16,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.20498301699990407
+17,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.21314146399890888
+18,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.20519665900064865
+19,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.18785483999818098
+20,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.1982940489979228
+21,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.20089489100064384
+22,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19287346599958255
+23,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19984522700178786
+24,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19353858999966178
+25,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19229538199942908
+26,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19235486600155127
+27,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.2042099149985006
+28,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.20449172299777274
+29,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.2329615839989856
+30,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.21178531999976258
+31,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.2244153510000615
+32,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19599415499760653
+33,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19813364999936312
+34,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19488466199982213
+35,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.1995279999973718
+36,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.21028633700188948
+37,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.2070810219993291
+38,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19679551599983824
+39,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19567293699947186
+40,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19466905499939458
+41,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.23071639399859123
+42,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.19885633399826474
+43,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.1974906760005979
+44,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.20309931299925665
+45,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.2138663439982338
+46,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.20237513499887427
+47,2,2,primitive,,,"f0.9 empty (-1, 0)",False,0.0,False,False,625,21,0.2038335030010785

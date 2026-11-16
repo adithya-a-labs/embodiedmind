@@ -1,0 +1,191 @@
+{
+  "planned": 540,
+  "attempted": 540,
+  "unattempted": 0,
+  "attempt_records": 540,
+  "valid": 540,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "b11-mechanisms",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "dropout",
+      "planned": 180,
+      "planned_matched_cells": 30,
+      "matched_cells": 30,
+      "matched_seeds": 30,
+      "variants": {
+        "B11": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11C": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11P": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11PA": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11R": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11T": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-mechanisms",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "no_change",
+      "planned": 180,
+      "planned_matched_cells": 30,
+      "matched_cells": 30,
+      "matched_seeds": 30,
+      "variants": {
+        "B11": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11C": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11P": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11PA": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11R": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11T": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-mechanisms",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "relocation",
+      "planned": 180,
+      "planned_matched_cells": 30,
+      "matched_cells": 30,
+      "matched_seeds": 30,
+      "variants": {
+        "B11": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11C": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11P": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11PA": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11R": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11T": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

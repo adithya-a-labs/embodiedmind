@@ -1,0 +1,25 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the green ball,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the green ball,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,425,27,0.4554224139992584
+3,0,2,explore,choose_frontier_route,go to the green ball,o2,,0.0,False,False,451,27,0.42400634800014814
+4,2,2,explore,choose_frontier_route,go to the green ball,o1,True,0.0,False,False,468,27,0.4122111800006678
+5,2,0,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,487,27,0.3991150700003345
+6,2,2,explore,choose_frontier_route,go to the green ball,o5,True,0.0,False,False,506,27,0.3678472839992537
+7,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,526,27,0.3795400389999486
+8,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,539,27,0.6697795529998984
+9,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,556,27,0.4780645649998405
+10,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,573,27,0.42192055499981507
+11,0,0,explore,choose_frontier_route,go to the green ball,o0,,0.0,False,False,587,27,0.4721329860003607
+12,2,2,explore,continue_frontier_route,go to the green ball,o0,True,0.0,False,False,619,27,0.5053322100002333
+13,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,637,27,0.42545676499958063
+14,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,654,27,0.42490795599951525
+15,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,671,27,0.36706627900002786
+16,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,688,27,0.36216776499986736
+17,2,2,explore,choose_frontier_route,go to the green ball,o12,True,0.0,False,False,682,28,0.45748631699916587
+18,2,2,explore,choose_frontier_route,go to the green ball,o1,True,0.0,False,False,699,27,0.4167330589998528
+19,0,0,explore,choose_frontier_route,go to the green ball,o1,,0.0,False,False,685,27,0.4081354019999708
+20,2,2,approach,route_to_mission_target,go to the green ball,o8,True,0.0,False,False,694,27,0.41205636599988793
+21,2,2,approach,route_to_mission_target,go to the green ball,o20,True,0.0,False,False,689,28,0.37573767399953795
+22,2,2,approach,route_to_mission_target,go to the green ball,o21,True,0.0,False,False,691,28,0.4360870780001278
+23,2,2,approach,route_to_mission_target,go to the green ball,o20,True,0.904,True,False,702,28,0.4514546469999914

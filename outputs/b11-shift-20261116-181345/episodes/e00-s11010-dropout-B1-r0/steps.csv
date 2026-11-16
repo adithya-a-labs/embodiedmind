@@ -1,0 +1,34 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,o0,True,0.0,False,False,394,15,0.23082788000101573
+3,2,2,primitive,,,o2,True,0.0,False,False,416,12,0.1711614730011206
+4,2,2,primitive,,,o3,True,0.0,False,False,443,12,0.19523499800197897
+5,2,2,primitive,,,o0,True,0.0,False,False,467,12,0.20096404399737366
+6,2,2,primitive,,,o5,True,0.0,False,False,479,12,0.1909695219983405
+7,2,2,primitive,,,o1,True,0.0,False,False,491,12,0.1859762829990359
+8,0,0,primitive,,,o1,,0.0,False,False,503,12,0.18003116700128885
+9,2,2,primitive,,,o0,True,0.0,False,False,533,12,0.2264755280011741
+10,2,2,primitive,,,o0,True,0.0,False,False,543,12,0.211888750000071
+11,2,2,primitive,,,o0,True,0.0,False,False,560,12,0.1753003310004715
+12,2,2,primitive,,,o0,True,0.0,False,False,577,12,0.17460631499852752
+13,2,2,primitive,,,"o1 step 1 prev=0 facing=2: blue ball@2,3",True,0.0,False,False,594,28,0.4114823620002426
+14,2,2,primitive,,,o0,True,0.0,False,False,611,12,0.24599435300115147
+15,0,0,primitive,,,o0,,0.0,False,False,623,13,0.21422765199895366
+16,2,2,primitive,,,o1,True,0.0,False,False,659,12,0.24158805499973823
+17,2,2,primitive,,,o1,True,0.0,False,False,657,12,0.26062723900031415
+18,2,2,primitive,,,o4,True,0.0,False,False,659,12,0.29754930499984766
+19,2,2,primitive,,,o4,True,0.0,False,False,654,12,0.240002934999211
+20,2,2,primitive,,,o4,True,0.0,False,False,668,12,0.288764357999753
+21,2,2,primitive,,,"o1 step 1 prev=0 facing=2: blue ball@2,3",True,0.0,False,False,656,28,0.35269070099820965
+22,2,2,primitive,,,o20,True,0.0,False,False,655,13,0.2038793359970441
+23,2,2,primitive,,,o7,True,0.0,False,False,653,12,0.19216034100099932
+24,2,2,primitive,,,o6,True,0.0,False,False,654,12,0.23082420799983083
+25,2,2,primitive,,,o20,True,0.0,False,False,636,13,0.23053744299977552
+26,2,2,primitive,,,o20,True,0.0,False,False,637,13,0.24533743299980415
+27,2,2,primitive,,,o20,True,0.0,False,False,636,13,0.24033398699975805
+28,0,0,primitive,,,o20,,0.0,False,False,630,14,0.26236679299836396
+29,2,2,primitive,,,o20 step 20,True,0.0,False,False,640,17,0.23977982300129952
+30,2,2,primitive,,,"o29 step 29 prev=0 facing=2: red ball@5,0",True,0.0,False,False,662,30,0.32537453900295077
+31,2,2,primitive,,,o20,True,0.0,False,False,673,14,0.26065480100078275
+32,2,2,primitive,,,o31,True,0.868,True,False,665,13,0.23004338499958976

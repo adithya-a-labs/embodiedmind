@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,remembered,True,0.0,False,False,387,12,0.3295706850003626
+1,0,0,primitive,,,f0.5,,0.0,False,False,444,17,0.23611375299879
+2,2,2,primitive,,,f0.11,True,0.0,False,False,497,15,0.2922458009998081
+3,1,1,primitive,,,f0.9,,0.0,False,False,570,14,0.18648313900121138
+4,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.40999649799778126
+5,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.29149034099827986
+6,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2980895939981565
+7,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2567519349977374
+8,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2545128309975553
+9,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2980607399986184
+10,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.3247558939983719
+11,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.275501746997179
+12,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2566729030004353
+13,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2557712609996088
+14,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2696335820000968
+15,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.27289987400217797
+16,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2530887610009813
+17,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2556816210017132
+18,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.25764688799972646
+19,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2614830809980049
+20,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.26159688099869527
+21,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.25455534999855445
+22,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.28662763399916
+23,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.29019244499795604
+24,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.30132179399879533
+25,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.26786311700197984
+26,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2941153829997347
+27,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.271164450001379
+28,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2980800600016664
+29,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.25445029999900726
+30,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.267625128999498
+31,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.25866623999900185
+32,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2826047259986808
+33,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2692932429999928
+34,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2588956620020326
+35,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.3070156079993467
+36,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.30446310700062895
+37,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2469617909991939
+38,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.24718278000000282
+39,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2487209589999111
+40,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2445303429994965
+41,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.28016300899980706
+42,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.3018857700008084
+43,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2848047490006138
+44,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.2636189939985343
+45,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.25357882699972834
+46,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.26371629599816515
+47,2,2,primitive,,,"f0.5 yellow box (-1, 0) observed at step 3",False,0.0,False,False,566,27,0.27691257299738936

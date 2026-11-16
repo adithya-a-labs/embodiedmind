@@ -1,0 +1,41 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,o0,True,0.0,False,False,378,12,0.15271991699773935
+3,2,2,primitive,,,o0,True,0.0,False,False,406,12,0.15550712699769065
+4,2,2,primitive,,,o3,True,0.0,False,False,435,12,0.13277107199974125
+5,2,2,primitive,,,o4,True,0.0,False,False,450,12,0.15190716899815015
+6,2,2,primitive,,,o5,True,0.0,False,False,465,12,0.13844523100124206
+7,2,2,primitive,,,o6,True,0.0,False,False,481,12,0.1370962299988605
+8,2,2,primitive,,,o1 step 1,False,0.0,False,False,491,15,0.17546405599932768
+9,0,0,primitive,,,o1,,0.0,False,False,505,13,0.1574812379985815
+10,2,2,primitive,,,o6,True,0.0,False,False,533,12,0.14990824000051362
+11,2,2,primitive,,,o1,True,0.0,False,False,550,12,0.15576009900178178
+12,2,2,primitive,,,o4,True,0.0,False,False,567,12,0.17377455400128383
+13,2,2,primitive,,,o4,True,0.0,False,False,584,12,0.1522171549986524
+14,2,2,primitive,,,o4,True,0.0,False,False,601,12,0.1673721979968832
+15,6,6,primitive,,,o1,,0.0,False,False,613,13,0.2034776070031512
+16,5,5,primitive,,,o1,,0.0,False,False,631,12,0.18601626300005591
+17,5,5,primitive,,,o4,,0.0,False,False,626,13,0.2043228190013906
+18,5,5,primitive,,,"o4 step 4 prev=2 facing=0: red key@0,-3; green box@2,1",,0.0,False,False,625,36,0.37620665499707684
+19,5,5,primitive,,,o4,,0.0,False,False,627,13,0.19653757799824234
+20,5,5,primitive,,,o6,,0.0,False,False,619,12,0.19876956699954462
+21,5,5,primitive,,,o2 step 2 prev=0 facing=0: no named objects,,0.0,False,False,627,25,0.3056522299993958
+22,0,0,primitive,,,o5 step 5,,0.0,False,False,629,16,0.23999701499997173
+23,5,5,primitive,,,o7,,0.0,False,False,628,13,0.21718547899945406
+24,2,2,primitive,,,"o23 step 23 prev=0 facing=2: red key@4,-2",True,0.0,False,False,652,30,0.332110991999798
+25,2,2,primitive,,,"o24 step 24 prev=5 facing=2: red key@4,-2",True,0.0,False,False,657,30,0.3671157190001395
+26,2,2,primitive,,,"o25 step 25 prev=2 facing=2: red key@3,-2",True,0.0,False,False,659,30,0.3365174639984616
+27,2,2,primitive,,,"o26 step 26 prev=2 facing=2: red key@2,-2",True,0.0,False,False,664,30,0.3763310329995875
+28,2,2,primitive,,,"o27 step 27 prev=2 facing=2: red key@1,-2",True,0.0,False,False,666,30,0.3748883139996906
+29,2,2,primitive,,,o22,True,0.0,False,False,662,13,0.21060879600190674
+30,2,2,primitive,,,"o28 step 28 prev=2 facing=2: red key@1,-2",True,0.0,False,False,662,30,0.30680802300048526
+31,2,2,primitive,,,"o24 step 24 prev=2 facing=2: red key@4,-2",True,0.0,False,False,661,30,0.3142065790016204
+32,2,2,primitive,,,o24,True,0.0,False,False,660,13,0.1924879870020959
+33,2,2,primitive,,,o22,True,0.0,False,False,659,13,0.22372189200177672
+34,2,2,primitive,,,o22 step 22 prev=5 facing=3,True,0.0,False,False,658,23,0.2621864220018324
+35,2,2,primitive,,,o22 step 22 prev=5 facing=3: no named objects,True,0.0,False,False,657,27,0.31047858300007647
+36,0,0,primitive,,,o22 step 22 prev=5 facing=3: no named objects,,0.0,False,False,651,27,0.29466465299992706
+37,2,2,primitive,,,o22 step 22 prev=5 facing=3: no named objects,True,0.0,False,False,661,28,0.3195437360009237
+38,2,2,primitive,,,o32 step 22 prev=5 facing=3: no named objects,True,0.0,False,False,673,27,0.3089343169995118
+39,2,2,primitive,,,o38,True,0.84,True,False,681,13,0.1868467230015085

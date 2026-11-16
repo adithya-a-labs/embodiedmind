@@ -1,0 +1,31 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,f0.32,True,0.0,False,False,665,18,0.522884531001182
+3,2,2,primitive,,,"f0.33 yellow ball (-7, -2) observed at step 0",True,0.0,False,False,649,28,0.48274851300084265
+4,2,2,primitive,,,"f0.34 yellow ball (-8, -2) observed at step 0",True,0.0,False,False,650,28,0.4768617140034621
+5,2,2,primitive,,,"f0.34 yellow ball (-9, -2) observed at step 0",True,0.0,False,False,643,28,0.29433741699904203
+6,2,2,primitive,,,"f0.34 yellow ball (-10, -2) observed at step 0",True,0.0,False,False,640,29,0.4121572340009152
+7,2,2,primitive,,,"f0.34 yellow ball (-11, -2) observed at step 0",True,0.0,False,False,635,29,0.40641058899927884
+8,0,0,primitive,,,"f0.34 yellow ball (-12, -2) observed at step 0",,0.0,False,False,632,29,0.3330238900016411
+9,2,2,primitive,,,"f0.34 yellow ball (2, -12) observed at step 0",True,0.0,False,False,651,29,0.3259481510031037
+10,2,2,primitive,,,"f0.34 yellow ball (1, -12) observed at step 0",True,0.0,False,False,652,29,0.3177614109990827
+11,2,2,primitive,,,"f0.34 yellow ball (0, -12) observed at step 0",True,0.0,False,False,655,29,0.5327319540010649
+12,2,2,primitive,,,"f0.34 yellow ball (-1, -12) STALE; reobserve at step 0",True,0.0,False,False,640,33,0.47323685200171894
+13,2,2,primitive,,,"f0.34 yellow ball (-2, -12) STALE; reobserve at step 0",True,0.0,False,False,640,33,0.3876224719970196
+14,2,2,primitive,,,"f0.34 yellow ball (-3, -12) STALE; reobserve at step 0",True,0.0,False,False,641,33,0.36035357899891096
+15,2,2,primitive,,,"f0.34 yellow ball (-4, -12) STALE; reobserve at step 0",True,0.0,False,False,643,33,0.38560657699781586
+16,0,0,primitive,,,"f0.34 yellow ball (-5, -12) STALE; reobserve at step 0",,0.0,False,False,643,33,0.39238947099875077
+17,2,2,primitive,,,"f0.34 yellow ball (12, -5) STALE; reobserve at step 0",True,0.0,False,False,656,33,0.35895220000020345
+18,2,2,primitive,,,"f0.34 yellow ball (11, -5) STALE; reobserve at step 0",True,0.0,False,False,648,33,0.3634120050010097
+19,2,2,primitive,,,"f0.34 yellow ball (10, -5) STALE; reobserve at step 0",True,0.0,False,False,648,33,0.37538245499672485
+20,2,2,primitive,,,"f0.34 yellow ball (9, -5) STALE; reobserve at step 0",True,0.0,False,False,660,32,0.33049338899945724
+21,2,2,primitive,,,"f0.34 yellow ball (8, -5) STALE; reobserve at step 0",True,0.0,False,False,657,32,0.34597422200022265
+22,2,2,primitive,,,"f0.34 yellow ball (7, -5) STALE; reobserve at step 0",True,0.0,False,False,659,32,0.3372570639985497
+23,2,2,primitive,,,visible,True,0.0,False,False,646,11,0.2210191810008837
+24,2,2,primitive,,,"f0.34 yellow ball (5, -5) STALE; reobserve at step 0",True,0.0,False,False,646,32,0.3175008030011668
+25,2,2,primitive,,,"f0.34 yellow ball (4, -5) STALE; reobserve at step 0",True,0.0,False,False,645,32,0.397719110998878
+26,2,2,primitive,,,"f0.34 yellow ball (3, -5) STALE; reobserve at step 0",True,0.0,False,False,644,32,0.3447721430020465
+27,0,0,primitive,,,"f0.34 yellow ball (2, -5) STALE; reobserve at step 0",,0.0,False,False,643,32,0.32798460900085047
+28,2,2,primitive,,,f0.10,True,0.0,False,False,642,15,0.26255590300206677
+29,2,2,primitive,,,visible,True,0.88,True,False,638,11,0.19860371500180918

@@ -1,0 +1,24 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible 0,True,0.0,False,False,383,14,0.2251444929988793
+1,2,2,primitive,,,o0,True,0.0,False,False,390,12,0.16617046899955312
+2,2,2,primitive,,,o0,True,0.0,False,False,406,12,0.1722987400007696
+3,2,2,primitive,,,o0,True,0.0,False,False,423,12,0.15581227499933448
+4,2,2,primitive,,,o0 step 0,True,0.0,False,False,439,15,0.18839966599989566
+5,2,2,primitive,,,o0,True,0.0,False,False,455,12,0.15873797700078285
+6,2,2,primitive,,,o0,True,0.0,False,False,471,12,0.1920906510003988
+7,2,2,primitive,,,o0,True,0.0,False,False,487,12,0.16077841600053944
+8,2,2,primitive,,,o0,True,0.0,False,False,517,12,0.170629447000465
+9,2,2,primitive,,,o8,True,0.0,False,False,540,12,0.18397232899951632
+10,2,2,primitive,,,o9,True,0.0,False,False,564,12,0.16438115299933997
+11,2,2,primitive,,,o1,True,0.0,False,False,590,12,0.1853869010010385
+12,2,2,primitive,,,"o1 step 1 prev=2 facing=0: green ball@0,-1",True,0.0,False,False,616,28,0.343253476999962
+13,2,2,primitive,,,"o1 step 1 prev=2 facing=0: green ball@0,-1",True,0.0,False,False,642,28,0.4058536990014545
+14,2,2,primitive,,,"o1 step 1 prev=2 facing=0: green ball@0,-1",False,0.0,False,False,663,29,0.3367711219998455
+15,2,2,primitive,,,"o1 step 1 prev=2 facing=0: green ball@0,-1",False,0.0,False,False,691,28,0.29373334200136014
+16,2,2,primitive,,,"o1 step 1 prev=2 facing=0: green key@0,-2; green ball@0,2",False,0.0,False,False,687,35,0.3943897419994755
+17,2,2,primitive,,,o15,False,0.0,False,False,699,14,0.36689707999903476
+18,5,5,primitive,,,"o1 step 1 prev=0 facing=0: green ball@0,-1",,0.0,False,False,711,28,0.2932911690004403
+19,2,2,primitive,,,"o14 step 14 prev=2 facing=0: green key@0,-2; green ball@0,2",False,0.0,False,False,707,37,0.5354477919991041
+20,2,2,primitive,,,o1,False,0.0,False,False,719,13,0.4347673410011339
+21,1,1,primitive,,,o7 step 7 prev=2 facing=0: no named objects,,0.0,False,False,721,28,0.46530089100087935
+22,2,2,primitive,,,o21,True,0.985674740484429,True,False,730,13,0.20223891999921761

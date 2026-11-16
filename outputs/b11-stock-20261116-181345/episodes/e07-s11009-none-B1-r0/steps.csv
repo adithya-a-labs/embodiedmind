@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible0,True,0.0,False,False,333,12,0.15849883800183306
+1,0,0,primitive,,,o0,,0.0,False,False,338,15,0.16380576600204222
+2,2,2,primitive,,,o1,True,0.0,False,False,361,13,0.14429651299724355
+3,0,0,primitive,,,o1,,0.0,False,False,371,15,0.17393280400210642
+4,2,2,primitive,,,o1,True,0.0,False,False,410,15,0.18781094400037546
+5,2,2,primitive,,,o4,True,0.0,False,False,435,12,0.13447824300237698
+6,2,2,primitive,,,o5,True,0.0,False,False,459,12,0.16095392100032768
+7,6,6,primitive,,,o6,,0.0,False,False,465,13,0.2035693000034371
+8,6,6,primitive,,,o7,,0.0,False,False,481,13,0.16393308300030185
+9,0,0,primitive,,,o8,,0.0,False,False,497,13,0.15078844399977243
+10,2,2,primitive,,,o7,True,0.0,False,False,548,12,0.18443530399963493
+11,2,2,primitive,,,o10,True,0.0,False,False,583,13,0.18862302900015493
+12,2,2,primitive,,,o1 step 1 prev=2 facing=3: no named objects,True,0.0,False,False,618,25,0.28705558300134726
+13,1,1,primitive,,,o12,,0.0,False,False,640,14,0.20298687299873563
+14,6,6,primitive,,,o1 prev=2 facing=3: no named objects,,0.0,False,False,635,23,0.3043705170020985
+15,6,6,primitive,,,o1,,0.0,False,False,634,13,0.2326719390002836
+16,2,2,primitive,,,"o10 step 10 prev=0 facing=0: purple key@2,-1; blue ball@3,-1; purple door locked@4,-1",False,0.0,False,False,636,45,0.5145255579991499
+17,2,2,primitive,,,o2 prev=3 facing=1: no named objects,False,0.0,False,False,631,22,0.2669720129997586
+18,6,6,primitive,,,"o12 step 12 prev=2 facing=0: purple key@0,-1; blue ball@1,-1; purple door locked@2,-1",,0.0,False,False,633,46,0.4443890010006726
+19,5,5,primitive,,,o13,,0.0,False,False,625,14,0.20718772799955332
+20,2,2,primitive,,,"o10 step 10 prev=0 facing=0: purple key@2,-1; blue ball@3,-1; purple door locked@4,-1",False,0.0,False,False,617,45,0.4337037999976019
+21,2,2,primitive,,,o10 step 10 prev=6 facing=1: no named objects,False,0.0,False,False,619,27,0.2976779689997784
+22,1,1,primitive,,,o10 step 10 prev=6 facing=1: no named objects,,0.0,False,False,621,27,0.306833741000446
+23,2,2,primitive,,,o10,True,0.0,False,False,644,13,0.19899213400276494
+24,2,2,primitive,,,o22,True,0.0,False,False,643,13,0.1925624430004973
+25,2,2,primitive,,,o12,True,0.0,False,False,641,13,0.18898613700002898
+26,6,6,primitive,,,o12 step 12,,0.0,False,False,634,18,0.24894434100133367
+27,0,0,primitive,,,o13,,0.0,False,False,636,13,0.404560543000116
+28,0,0,primitive,,,o13 step 13,,0.0,False,False,636,18,0.36790438699972583
+29,2,2,primitive,,,o27 step 27 prev=6 facing=2: no named objects,True,0.0,False,False,660,27,0.290699573000893
+30,2,2,primitive,,,o24 step 24,True,0.0,False,False,661,17,0.33075218299927656
+31,2,2,primitive,,,o24,True,0.0,False,False,660,13,0.19047651099754148
+32,1,1,primitive,,,o31,,0.0,False,False,659,13,0.18467548199987505
+33,6,6,primitive,,,o24 step 24,,0.0,False,False,636,19,0.24813995699878433
+34,2,2,primitive,,,o24 step 24,False,0.0,False,False,636,17,0.38552596400040784
+35,1,1,primitive,,,o23 step 23,,0.0,False,False,636,20,0.2617114210006548
+36,2,2,primitive,,,o24 step 24 prev=2 facing=2,True,0.0,False,False,657,23,0.3160627680008474
+37,2,2,primitive,,,o36,True,0.0,False,False,648,13,0.18515952600137098
+38,2,2,primitive,,,o35 step 35 prev=2 facing=1: no named objects,True,0.0,False,False,641,27,0.37910351599930436
+39,1,1,primitive,,,o35 step 35,,0.0,False,False,636,20,0.37320861800253624
+40,2,2,primitive,,,o37,True,0.0,False,False,657,13,0.22472128000299563
+41,2,2,primitive,,,o31,True,0.0,False,False,666,13,0.2129836759995669
+42,2,2,primitive,,,o41,True,0.0,False,False,643,13,0.3887738440025714
+43,2,2,primitive,,,o41,False,0.0,False,False,638,13,0.21002189600039856
+44,2,2,primitive,,,o40,False,0.0,False,False,638,13,0.17729295099707088
+45,2,2,primitive,,,o40,False,0.0,False,False,638,13,0.18593285499810008
+46,2,2,primitive,,,o41,False,0.0,False,False,638,14,0.2664014469992253
+47,2,2,primitive,,,o41,False,0.0,False,False,638,13,0.2651152260004892

@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,1,1,primitive,,,visible,,0.0,False,False,356,13,0.16608137000002898
+1,1,1,primitive,,,"f0.0 grey wall (-1, -1) observed at step 0",,0.0,False,False,433,27,0.2918839369995112
+2,1,1,primitive,,,visible,,0.0,False,False,490,11,0.26790583899855847
+3,1,1,primitive,,,"f0.4 purple key (-1, 0) observed at step 2",,0.0,False,False,635,27,0.35999165999965044
+4,1,1,primitive,,,f1.12,,0.0,False,False,641,15,0.21274398999958066
+5,1,1,primitive,,,visible,,0.0,False,False,490,11,0.48492620899924077
+6,1,1,primitive,,,visible,,0.0,False,False,490,11,0.23604016399985994
+7,1,1,primitive,,,f0.4,,0.0,False,False,635,14,0.24471404600262758
+8,1,1,primitive,,,f1.12,,0.0,False,False,641,15,0.3776387540019641
+9,1,1,primitive,,,visible,,0.0,False,False,490,11,0.31123176500113914
+10,1,1,primitive,,,visible,,0.0,False,False,490,14,0.24682735600072192
+11,1,1,primitive,,,f1.15,,0.0,False,False,647,18,0.2670777269995597
+12,1,1,primitive,,,"f1.10 purple box (-1, 0) observed at step 11",,0.0,False,False,656,29,0.3501239449979039
+13,1,1,primitive,,,visible,,0.0,False,False,495,11,0.20141462399988086
+14,1,1,primitive,,,visible,,0.0,False,False,495,11,0.17238256900236593
+15,1,1,primitive,,,"f0.4 purple key (-1, 0) observed at step 14",,0.0,False,False,650,28,0.33601655299935373
+16,1,1,primitive,,,"f1.10 purple box (-1, 0) observed at step 15",,0.0,False,False,656,29,0.35877556999912485
+17,1,1,primitive,,,visible,,0.0,False,False,495,11,0.20855973599827848
+18,1,1,primitive,,,visible,,0.0,False,False,495,11,0.21505651700135786
+19,1,1,primitive,,,f1.12,,0.0,False,False,650,15,0.26122243699865066
+20,1,1,primitive,,,f1.10,,0.0,False,False,656,18,0.24067999399994733
+21,1,1,primitive,,,visible,,0.0,False,False,495,11,0.14939888500157394
+22,1,1,primitive,,,visible,,0.0,False,False,495,11,0.1652618190018984
+23,1,1,primitive,,,"f0.4 purple key (-1, 0) observed at step 22",,0.0,False,False,650,28,0.3135718210032792
+24,1,1,primitive,,,"f1.10 purple box (-1, 0) observed at step 23",,0.0,False,False,656,29,0.3461475919975783
+25,1,1,primitive,,,visible,,0.0,False,False,495,11,0.1776184749978711
+26,1,1,primitive,,,visible,,0.0,False,False,495,11,0.1858490949998668
+27,1,1,primitive,,,"f0.4 purple key (-1, 0) observed at step 26",,0.0,False,False,650,28,0.3002918870006397
+28,1,1,primitive,,,"f1.12 purple ball (-2, 2) observed at step 26",,0.0,False,False,656,29,0.3186036339975544
+29,1,1,primitive,,,visible,,0.0,False,False,495,11,0.1994843780012161
+30,1,1,primitive,,,visible,,0.0,False,False,495,11,0.19572191299812403
+31,1,1,primitive,,,"f0.4 purple key (-1, 0) observed at step 30",,0.0,False,False,650,28,0.31698448300085147
+32,1,1,primitive,,,"f1.12 purple ball (-2, 2) observed at step 30",,0.0,False,False,656,29,0.3270825119980145
+33,1,1,primitive,,,visible,,0.0,False,False,495,11,0.1692716140023549
+34,1,1,primitive,,,visible,,0.0,False,False,495,11,0.19069361299989396
+35,1,1,primitive,,,"f0.4 purple key (-1, 0) observed at step 34",,0.0,False,False,650,28,0.338141969001299
+36,1,1,primitive,,,f1.12,,0.0,False,False,656,15,0.21364990700021735
+37,1,1,primitive,,,visible,,0.0,False,False,495,11,0.15456124799675308
+38,1,1,primitive,,,visible,,0.0,False,False,495,11,0.171304940002301
+39,1,1,primitive,,,"f0.4 purple key (-1, 0) observed at step 38",,0.0,False,False,650,28,0.3224887639989902
+40,1,1,primitive,,,visible,,0.0,False,False,656,14,0.20447291799791856
+41,1,1,primitive,,,visible,,0.0,False,False,495,11,0.15597997499935445
+42,1,1,primitive,,,visible,,0.0,False,False,495,11,0.150412964001589
+43,1,1,primitive,,,"f0.4 purple key (-1, 0) observed at step 42",,0.0,False,False,650,28,0.33125310800096486
+44,1,1,primitive,,,"f1.12 purple ball (-2, 2) observed at step 42",,0.0,False,False,656,29,0.37991080899882945
+45,1,1,primitive,,,visible,,0.0,False,False,495,11,0.16095576099905884
+46,1,1,primitive,,,visible,,0.0,False,False,495,11,0.16976186399915605
+47,1,1,primitive,,,f1.12,,0.0,False,False,650,15,0.20244026000000304

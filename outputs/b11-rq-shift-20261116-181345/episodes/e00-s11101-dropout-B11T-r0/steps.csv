@@ -1,0 +1,25 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the green key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the green key,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,426,27,0.3930237419999685
+3,0,2,explore,choose_frontier_route,go to the green key,o2,,0.0,False,False,445,27,0.2982234769997376
+4,2,2,explore,choose_frontier_route,go to the green key,o3,True,0.0,False,False,460,27,0.2897348219999003
+5,2,0,explore,choose_frontier_route,go to the green key,o4,True,0.0,False,False,482,27,0.2690873750002538
+6,2,2,explore,choose_frontier_route,go to the green key,o5,True,0.0,False,False,497,27,0.26834024400022827
+7,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,515,27,0.2560964090002926
+8,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,529,27,0.26437387700025283
+9,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,546,27,0.2943200270001398
+10,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,559,27,0.26920064600017213
+11,0,0,explore,choose_frontier_route,go to the green key,o0,,0.0,False,False,573,27,0.28176715199970204
+12,2,2,explore,continue_frontier_route,go to the green key,o0,True,0.0,False,False,605,27,0.29222453400007
+13,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,623,27,0.25799835700036056
+14,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,640,27,0.2748010779996548
+15,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,657,27,0.27663398799995775
+16,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,674,27,0.30702597600020454
+17,2,2,explore,choose_frontier_route,go to the green key,o7,True,0.0,False,False,691,27,0.26404570100021374
+18,2,2,explore,choose_frontier_route,go to the green key,o13,True,0.0,False,False,685,28,0.28907012800027587
+19,0,0,explore,choose_frontier_route,go to the green key,o7,,0.0,False,False,678,27,0.30080421800039403
+20,2,2,approach,route_to_mission_target,go to the green key,o7,True,0.0,False,False,687,27,0.3102629889999662
+21,2,2,approach,route_to_mission_target,go to the green key,o20,True,0.0,False,False,689,28,0.32175023500030875
+22,2,2,approach,route_to_mission_target,go to the green key,o21,True,0.0,False,False,691,28,0.33573266999974294
+23,2,2,approach,route_to_mission_target,go to the green key,o20,True,0.904,True,False,702,28,0.2608440169997266

@@ -1,0 +1,16 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,remembered,,0.0,False,False,354,13,0.20392549200005305
+1,2,2,primitive,,,f0.11,True,0.0,False,False,428,16,0.21794281400070759
+2,2,2,primitive,,,remembered,True,0.0,False,False,498,12,0.14516803399965283
+3,3,3,primitive,,,remembered cells,,0.0,False,False,585,13,0.1712843020013679
+4,0,0,primitive,,,"f0.8 empty (-1, 0) observed at step 1",,0.0,False,False,578,26,0.34848183099893504
+5,2,2,primitive,,,"f0.7 empty (-1, -1) observed at step 2",True,0.0,False,False,643,26,0.40800889799902507
+6,5,5,primitive,,,"f0.2 yellow key (-1, 1) observed at step 3",,0.0,False,False,654,27,0.30837940000128583
+7,2,2,primitive,,,"f0.2 yellow key (-1, 1) observed at step 3",True,0.0,False,False,662,27,0.5026099520000571
+8,2,2,primitive,,,"f0.2 yellow key (-2, 1) observed at step 3",True,0.0,False,False,655,27,0.3411732350014063
+9,2,2,primitive,,,"f7.18 yellow door open (-1, 0) observed at step 7",True,0.0,False,False,640,29,0.4039766080004483
+10,2,2,primitive,,,"f7.18 yellow door locked (-2, 0) observed at step 6",False,0.0,False,False,643,29,0.4364469250012917
+11,1,1,primitive,,,"f7.18 yellow door locked (-2, 0) observed at step 6",,0.0,False,False,643,29,0.23287160200015933
+12,2,2,primitive,,,"f0.2 yellow key (1, 4) observed at step 3",True,0.0,False,False,676,27,0.33830081499945663
+13,2,2,primitive,,,"f7.16 empty (-1, 0) observed at step 9",True,0.0,False,False,658,27,0.38904339500004426
+14,2,2,primitive,,,"f1.9 empty (0, 3) observed at step 12",True,0.97890625,True,False,659,27,0.3544954979988688

@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,remembered,True,0.0,False,False,374,12,0.16790396899887128
+1,2,2,primitive,,,f0.28,True,0.0,False,False,451,15,0.1896448240004247
+2,2,2,primitive,,,"f0.10 empty (-1, -1) observed at step 1",True,0.0,False,False,540,27,0.27876732100048685
+3,2,2,primitive,,,"f0.20 grey key (-1, 1) observed at step 2",True,0.0,False,False,620,28,0.29447398200136377
+4,0,0,primitive,,,f0.8,,0.0,False,False,642,17,0.2500716869981261
+5,3,3,primitive,,,f0.18,,0.0,False,False,623,15,0.24178286499954993
+6,3,3,primitive,,,f0.18,,0.0,False,False,623,15,0.22750266100047156
+7,3,3,primitive,,,f0.18,,0.0,False,False,623,15,0.1592772789990704
+8,3,3,primitive,,,f0.18,,0.0,False,False,623,15,0.14559800699862535
+9,3,3,primitive,,,f0.18,,0.0,False,False,623,15,0.15194079999855603
+10,3,3,primitive,,,f0.18,,0.0,False,False,623,15,0.14991668999937247
+11,3,3,primitive,,,f0.18,,0.0,False,False,623,15,0.16375506799886352
+12,3,3,primitive,,,f0.18,,0.0,False,False,623,15,0.151553450999927
+13,3,3,primitive,,,f0.18,,0.0,False,False,623,15,0.16333124499942642
+14,5,5,primitive,,,"f0.20 grey key (-1, -2) STALE; reobserve at step 2",,0.0,False,False,627,32,0.3323284909965878
+15,2,2,primitive,,,f0.18,True,0.0,False,False,627,15,0.1950459529980435
+16,1,1,primitive,,,f0.20,,0.0,False,False,644,15,0.19424341099875164
+17,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,652,22,0.315365070997359
+18,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,635,22,0.267753473999619
+19,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,635,22,0.21052802600024734
+20,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,635,22,0.2060036120019504
+21,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,635,22,0.21273986300002434
+22,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,635,22,0.20777106899913633
+23,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,635,22,0.20412850300272112
+24,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,635,22,0.21047077699768124
+25,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,635,22,0.20361604600111605
+26,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,635,22,0.20160061099886661
+27,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,635,22,0.2009038389987836
+28,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.23693019300117157
+29,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.18462867000198457
+30,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.18913372200040612
+31,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.1925335370033281
+32,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.20423252399996272
+33,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.2054568540006585
+34,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.2078436400006467
+35,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.20221968999976525
+36,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.2026322310011892
+37,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.18796753399874433
+38,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.18809203400087426
+39,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.20237804900170886
+40,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.19382928800041554
+41,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.190234107998549
+42,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.19433649200072978
+43,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.19819266600097762
+44,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.18877536000218242
+45,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.19360223399780807
+46,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.19204020699908142
+47,2,2,primitive,,,"f0.8 red key (-1, 0)",False,0.0,False,False,639,22,0.1985082989995135

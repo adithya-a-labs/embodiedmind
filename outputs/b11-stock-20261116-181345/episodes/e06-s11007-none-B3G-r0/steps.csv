@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,visible,,0.0,False,False,369,14,0.18820390100154327
+1,2,2,primitive,,,f0.9,True,0.0,False,False,500,14,0.21416027799932635
+2,2,2,primitive,,,"f0.6 green door closed (-1, 1) observed at step 1",True,0.0,False,False,519,28,0.2435712769984093
+3,1,1,primitive,,,"f0.6 green door closed (-2, 1) observed at step 1",,0.0,False,False,566,28,0.24930048100213753
+4,1,2,primitive,blocked_by_visible_door,,"f1.1 grey door closed (-1, 0) observed at step 3",,0.0,False,False,512,28,0.2728988569979265
+5,2,2,primitive,,,f0.0,True,0.0,False,False,466,14,0.2650036490013008
+6,2,2,primitive,,,"f0.2 purple door closed (-1, -1) observed at step 5",True,0.0,False,False,502,28,0.3275762709999981
+7,2,2,primitive,,,"f0.2 purple door closed (-2, -1) observed at step 5",True,0.0,False,False,553,28,0.3972376609999628
+8,2,2,primitive,,,"f0.6 green door closed (-1, -1) observed at step 7",True,0.0,False,False,588,28,0.2859495459997561
+9,1,1,primitive,,,visible,,0.0,False,False,636,11,0.18345611200129497
+10,0,0,primitive,,,visible,,0.0,False,False,565,14,0.20210082500125282
+11,1,1,primitive,,,"f0.6 green door closed (-2, -1) observed at step 7",,0.0,False,False,641,28,0.36156268100239686
+12,0,0,primitive,,,visible,,0.0,False,False,567,14,0.20227407299898914
+13,1,1,primitive,,,"f0.6 green door closed (-2, -1) observed at step 7",,0.0,False,False,641,28,0.2853766629996244
+14,0,0,primitive,,,visible,,0.0,False,False,567,14,0.20392571300180862
+15,1,1,primitive,,,"f1.3 yellow door closed (-2, 1) observed at step 14",,0.0,False,False,641,29,0.2974958750019141
+16,1,2,primitive,blocked_by_visible_door,,visible,,0.0,False,False,567,11,0.19321012900036294
+17,2,2,primitive,,,visible,True,0.0,False,False,472,11,0.17203872399841202
+18,2,2,primitive,,,"f0.9 blue door closed (-1, 1) observed at step 17",True,0.0,False,False,512,29,0.28560577299867873
+19,2,2,primitive,,,"f0.9 blue door closed (-2, 1) observed at step 17",True,0.0,False,False,567,29,0.29357975300081307
+20,2,2,primitive,,,"f0.6 green door closed (-1, 1) observed at step 19",True,0.0,False,False,605,29,0.28836054600105854
+21,1,1,primitive,,,visible,,0.0,False,False,635,11,0.18600322199927177
+22,0,0,primitive,,,f1.1,,0.0,False,False,580,17,0.3101410359995498
+23,1,1,primitive,,,visible,,0.0,False,False,654,11,0.17470433199923718
+24,0,0,primitive,,,f1.1,,0.0,False,False,580,17,0.2609769160008
+25,1,1,primitive,,,visible,,0.0,False,False,654,11,0.17998729199825902
+26,0,0,primitive,,,f1.1,,0.0,False,False,580,17,0.26154913299978944
+27,1,1,primitive,,,visible,,0.0,False,False,654,11,0.18231231499885325
+28,0,0,primitive,,,"f1.1 grey door closed (-1, 0) observed at step 27",,0.0,False,False,580,32,0.36596749300224474
+29,1,1,primitive,,,visible,,0.0,False,False,642,11,0.19502144499710994
+30,0,0,primitive,,,f1.1,,0.0,False,False,588,17,0.21912915199936833
+31,1,1,primitive,,,visible,,0.0,False,False,646,11,0.19728227399900788
+32,0,0,primitive,,,"f1.1 grey door closed (-1, 0) observed at step 31",,0.0,False,False,592,29,0.32332071299970266
+33,1,1,primitive,,,visible,,0.0,False,False,646,11,0.17378606999773183
+34,1,2,primitive,blocked_by_visible_door,,"f1.1 grey door closed (-1, 0) observed at step 33",,0.0,False,False,592,29,0.3099392740004987
+35,2,2,primitive,,,visible,True,0.0,False,False,469,11,0.21323752199896262
+36,2,2,primitive,,,"f0.2 purple door closed (-1, -1) observed at step 35",True,0.0,False,False,508,29,0.2642108420004661
+37,2,2,primitive,,,"f0.2 purple door closed (-2, -1) observed at step 35",True,0.0,False,False,562,29,0.3008200399999623
+38,2,2,primitive,,,"f0.6 green door closed (-1, -1) observed at step 37",True,0.0,False,False,600,29,0.3250898779988347
+39,1,1,primitive,,,visible,,0.0,False,False,632,11,0.20255757799895946
+40,0,0,primitive,,,visible,,0.0,False,False,576,14,0.1996869719987444
+41,1,1,primitive,,,"f0.6 green door closed (-2, -1) observed at step 37",,0.0,False,False,650,29,0.3059359280014178
+42,0,0,primitive,,,"f0.1 blue door closed (-1, 0) observed at step 41",,0.0,False,False,576,32,0.3426709720006329
+43,1,1,primitive,,,"f0.6 green door closed (-2, -1) observed at step 37",,0.0,False,False,650,29,0.3236158460022125
+44,0,0,primitive,,,visible,,0.0,False,False,576,14,0.2188015940009791
+45,1,1,primitive,,,"f1.3 yellow door closed (-2, 1) observed at step 44",,0.0,False,False,650,29,0.314232169999741
+46,0,0,primitive,,,visible,,0.0,False,False,576,14,0.21342151100179763
+47,1,1,primitive,,,"f0.6 green door closed (-2, -1) observed at step 37",,0.0,False,False,639,29,0.3086142380016099

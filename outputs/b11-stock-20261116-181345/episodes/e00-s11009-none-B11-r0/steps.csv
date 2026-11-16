@@ -1,0 +1,4 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,4,approach,route_to_mission_target,go to the blue ball,f0.11,True,0.0,False,False,419,30,0.3693027909994271
+1,2,0,approach,route_to_mission_target,go to the blue ball,f0.11,True,0.0,False,False,419,30,0.31206597200070973
+2,1,4,approach,route_to_mission_target,go to the blue ball,f0.11,,0.925,True,False,419,30,0.337778443001298

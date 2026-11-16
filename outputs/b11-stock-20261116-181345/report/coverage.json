@@ -1,0 +1,1455 @@
+{
+  "planned": 1650,
+  "attempted": 1650,
+  "unattempted": 0,
+  "attempt_records": 1650,
+  "valid": 1650,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "b11-broad",
+      "environment": "BabyAI-BlockedUnlockPickup-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-broad",
+      "environment": "BabyAI-GoToObjMazeS7-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-broad",
+      "environment": "BabyAI-GoToObjS6-v1",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-broad",
+      "environment": "BabyAI-KeyCorridorS3R3-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-broad",
+      "environment": "BabyAI-PutNextS5N2-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-broad",
+      "environment": "BabyAI-SynthS5R2-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-broad",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-broad",
+      "environment": "MiniGrid-Dynamic-Obstacles-8x8-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-broad",
+      "environment": "MiniGrid-MemoryS13-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-broad",
+      "environment": "MiniGrid-MemoryS17Random-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-broad",
+      "environment": "MiniGrid-MultiRoom-N6-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

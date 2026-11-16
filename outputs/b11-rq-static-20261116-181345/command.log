@@ -1,0 +1,2 @@
+[2026-11-16T19:42:25+05:30] .venv/bin/embodiedmind run --config configs/b11-rq-static.yaml --output outputs/b11-rq-static-20261116-181345 --monitor --parallel 1
+[2026-11-16T20:21:07+05:30] runner exit 0

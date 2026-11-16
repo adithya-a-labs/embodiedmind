@@ -1,0 +1,21 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the blue key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the blue key,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,425,27,0.2918474560001414
+3,0,2,explore,choose_frontier_route,go to the blue key,o2,,0.0,False,False,451,27,0.29543826799999806
+4,2,2,explore,choose_frontier_route,go to the blue key,o1,True,0.0,False,False,468,27,0.2934195570005613
+5,2,0,explore,choose_frontier_route,go to the blue key,o4,True,0.0,False,False,487,27,0.3673571899998933
+6,2,2,explore,choose_frontier_route,go to the blue key,o5,True,0.0,False,False,506,27,0.33555587499995454
+7,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,526,27,0.3423515750000661
+8,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,539,27,0.3351063370000702
+9,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,556,27,0.26447536700015917
+10,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,573,27,0.28014509299919155
+11,0,0,explore,choose_frontier_route,go to the blue key,o0,,0.0,False,False,587,27,0.319272046000151
+12,2,2,approach,route_to_mission_target,go to the blue key,o0,True,0.0,False,False,618,27,0.37850366899965593
+13,2,2,approach,route_to_mission_target,go to the blue key,o12,True,0.0,False,False,639,28,0.38314023400016595
+14,2,2,approach,route_to_mission_target,go to the blue key,o13,True,0.0,False,False,659,28,0.3745582689998628
+15,2,2,approach,route_to_mission_target,go to the blue key,o14,True,0.0,False,False,679,28,0.3580090149998796
+16,2,2,approach,route_to_mission_target,go to the blue key,o15,True,0.0,False,False,699,28,0.34874628000034136
+17,0,0,approach,route_to_mission_target,go to the blue key,o16,,0.0,False,False,719,28,0.4071578299999601
+18,2,2,explore,route_to_mission_target,go to the blue key,o13,True,0.0,False,False,709,28,0.4509757030000401
+19,2,2,approach,route_to_mission_target,go to the blue key,o18,True,0.92,True,False,711,28,0.4784933219998493

@@ -1,0 +1,9 @@
+{
+  "id": "e01-s11008-none-B3G-r0",
+  "environment": "MiniGrid-DoorKey-8x8-v0",
+  "seed": 11008,
+  "variant": "B3G",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-16T15:13:49+00:00"
+}

@@ -1,0 +1,12 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the red ball,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the red ball,,,0.0,False,False,,,0.0
+2,0,4,approach,route_to_mission_target,go to the red ball,f0.34,,0.0,False,False,431,30,0.3116606399999
+3,2,2,explore,route_to_mission_target,go to the red ball,f0.34,True,0.0,False,False,422,30,0.31682716499926755
+4,2,0,explore,route_to_mission_target,go to the red ball,f0.34,True,0.0,False,False,422,30,0.31321147499966173
+5,0,2,explore,route_to_mission_target,go to the red ball,f0.34,,0.0,False,False,422,30,0.360826817999623
+6,2,2,approach,route_to_mission_target,go to the red ball,f0.34,True,0.0,False,False,413,30,0.32307761199990637
+7,2,2,approach,route_to_mission_target,go to the red ball,f0.34,True,0.0,False,False,413,30,0.3273691630001849
+8,2,2,approach,route_to_mission_target,go to the red ball,f0.34,True,0.0,False,False,414,30,0.3444024509999508
+9,2,2,approach,route_to_mission_target,go to the red ball,f0.34,True,0.0,False,False,415,30,0.35216830799981835
+10,2,4,approach,route_to_mission_target,go to the red ball,f0.34,True,0.956,True,False,417,30,0.39524768800038146

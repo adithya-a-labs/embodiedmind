@@ -1,0 +1,1 @@
+{"events": [{"intervention": "relocation", "step": 2, "applied": true, "old_position": [10, 1], "planned_position": [12, 3], "reason": "both_positions_unseen_and_reachable", "new_position": [12, 3]}], "terminated": true, "truncated": false}

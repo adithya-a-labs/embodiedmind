@@ -1,0 +1,4407 @@
+{
+  "split": "b11-mechanisms",
+  "commit": "7070c1df449dfecf24b45444a91707caffcc4825",
+  "dirty": true,
+  "settings": {
+    "split": "b11-mechanisms",
+    "environments": [
+      "EmbodiedMind-GoToShift-v0"
+    ],
+    "variants": [
+      "B11T",
+      "B11P",
+      "B11R",
+      "B11PA",
+      "B11",
+      "B11C"
+    ],
+    "seed_start": 11101,
+    "seed_count": 30,
+    "interventions": [
+      "no_change",
+      "dropout",
+      "relocation"
+    ],
+    "limits": {
+      "max_steps": 48,
+      "max_calls": 48,
+      "memory_bytes": 768,
+      "infrastructure_retries": 2,
+      "scripted_prefix": [
+        0,
+        0
+      ],
+      "dynamics": {
+        "step": 2,
+        "dropout_until": 9,
+        "dropout_probability": 0.25
+      }
+    }
+  },
+  "config": "configs/b11-rq-shift.yaml",
+  "config_sha256": "fc77f069e6b8c5567def1c0c963cdd5a118c5e6b5f27a0f4ce2c94eb917b6ae8",
+  "model_config": "configs/models.yaml",
+  "model_config_sha256": "e27bbcc2d8433cfc7c7a1740e70fc2ea14957cf7615a5db4802ccbb8033f35fe",
+  "lock_sha256": "d59d6219f23927e1567c5543d485f302747bf568cc0f2cc1914933cad2ccf4bb",
+  "model": {
+    "version": "0.40.16",
+    "model": {
+      "name": "qwen2.5:3b-instruct",
+      "model": "qwen2.5:3b-instruct",
+      "modified_at": "2026-11-14T04:03:52.366085552+05:30",
+      "size": 1929912432,
+      "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen2",
+        "families": [
+          "qwen2"
+        ],
+        "parameter_size": "3.1B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 32768,
+        "embedding_length": 2048,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools"
+      ]
+    }
+  },
+  "endpoint": "http://127.0.0.1:11434",
+  "profile": {},
+  "parallel": 1,
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "3.12.16",
+  "packages": {
+    "minigrid": "3.2.0",
+    "gymnasium": "1.4.0",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2"
+  },
+  "jobs": [
+    {
+      "id": "e00-s11101-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11101-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11101,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11102-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11102,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11103-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11103,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11104-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11104,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11105-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11105,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11106-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11106,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11107-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11107,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11108-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11108,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11109-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11109,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11110-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11110,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11111-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11111,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11112-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11112,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11113-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11113,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11114-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11114,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11115-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11115,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11116-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11116,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11117-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11117,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11118-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11118,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11119-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11119,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11120-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11120,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11121-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11121,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11122-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11122,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11123-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11123,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11124-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11124,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11125-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11125,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11126-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11126,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11127-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11127,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11128-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11128,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11129-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11129,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-no_change-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11T",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-no_change-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11P",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-no_change-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11R",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-no_change-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11PA",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-no_change-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-no_change-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11C",
+      "intervention": "no_change",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-dropout-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11T",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-dropout-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11P",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-dropout-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11R",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-dropout-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11PA",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-dropout-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-dropout-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11C",
+      "intervention": "dropout",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-relocation-B11T-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11T",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-relocation-B11P-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11P",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-relocation-B11R-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11R",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-relocation-B11PA-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11PA",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-relocation-B11-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11",
+      "intervention": "relocation",
+      "replicate": 0
+    },
+    {
+      "id": "e00-s11130-relocation-B11C-r0",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "seed": 11130,
+      "variant": "B11C",
+      "intervention": "relocation",
+      "replicate": 0
+    }
+  ],
+  "created": "2026-11-16T12:49:17+00:00"
+}

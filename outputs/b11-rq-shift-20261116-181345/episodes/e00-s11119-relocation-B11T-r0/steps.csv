@@ -1,0 +1,20 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the red key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the red key,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the red key,o1,True,0.0,False,False,425,27,0.30781203800052026
+3,0,2,explore,choose_frontier_route,go to the red key,o2,,0.0,False,False,451,27,0.2786610040002415
+4,2,2,explore,choose_frontier_route,go to the red key,o1,True,0.0,False,False,468,27,0.2913069730002462
+5,2,0,explore,choose_frontier_route,go to the red key,o4,True,0.0,False,False,487,27,0.28406094500041945
+6,2,2,explore,choose_frontier_route,go to the red key,o5,True,0.0,False,False,506,27,0.2773755099997288
+7,2,2,explore,choose_frontier_route,go to the red key,o0,True,0.0,False,False,526,27,0.29806765299963445
+8,2,2,explore,choose_frontier_route,go to the red key,o0,True,0.0,False,False,539,27,0.32772170699990966
+9,2,2,explore,choose_frontier_route,go to the red key,o0,True,0.0,False,False,556,27,0.3026684110000133
+10,2,2,explore,choose_frontier_route,go to the red key,o0,True,0.0,False,False,573,27,0.29761934300040593
+11,0,0,explore,choose_frontier_route,go to the red key,o0,,0.0,False,False,587,27,0.40197338500001933
+12,2,2,approach,route_to_mission_target,go to the red key,o0,True,0.0,False,False,619,27,0.32257054000001517
+13,2,2,approach,route_to_mission_target,go to the red key,o12,True,0.0,False,False,640,28,0.3612610970003516
+14,2,2,approach,route_to_mission_target,go to the red key,o13,True,0.0,False,False,660,28,0.35053220500049065
+15,2,2,approach,route_to_mission_target,go to the red key,o14,True,0.0,False,False,680,28,0.40797080999982427
+16,2,2,approach,route_to_mission_target,go to the red key,o15,True,0.0,False,False,700,28,0.38494709899987356
+17,0,0,approach,route_to_mission_target,go to the red key,o0,,0.0,False,False,719,27,0.28850032899936195
+18,2,2,approach,route_to_mission_target,go to the red key,o12,True,0.924,True,False,709,28,0.3297841889998381

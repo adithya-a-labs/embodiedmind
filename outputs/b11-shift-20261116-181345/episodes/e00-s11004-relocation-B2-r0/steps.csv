@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,f0.26,True,0.0,False,False,661,15,0.20929702099965652
+3,2,2,primitive,,,f0.20,True,0.0,False,False,661,15,0.20365249099995708
+4,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.3303459359995031
+5,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23822290799944312
+6,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.2401806409980054
+7,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.2443868369991833
+8,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.24598468600015622
+9,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.2365049049985828
+10,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.2340542399979313
+11,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.2411945130006643
+12,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23462014799952158
+13,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23605820900047547
+14,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23845633399832877
+15,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23373896599878208
+16,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23709430000235443
+17,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23365740799999912
+18,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23397707099866238
+19,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23690573100248002
+20,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.24325326299731387
+21,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.2441899760015076
+22,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.2409675970011449
+23,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23508954199860455
+24,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23507770499782055
+25,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.2371518649997597
+26,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.24072094499933883
+27,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.24340457600192167
+28,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23778954400040675
+29,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23279080300198984
+30,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23794138499943074
+31,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23822160700001405
+32,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23460546599744703
+33,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23307613599899923
+34,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.2367886649990396
+35,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.24513847900016117
+36,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.2411257059975469
+37,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23851647499759565
+38,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.24127538500033552
+39,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.24193923599887057
+40,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.25335222099965904
+41,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.261152586001117
+42,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.24231837900151731
+43,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23473468000156572
+44,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23742080900046858
+45,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.23855777000062517
+46,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.24665876899962313
+47,5,5,primitive,,,"f0.27 green key (-8, -1) observed at step 0",,0.0,False,False,661,28,0.25166729299962753

@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,visible,,0.0,False,False,358,14,0.17468173000088427
+1,2,2,primitive,,,visible,True,0.0,False,False,469,11,0.1609416909996071
+2,1,1,primitive,,,"f0.4 grey wall (-1, 1) observed at step 1",,0.0,False,False,500,27,0.26980070599893224
+3,0,0,primitive,,,f0.9,,0.0,False,False,444,17,0.2282522230016184
+4,1,1,primitive,,,f0.9,,0.0,False,False,516,14,0.18705985700216843
+5,0,0,primitive,,,f1.0,,0.0,False,False,444,17,0.20938663899869425
+6,1,1,primitive,,,f0.0,,0.0,False,False,516,14,0.18149485499816365
+7,0,0,primitive,,,f1.1,,0.0,False,False,444,17,0.2684344859990233
+8,1,1,primitive,,,f0.0,,0.0,False,False,516,14,0.19170854199910536
+9,0,0,primitive,,,f1.1,,0.0,False,False,444,17,0.24173274699933245
+10,1,1,primitive,,,f0.9,,0.0,False,False,516,14,0.18976390999887371
+11,0,0,primitive,,,f1.0,,0.0,False,False,446,17,0.23900385300294147
+12,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.28077139100059867
+13,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.2394783700001426
+14,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.2734293670000625
+15,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.22345642900108942
+16,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.23751842400088208
+17,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.21077133500148193
+18,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.23819047700089868
+19,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.21559370500108344
+20,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.2549042769969674
+21,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.20965313199849334
+22,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.24794246699821088
+23,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.21466613099983078
+24,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.2657224020003923
+25,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.2380538700017496
+26,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.23060256999815465
+27,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.22717928300335188
+28,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.25020854299873463
+29,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.23094485299952794
+30,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.25580908299889416
+31,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.2072345119995589
+32,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.24154044300303212
+33,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.2189533479977399
+34,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.251336369998171
+35,0,0,primitive,,,f0.9,,0.0,False,False,450,17,0.21226240699979826
+36,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.2384618110008887
+37,0,0,primitive,,,visible,,0.0,False,False,450,14,0.19478044400239014
+38,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.2264509859996906
+39,0,0,primitive,,,visible,,0.0,False,False,450,14,0.193074514001637
+40,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.2668018349977501
+41,0,0,primitive,,,visible,,0.0,False,False,450,14,0.19188518800001475
+42,1,1,primitive,,,"f0.9 yellow door closed (-4, 1)",,0.0,False,False,526,23,0.23858200399990892
+43,1,2,primitive,blocked_by_visible_wall,,f0.10,,0.0,False,False,450,15,0.19666777800011914
+44,2,2,primitive,,,visible,True,0.0,False,False,460,11,0.18755094799780636
+45,2,2,primitive,,,f1.1 yellow door locked,True,0.0,False,False,506,17,0.18319232500289218
+46,2,2,primitive,,,"f1.1 yellow door locked (-2, 1) observed at step 44",True,0.0,False,False,560,29,0.3284442290023435
+47,2,2,primitive,,,"f0.5 purple door closed (-1, -1) observed at step 46",True,0.0,False,False,600,29,0.3258768150008109

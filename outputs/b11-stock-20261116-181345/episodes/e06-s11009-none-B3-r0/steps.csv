@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,remembered,True,0.0,False,False,385,12,0.1584563429969421
+1,2,2,primitive,,,f0,True,0.0,False,False,410,12,0.16120575400054804
+2,1,1,primitive,,,"f0.10 grey door closed (-2, 1) observed at step 0",,0.0,False,False,457,29,0.26708797500032233
+3,0,0,primitive,,,f0.1,,0.0,False,False,437,17,0.23857105099887121
+4,1,1,primitive,,,f0.10,,0.0,False,False,508,15,0.18647187999886228
+5,0,0,primitive,,,f0.1,,0.0,False,False,437,17,0.24741648900089785
+6,1,1,primitive,,,visible,,0.0,False,False,508,11,0.17535442599910311
+7,1,1,primitive,,,visible,,0.0,False,False,437,14,0.1707335300015984
+8,2,2,primitive,,,"f0.4 grey wall (-1, 0) observed at step 7",True,0.0,False,False,466,27,0.3488974510000844
+9,2,2,primitive,,,"f0.1 green door closed (-1, 1) observed at step 8",True,0.0,False,False,502,28,0.2683358569993288
+10,2,2,primitive,,,"f0.1 green door closed (-2, 1) observed at step 8",True,0.0,False,False,553,28,0.2840557320014341
+11,2,2,primitive,,,"f0.1 green door closed (-3, 1) observed at step 8",True,0.0,False,False,591,28,0.2828865949995816
+12,1,1,primitive,,,visible,,0.0,False,False,642,11,0.18066649400134338
+13,0,0,primitive,,,visible,,0.0,False,False,569,14,0.22380131800309755
+14,1,1,primitive,,,visible,,0.0,False,False,644,11,0.18588667899894062
+15,0,0,primitive,,,visible,,0.0,False,False,569,14,0.1997838489987771
+16,1,1,primitive,,,visible,,0.0,False,False,644,11,0.1685690109989082
+17,0,0,primitive,,,visible,,0.0,False,False,569,14,0.21310838999852422
+18,1,1,primitive,,,visible,,0.0,False,False,644,11,0.22837806199822808
+19,0,0,primitive,,,visible,,0.0,False,False,569,14,0.19865302000107476
+20,1,1,primitive,,,"f0.1 green door closed (-4, 1) STALE; reobserve at step 8",,0.0,False,False,652,32,0.3159718549977697
+21,0,0,primitive,,,visible,,0.0,False,False,577,14,0.20304709400079446
+22,1,1,primitive,,,"f0.3 green door closed (-4, 1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.3242697380010213
+23,0,0,primitive,,,visible,,0.0,False,False,581,14,0.20987016599974595
+24,1,1,primitive,,,"f0.3 green door closed (-4, 1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.34345848799785017
+25,2,2,primitive,,,visible,False,0.0,False,False,581,11,0.15765754000312882
+26,2,2,primitive,,,"f0.0 green door locked (-1, 1) observed at step 10",False,0.0,False,False,582,29,0.29594752800039714
+27,2,2,primitive,,,"f0.0 green door locked (-1, 1) observed at step 10",False,0.0,False,False,582,29,0.24202887100182124
+28,2,2,primitive,,,"f0.0 green door locked (-1, 1) observed at step 10",False,0.0,False,False,582,29,0.2465285389989731
+29,2,2,primitive,,,"f0.0 green door locked (-1, 1) observed at step 10",False,0.0,False,False,582,29,0.2360632700001588
+30,2,2,primitive,,,"f0.0 green door locked (-1, 1) observed at step 10",False,0.0,False,False,582,29,0.24336481199861737
+31,2,2,primitive,,,"f0.0 green door locked (-1, 1) observed at step 10",False,0.0,False,False,582,29,0.24277343699941412
+32,2,2,primitive,,,"f0.0 green door locked (-1, 1) observed at step 10",False,0.0,False,False,582,29,0.24972413800060167
+33,2,2,primitive,,,"f0.0 green door locked (-1, 1) observed at step 10",False,0.0,False,False,582,29,0.24410723900291487
+34,2,2,primitive,,,"f0.0 green door locked (-1, 1) observed at step 10",False,0.0,False,False,582,29,0.2510979769976984
+35,2,2,primitive,,,"f0.0 green door locked (-1, 1) observed at step 10",False,0.0,False,False,582,29,0.2470854569983203
+36,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.16055557300205692
+37,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.1151975639986631
+38,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.13348020299963537
+39,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.11686079900027835
+40,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.11759245499706594
+41,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.10715219100165996
+42,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.1204062190008699
+43,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.11808157899940852
+44,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.13258898100320948
+45,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.12355000899697188
+46,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.1233286370006681
+47,2,2,primitive,,,visible,False,0.0,False,False,586,11,0.11477689999810536

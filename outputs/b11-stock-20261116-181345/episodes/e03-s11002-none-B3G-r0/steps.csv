@@ -1,0 +1,6 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,Remembered cells,True,0.0,False,False,396,14,0.2088882839998405
+1,2,2,primitive,,,f0.17,True,0.0,False,False,437,16,0.21698875000038242
+2,2,2,primitive,,,"f0.17 empty (-2, 1) observed at step 0",True,0.0,False,False,490,27,0.2913447120008641
+3,0,2,primitive,blocked_by_visible_wall,,visible,,0.0,False,False,538,14,0.20161157800066576
+4,2,2,primitive,,,visible,True,0.9946745562130177,True,False,567,14,0.4684252440001728

@@ -1,0 +1,46 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible0,,0.0,False,False,302,14,0.21199701100340462
+1,1,2,primitive,blocked_by_visible_ball,,,,0.0,False,False,306,11,0.17645626299781725
+2,0,2,primitive,blocked_by_visible_ball,,visible 0,,0.0,False,False,297,15,0.1801112489993102
+3,1,2,primitive,blocked_by_visible_ball,,visible 0,,0.0,False,False,296,15,0.1706717880006181
+4,0,0,primitive,,,visible 4,,0.0,False,False,297,16,0.1749183339998126
+5,1,2,primitive,blocked_by_visible_ball,,visible 0,,0.0,False,False,297,15,0.17011014800300472
+6,2,2,primitive,,,visible,,0.0,False,False,303,12,0.1518960329995025
+7,0,0,primitive,,,visible,,0.0,False,False,296,14,0.1707118879967311
+8,2,2,primitive,,,visible,,0.0,False,False,302,12,0.18080017299871542
+9,1,2,primitive,blocked_by_visible_ball,,visible 4,,0.0,False,False,298,15,0.20998426499863854
+10,0,0,primitive,,,visible 0,,0.0,False,False,298,16,0.19751688600081252
+11,2,2,primitive,,,visible 0,,0.0,False,False,302,15,0.19513596500109998
+12,2,2,primitive,,,visible 0,,0.0,False,False,293,15,0.18373325399807072
+13,1,2,primitive,blocked_by_visible_ball,,visible0,,0.0,False,False,278,14,0.18071570599931874
+14,2,2,primitive,,,visible,,0.0,False,False,322,12,0.15262305100259255
+15,1,2,primitive,blocked_by_visible_ball,,visible,,0.0,False,False,317,14,0.16565767000065534
+16,2,2,primitive,,,visible,,0.0,False,False,293,13,0.20309226999961538
+17,2,2,primitive,,,visible,,0.0,False,False,283,13,0.18408548799925484
+18,0,2,primitive,blocked_by_visible_ball,,,,0.0,False,False,278,11,0.14225004299805732
+19,2,2,primitive,,,visible 0,,0.0,False,False,312,15,0.19257088599988492
+20,2,2,primitive,,,visible 0,,0.0,False,False,301,14,0.15622166699904483
+21,0,0,primitive,,,visible,,0.0,False,False,297,14,0.15525430900015635
+22,2,2,primitive,,,visible0,,0.0,False,False,315,13,0.16495019699868863
+23,2,2,primitive,,,visible0,,0.0,False,False,314,13,0.172639912001614
+24,2,2,primitive,,,visible0,,0.0,False,False,304,14,0.1991110099988873
+25,2,2,primitive,,,visible,,0.0,False,False,294,13,0.16172033900147653
+26,0,2,primitive,blocked_by_visible_wall,,visible0,,0.0,False,False,280,14,0.1716854729966144
+27,2,2,primitive,,,visible,,0.0,False,False,284,12,0.14999382500172942
+28,2,2,primitive,,,visible,,0.0,False,False,283,12,0.14223316800052999
+29,0,2,primitive,blocked_by_visible_wall,,,,0.0,False,False,278,11,0.17575022800156148
+30,2,2,primitive,,,visible,,0.0,False,False,293,12,0.14618162399710855
+31,2,2,primitive,,,visible,,0.0,False,False,293,13,0.17083371199987596
+32,2,2,primitive,,,visible,,0.0,False,False,293,12,0.17239268900084426
+33,2,2,primitive,,,visible,,0.0,False,False,292,13,0.19901263599967933
+34,0,2,primitive,blocked_by_visible_ball,,,,0.0,False,False,278,11,0.15091971299989382
+35,0,0,primitive,,,visible 0,,0.0,False,False,316,16,0.1747238629977801
+36,2,2,primitive,,,visible,,0.0,False,False,294,13,0.20721093300016946
+37,2,2,primitive,,,visible 0,,0.0,False,False,276,15,0.18874922200120636
+38,2,2,primitive,,,visible0,,0.0,False,False,276,14,0.16798064300019178
+39,1,1,primitive,,,visible 0,,0.0,False,False,271,16,0.162067509998451
+40,2,2,primitive,,,visible,,0.0,False,False,293,12,0.154393071999948
+41,2,2,primitive,,,visible,,0.0,False,False,313,13,0.1730096510000294
+42,2,2,primitive,,,visible 0,,0.0,False,False,301,14,0.158944913000596
+43,2,2,primitive,,,visible0,,0.0,False,False,320,14,0.1971608460007701
+44,2,2,primitive,,,visible0,,0.841796875,True,False,310,14,0.1672321389996796

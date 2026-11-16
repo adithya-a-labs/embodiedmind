@@ -1,0 +1,22 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the blue key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the blue key,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,425,27,0.3296149059997333
+3,0,2,explore,choose_frontier_route,go to the blue key,o2,,0.0,False,False,451,27,0.31843017900064297
+4,2,2,explore,choose_frontier_route,go to the blue key,o1,True,0.0,False,False,468,27,0.26064767000025313
+5,2,0,explore,choose_frontier_route,go to the blue key,o4,True,0.0,False,False,488,27,0.2818898089999493
+6,2,2,explore,choose_frontier_route,go to the blue key,o5,True,0.0,False,False,508,27,0.2923455300006026
+7,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,528,27,0.3085677949993624
+8,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,541,27,0.32079393500043807
+9,0,0,explore,choose_frontier_route,go to the blue key,o0,,0.0,False,False,553,27,0.29045005200077867
+10,2,2,explore,continue_frontier_route,go to the blue key,o0,True,0.0,False,False,583,27,0.2833325120000154
+11,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,601,27,0.2853200810004637
+12,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,618,27,0.2989594640002906
+13,2,2,explore,choose_frontier_route,go to the blue key,o12,True,0.0,False,False,635,28,0.33847556999990047
+14,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,652,27,0.32099814399953175
+15,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,669,27,0.3932030460000533
+16,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,686,27,0.3452447850004319
+17,0,0,explore,choose_frontier_route,go to the blue key,o16,,0.0,False,False,675,28,0.40030705199933436
+18,2,2,approach,route_to_mission_target,go to the blue key,o13,True,0.0,False,False,703,28,0.41505013900041376
+19,2,2,approach,route_to_mission_target,go to the blue key,o10,True,0.0,False,False,714,28,0.37724764199992933
+20,2,2,approach,route_to_mission_target,go to the blue key,o10,True,0.916,True,False,716,28,0.37422712100033095

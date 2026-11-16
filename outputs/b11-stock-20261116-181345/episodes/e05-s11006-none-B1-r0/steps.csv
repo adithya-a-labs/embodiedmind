@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible0,True,0.0,False,False,335,12,0.14470543499919586
+1,2,2,primitive,,,o0,True,0.0,False,False,346,12,0.1409115960013878
+2,2,2,primitive,,,o1,True,0.0,False,False,362,13,0.1604494240018539
+3,2,2,primitive,,,o2,True,0.0,False,False,378,12,0.16943427200021688
+4,0,0,primitive,,,o0,,0.0,False,False,389,15,0.21901898299984168
+5,2,2,primitive,,,o4,True,0.0,False,False,414,13,0.19754604499757988
+6,2,2,primitive,,,o0,True,0.0,False,False,429,13,0.16261610000219662
+7,0,0,primitive,,,o6,,0.0,False,False,439,15,0.1858122280027601
+8,2,2,primitive,,,o0,True,0.0,False,False,466,13,0.1724695380034973
+9,2,2,primitive,,,o0,True,0.0,False,False,489,12,0.13715480400060187
+10,2,2,primitive,,,o9,True,0.0,False,False,508,12,0.14954353700159118
+11,2,2,primitive,,,o10,True,0.0,False,False,529,13,0.15393785899868817
+12,2,2,primitive,,,o11,True,0.0,False,False,550,13,0.16961583300144412
+13,2,2,primitive,,,o1 step 1 prev=2 facing=2: no named objects,True,0.0,False,False,571,25,0.2823338710004464
+14,6,6,primitive,,,o13,,0.0,False,False,587,14,0.24256694200084894
+15,6,6,primitive,,,o14,,0.0,False,False,609,14,0.19865045199912856
+16,6,6,primitive,,,o15,,0.0,False,False,631,14,0.21162893399741733
+17,0,0,primitive,,,o16,,0.0,False,False,637,16,0.22534912899936899
+18,2,2,primitive,,,o16,True,0.0,False,False,639,13,0.20373777599888854
+19,2,2,primitive,,,"o18 step 18 prev=0 facing=3: purple door closed@3,1",True,0.0,False,False,644,31,0.30244984200180625
+20,2,2,primitive,,,"o19 step 19 prev=2 facing=3: purple door closed@2,1",True,0.0,False,False,649,31,0.3339770969978417
+21,2,2,primitive,,,"o20 step 20 prev=2 facing=3: purple door closed@1,1",True,0.0,False,False,654,31,0.3740201109976624
+22,2,2,primitive,,,o21,True,0.0,False,False,649,13,0.20754440800010343
+23,0,0,primitive,,,o20,,0.0,False,False,645,16,0.21875387800173485
+24,2,2,primitive,,,o20,True,0.0,False,False,657,13,0.20124848599880352
+25,2,2,primitive,,,"o20 step 20 prev=2 facing=3: purple door closed@1,1",True,0.0,False,False,656,31,0.33785716599959414
+26,2,2,primitive,,,o24 step 24 prev=0 facing=2: no named objects,True,0.0,False,False,653,27,0.4439896320000116
+27,2,2,primitive,,,o20,True,0.0,False,False,648,13,0.35101918500004103
+28,2,2,primitive,,,o20,True,0.0,False,False,643,13,0.3651462289999472
+29,2,2,primitive,,,"o21 step 21 prev=2 facing=3: purple door closed@0,1",True,0.0,False,False,638,31,0.49091424200014444
+30,0,0,primitive,,,o24 step 24 prev=0 facing=2: no named objects,,0.0,False,False,628,28,0.649785213998257
+31,2,2,primitive,,,o24,True,0.0,False,False,647,13,0.19258668000111356
+32,2,2,primitive,,,"o20 step 20 prev=2 facing=3: purple door closed@1,1",True,0.0,False,False,645,31,0.33396640900173225
+33,2,2,primitive,,,o20,True,0.0,False,False,646,13,0.2930771020000975
+34,2,2,primitive,,,"o20 step 20 prev=2 facing=3: purple door closed@1,1",True,0.0,False,False,641,31,0.6556505660009861
+35,2,2,primitive,,,"o21 step 21 prev=2 facing=3: purple door closed@0,1",True,0.0,False,False,636,31,0.46327095100059523
+36,0,0,primitive,,,"o21 step 21 prev=2 facing=3: purple door closed@0,1",,0.0,False,False,626,32,0.5354135089983174
+37,2,2,primitive,,,o21,True,0.0,False,False,633,13,0.2960817720013438
+38,2,2,primitive,,,o22,True,0.0,False,False,636,13,0.4270839450000494
+39,2,2,primitive,,,o38,True,0.0,False,False,639,13,0.19192803600162733
+40,2,2,primitive,,,o39,True,0.0,False,False,642,13,0.4417292340003769
+41,2,2,primitive,,,o37,True,0.0,False,False,645,13,0.28570767999917734
+42,2,2,primitive,,,o41,True,0.0,False,False,648,13,0.324355516997457
+43,2,2,primitive,,,o42,False,0.0,False,False,644,13,0.20679277299859677
+44,0,0,primitive,,,o43,,0.0,False,False,645,16,0.20465670799967484
+45,2,2,primitive,,,o37,True,0.0,False,False,645,13,0.3338846439983172
+46,2,2,primitive,,,o45,True,0.0,False,False,648,13,0.22699814399675233
+47,2,2,primitive,,,o46,True,0.0,False,False,651,13,0.18805765900106053

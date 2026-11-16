@@ -1,0 +1,28 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,f0.0,True,0.0,False,False,665,17,0.3019626259992947
+3,2,2,primitive,,,f0.27,True,0.0,False,False,649,15,0.17899947700061603
+4,2,2,primitive,,,"f0.27 purple key (-8, -1) observed at step 0",True,0.0,False,False,650,28,0.25879582799825585
+5,2,2,primitive,,,"f0.27 purple key (-9, -1) observed at step 0",True,0.0,False,False,643,28,0.2307096839977021
+6,2,2,primitive,,,"f0.27 purple key (-10, -1) observed at step 0",True,0.0,False,False,640,29,0.2489977129989711
+7,2,2,primitive,,,"f0.27 purple key (-11, -1) observed at step 0",True,0.0,False,False,635,29,0.2779824989993358
+8,0,0,primitive,,,visible,,0.0,False,False,632,14,0.22613148200252908
+9,2,2,primitive,,,"f0.27 purple key (1, -12) observed at step 0",True,0.0,False,False,651,29,0.2940841970012116
+10,2,2,primitive,,,f0.27,True,0.0,False,False,651,15,0.16397258700089878
+11,2,2,primitive,,,f0.27,True,0.0,False,False,655,15,0.17847392499970738
+12,2,2,primitive,,,"f0.27 purple key (-2, -12) STALE; reobserve at step 0",True,0.0,False,False,639,33,0.33515981000164174
+13,2,2,primitive,,,"f0.27 purple key (-3, -12) STALE; reobserve at step 0",True,0.0,False,False,639,33,0.2902178200019989
+14,2,2,primitive,,,"f0.27 purple key (-4, -12) STALE; reobserve at step 0",True,0.0,False,False,640,33,0.2921477739982947
+15,0,0,primitive,,,visible,,0.0,False,False,637,14,0.31489712099937606
+16,2,2,primitive,,,f0.27,True,0.0,False,False,660,15,0.1650204979996488
+17,2,2,primitive,,,f0.27,True,0.0,False,False,663,15,0.14577299899974605
+18,2,2,primitive,,,f0.27,True,0.0,False,False,670,18,0.21505736900144257
+19,2,2,primitive,,,"f0.27 purple key (9, -5) STALE; reobserve at step 0",True,0.0,False,False,663,32,0.25714689300002647
+20,2,2,primitive,,,"f0.27 purple key (8, -5) STALE; reobserve at step 0",True,0.0,False,False,660,32,0.30573114099752274
+21,2,2,primitive,,,"f0.27 purple key (7, -5) STALE; reobserve at step 0",True,0.0,False,False,655,32,0.29520896499889204
+22,2,2,primitive,,,"f0.27 purple key (6, -5) STALE; reobserve at step 0",True,0.0,False,False,661,32,0.26539021599819534
+23,2,2,primitive,,,"f0.27 purple key (5, -5) STALE; reobserve at step 0",True,0.0,False,False,663,32,0.2908662850022665
+24,2,2,primitive,,,"f0.27 purple key (4, -5) STALE; reobserve at step 0",True,0.0,False,False,662,32,0.3120574190033949
+25,2,2,primitive,,,"f0.27 purple key (3, -5) STALE; reobserve at step 0",True,0.0,False,False,661,32,0.2888022449988057
+26,0,0,primitive,,,"f0.27 purple key (2, -5) STALE; reobserve at step 0",,0.892,True,False,660,32,0.3089241800007585

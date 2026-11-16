@@ -1,0 +1,22 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,1,explore,,Find mission target,explore,,0.0,False,False,353,27,0.29095817699999316
+1,0,0,explore,,Find mission target,explore,,0.0,False,False,344,27,0.266756783999881
+2,0,0,explore,,Find mission target,explore,,0.0,False,False,337,28,0.3073625079996418
+3,0,0,explore,,Find mission target,explore,,0.0,False,False,362,27,0.282504507998965
+4,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,370,27,0.315747550001106
+5,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,349,27,0.2942064090020722
+6,0,0,explore,,Find mission target,explore,,0.0,False,False,344,27,0.25359986500188825
+7,0,0,explore,,Find mission target,explore,,0.0,False,False,337,28,0.3080563030016492
+8,0,0,explore,,Find mission target,visible,,0.0,False,False,361,26,0.2908065829979023
+9,0,0,explore,,Find mission target,visible,,0.0,False,False,372,26,0.3216335560027801
+10,1,2,explore,,Find mission target,explore,,0.0,False,False,364,27,0.2988044399971841
+11,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,378,27,0.28925331700156676
+12,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,350,27,0.29318534299818566
+13,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,350,27,0.2836470839974936
+14,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,349,27,0.29479324299973086
+15,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,342,27,0.265866203000769
+16,0,0,explore,,Find mission target,explore,,0.0,False,False,337,28,0.299384423000447
+17,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,358,27,0.26940660000036587
+18,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,349,27,0.32654983699831064
+19,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,349,27,0.29072886199719505
+20,2,2,explore,forward_burst,Find mission target,explore,,0.926171875,True,False,349,27,0.26872918700246373

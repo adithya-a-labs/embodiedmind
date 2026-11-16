@@ -1,0 +1,26 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,visible,,0.0,False,False,351,14,0.18069961199944373
+1,2,2,primitive,,,f0.5,True,0.0,False,False,396,15,0.16984301099910226
+2,0,0,primitive,,,"f0.4 grey wall (-1, 1) observed at step 1",,0.0,False,False,464,27,0.29648261799957254
+3,2,2,primitive,,,f0.5,True,0.0,False,False,455,14,0.1749545050006418
+4,3,3,primitive,,,visible,,0.0,False,False,524,12,0.17635266999968735
+5,2,2,primitive,,,f1.4,True,0.0,False,False,537,14,0.19393449300150678
+6,2,2,primitive,,,f1.8,True,0.0,False,False,584,14,0.1744657660001394
+7,2,2,primitive,,,"f5.16 empty (-1, 0) observed at step 5",True,0.0,False,False,652,27,0.24503231999915442
+8,2,2,primitive,,,"f1.1 empty (-1, 0) observed at step 6",True,0.0,False,False,647,26,0.21459759200115514
+9,0,2,primitive,blocked_by_visible_wall,,"f3.16 empty (-1, 0) observed at step 7",,0.0,False,False,644,27,0.22515571599979012
+10,2,2,primitive,,,"f3.21 yellow door locked (-1, 0) observed at step 9",True,0.0,False,False,632,29,0.30949850300021353
+11,0,0,primitive,,,"f3.21 yellow door locked (-2, 0) observed at step 9",,0.0,False,False,632,30,0.33175080900036846
+12,0,0,primitive,,,visible,,0.0,False,False,453,12,0.2007970770009706
+13,2,2,primitive,,,f3.4,True,0.0,False,False,660,14,0.19094745400070678
+14,5,5,primitive,,,"f3.9 empty (-1, 1) observed at step 13",,0.0,False,False,657,27,0.31345823900119285
+15,2,2,primitive,,,"f3.8 empty (-1, 0) observed at step 10",True,0.0,False,False,648,27,0.28406910599915136
+16,2,2,primitive,,,"f3.16 empty (-1, 1) observed at step 15",True,0.0,False,False,661,28,0.365300166000452
+17,2,2,primitive,,,"f15.10 yellow door open (-1, 0) observed at step 15",True,0.0,False,False,646,31,0.3543853070004843
+18,2,2,primitive,,,"f15.10 yellow door open (-2, 0) observed at step 15",True,0.0,False,False,652,31,0.3604157480003778
+19,1,2,primitive,blocked_by_visible_wall,,"f15.10 yellow door open (-3, 0) observed at step 15",,0.0,False,False,652,32,0.35225276300116093
+20,2,2,primitive,,,"f15.1 grey wall (-1, 0) observed at step 19",True,0.0,False,False,679,29,0.3191233020006621
+21,2,2,primitive,,,"f15.10 yellow door open (-1, 3) observed at step 20",True,0.0,False,False,656,31,0.35138892699978896
+22,2,2,primitive,,,"f15.10 yellow door open (-2, 3) observed at step 20",True,0.0,False,False,660,31,0.3655239809995692
+23,2,2,primitive,,,"f15.10 yellow door open (-3, 3) observed at step 20",True,0.0,False,False,661,31,0.3160352539998712
+24,2,2,primitive,,,"f15.10 yellow door open (-4, 3) observed at step 20",True,0.96484375,True,False,661,31,0.344859484999688

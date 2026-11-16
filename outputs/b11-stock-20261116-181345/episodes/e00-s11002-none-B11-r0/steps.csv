@@ -1,0 +1,5 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,choose_frontier_route,go to the blue box,explore,,0.0,False,False,389,27,0.2709733100000449
+1,0,0,explore,choose_frontier_route,go to the blue box,explore,,0.0,False,False,386,28,0.2864877030006028
+2,2,4,approach,route_to_mission_target,go to the blue box,f2.10,True,0.0,False,False,423,30,0.31031945500035363
+3,0,4,approach,route_to_mission_target,go to the blue box,f2.10,,0.9,True,False,422,30,0.3185410480000428

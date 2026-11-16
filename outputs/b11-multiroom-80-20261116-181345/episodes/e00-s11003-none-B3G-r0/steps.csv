@@ -1,0 +1,81 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,remembered,True,0.0,False,False,361,12,0.15216276299906895
+1,2,2,primitive,,,f0,True,0.0,False,False,439,15,0.18627586200091173
+2,2,2,primitive,,,f0.18,True,0.0,False,False,529,15,0.22163262699905317
+3,2,2,primitive,,,f0.12,True,0.0,False,False,619,15,0.16970546200172976
+4,2,2,primitive,,,"f0.10 empty (-1, 0) observed at step 2",True,0.0,False,False,646,27,0.32619760200032033
+5,1,2,primitive,blocked_by_visible_wall,,"f0.9 empty (-1, 0) observed at step 3",,0.0,False,False,639,26,0.2559102929990331
+6,2,2,primitive,,,f0.18,True,0.0,False,False,615,15,0.23820693499874324
+7,2,2,primitive,,,f0.12,True,0.0,False,False,649,15,0.2274943419979536
+8,1,2,primitive,blocked_by_visible_wall,,"f0.13 empty (-1, -1) observed at step 7",,0.0,False,False,644,27,0.3272184470006323
+9,2,2,primitive,,,f0.20,True,0.0,False,False,460,18,0.27093195299676154
+10,2,2,primitive,,,"f0.21 empty (-1, 0) observed at step 7",True,0.0,False,False,551,27,0.27010618100030115
+11,2,2,primitive,,,"f0.22 empty (-1, 0) observed at step 9",True,0.0,False,False,643,27,0.29488109500016435
+12,2,2,primitive,,,"f0.30 purple door closed (-1, -1) observed at step 11",True,0.0,False,False,640,30,0.38681862500015995
+13,2,2,primitive,,,"f0.24 empty (-1, 0) observed at step 11",True,0.0,False,False,643,28,0.2958591589995194
+14,2,2,primitive,,,"f0.25 empty (-1, 0) observed at step 12",True,0.0,False,False,644,28,0.2995529809995787
+15,2,2,primitive,,,"f0.26 empty (-1, 0) observed at step 13",True,0.0,False,False,645,28,0.291902121000021
+16,1,2,primitive,blocked_by_visible_wall,,visible,,0.0,False,False,638,11,0.2228909260011278
+17,2,2,primitive,,,"f0.30 purple door closed (-1, 5) observed at step 11",True,0.0,False,False,662,30,0.35598551200018846
+18,2,2,primitive,,,"f0.11 empty (1, 4) observed at step 12",True,0.0,False,False,644,28,0.29822643300212803
+19,1,2,primitive,blocked_by_visible_wall,,visible,,0.0,False,False,640,11,0.20561151999936556
+20,2,2,primitive,,,"f11.20 grey wall (-1, 0) observed at step 19",True,0.0,False,False,654,30,0.3488483270011784
+21,2,2,primitive,,,"f11.27 grey wall (-2, -1) observed at step 19",True,0.0,False,False,665,30,0.36714829500124324
+22,2,2,primitive,,,"f9.20 empty (-1, 0) observed at step 20",True,0.0,False,False,665,28,0.3418494239995198
+23,2,2,primitive,,,"f9.20 empty (-2, 0) observed at step 20",True,0.0,False,False,658,28,0.34854346299835015
+24,2,2,primitive,,,"f0.18 empty (-1, 1) observed at step 23",True,0.0,False,False,673,28,0.3400364830013132
+25,2,2,primitive,,,"f0.11 empty (-1, 0) observed at step 23",True,0.0,False,False,670,28,0.3200044709992653
+26,2,2,primitive,,,"f0.10 empty (-1, 0) observed at step 24",True,0.0,False,False,643,28,0.3489708929992048
+27,0,0,primitive,,,"f0.12 empty (-4, 0) observed at step 22",,0.0,False,False,636,28,0.3160124120004184
+28,0,0,primitive,,,f0.12,,0.0,False,False,641,18,0.30519974699927843
+29,2,2,primitive,,,f0.0,True,0.0,False,False,675,14,0.2135810820000188
+30,2,2,primitive,,,"f0.8 empty (-1, 0) observed at step 26",True,0.0,False,False,671,27,0.3011135380002088
+31,2,2,primitive,,,"f0.27 grey wall (-3, -3) observed at step 27",True,0.0,False,False,661,29,0.299307413999486
+32,2,2,primitive,,,"f0.10 empty (-1, 0) observed at step 29",True,0.0,False,False,650,28,0.3332845010008896
+33,2,2,primitive,,,"f0.11 empty (-1, 0) observed at step 31",True,0.0,False,False,648,28,0.3183516889985185
+34,2,2,primitive,,,"f0.12 empty (-1, 0) observed at step 32",True,0.0,False,False,648,28,0.32395616700159735
+35,2,2,primitive,,,"f0.32 grey wall (-2, -3) observed at step 33",True,0.0,False,False,647,29,0.347402179002529
+36,0,0,primitive,,,"f0.30 purple door closed (-5, -3) observed at step 31",,0.0,False,False,639,33,0.3621044140018057
+37,2,2,primitive,,,"f0.31 grey wall (3, -4) observed at step 32",True,0.0,False,False,648,29,0.31471088000034797
+38,2,2,primitive,,,"f0.30 purple door closed (2, -5) observed at step 31",True,0.0,False,False,651,30,0.32730852699751267
+39,0,0,primitive,,,f0.12,,0.0,False,False,648,15,0.21191355900009512
+40,2,2,primitive,,,f11.7,True,0.0,False,False,670,15,0.21377195500099333
+41,2,2,primitive,,,"f10.7 empty (-1, 0) observed at step 38",True,0.0,False,False,676,28,0.3454117340006633
+42,2,2,primitive,,,f9.27,True,0.0,False,False,671,15,0.23621595800068462
+43,2,2,primitive,,,"f0.19 empty (-1, -1) observed at step 42",True,0.0,False,False,661,28,0.36972995399992215
+44,2,2,primitive,,,"f0.25 empty (-1, 0) observed at step 42",True,0.0,False,False,655,28,0.3362077229976421
+45,2,2,primitive,,,"f0.24 empty (-1, 0) observed at step 43",True,0.0,False,False,654,28,0.3062414819978585
+46,2,2,primitive,,,"f0.23 empty (-1, 0) observed at step 44",True,0.0,False,False,647,28,0.33816737300003297
+47,0,0,primitive,,,f0.30,,0.0,False,False,639,18,0.28369080099946586
+48,2,2,primitive,,,"f0.30 purple door closed (-1, -2) observed at step 45",True,0.0,False,False,648,30,0.3232696239974757
+49,2,2,primitive,,,"f0.21 empty (-1, 0) observed at step 46",True,0.0,False,False,649,28,0.3433914650013321
+50,0,0,primitive,,,"f0.12 empty (0, -4) observed at step 43",,0.0,False,False,642,31,0.3863134919993172
+51,2,2,primitive,,,f0.0,True,0.0,False,False,675,14,0.20569113599776756
+52,2,2,primitive,,,"f0.8 empty (-1, 0) observed at step 49",True,0.0,False,False,671,27,0.3396339250029996
+53,2,2,primitive,,,"f0.22 empty (-1, -1) observed at step 51",True,0.0,False,False,661,28,0.31700353199994424
+54,2,2,primitive,,,"f0.10 empty (-1, 0) observed at step 52",True,0.0,False,False,650,28,0.3235066720008035
+55,2,2,primitive,,,"f0.11 empty (-1, 0) observed at step 53",True,0.0,False,False,648,28,0.3653473039994424
+56,2,2,primitive,,,"f0.12 empty (-1, 0) observed at step 54",True,0.0,False,False,648,28,0.3310055090005335
+57,2,2,primitive,,,"f0.30 purple door closed (-4, -3) observed at step 53",True,0.0,False,False,647,30,0.332216779999726
+58,0,0,primitive,,,"f0.30 purple door closed (-5, -3) observed at step 53",,0.0,False,False,639,33,0.37009406899960595
+59,2,2,primitive,,,"f0.30 purple door closed (3, -5) observed at step 53",True,0.0,False,False,648,30,0.30527696699937223
+60,2,2,primitive,,,"f0.30 purple door closed (2, -5) observed at step 53",True,0.0,False,False,651,30,0.3173739419980848
+61,0,0,primitive,,,visible,,0.0,False,False,648,11,0.18775421299869777
+62,2,2,primitive,,,f11.7,True,0.0,False,False,670,15,0.22296379099861952
+63,2,2,primitive,,,"f10.7 empty (-1, 0) observed at step 60",True,0.0,False,False,676,28,0.28137262299787835
+64,2,2,primitive,,,f9.27,True,0.0,False,False,671,15,0.21986739700150792
+65,2,2,primitive,,,"f0.19 empty (-1, -1) observed at step 64",True,0.0,False,False,661,28,0.3233294860001479
+66,2,2,primitive,,,"f0.25 empty (-1, 0) observed at step 64",True,0.0,False,False,655,28,0.32761212200057344
+67,2,2,primitive,,,"f0.25 empty (-2, 0) observed at step 64",True,0.0,False,False,654,28,0.30179491300077643
+68,2,2,primitive,,,"f0.23 empty (-1, 0) observed at step 66",True,0.0,False,False,647,28,0.3084496499977831
+69,0,0,primitive,,,f0.30,,0.0,False,False,639,18,0.28850363200035645
+70,2,2,primitive,,,"f0.30 purple door closed (-1, -2) observed at step 67",True,0.0,False,False,648,30,0.3548407119997137
+71,2,2,primitive,,,"f0.30 purple door closed (-2, -2) observed at step 67",True,0.0,False,False,649,30,0.32079632699969807
+72,0,0,primitive,,,"f0.12 empty (0, -4) observed at step 65",,0.0,False,False,642,31,0.33064070399996126
+73,4,4,primitive,,,visible,,0.0,False,False,675,11,0.17442748000030406
+74,2,2,primitive,,,visible,True,0.0,False,False,675,14,0.2344575300012366
+75,2,2,primitive,,,"f0.8 empty (-1, 0) observed at step 71",True,0.0,False,False,671,27,0.3484457320009824
+76,2,2,primitive,,,"f0.22 empty (-1, -1) observed at step 74",True,0.0,False,False,661,28,0.29767868199996883
+77,2,2,primitive,,,visible,True,0.0,False,False,650,11,0.17171119799968437
+78,2,2,primitive,,,"f0.11 empty (-1, 0) observed at step 76",True,0.0,False,False,648,28,0.3417363070002466
+79,2,2,primitive,,,"f0.12 empty (-1, 0) observed at step 77",True,0.0,False,False,648,28,0.3331821400024637

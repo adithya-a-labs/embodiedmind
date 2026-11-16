@@ -1,0 +1,12 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,inspect_toward_start_room,Find start-room cue,explore,,0.0,False,False,436,27,0.279517916000259
+1,0,0,explore,inspect_toward_start_room,Find start-room cue,visible,,0.0,False,False,426,26,0.27650395999989996
+2,2,2,explore,return_toward_start_room,Find start-room cue,explore,True,0.0,False,False,433,27,0.27370952400087845
+3,2,2,explore,return_toward_start_room,Find start-room cue,explore,True,0.0,False,False,433,27,0.27153956899928744
+4,0,2,explore,search_hallway,Choose matching branch,f0.13,,0.0,False,False,479,30,0.283291083000222
+5,0,0,explore,approach_matching_branch,Choose matching branch,f0.13,,0.0,False,False,462,30,0.2934767650003778
+6,2,2,explore,approach_matching_branch,Choose matching branch,f0.13,True,0.0,False,False,479,30,0.2925960289994691
+7,2,2,explore,approach_matching_branch,Choose matching branch,f0.13,True,0.0,False,False,477,30,0.29051355899900955
+8,2,2,explore,approach_matching_branch,Choose matching branch,f0.13,True,0.0,False,False,475,30,0.29746361400066235
+9,1,0,explore,approach_matching_branch,Choose matching branch,f0.13,,0.0,False,False,468,30,0.2758302330003062
+10,2,2,explore,approach_matching_branch,Choose matching branch,f0.13,True,0.9931487889273356,True,False,475,30,0.30323834999944665

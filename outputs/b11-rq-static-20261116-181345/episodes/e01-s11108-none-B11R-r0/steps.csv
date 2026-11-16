@@ -1,0 +1,24 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,choose_frontier_route,go to the green ball,explore,,0.0,False,False,392,27,0.24741227199956484
+1,2,2,explore,choose_frontier_route,go to the green ball,explore,True,0.0,False,False,390,27,0.25259105599980103
+2,0,0,explore,choose_frontier_route,go to the green ball,explore,,0.0,False,False,384,28,0.2866400109996903
+3,0,2,explore,choose_frontier_route,go to the green ball,explore,,0.0,False,False,400,27,0.2735393969996949
+4,2,2,explore,continue_frontier_route,go to the green ball,explore,True,0.0,False,False,407,27,0.2615345759986667
+5,2,2,explore,continue_frontier_route,go to the green ball,explore,True,0.0,False,False,407,27,0.2640361470002972
+6,2,2,explore,continue_frontier_route,go to the green ball,explore,True,0.0,False,False,407,27,0.26525410099930014
+7,1,2,explore,continue_frontier_route,go to the green ball,explore,,0.0,False,False,407,27,0.2871092460009095
+8,2,2,explore,continue_frontier_route,go to the green ball,explore,True,0.0,False,False,408,27,0.2727889130001131
+9,5,0,explore,verified_toggle_precondition,go to the green ball,visible,,0.0,False,False,393,26,0.2607218620014464
+10,2,2,explore,choose_frontier_route,go to the green ball,explore,True,0.0,False,False,412,27,0.26768918100060546
+11,2,2,explore,choose_frontier_route,go to the green ball,explore,True,0.0,False,False,414,27,0.2839486630000465
+12,2,2,explore,continue_frontier_route,go to the green ball,explore,True,0.0,False,False,411,27,0.2668772420001915
+13,2,2,explore,continue_frontier_route,go to the green ball,explore,True,0.0,False,False,410,27,0.28326670699971146
+14,0,2,explore,continue_frontier_route,go to the green ball,explore,,0.0,False,False,409,27,0.27553549699950963
+15,2,2,explore,continue_frontier_route,go to the green ball,explore,True,0.0,False,False,407,27,0.27412239799923555
+16,5,0,explore,verified_toggle_precondition,go to the green ball,visible,,0.0,False,False,393,26,0.2564730720005173
+17,2,4,approach,route_to_mission_target,go to the green ball,f17.15,True,0.0,False,False,453,31,0.3373968190007872
+18,2,4,approach,route_to_mission_target,go to the green ball,visible,True,0.0,False,False,454,26,0.29948799000158033
+19,2,0,approach,route_to_mission_target,go to the green ball,f17.15,True,0.0,False,False,453,31,0.3058633649998228
+20,2,4,approach,route_to_mission_target,go to the green ball,f17.15,True,0.0,False,False,443,31,0.3498868530004984
+21,2,4,approach,route_to_mission_target,go to the green ball,f17.15,True,0.0,False,False,434,31,0.3068564300010621
+22,0,4,approach,route_to_mission_target,go to the green ball,f17.15,,0.9530612244897959,True,False,433,31,0.3445331190014258

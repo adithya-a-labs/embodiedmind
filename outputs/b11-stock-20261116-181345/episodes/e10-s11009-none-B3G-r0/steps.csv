@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,1,2,primitive,blocked_by_visible_wall,,remembered,,0.0,False,False,343,12,0.17992620599761722
+1,2,2,primitive,,,f0.1,True,0.0,False,False,424,14,0.21566111100037233
+2,2,2,primitive,,,f1.10,True,0.0,False,False,474,15,0.18947409899919876
+3,1,2,primitive,blocked_by_visible_wall,,"f1.10 blue ball (-2, 1) observed at step 1",,0.0,False,False,551,28,0.31364927599861403
+4,2,2,primitive,,,f0.0,True,0.0,False,False,488,17,0.24168872400332475
+5,2,2,primitive,,,"f0.0 empty (-2, 3) observed at step 0",True,0.0,False,False,576,26,0.29511527300201124
+6,1,2,primitive,blocked_by_visible_wall,,"f1.2 blue ball (-2, 1) observed at step 5",,0.0,False,False,636,27,0.3222013449994847
+7,2,2,primitive,,,f1.7,True,0.0,False,False,491,14,0.20793707900156733
+8,1,1,primitive,,,visible,,0.0,False,False,576,14,0.2194039679998241
+9,0,0,primitive,,,f1.15,,0.0,False,False,481,18,0.43363297099858755
+10,1,1,primitive,,,"f1.16 empty (-1, -1) observed at step 7",,0.0,False,False,575,27,0.29972727600033977
+11,1,2,primitive,blocked_by_visible_ball,,visible,,0.0,False,False,484,11,0.17334379199746763
+12,2,2,primitive,,,f1.10,True,0.0,False,False,562,15,0.2676961239994853
+13,0,0,primitive,,,f1.10,,0.0,False,False,624,18,0.32553290800206014
+14,2,2,primitive,,,visible,True,0.0,False,False,491,14,0.22056310399784707
+15,2,2,primitive,,,f1.18,True,0.0,False,False,580,15,0.20561366199763143
+16,0,0,primitive,,,"f1.10 blue ball (-1, -2) observed at step 15",,0.0,False,False,627,32,0.39624129999720026
+17,2,2,primitive,,,f0.7,True,0.0,False,False,499,14,0.1928804119997949
+18,2,2,primitive,,,f1.11,True,0.0,False,False,592,15,0.19068694399902597
+19,1,1,primitive,,,"f0.4 empty (-1, 0) observed at step 17",,0.0,False,False,672,27,0.3145019660005346
+20,1,1,primitive,,,"f1.9 yellow ball (-1, 1) observed at step 18",,0.0,False,False,644,31,0.34411894799995935
+21,2,2,primitive,,,visible,True,0.0,False,False,487,11,0.3459275710010843
+22,2,2,primitive,,,f1.10,True,0.0,False,False,560,15,0.19543811599942273
+23,1,2,primitive,blocked_by_visible_wall,,"f1.10 blue ball (-2, 1) observed at step 21",,0.0,False,False,642,29,0.3705464650010981
+24,2,2,primitive,,,f0.0,True,0.0,False,False,493,17,0.29563265899923863
+25,2,2,primitive,,,"f0.0 empty (-2, 3) observed at step 20",True,0.0,False,False,586,27,0.29765313800089643
+26,1,1,primitive,,,"f0.0 grey wall (-3, 3) observed at step 20",,0.0,False,False,651,31,0.3539088029974664
+27,2,2,primitive,,,f0.7,True,0.0,False,False,496,17,0.22823137199884513
+28,1,1,primitive,,,"f1.1 blue ball (-2, 0) observed at step 26",,0.0,False,False,586,28,0.3077024740014167
+29,0,0,primitive,,,f1.15,,0.0,False,False,486,18,0.2626691000004939
+30,1,1,primitive,,,"f1.16 empty (-2, -1) observed at step 26",,0.0,False,False,585,28,0.32691424699805793
+31,0,0,primitive,,,f1.15,,0.0,False,False,486,18,0.25669967100111535
+32,1,1,primitive,,,"f1.16 empty (-2, -1) observed at step 26",,0.0,False,False,585,28,0.30981359900033567
+33,0,0,primitive,,,f1.15,,0.0,False,False,486,18,0.24621112699969672
+34,1,1,primitive,,,"f1.16 empty (-1, -1) observed at step 27",,0.0,False,False,585,28,0.29630574099792284
+35,0,0,primitive,,,f1.15,,0.0,False,False,486,18,0.22748373599824845
+36,1,1,primitive,,,"f1.16 empty (-1, -1) observed at step 27",,0.0,False,False,585,28,0.3087549800002307
+37,0,0,primitive,,,f1.15,,0.0,False,False,486,18,0.21877623999898788
+38,1,1,primitive,,,"f1.16 empty (-1, -1) observed at step 27",,0.0,False,False,585,28,0.30961413699697005
+39,0,0,primitive,,,f1.15,,0.0,False,False,486,18,0.21756628500224906
+40,1,1,primitive,,,"f1.16 empty (-2, -1) observed at step 26",,0.0,False,False,585,28,0.2910162960033631
+41,0,0,primitive,,,visible,,0.0,False,False,486,14,0.19759367799997563
+42,1,1,primitive,,,"f1.16 empty (-2, -1) observed at step 26",,0.0,False,False,585,28,0.30295208300231025
+43,0,0,primitive,,,visible,,0.0,False,False,486,14,0.18625184499978786
+44,1,1,primitive,,,"f1.12 empty (-1, 0) observed at step 43",,0.0,False,False,585,28,0.30657250699732685
+45,0,0,primitive,,,visible,,0.0,False,False,486,14,0.192426763002004
+46,1,1,primitive,,,"f1.16 empty (-2, -1) observed at step 26",,0.0,False,False,585,28,0.3366742559992417
+47,0,0,primitive,,,visible,,0.0,False,False,486,14,0.20559365100052673

@@ -1,0 +1,27 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,visible,True,0.0,False,False,342,14,0.2053986899991287
+3,2,2,primitive,,,visible,True,0.0,False,False,342,11,0.1602007430010417
+4,2,2,primitive,,,visible,True,0.0,False,False,343,11,0.1424298899983114
+5,2,2,primitive,,,visible,True,0.0,False,False,335,11,0.1415579690001323
+6,2,2,primitive,,,visible,True,0.0,False,False,336,11,0.13087539000116521
+7,2,2,primitive,,,visible0,True,0.0,False,False,330,12,0.15292167699954007
+8,0,0,primitive,,,visible,,0.0,False,False,326,14,0.19116248899808852
+9,2,2,primitive,,,visible,True,0.0,False,False,339,12,0.14851927400013665
+10,2,2,primitive,,,visible0,True,0.0,False,False,338,12,0.15443329399931827
+11,2,2,primitive,,,visible0,True,0.0,False,False,337,12,0.15331697200235794
+12,2,2,primitive,,,visible0,True,0.0,False,False,336,12,0.14570089200060465
+13,2,2,primitive,,,visible0,True,0.0,False,False,335,12,0.14925944499918842
+14,0,0,primitive,,,visible,,0.0,False,False,329,14,0.1743102850014111
+15,2,2,primitive,,,visible,True,0.0,False,False,348,11,0.18471675900218543
+16,2,2,primitive,,,visible,True,0.0,False,False,348,11,0.15870407900001737
+17,2,2,primitive,,,visible,True,0.0,False,False,348,14,0.22866454599716235
+18,2,2,primitive,,,visible,True,0.0,False,False,348,11,0.16178056599892443
+19,2,2,primitive,,,visible 0,True,0.0,False,False,348,14,0.1522471360003692
+20,2,2,primitive,,,visible,True,0.0,False,False,339,13,0.16062749900083872
+21,2,2,primitive,,,visible,True,0.0,False,False,339,12,0.1332422840023355
+22,2,2,primitive,,,visible,True,0.0,False,False,338,12,0.13963618499838049
+23,2,2,primitive,,,visible,True,0.0,False,False,337,12,0.14802611800041632
+24,2,2,primitive,,,visible,True,0.0,False,False,336,12,0.13448580499971285
+25,0,0,primitive,,,visible0,,0.896,True,False,335,12,0.1493430670016096

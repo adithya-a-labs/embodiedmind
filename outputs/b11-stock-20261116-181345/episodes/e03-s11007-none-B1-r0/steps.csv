@@ -1,0 +1,26 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible 2,True,0.0,False,False,376,13,0.16857128299852775
+1,2,2,primitive,,,o0,True,0.0,False,False,388,13,0.18455167499996605
+2,2,2,primitive,,,o1,True,0.0,False,False,418,12,0.1764924049984984
+3,2,2,primitive,,,o2,True,0.0,False,False,441,12,0.1498015300003317
+4,2,2,primitive,,,o3,True,0.0,False,False,465,12,0.19525178900039464
+5,2,2,primitive,,,o4,True,0.0,False,False,489,12,0.2234485669996502
+6,2,2,primitive,,,o5,True,0.0,False,False,513,12,0.19919542699972226
+7,2,2,primitive,,,o6,True,0.0,False,False,537,12,0.1657849970015377
+8,2,2,primitive,,,o7,False,0.0,False,False,556,15,0.21215084799951
+9,2,2,primitive,,,o8,False,0.0,False,False,582,12,0.15370447799978137
+10,2,2,primitive,,,o9,False,0.0,False,False,608,12,0.17005541700018512
+11,5,5,primitive,,,"o1 prev=2 facing=0: green key@6,-2; green ball@6,2",,0.0,False,False,636,32,0.31715543800055457
+12,2,2,primitive,,,"o1 prev=2 facing=0: green key@0,-2; green ball@0,2",False,0.0,False,False,664,33,0.3535668150016136
+13,2,2,primitive,,,o1 step 1 prev=2 facing=0: no named objects,False,0.0,False,False,692,25,0.2908287560003373
+14,2,2,primitive,,,o1 prev=2 facing=0: no named objects,False,0.0,False,False,707,22,0.24709586700009822
+15,2,2,primitive,,,"o1 prev=2 facing=0: green key@0,-2; green ball@0,2",False,0.0,False,False,719,32,0.34099973299998965
+16,2,2,primitive,,,"o1 prev 2 facing 0: green key@0,-2; green ball@0,2",False,0.0,False,False,721,33,0.38213444000029995
+17,2,2,primitive,,,"o1 step 1 prev=0 facing=0: green key@0,-2; green ball@0,2",False,0.0,False,False,723,36,0.44934994600043865
+18,2,2,primitive,,,o1 step 1 prev=2 facing=0: no named objects,False,0.0,False,False,715,26,0.5610395289986627
+19,2,2,primitive,,,o1 step 1 prev=2 facing=0: no named objects,False,0.0,False,False,717,26,0.42382703899966145
+20,2,2,primitive,,,o1 step 1 prev=2 facing=0: no named objects,False,0.0,False,False,719,25,0.43828180899981817
+21,5,5,primitive,,,"o20 step 20 prev=2 facing=0: green key@0,-2; green ball@0,2",,0.0,False,False,721,37,0.5290765450008621
+22,5,5,primitive,,,"o21 step 21 prev=2 facing=0: green key@0,-2; green ball@0,2",,0.0,False,False,723,37,0.541585605000364
+23,0,0,primitive,,,"o22 step 22 prev=5 facing=0: green key@0,-2; green ball@0,2",,0.0,False,False,723,37,0.3902934979996644
+24,2,2,primitive,,,o1 step 1 prev=2 facing=0: no named objects,True,0.9733727810650887,True,False,731,25,0.3145018830000481

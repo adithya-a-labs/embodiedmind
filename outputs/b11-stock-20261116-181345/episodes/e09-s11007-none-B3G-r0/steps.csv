@@ -1,0 +1,13 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible0,,0.0,False,False,305,13,0.1516114620026201
+1,2,2,primitive,,,visible,,0.0,False,False,311,13,0.17364308000105666
+2,1,2,primitive,blocked_by_visible_ball,,,,0.0,False,False,305,11,0.16267395099930582
+3,2,2,primitive,,,"f2.26 contradicted: blue ball at (0, -1). Reobserve before use.",,0.0,False,False,610,32,0.36969850399691495
+4,2,2,primitive,,,visible,,0.0,False,False,330,12,0.22311986700151465
+5,2,2,primitive,,,visible,,0.0,False,False,331,12,0.1529175750001741
+6,2,2,primitive,,,"visible0,-1blue ball",,0.0,False,False,327,17,0.1801635410010931
+7,2,2,primitive,,,visible 0,,0.0,False,False,319,14,0.1786255090009945
+8,0,2,primitive,blocked_by_visible_wall,,,,0.0,False,False,296,11,0.15663326600042637
+9,2,2,primitive,,,f8.32,,0.0,False,False,592,15,0.19544351200238452
+10,2,2,primitive,,,visible,,0.0,False,False,300,12,0.28004674700059695
+11,2,2,primitive,,,visible,,0.9578125,True,False,300,12,0.17110361499726423

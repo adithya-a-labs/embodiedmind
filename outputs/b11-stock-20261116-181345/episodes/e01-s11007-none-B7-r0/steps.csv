@@ -1,0 +1,23 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,explore,,Find key,visible,,0.0,False,False,416,26,0.2991785739995976
+1,2,6,approach,,Find key,f1.4,True,0.0,False,False,439,29,0.359031000001778
+2,0,6,approach,,Find key,f1.4,,0.0,False,False,437,29,0.333070898999722
+3,2,4,approach,,Find key,f1.4,True,0.0,False,False,462,29,0.34156166600041615
+4,3,4,approach,,Find key,f1.4,,0.0,False,False,459,29,0.3595251839997218
+5,2,6,approach,,Find and cross door,f3.21,True,0.0,False,False,458,30,0.34057114199822536
+6,2,6,approach,,Find and cross door,f3.21,True,0.0,False,False,455,30,0.3413823209994007
+7,2,6,approach,,Find and cross door,f3.21,True,0.0,False,False,452,30,0.3737493110002106
+8,2,6,approach,,Find and cross door,f3.21,True,0.0,False,False,449,30,0.32385043899921584
+9,1,6,approach,,Find and cross door,f3.21,,0.0,False,False,446,30,0.34522712400030287
+10,5,6,approach,,Find and cross door,f3.21,,0.0,False,False,445,30,0.35248717100148497
+11,2,6,approach,,Find and cross door,f11.10,True,0.0,False,False,453,31,0.3458536959988123
+12,2,2,explore,,Reach goal,explore,True,0.0,False,False,418,27,0.256467426999734
+13,1,2,explore,,Reach goal,explore,,0.0,False,False,416,27,0.25485513499916124
+14,2,6,approach,,Reach goal,f14.8,True,0.0,False,False,451,30,0.38088060399968526
+15,2,6,approach,,Reach goal,f14.8,True,0.0,False,False,447,30,0.3914393930008373
+16,2,6,approach,,Reach goal,f14.8,True,0.0,False,False,445,30,0.32563106900124694
+17,2,6,approach,,Reach goal,f14.8,True,0.0,False,False,443,30,0.32545250700059114
+18,2,6,approach,,Reach goal,f14.8,True,0.0,False,False,441,30,0.32810621000135143
+19,0,6,approach,,Reach goal,f14.8,,0.0,False,False,438,30,0.3321108899999672
+20,2,6,approach,,Reach goal,f14.8,True,0.0,False,False,440,30,0.3316977809990931
+21,2,6,approach,,Reach goal,f14.8,True,0.9690625,True,False,439,30,0.3448033200002101

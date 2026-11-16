@@ -1,0 +1,23 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,1,2,primitive,blocked_by_visible_ball,,visible0,,0.0,False,False,299,13,0.1512540399999125
+1,2,2,primitive,,,"f0.26 contradicted: blue ball at (0, -1). Reobserve before use.",,0.0,False,False,579,32,0.31935308299944154
+2,2,2,primitive,,,visible 2,,0.0,False,False,318,13,0.1799193999977433
+3,0,0,primitive,,,visible,,0.0,False,False,313,18,0.18340519900084473
+4,2,2,primitive,,,"f3.26 contradicted: blue ball at (0, 1). Reobserve before use.",,0.0,False,False,616,32,0.4389966070011724
+5,2,2,primitive,,,visible,,0.0,False,False,332,12,0.30246425199948135
+6,2,2,primitive,,,visible,,0.0,False,False,331,12,0.14684384599968325
+7,2,2,primitive,,,visible,,0.0,False,False,320,13,0.17272419400251238
+8,2,2,primitive,,,visible,,0.0,False,False,310,13,0.164880030999484
+9,0,2,primitive,blocked_by_visible_wall,,visible 0,,0.0,False,False,297,15,0.1924741439979698
+10,2,2,primitive,,,"f9.33 empty (-1, 0) observed at step 9",,0.0,False,False,592,27,0.2823271579982247
+11,2,2,primitive,,,visible 5,,0.0,False,False,293,14,0.21917748900159495
+12,0,0,primitive,,,visible 0,,0.0,False,False,288,16,0.16728223400059505
+13,2,2,primitive,,,f12.30,,0.0,False,False,645,16,0.2261801739987277
+14,0,2,primitive,blocked_by_visible_ball,,,,0.0,False,False,323,11,0.20417255600114004
+15,2,2,primitive,,,f14.16,,0.0,False,False,636,16,0.20875335600067046
+16,2,2,primitive,,,visible 4,,0.0,False,False,322,15,0.20631068700095057
+17,2,2,primitive,,,visible 2,,0.0,False,False,321,15,0.1950681269991037
+18,2,2,primitive,,,visible0,,0.0,False,False,311,14,0.21045242699983646
+19,2,2,primitive,,,visible0,,0.0,False,False,310,14,0.2198370049991354
+20,0,2,primitive,blocked_by_visible_wall,,visible,,0.0,False,False,295,12,0.1446381259993359
+21,2,2,primitive,,,f20.47,,0.92265625,True,False,612,17,0.21717565400103922

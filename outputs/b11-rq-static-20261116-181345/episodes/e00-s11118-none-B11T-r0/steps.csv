@@ -1,0 +1,18 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,6,explore,route_to_mission_target,Find matching key,explore,True,0.0,False,False,404,27,0.29586697400009143
+1,2,4,approach,route_to_mission_target,Find matching key,visible,True,0.0,False,False,424,26,0.29568457099958323
+2,0,6,explore,route_to_mission_target,Find and pick up key,o1,,0.0,False,False,440,27,0.35047897000004014
+3,3,4,approach,verified_pickup_precondition,Find and pick up key,o1,,0.0,False,False,450,27,0.38398974200026714
+4,2,2,explore,choose_frontier_route,Reach goal beyond the door,o1,True,0.0,False,False,471,27,0.3121166199998697
+5,2,2,explore,choose_frontier_route,Reach goal beyond the door,o0,True,0.0,False,False,487,27,0.34133329299947945
+6,0,0,explore,choose_frontier_route,Reach goal beyond the door,o0,,0.0,False,False,498,27,0.3557986539999547
+7,2,4,approach,route_to_mission_target,Unlock matching door,o5,True,0.0,False,False,525,27,0.3855837249993783
+8,0,4,approach,route_to_mission_target,Unlock matching door,o1,,0.0,False,False,543,27,0.36418459299966344
+9,2,2,approach,route_to_mission_target,Unlock matching door,o1,True,0.0,False,False,560,27,0.4299021030001313
+10,2,2,approach,route_to_mission_target,Unlock matching door,o0,True,0.0,False,False,580,27,0.3657276699996146
+11,5,6,explore,verified_toggle_precondition,Unlock matching door,o0,,0.0,False,False,602,27,0.36848721300157194
+12,2,2,approach,route_to_mission_target,Reach goal beyond the door,o0,True,0.0,False,False,633,27,0.42893991299933987
+13,2,2,approach,route_to_mission_target,Reach goal beyond the door,o12,True,0.0,False,False,654,28,0.3831902390011237
+14,2,2,approach,route_to_mission_target,Reach goal beyond the door,o12,True,0.0,False,False,673,28,0.39709236300041084
+15,1,4,approach,route_to_mission_target,Reach goal beyond the door,o12,,0.0,False,False,694,28,0.3966294649999327
+16,2,2,approach,route_to_mission_target,Reach goal beyond the door,o12,True,0.97609375,True,False,701,28,0.4468971699989197

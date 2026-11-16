@@ -1,0 +1,22 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,1,0,explore,choose_frontier_route,go to the yellow ball,visible,,0.0,False,False,393,26,0.29575154799931624
+1,2,2,explore,continue_frontier_route,go to the yellow ball,explore,True,0.0,False,False,396,27,0.2741205689999333
+2,0,2,explore,continue_frontier_route,go to the yellow ball,explore,,0.0,False,False,396,27,0.28996315599943046
+3,5,0,explore,verified_toggle_precondition,go to the yellow ball,visible,,0.0,False,False,393,26,0.29064546300105576
+4,2,2,explore,choose_frontier_route,go to the yellow ball,explore,True,0.0,False,False,407,27,0.26502724300007685
+5,2,2,explore,choose_frontier_route,go to the yellow ball,explore,True,0.0,False,False,409,27,0.29500360199926945
+6,1,2,explore,continue_frontier_route,go to the yellow ball,explore,,0.0,False,False,407,27,0.3029014059993642
+7,2,2,explore,continue_frontier_route,go to the yellow ball,explore,True,0.0,False,False,406,27,0.2922771159992408
+8,5,0,explore,verified_toggle_precondition,go to the yellow ball,visible,,0.0,False,False,395,26,0.25696178099860845
+9,2,2,explore,choose_frontier_route,go to the yellow ball,explore,True,0.0,False,False,414,27,0.262567174000651
+10,2,2,explore,choose_frontier_route,go to the yellow ball,explore,True,0.0,False,False,415,27,0.292024467000374
+11,2,2,explore,continue_frontier_route,go to the yellow ball,explore,True,0.0,False,False,413,27,0.28218909699899086
+12,2,2,explore,continue_frontier_route,go to the yellow ball,explore,True,0.0,False,False,412,27,0.2917622470013157
+13,2,2,explore,continue_frontier_route,go to the yellow ball,explore,True,0.0,False,False,411,27,0.33415199800037954
+14,1,2,explore,continue_frontier_route,go to the yellow ball,explore,,0.0,False,False,410,27,0.28428320700004406
+15,5,0,explore,verified_toggle_precondition,go to the yellow ball,visible,,0.0,False,False,393,26,0.2778541950010549
+16,2,4,approach,route_to_mission_target,go to the yellow ball,f16.14,True,0.0,False,False,437,31,0.32332687499911117
+17,2,4,approach,route_to_mission_target,go to the yellow ball,f16.14,True,0.0,False,False,428,31,0.3433234500007529
+18,2,4,approach,route_to_mission_target,go to the yellow ball,f16.14,True,0.0,False,False,425,31,0.36829465399932815
+19,2,1,approach,route_to_mission_target,go to the yellow ball,f16.14,True,0.0,False,False,424,31,0.34993884899995464
+20,2,4,approach,route_to_mission_target,go to the yellow ball,f16.14,True,0.9571428571428572,True,False,423,31,0.3591210079994198

@@ -1,0 +1,26 @@
+Evidence packaging failed: 'B11P'. Rebuild with embodiedmind package outputs/b11-rq-shift-20261116-181345
+Traceback (most recent call last):
+  File "/home/adithyaa/Projects/EmbodiedMind/.venv/bin/embodiedmind", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/adithyaa/Projects/EmbodiedMind/src/embodiedmind/cli.py", line 59, in main
+    result = run(args.config, args.output, args.models, args.parallel, args.profile, args.limit_jobs, args.monitor)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adithyaa/Projects/EmbodiedMind/src/embodiedmind/experiments/schedule.py", line 229, in run
+    return run_and_package(root, manifest, model, stop, limit_jobs, monitor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adithyaa/Projects/EmbodiedMind/src/embodiedmind/experiments/schedule.py", line 249, in run_and_package
+    package_run(root)
+  File "/home/adithyaa/Projects/EmbodiedMind/src/embodiedmind/experiments/archive.py", line 87, in package_run
+    return generate_report(root)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adithyaa/Projects/EmbodiedMind/src/embodiedmind/analysis/report.py", line 567, in generate_report
+    return generate_combined_report([run_dir], run_dir / "report")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adithyaa/Projects/EmbodiedMind/src/embodiedmind/analysis/report.py", line 553, in generate_combined_report
+    plots = make_plots(episodes, comparisons, output_dir / "figures")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adithyaa/Projects/EmbodiedMind/src/embodiedmind/analysis/plots.py", line 99, in make_plots
+    ax.hlines(index, result.lower_95, result.upper_95, color=COLORS[result.treatment], linewidth=1.5)
+                                                             ~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'B11P'

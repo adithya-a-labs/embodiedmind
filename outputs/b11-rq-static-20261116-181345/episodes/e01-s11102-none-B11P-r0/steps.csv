@@ -1,0 +1,23 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,explore,choose_frontier_route,go to the grey ball,explore,True,0.0,False,False,411,27,0.34660230500048783
+1,2,2,explore,continue_frontier_route,go to the grey ball,explore,True,0.0,False,False,410,27,0.27666702900023665
+2,2,2,explore,continue_frontier_route,go to the grey ball,explore,True,0.0,False,False,409,27,0.2431987330000993
+3,0,2,explore,continue_frontier_route,go to the grey ball,explore,,0.0,False,False,408,27,0.25815933600097196
+4,2,0,explore,continue_frontier_route,go to the grey ball,visible,True,0.0,False,False,398,26,0.28766126099981193
+5,5,0,explore,verified_toggle_precondition,go to the grey ball,visible,,0.0,False,False,393,26,0.25703465699916705
+6,2,2,explore,choose_frontier_route,go to the grey ball,explore,True,0.0,False,False,398,27,0.2637745250012813
+7,2,2,explore,choose_frontier_route,go to the grey ball,visible,True,0.0,False,False,392,26,0.258102740999675
+8,2,2,explore,choose_frontier_route,go to the grey ball,explore,True,0.0,False,False,390,27,0.2502811659996951
+9,2,2,explore,choose_frontier_route,go to the grey ball,explore,True,0.0,False,False,390,27,0.24193922700033
+10,2,2,explore,choose_frontier_route,go to the grey ball,explore,True,0.0,False,False,390,27,0.24914957900000445
+11,2,2,explore,choose_frontier_route,go to the grey ball,explore,True,0.0,False,False,390,27,0.25403540800107294
+12,0,0,explore,choose_frontier_route,go to the grey ball,visible,,0.0,False,False,385,26,0.26404529500177887
+13,2,2,explore,continue_frontier_route,go to the grey ball,explore,True,0.0,False,False,403,27,0.2533894260013767
+14,2,2,explore,choose_frontier_route,go to the grey ball,explore,True,0.0,False,False,402,27,0.25757266900109244
+15,2,0,explore,continue_frontier_route,go to the grey ball,visible,True,0.0,False,False,401,26,0.2749822170007974
+16,5,0,explore,verified_toggle_precondition,go to the grey ball,visible,,0.0,False,False,395,26,0.2657951109995338
+17,2,4,approach,route_to_mission_target,go to the grey ball,f17.4,True,0.0,False,False,447,30,0.31154767999942123
+18,2,4,approach,route_to_mission_target,go to the grey ball,f17.4,True,0.0,False,False,437,30,0.3272278460008238
+19,0,4,approach,route_to_mission_target,go to the grey ball,f17.4,,0.0,False,False,435,30,0.3116352039996855
+20,2,4,approach,route_to_mission_target,go to the grey ball,f17.4,True,0.0,False,False,439,30,0.3197233660011989
+21,2,4,approach,route_to_mission_target,go to the grey ball,f17.4,True,0.9551020408163265,True,False,431,30,0.343833196999185

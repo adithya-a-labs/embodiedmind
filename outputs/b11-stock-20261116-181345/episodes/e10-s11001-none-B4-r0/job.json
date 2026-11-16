@@ -1,0 +1,9 @@
+{
+  "id": "e10-s11001-none-B4-r0",
+  "environment": "BabyAI-SynthS5R2-v0",
+  "seed": 11001,
+  "variant": "B4",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-16T18:14:04+00:00"
+}

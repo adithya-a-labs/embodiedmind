@@ -1,0 +1,25 @@
+Incomplete roster: outputs/b11-rq-shift-20261116-181345 {'pid': 14713, 'planned': 540, 'completed': 15, 'errors': 0, 'status': 'running', 'at': '2026-11-16T12:50:17+00:00', 'active': ['e00-s11101-relocation-B11PA-r0']}
+[2026-11-16T18:21:01+05:30] Waiting for the benchmark service
+[2026-11-16T18:21:59+05:30] Waiting for the benchmark service
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+  File "/home/adithyaa/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adithyaa/.local/share/uv/python/cpython-3.12.16-linux-x86_64-gnu/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'outputs/b11-rq-static-20261116-181345/manifest.json'
+[2026-11-16T19:40:49+05:30] Waiting for the benchmark service
+/home/adithyaa/Projects/EmbodiedMind/outputs/b11-rq-shift-20261116-181345/report/report.md
+/home/adithyaa/Projects/EmbodiedMind/outputs/b11-rq-static-20261116-181345/report/report.md
+/home/adithyaa/Projects/EmbodiedMind/outputs/b11-stock-20261116-181345/report/report.md
+/home/adithyaa/Projects/EmbodiedMind/src/embodiedmind/analysis/plots.py:44: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all Axes decorations.
+  fig.tight_layout(pad=1.3)
+/home/adithyaa/Projects/EmbodiedMind/outputs/b11-shift-20261116-181345/report/report.md
+/home/adithyaa/Projects/EmbodiedMind/src/embodiedmind/analysis/plots.py:44: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all Axes decorations.
+  fig.tight_layout(pad=1.3)
+/home/adithyaa/Projects/EmbodiedMind/outputs/b11-multiroom-80-20261116-181345/report/report.md
+/home/adithyaa/Projects/EmbodiedMind/outputs/b11-combined-20261116-181345/report/report.md
+Verified all 3090 episodes and 141830 indexed artifacts.
+[2026-11-17T01:56:54+05:30] Combined benchmark verified

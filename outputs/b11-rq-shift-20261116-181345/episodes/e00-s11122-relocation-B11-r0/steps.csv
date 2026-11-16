@@ -1,0 +1,13 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the blue key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the blue key,,,0.0,False,False,,,0.0
+2,0,3,approach,route_to_mission_target,go to the blue key,f0.34,,0.0,False,False,431,30,0.3430575120000867
+3,2,2,explore,route_to_mission_target,go to the blue key,f0.34,True,0.0,False,False,422,30,0.2900563590001184
+4,2,0,explore,route_to_mission_target,go to the blue key,f0.34,True,0.0,False,False,422,30,0.29198817199994664
+5,0,2,explore,route_to_mission_target,go to the blue key,f0.34,,0.0,False,False,422,30,0.47432417800064286
+6,2,4,approach,route_to_mission_target,go to the blue key,f6.36,True,0.0,False,False,426,30,0.45053691000066465
+7,2,4,approach,route_to_mission_target,go to the blue key,f6.36,True,0.0,False,False,426,30,0.6517479409994849
+8,2,4,approach,route_to_mission_target,go to the blue key,f6.36,True,0.0,False,False,427,30,0.47613842000009754
+9,2,3,approach,route_to_mission_target,go to the blue key,f6.36,True,0.0,False,False,428,30,0.5732477989995459
+10,1,3,approach,route_to_mission_target,go to the blue key,f6.36,,0.0,False,False,430,30,0.4329948510003305
+11,2,4,approach,route_to_mission_target,go to the blue key,f6.36,True,0.952,True,False,433,30,0.4350851049994162

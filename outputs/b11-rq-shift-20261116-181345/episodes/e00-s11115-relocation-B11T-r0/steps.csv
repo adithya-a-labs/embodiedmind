@@ -1,0 +1,20 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the red key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the red key,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the red key,o1,True,0.0,False,False,425,27,0.31057350899936864
+3,0,2,explore,choose_frontier_route,go to the red key,o2,,0.0,False,False,451,27,0.2750268429999778
+4,2,2,explore,choose_frontier_route,go to the red key,o1,True,0.0,False,False,468,27,0.30605534599999373
+5,2,0,explore,choose_frontier_route,go to the red key,o4,True,0.0,False,False,487,27,0.310813674000201
+6,2,2,explore,choose_frontier_route,go to the red key,o5,True,0.0,False,False,506,27,0.3486009580001337
+7,2,2,explore,choose_frontier_route,go to the red key,o0,True,0.0,False,False,526,27,0.28047298900037276
+8,2,2,explore,choose_frontier_route,go to the red key,o0,True,0.0,False,False,539,27,0.31141874699915206
+9,2,2,explore,choose_frontier_route,go to the red key,o0,True,0.0,False,False,556,27,0.2887555249999423
+10,2,2,explore,choose_frontier_route,go to the red key,o0,True,0.0,False,False,573,27,0.2760589400004392
+11,0,0,explore,choose_frontier_route,go to the red key,o0,,0.0,False,False,587,27,0.3351670690008177
+12,2,2,approach,route_to_mission_target,go to the red key,o0,True,0.0,False,False,619,27,0.3708928130008644
+13,2,2,approach,route_to_mission_target,go to the red key,o12,True,0.0,False,False,640,28,0.42402533699987544
+14,2,2,approach,route_to_mission_target,go to the red key,o13,True,0.0,False,False,660,28,0.40163888999995834
+15,2,2,approach,route_to_mission_target,go to the red key,o14,True,0.0,False,False,680,28,0.3974410570008331
+16,2,2,approach,route_to_mission_target,go to the red key,o15,True,0.0,False,False,700,28,0.4867253399997935
+17,0,0,approach,route_to_mission_target,go to the red key,o0,,0.0,False,False,719,27,0.40400495500034594
+18,2,2,approach,route_to_mission_target,go to the red key,o12,True,0.924,True,False,709,28,0.49849331400037045

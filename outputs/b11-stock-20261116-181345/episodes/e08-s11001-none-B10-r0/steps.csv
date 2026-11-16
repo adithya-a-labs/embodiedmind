@@ -1,0 +1,22 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,choose_frontier_route,Find and pick up source,explore,,0.0,False,False,412,27,0.2680013369972585
+1,2,3,approach,choose_frontier_route,Find and pick up source,f1.4,True,0.0,False,False,444,29,0.31613739499880467
+2,0,3,approach,choose_frontier_route,Find and pick up source,f1.4,,0.0,False,False,437,29,0.3187878800017643
+3,0,0,explore,choose_frontier_route,Find and pick up source,f1.4,,0.0,False,False,438,29,0.3031417460006196
+4,2,3,approach,route_to_mission_target,Find and pick up source,f4.7,True,0.0,False,False,489,29,0.31570997900053044
+5,2,4,approach,route_to_mission_target,Find and pick up source,f4.7,True,0.0,False,False,479,29,0.30661990299995523
+6,2,4,approach,route_to_mission_target,Find and pick up source,f4.7,True,0.0,False,False,477,29,0.3004037629980303
+7,0,3,approach,route_to_mission_target,Find and pick up source,f4.7,,0.0,False,False,466,29,0.3227379169984488
+8,2,4,approach,route_to_mission_target,Find and pick up source,f1.4,True,0.0,False,False,469,29,0.3050233770009072
+9,1,6,explore,route_to_mission_target,Find and pick up source,f1.4,,0.0,False,False,455,29,0.27354391399785527
+10,2,2,explore,route_to_mission_target,Find and pick up source,f1.4,True,0.0,False,False,463,29,0.2890197220003756
+11,2,0,explore,route_to_mission_target,Find and pick up source,f1.4,True,0.0,False,False,462,29,0.3057445619997452
+12,3,0,explore,verified_pickup_precondition,Find and pick up source,f1.4,,0.0,False,False,456,29,0.28088477200071793
+13,1,2,explore,route_to_drop_position,Place beside reference,f1.4,,0.0,False,False,442,30,0.3290472320004483
+14,2,2,explore,route_to_drop_position,Place beside reference,f1.4,True,0.0,False,False,451,30,0.3430040050006937
+15,1,2,explore,route_to_drop_position,Place beside reference,f1.4,,0.0,False,False,441,30,0.35950546699677943
+16,2,6,approach,route_to_drop_position,Place beside reference,f1.4,True,0.0,False,False,461,29,0.32704058600211283
+17,2,2,explore,route_to_drop_position,Place beside reference,f1.4,True,0.0,False,False,459,30,0.3233275139973557
+18,2,2,explore,route_to_drop_position,Place beside reference,f1.4,True,0.0,False,False,457,30,0.31900181400123984
+19,2,6,approach,route_to_drop_position,Place beside reference,f1.4,True,0.0,False,False,455,29,0.3288755389985454
+20,4,2,explore,verified_drop_precondition,Place beside reference,f1.4,,0.9055,True,False,444,30,0.33685673999934806

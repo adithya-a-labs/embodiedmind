@@ -1,0 +1,10 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,Remembered cells,True,0.0,False,False,395,14,0.2146443849997013
+1,2,2,primitive,,,"f0.10 green ball (-1, -1) observed at step 0",True,0.0,False,False,482,28,0.2676435279990983
+2,2,2,primitive,,,"f0.16 empty (-1, 0) observed at step 1",True,0.0,False,False,569,27,0.26950802999999723
+3,2,2,primitive,,,"f0.10 green ball (-3, -1) observed at step 0",True,0.0,False,False,695,28,0.38476648300093075
+4,2,2,primitive,,,"f0.10 green ball (-4, -1) observed at step 0",True,0.0,False,False,693,28,0.2409712180015049
+5,2,2,primitive,,,"f0.10 green ball (-5, -1) observed at step 0",True,0.0,False,False,692,28,0.24133317100131535
+6,2,2,primitive,,,"f0.10 green ball (-6, -1) observed at step 0",True,0.0,False,False,690,28,0.40767528399919684
+7,0,0,primitive,,,f0.10,,0.0,False,False,666,18,0.2230290759998752
+8,2,2,primitive,,,"f0.10 green ball (1, -7) observed at step 0",True,0.99439446366782,True,False,696,28,0.35712846000024

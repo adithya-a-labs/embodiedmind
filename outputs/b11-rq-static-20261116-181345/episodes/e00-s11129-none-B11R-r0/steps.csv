@@ -1,0 +1,12 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,4,approach,route_to_mission_target,Find and pick up key,f0.11,,0.0,False,False,425,30,0.39227538900013315
+1,3,6,explore,verified_pickup_precondition,Find matching key,f0.11,,0.0,False,False,438,30,0.3494589419988188
+2,2,4,approach,route_to_mission_target,Unlock matching door,f1.2,True,0.0,False,False,429,29,0.3013729049998801
+3,2,4,approach,route_to_mission_target,Unlock matching door,f1.2,True,0.0,False,False,428,29,0.30861620399991807
+4,0,4,approach,route_to_mission_target,Unlock matching door,f1.2,,0.0,False,False,427,29,0.35560748999887437
+5,5,4,approach,verified_toggle_precondition,Unlock matching door,f1.2,,0.0,False,False,427,29,0.4108681939997041
+6,2,6,explore,route_to_mission_target,Reach goal beyond the door,f6.18,True,0.0,False,False,440,30,0.32803876499929174
+7,2,4,approach,route_to_mission_target,Reach goal beyond the door,f6.20,True,0.0,False,False,431,30,0.29637725799875625
+8,2,6,explore,route_to_mission_target,Reach goal beyond the door,f6.20,True,0.0,False,False,429,30,0.3226077590006753
+9,1,6,explore,route_to_mission_target,Reach goal beyond the door,f6.20,,0.0,False,False,429,30,0.31383604099937656
+10,2,4,approach,route_to_mission_target,Reach goal beyond the door,f6.20,True,0.98453125,True,False,440,30,0.3269416849998379
