@@ -1,0 +1,22 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,explore,choose_frontier_route,go to the blue box,explore,True,0.0,False,False,396,27,0.29588261299977603
+1,0,2,explore,continue_frontier_route,go to the blue box,explore,,0.0,False,False,396,27,0.2591930339985993
+2,5,0,explore,verified_toggle_precondition,go to the blue box,visible,,0.0,False,False,393,26,0.2922232119999535
+3,2,2,explore,choose_frontier_route,go to the blue box,explore,True,0.0,False,False,398,27,0.25306903999990027
+4,2,2,explore,choose_frontier_route,go to the blue box,explore,True,0.0,False,False,400,27,0.38488937100009935
+5,0,2,explore,choose_frontier_route,go to the blue box,explore,,0.0,False,False,398,27,0.2917810190010641
+6,2,2,explore,continue_frontier_route,go to the blue box,explore,True,0.0,False,False,396,27,0.2960721060007927
+7,2,2,explore,continue_frontier_route,go to the blue box,explore,True,0.0,False,False,389,27,0.2868665340010921
+8,1,2,explore,continue_frontier_route,go to the blue box,explore,,0.0,False,False,389,27,0.2543644819998008
+9,2,2,explore,continue_frontier_route,go to the blue box,explore,True,0.0,False,False,411,27,0.279479803999493
+10,2,2,explore,continue_frontier_route,go to the blue box,explore,True,0.0,False,False,410,27,0.2709927970008721
+11,2,2,explore,continue_frontier_route,go to the blue box,explore,True,0.0,False,False,409,27,0.2801362099999096
+12,2,2,explore,continue_frontier_route,go to the blue box,explore,True,0.0,False,False,408,27,0.27275179000025673
+13,5,0,explore,verified_toggle_precondition,go to the blue box,visible,,0.0,False,False,402,26,0.3134375839999848
+14,2,2,approach,route_to_mission_target,go to the blue box,f14.28,True,0.0,False,False,456,31,0.389136634001261
+15,2,4,approach,route_to_mission_target,go to the blue box,f14.28,True,0.0,False,False,438,31,0.3527475829996547
+16,2,4,approach,route_to_mission_target,go to the blue box,f14.28,True,0.0,False,False,435,31,0.337016453000615
+17,2,4,approach,route_to_mission_target,go to the blue box,f14.28,True,0.0,False,False,434,31,0.34528023100028804
+18,2,4,approach,route_to_mission_target,go to the blue box,f14.28,True,0.0,False,False,424,31,0.30662505899999815
+19,1,4,approach,route_to_mission_target,go to the blue box,f14.28,,0.0,False,False,423,31,0.31224847200064687
+20,2,4,approach,route_to_mission_target,go to the blue box,f14.28,True,0.9571428571428572,True,False,424,31,0.3057495020002534

@@ -1,0 +1,18 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,1,explore,choose_frontier_route,Find and pick up source,explore,,0.0,False,False,400,27,0.28447310300543904
+1,0,0,explore,choose_frontier_route,Find and pick up source,explore,,0.0,False,False,401,27,0.27791473899560515
+2,2,4,approach,route_to_mission_target,Find and pick up source,f2.12,True,0.0,False,False,493,30,0.3677204310079105
+3,2,3,approach,route_to_mission_target,Find and pick up source,f2.12,True,0.0,False,False,490,30,0.34203417399839964
+4,2,4,approach,route_to_mission_target,Find and pick up source,f2.12,True,0.0,False,False,480,30,0.3466560569941066
+5,2,3,approach,route_to_mission_target,Find and pick up source,f2.12,True,0.0,False,False,470,30,0.3233102170052007
+6,2,3,approach,route_to_mission_target,Find and pick up source,f2.12,True,0.0,False,False,468,30,0.32092781299434137
+7,2,3,approach,route_to_mission_target,Find and pick up source,f2.12,True,0.0,False,False,466,30,0.3343750719941454
+8,0,3,approach,route_to_mission_target,Find and pick up source,f2.12,,0.0,False,False,460,30,0.3433851309964666
+9,3,0,explore,verified_pickup_precondition,Find and pick up source,f2.12,,0.0,False,False,462,30,0.31379239399393555
+10,2,6,explore,route_to_drop_position,Place beside reference,f2.12,True,0.0,False,False,446,31,0.33705685200402513
+11,0,0,explore,route_to_drop_position,Place beside reference,f2.12,,0.0,False,False,440,31,0.32256127599976026
+12,2,2,explore,route_to_drop_position,Place beside reference,f2.12,True,0.0,False,False,474,31,0.37534865899942815
+13,2,2,explore,route_to_drop_position,Place beside reference,f2.12,True,0.0,False,False,463,31,0.3463068429991836
+14,2,2,explore,route_to_drop_position,Place beside reference,f2.12,True,0.0,False,False,461,31,0.44569601900002453
+15,2,2,explore,route_to_drop_position,Place beside reference,f2.12,True,0.0,False,False,459,31,0.37608695701055694
+16,4,2,explore,verified_drop_precondition,Place beside reference,f2.12,,0.9235,True,False,457,31,0.36009459900378715

@@ -1,0 +1,24 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,Find key,f0,True,0.0,False,False,383,13,0.17527710099966498
+1,1,1,primitive,,Find key,f0.13,,0.0,False,False,382,16,0.18789092999941204
+2,3,3,primitive,,Find key,f0.13,,0.0,False,False,384,16,0.1867737140000827
+3,2,2,primitive,,Find and cross door,f0.19,True,0.0,False,False,379,15,0.16956003300037992
+4,2,2,primitive,,Find and cross door,f0.19,True,0.0,False,False,378,15,0.15820566000002145
+5,2,2,primitive,,Find and cross door,f0.19,True,0.0,False,False,377,15,0.15459921399997256
+6,0,0,primitive,,Find and cross door,f0.19,,0.0,False,False,376,16,0.15571492400158604
+7,2,2,primitive,,Find and cross door,f0.19,True,0.0,False,False,376,16,0.16307644200060167
+8,5,5,primitive,,Find and cross door,f0.19,,0.0,False,False,376,16,0.16048886499993387
+9,2,2,primitive,,Find and cross door,f9.14,True,0.0,False,False,385,16,0.16652469499967992
+10,2,2,primitive,,Reach goal,f9.16,True,0.0,False,False,375,15,0.19421644599970023
+11,0,2,primitive,blocked_by_visible_wall,Reach goal,f9.16,,0.0,False,False,373,15,0.15772860100150865
+12,2,2,primitive,,Reach goal,f9.16,True,0.0,False,False,392,15,0.16679052899962699
+13,2,2,primitive,,Reach goal,f9.16,True,0.0,False,False,384,15,0.17632381200019154
+14,2,2,primitive,,Reach goal,f9.16,True,0.0,False,False,382,15,0.16965144200003124
+15,2,2,primitive,,Reach goal,f9.16,True,0.0,False,False,380,15,0.16846774899931916
+16,1,1,primitive,,Reach goal,f9.16,,0.0,False,False,374,15,0.16412728899922513
+17,1,1,primitive,,Reach goal,f9.16,,0.0,False,False,369,18,0.2132563699997263
+18,2,2,primitive,,Reach goal,visible 18,True,0.0,False,False,391,14,0.18162648799989256
+19,2,2,primitive,,Reach goal,visible f9.16,True,0.0,False,False,389,16,0.1848096119992988
+20,2,2,primitive,,Reach goal,f9.16,True,0.0,False,False,387,15,0.15870486400126538
+21,2,2,primitive,,Reach goal,f9.16,True,0.0,False,False,385,15,0.16690110199851915
+22,2,2,primitive,,Reach goal,f9.16,True,0.96765625,True,False,383,16,0.20364354699995602

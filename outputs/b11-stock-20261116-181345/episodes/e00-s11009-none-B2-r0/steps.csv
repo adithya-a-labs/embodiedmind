@@ -1,0 +1,4 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,343,12,0.14634722199843964
+1,2,2,primitive,,,f0.13,True,0.0,False,False,415,15,0.1731657170003018
+2,1,1,primitive,,,"f0.1 blue ball (-2, 1) observed at step 0",,0.925,True,False,504,27,0.26562909099993703

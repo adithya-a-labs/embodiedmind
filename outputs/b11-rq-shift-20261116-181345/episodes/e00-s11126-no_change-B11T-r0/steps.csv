@@ -1,0 +1,21 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the blue ball,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the blue ball,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the blue ball,o1,True,0.0,False,False,425,27,0.2907390549999036
+3,0,2,explore,choose_frontier_route,go to the blue ball,o1,,0.0,False,False,451,27,0.2653860179998446
+4,2,2,explore,choose_frontier_route,go to the blue ball,o1,True,0.0,False,False,468,27,0.2912784459995237
+5,2,0,explore,choose_frontier_route,go to the blue ball,o0,True,0.0,False,False,488,27,0.3268381789994237
+6,2,2,explore,choose_frontier_route,go to the blue ball,o0,True,0.0,False,False,508,27,0.27994874700016226
+7,2,2,explore,choose_frontier_route,go to the blue ball,o0,True,0.0,False,False,528,27,0.28538037499947677
+8,2,2,explore,choose_frontier_route,go to the blue ball,o0,True,0.0,False,False,541,27,0.34104762800052413
+9,0,0,explore,choose_frontier_route,go to the blue ball,o0,,0.0,False,False,553,27,0.3148145189998104
+10,2,2,explore,continue_frontier_route,go to the blue ball,o0,True,0.0,False,False,583,27,0.30311779899966496
+11,2,2,approach,route_to_mission_target,go to the blue ball,o0,True,0.0,False,False,600,27,0.31453329299984034
+12,2,2,approach,route_to_mission_target,go to the blue ball,o11,True,0.0,False,False,620,28,0.4131432890008
+13,2,2,approach,route_to_mission_target,go to the blue ball,o12,True,0.0,False,False,640,28,0.38372696900023584
+14,2,2,approach,route_to_mission_target,go to the blue ball,o13,True,0.0,False,False,660,28,0.37860834499952034
+15,2,2,approach,route_to_mission_target,go to the blue ball,o14,True,0.0,False,False,680,28,0.4408986409998761
+16,2,2,approach,route_to_mission_target,go to the blue ball,o15,True,0.0,False,False,700,28,0.41159221100042487
+17,0,0,approach,route_to_mission_target,go to the blue ball,o0,,0.0,False,False,720,27,0.3879337389998909
+18,2,2,approach,route_to_mission_target,go to the blue ball,o13,True,0.0,False,False,724,28,0.4729886369996166
+19,2,2,approach,route_to_mission_target,go to the blue ball,visible,True,0.92,True,False,735,26,0.34687500900054147

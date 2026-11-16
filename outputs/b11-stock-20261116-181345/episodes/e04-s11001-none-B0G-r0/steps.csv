@@ -1,0 +1,4 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible 1,True,0.0,False,False,380,14,0.2275224969998817
+1,0,0,primitive,,,visible0,,0.0,False,False,373,15,0.17735476400048356
+2,2,2,primitive,,,visible,True,0.0,True,False,382,14,0.18238174199905188

@@ -1,0 +1,320 @@
+{
+  "phase": "finished",
+  "step": 2,
+  "observation": {
+    "mission": "go to the red box",
+    "direction": 2,
+    "cells": [
+      {
+        "forward": 2,
+        "right": -3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": -3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": -3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": -2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": -2,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": -2,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": -1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": -1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 0,
+        "object": "box",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": 1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      }
+    ],
+    "carrying": null
+  },
+  "board": {
+    "width": 6,
+    "height": 6,
+    "objects": [
+      {
+        "x": 0,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "object": "box",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      }
+    ],
+    "agent": {
+      "x": 2,
+      "y": 2,
+      "direction": 2
+    }
+  },
+  "decision": {
+    "action": 2,
+    "evidence": "f0.16",
+    "valid": true,
+    "error": null,
+    "proposed_action": 2,
+    "planning": {
+      "goal": "approach",
+      "reason": null,
+      "route": [
+        2
+      ]
+    },
+    "subgoal": "Find mission target",
+    "moved": true,
+    "reward": 0.95,
+    "terminated": true,
+    "truncated": false,
+    "inference_seconds": 0.35594611200212967,
+    "hint": "Route to visible objective, next suggested action: 2.",
+    "success": true
+  },
+  "job": {
+    "id": "e00-s04007-none-B9N-r0",
+    "environment": "BabyAI-GoToObjS6-v1",
+    "seed": 4007,
+    "variant": "B9N",
+    "intervention": "none",
+    "replicate": 0
+  },
+  "at": "2026-11-14T12:10:22+00:00",
+  "attempt": "1794658222221601238-0"
+}

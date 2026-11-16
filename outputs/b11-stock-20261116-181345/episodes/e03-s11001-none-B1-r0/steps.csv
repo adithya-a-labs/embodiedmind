@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,empty,True,0.0,False,False,388,12,0.1743443280010979
+1,2,2,primitive,,,o0,True,0.0,False,False,407,12,0.1419368620008754
+2,2,2,primitive,,,o1,True,0.0,False,False,431,12,0.17861909100065532
+3,2,2,primitive,,,o0,True,0.0,False,False,455,12,0.18987160899996525
+4,2,2,primitive,,,o0,True,0.0,False,False,479,12,0.20825454400073795
+5,6,6,primitive,,,o0,,0.0,False,False,498,14,0.19917058999999426
+6,6,6,primitive,,,o0,,0.0,False,False,524,14,0.19150747499952558
+7,6,6,primitive,,,o0,,0.0,False,False,550,14,0.1838818269989133
+8,2,2,primitive,,,o7,False,0.0,False,False,576,13,0.2209777230000327
+9,2,2,primitive,,,o8,False,0.0,False,False,602,12,0.17024405499978457
+10,2,2,primitive,,,o0,False,0.0,False,False,628,12,0.17203588200027298
+11,5,5,primitive,,,o0,,0.0,False,False,656,14,0.187369077000767
+12,2,2,primitive,,,o0,False,0.0,False,False,684,13,0.21680645299966272
+13,2,2,primitive,,,o0,False,0.0,False,False,712,13,0.25606399800017243
+14,2,2,primitive,,,"o1 prev=2 facing=0: green ball@4,-2; green key@4,2",False,0.0,False,False,717,32,0.5545003500010353
+15,5,5,primitive,,,"o1 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,719,32,0.3175419180006429
+16,2,2,primitive,,,o2,False,0.0,False,False,721,13,0.20321984300062468
+17,5,5,primitive,,,"o15 step 15 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,723,37,0.3998220579996996
+18,2,2,primitive,,,"o10 step 10 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,722,38,0.39172035200135724
+19,2,2,primitive,,,"o1 step 1 prev=0 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,724,36,0.3682594660003815
+20,2,2,primitive,,,"o10 step 10 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,726,37,0.40172206799979904
+21,5,5,primitive,,,"o20 step 20 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,728,37,0.47793449200071336
+22,2,2,primitive,,,"o21 step 21 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,37,0.36625237400039623
+23,2,2,primitive,,,"o20 step 20 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,37,0.3642608680002013
+24,2,2,primitive,,,"o22 step 22 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,37,0.3882899140007794
+25,5,5,primitive,,,"o24 step 24 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,707,39,0.45015529400006926
+26,2,2,primitive,,,"o13 step 13 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.4096299259999796
+27,2,2,primitive,,,"o15 step 15 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.4111601829990832
+28,2,2,primitive,,,"o26 step 26 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,37,0.40018755799974315
+29,2,2,primitive,,,"o17 step 17 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.6178754630000185
+30,5,5,primitive,,,"o29 step 29 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,707,37,0.5339493850005965
+31,2,2,primitive,,,"o19 step 19 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.4410045339991484
+32,2,2,primitive,,,"o20 step 20 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.4812024040002143
+33,2,2,primitive,,,"o21 step 21 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.4376211290000356
+34,2,2,primitive,,,"o22 step 22 prev=5 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,37,0.47992924000027415
+35,5,5,primitive,,,"o30 step 30 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,707,37,0.5417380719991343
+36,2,2,primitive,,,"o24 step 24 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.4816319889996521
+37,2,2,primitive,,,"o25 step 25 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.4296581229991716
+38,5,5,primitive,,,"o36 step 36 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,707,39,0.4788991539990093
+39,2,2,primitive,,,"o27 step 27 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.6166484709992801
+40,5,5,primitive,,,"o30 step 30 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,707,39,0.4784102960002201
+41,2,2,primitive,,,o29,False,0.0,False,False,707,14,0.2875365250001778
+42,2,2,primitive,,,"o30 step 30 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.4581024819999584
+43,2,2,primitive,,,o31,False,0.0,False,False,707,14,0.24700099499932548
+44,5,5,primitive,,,o43,,0.0,False,False,707,15,0.23486128600052325
+45,2,2,primitive,,,"o33 step 33 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.4019930590002332
+46,2,2,primitive,,,o34,False,0.0,False,False,707,14,0.2888815460009937
+47,2,2,primitive,,,"o35 step 35 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.44468897200022184

@@ -1,0 +1,89 @@
+{
+  "planned": 32,
+  "attempted": 32,
+  "unattempted": 0,
+  "attempt_records": 32,
+  "valid": 32,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "development",
+      "environment": "MiniGrid-MemoryS13-v0",
+      "intervention": "none",
+      "planned": 32,
+      "planned_matched_cells": 4,
+      "matched_cells": 4,
+      "matched_seeds": 4,
+      "variants": {
+        "B0": {
+          "planned": 4,
+          "valid": 4,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 4,
+          "valid": 4,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 4,
+          "valid": 4,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 4,
+          "valid": 4,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 4,
+          "valid": 4,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 4,
+          "valid": 4,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 4,
+          "valid": 4,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 4,
+          "valid": 4,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

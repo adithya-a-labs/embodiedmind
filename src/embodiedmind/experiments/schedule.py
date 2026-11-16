@@ -7,7 +7,9 @@ import os
 import platform
 import signal
 import subprocess
+import sys
 import time
+import traceback
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from datetime import datetime, timezone
 from importlib.metadata import version
@@ -18,6 +20,7 @@ from threading import Event
 import yaml
 
 from embodiedmind.experiments.runner import episode, write_event
+from embodiedmind.agents import VARIANTS
 from embodiedmind.reasoning.llm_client import InferenceUnavailable, Ollama
 
 
@@ -50,9 +53,18 @@ def git(*args):
 def build_manifest(config, model_config, model, info, slots, profile):
     cfg = yaml.safe_load(config.read_text(encoding="utf-8"))
     limits = cfg["limits"]
+    if set(cfg["variants"]) - VARIANTS.keys():
+        raise ValueError("The config names an unknown memory variant")
+    if "B6" in cfg["variants"]:
+        path = config.parent / cfg["workflows"]
+        limits["workflows"] = load_json(path)
+        limits["workflow_sha256"] = digest(path)
+        source_seeds = {episode["seed"] for workflow in limits["workflows"] for episode in workflow["episodes"]}
     if any(type(limits[k]) is not int or limits[k] < 1 for k in ("max_steps", "max_calls", "memory_bytes")):
         raise ValueError("each episode limit must be a positive integer")
     seeds = cfg["seeds"] if "seeds" in cfg else range(cfg["seed_start"], cfg["seed_start"] + cfg["seed_count"])
+    if "B6" in cfg["variants"] and source_seeds.intersection(seeds):
+        raise ValueError("Workflow training and evaluation seeds must be disjoint")
     jobs = [
         {
             "id": f"e{e:02}-s{seed:05}-{intervention}-{variant}-r{replicate}",
@@ -68,7 +80,7 @@ def build_manifest(config, model_config, model, info, slots, profile):
         raise ValueError("the experiment roster must be nonempty and unique")
     guarded = cfg["split"] in {"static", "dynamic"}
     commit = git("rev-parse", "HEAD")
-    dirty = git("status", "--porcelain")
+    dirty = git("status", "--porcelain", "--", ".", ":(top,exclude)outputs")
     if guarded and dirty:
         raise ValueError("scored runs require the frozen clean commit")
     if guarded:
@@ -133,34 +145,48 @@ def complete(episodes, job_id):
     return True
 
 
-def execute(root, job, limits, model, visuals):
+def execute(root, job, limits, model, visuals, monitor=False):
     attempts = root / "attempts" / job["id"]
     attempts.mkdir(parents=True, exist_ok=True)
     for retry in range(limits.get("infrastructure_retries", 2) + 1):
         attempt = attempts / f"{time.time_ns()}-{retry}"
         attempt.mkdir()
         atomic_json(attempt / "job.json", {**job, "started": now()})
+
+        def publish(event):
+            atomic_json(root / "live" / f"{job['id']}.json", {
+                **event, "job": job, "at": now(), "attempt": attempt.name,
+            })
+
         try:
-            summary = episode(job, limits, model, attempt, visuals)
+            summary = episode(job, limits, model, attempt, visuals, publish if monitor else None)
             summary.update({"attempt": attempt.name, "completed": now()})
             atomic_json(attempt / "summary.json", summary)
             atomic_json(attempt / "integrity.json", {
-                path.name: digest(path) for path in sorted(attempt.iterdir()) if path.is_file()
+                path.relative_to(attempt).as_posix(): digest(path)
+                for path in sorted(attempt.rglob("*")) if path.is_file()
             })
             attempt.rename(root / "episodes" / job["id"])
             return {"id": job["id"], "attempt": attempt.name, "success": summary["success"]}
         except InferenceUnavailable as exc:
-            atomic_json(attempt / "error.json", {"kind": "infrastructure", "at": now(), "error": str(exc)})
+            atomic_json(attempt / "error.json", {"kind": "infrastructure", "at": now(), "error": str(exc),
+                                                "traceback": traceback.format_exc()})
+            if monitor:
+                publish({"phase": "retrying" if retry < limits.get("infrastructure_retries", 2)
+                         else "failed", "error": str(exc)})
             if retry == limits.get("infrastructure_retries", 2):
                 return {"id": job["id"], "error": str(exc)}
             time.sleep(2 ** retry)
         except Exception as exc:
-            atomic_json(attempt / "error.json", {"kind": "execution", "at": now(), "error": str(exc)})
+            atomic_json(attempt / "error.json", {"kind": "execution", "at": now(), "error": str(exc),
+                                                "traceback": traceback.format_exc()})
+            if monitor:
+                publish({"phase": "failed", "error": str(exc)})
             raise
     raise AssertionError("retry loop did not return")
 
 
-def run(config, root, model_config, slots, profile, limit_jobs):
+def run(config, root, model_config, slots, profile, limit_jobs, monitor=False):
     if limit_jobs is not None and limit_jobs < 1:
         raise ValueError("a job limit must be positive")
     if slots not in (1, 2):
@@ -173,7 +199,15 @@ def run(config, root, model_config, slots, profile, limit_jobs):
     with (root / "supervisor.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         (root / "episodes").mkdir(exist_ok=True)
-        manifest = build_manifest(config, model_config, model, model.verify(), slots, profile)
+        if monitor:
+            (root / "live").mkdir(exist_ok=True)
+        try:
+            manifest = build_manifest(config, model_config, model, model.verify(), slots, profile)
+        except Exception as exc:
+            with (root / "startup-errors.jsonl").open("a", encoding="utf-8") as startup_log:
+                write_event(startup_log, {"at": now(), "argv": sys.argv, "config": str(config),
+                                          "error": str(exc), "traceback": traceback.format_exc()})
+            raise
         path = root / "manifest.json"
         if path.exists():
             registered = load_json(path)
@@ -183,17 +217,44 @@ def run(config, root, model_config, slots, profile, limit_jobs):
                 raise ValueError("resume at the registered source commit")
         else:
             atomic_json(path, {**manifest, "created": now()})
+            (root / "config.yaml").write_bytes(config.read_bytes())
+            (root / "models.yaml").write_bytes(model_config.read_bytes())
+            (root / "uv.lock").write_bytes(Path("uv.lock").read_bytes())
+            if profile:
+                (root / "runtime-profile.json").write_bytes(profile.read_bytes())
 
         stop = Event()
         previous = {sig: signal.signal(sig, lambda *_: stop.set()) for sig in (signal.SIGINT, signal.SIGTERM)}
         try:
-            return supervise(root, manifest, model, stop, limit_jobs)
+            return run_and_package(root, manifest, model, stop, limit_jobs, monitor)
         finally:
             for sig, handler in previous.items():
                 signal.signal(sig, handler)
 
 
-def supervise(root, manifest, model, stop, limit_jobs):
+def run_and_package(root, manifest, model, stop, limit_jobs, monitor):
+    from embodiedmind.experiments.archive import package_run
+
+    invocation = {"argv": sys.argv, "started": now()}
+    status = "failed"
+    with (root / "invocations.jsonl").open("a", encoding="utf-8") as log:
+        write_event(log, invocation)
+        try:
+            result = supervise(root, manifest, model, stop, limit_jobs, monitor)
+            status = result["status"]
+        finally:
+            write_event(log, {**invocation, "finished": now(), "status": status})
+            active_error = sys.exc_info()[0] is not None
+            try:
+                package_run(root)
+            except Exception as exc:
+                print(f"Evidence packaging failed: {exc}. Rebuild with embodiedmind package {root}", file=sys.stderr)
+                if not active_error:
+                    raise
+    return result
+
+
+def supervise(root, manifest, model, stop, limit_jobs, monitor=False):
     all_jobs = manifest["jobs"]
     planned = len(all_jobs)
     pending = [job for job in all_jobs if not complete(root / "episodes", job["id"])]
@@ -214,8 +275,7 @@ def supervise(root, manifest, model, stop, limit_jobs):
                     job = next(jobs, None)
                     if job is None:
                         return
-                    visuals = job["seed"] == all_jobs[0]["seed"] or manifest["split"] == "smoke"
-                    future = pool.submit(execute, root, job, settings["limits"], model, visuals)
+                    future = pool.submit(execute, root, job, settings["limits"], model, True, monitor)
                     active[future] = job["id"]
 
             top_up()

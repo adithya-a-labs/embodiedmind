@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,365,11,0.503212376999727
+1,1,1,primitive,,,f0.2,,0.0,False,False,395,14,0.18903515500278445
+2,0,0,primitive,,,f0.1,,0.0,False,False,413,17,0.2404908019962022
+3,1,1,primitive,,,"f2.2 empty (-2, -1) observed at step 2",,0.0,False,False,483,26,0.28389422700274736
+4,0,0,primitive,,,f0.1,,0.0,False,False,413,17,0.20477798500360223
+5,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,483,23,0.2687595879979199
+6,0,0,primitive,,,f0.1,,0.0,False,False,413,17,0.19640471800084924
+7,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,483,23,0.309346974005166
+8,0,0,primitive,,,f0.1,,0.0,False,False,413,17,0.20256030600285158
+9,1,1,primitive,,,"f2.5 grey door closed (-2, 1) observed at step 8",,0.0,False,False,483,28,0.2842455880017951
+10,0,0,primitive,,,f0.1,,0.0,False,False,413,17,0.20964822299720254
+11,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.2629152070003329
+12,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.22818368000298506
+13,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.23003711099590873
+14,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.22142172200256027
+15,1,1,primitive,,,f0.2,,0.0,False,False,489,14,0.21266952699807007
+16,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.2156816849965253
+17,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.2501221280035679
+18,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.1763804939982947
+19,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.24223341499600792
+20,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.21730686599767068
+21,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.2541929610015359
+22,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.18575438600237248
+23,1,1,primitive,,,"f2.2 empty (-2, -1) observed at step 22",,0.0,False,False,489,27,0.3417293580059777
+24,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.18938800199975958
+25,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.26141525900311535
+26,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.19369696200010367
+27,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.24574045399640454
+28,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.1863233250041958
+29,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.3021036499994807
+30,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.2098234989971388
+31,1,1,primitive,,,"f2.5 grey door closed (-2, 1) observed at step 30",,0.0,False,False,489,29,0.3120254959940212
+32,0,0,primitive,,,f0.2,,0.0,False,False,415,17,0.19144235100247897
+33,1,1,primitive,,,"f2.5 grey door closed (-2, 1) observed at step 32",,0.0,False,False,489,29,0.36483907100046054
+34,0,0,primitive,,,f0.2,,0.0,False,False,415,17,0.18062129899772117
+35,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.2601852669977234
+36,0,0,primitive,,,f0.2,,0.0,False,False,415,17,0.18464578499697382
+37,1,1,primitive,,,"f2.5 grey door closed (-2, 1) observed at step 36",,0.0,False,False,489,29,0.34206253199954517
+38,0,0,primitive,,,f0.2,,0.0,False,False,415,17,0.19400153599417536
+39,1,1,primitive,,,"f2.5 grey door closed (-2, 1) observed at step 38",,0.0,False,False,489,29,0.31246085099701304
+40,0,0,primitive,,,f0.2,,0.0,False,False,415,17,0.17723953800305026
+41,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.2496092340006726
+42,0,0,primitive,,,f0.2,,0.0,False,False,415,17,0.23071019999770215
+43,1,1,primitive,,,"f2.5 grey door closed (-2, 1) observed at step 42",,0.0,False,False,489,29,0.33028559199738083
+44,0,0,primitive,,,f0.1,,0.0,False,False,415,17,0.20266374699713197
+45,1,1,primitive,,,"f2.5 grey door closed (-2, 1) observed at step 44",,0.0,False,False,489,29,0.3707151350026834
+46,0,0,primitive,,,f0.2,,0.0,False,False,415,17,0.2109106089992565
+47,1,1,primitive,,,"f2.5 grey door closed (-2, 1)",,0.0,False,False,489,23,0.2670287950022612

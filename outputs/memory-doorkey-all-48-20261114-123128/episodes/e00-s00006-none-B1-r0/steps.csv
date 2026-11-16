@@ -1,0 +1,17 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,3,3,primitive,,,visible,,0.0,False,False,357,12,0.15427128999726847
+1,2,2,primitive,,,o0,True,0.0,False,False,372,12,0.16001044099539286
+2,0,0,primitive,,,o1,,0.0,False,False,389,13,0.17505252599949017
+3,2,2,primitive,,,o0,True,0.0,False,False,404,13,0.18865526800072985
+4,5,5,primitive,,,o3,,0.0,False,False,424,12,0.14745984300679993
+5,2,2,primitive,,,o4,True,0.0,False,False,453,13,0.29046620999724837
+6,2,2,primitive,,,o5,True,0.0,False,False,472,12,0.1869493269987288
+7,2,2,primitive,,,o4,True,0.0,False,False,489,12,0.17411613399599446
+8,2,2,primitive,,,o1,True,0.0,False,False,508,12,0.172498228996119
+9,2,2,primitive,,,o1,False,0.0,False,False,527,12,0.1988506679990678
+10,2,2,primitive,,,o6,False,0.0,False,False,546,12,0.1921768229949521
+11,2,2,primitive,,,o6,False,0.0,False,False,567,12,0.2267415370006347
+12,2,2,primitive,,,o6,False,0.0,False,False,588,12,0.195669781001925
+13,2,2,primitive,,,o6,False,0.0,False,False,609,12,0.17154324700095458
+14,1,1,primitive,,,"o6 step 6 prev=2 facing=0: yellow door open@1,0; green goal@4,1",,0.0,False,False,630,37,0.354981857999519
+15,2,2,primitive,,,o1,True,0.9775,True,False,662,12,0.2377222659997642

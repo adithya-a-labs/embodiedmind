@@ -1,0 +1,119 @@
+{
+  "planned": 45,
+  "attempted": 45,
+  "unattempted": 0,
+  "attempt_records": 45,
+  "valid": 45,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "development",
+      "environment": "BabyAI-KeyCorridorS3R3-v0",
+      "intervention": "none",
+      "planned": 15,
+      "planned_matched_cells": 5,
+      "matched_cells": 5,
+      "matched_seeds": 5,
+      "variants": {
+        "B8": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "development",
+      "environment": "BabyAI-PutNextS5N2-v0",
+      "intervention": "none",
+      "planned": 15,
+      "planned_matched_cells": 5,
+      "matched_cells": 5,
+      "matched_seeds": 5,
+      "variants": {
+        "B8": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "development",
+      "environment": "MiniGrid-MemoryS17Random-v0",
+      "intervention": "none",
+      "planned": 15,
+      "planned_matched_cells": 5,
+      "matched_cells": 5,
+      "matched_seeds": 5,
+      "variants": {
+        "B8": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 5,
+          "valid": 5,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

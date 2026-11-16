@@ -16,6 +16,16 @@ METRICS = (
     "total_tokens",
     "inference_seconds",
     "invalid_actions",
+    "blocked_proposals",
+    "blocked_actions",
+    "verification_requests",
+    "verification_actions",
+    "informative_checks",
+    "stale_commitments",
+    "reacquired",
+    "episode_wall_seconds",
+    "old_target_rechecked_step",
+    "new_target_seen_step",
     "stale_actions",
     "stale_action_rate",
     "unsupported_claims",
@@ -85,15 +95,22 @@ def _variant_series(episodes, variant, metric):
 
 
 def compare(episodes, draws: int = 4000):
-    """Compare B3 against B1/B2 using only matched seed, mission and replicate."""
+    """Compare registered contrasts on matched seeds, missions and replicates."""
     results = []
     for (split, environment, intervention), group in sorted(stratify(episodes).items()):
         variants = {episode["variant"] for episode in group}
-        for control in sorted(variants.intersection({"B1", "B2"})):
-            if "B3" not in variants:
+        contrasts = (("B3", "B1"), ("B3", "B2"), ("B0G", "B0"), ("B3", "B0"),
+                     ("B3G", "B3"), ("B3G", "B0G"), ("B4", "B3G"), ("B5", "B4"),
+                     ("B6", "B5"), ("B7", "B5"), ("B6", "B7"),
+                     ("B8", "B5"), ("B8", "B0"), ("B9N", "B8"),
+                     ("B9", "B9N"), ("B9", "B8"), ("B10", "B9"), ("B11", "B10"),
+                     ("B11P", "B11T"), ("B11R", "B11T"), ("B11R", "B11P"),
+                     ("B11", "B11PA"), ("B11", "B11R"), ("B11PA", "B11P"), ("B11", "B11C"))
+        for treatment, control in contrasts:
+            if not {treatment, control} <= variants or treatment == "B3" and control == "B0" and "B0G" not in variants:
                 continue
             for metric in METRICS:
-                treated = _variant_series(group, "B3", metric)
+                treated = _variant_series(group, treatment, metric)
                 baseline = _variant_series(group, control, metric)
                 matches = []
                 for key in sorted(treated.keys() & baseline.keys()):
@@ -106,7 +123,7 @@ def compare(episodes, draws: int = 4000):
                 diffs = [left - right for left, right in matches]
                 low, high = _interval(diffs, draws)
                 results.append(Comparison(
-                    split, environment, intervention, metric, "B3", control,
+                    split, environment, intervention, metric, treatment, control,
                     len(treated), len(baseline), len(matches),
                     fmean(left for left, _ in matches) if matches else None,
                     fmean(right for _, right in matches) if matches else None,

@@ -1,0 +1,18 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the yellow key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the yellow key,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the yellow key,o1,True,0.0,False,False,425,27,0.30220507600006385
+3,0,2,explore,choose_frontier_route,go to the yellow key,o2,,0.0,False,False,451,27,0.3032182950000788
+4,2,2,explore,choose_frontier_route,go to the yellow key,o1,True,0.0,False,False,468,27,0.2996858489996157
+5,2,0,explore,choose_frontier_route,go to the yellow key,o4,True,0.0,False,False,487,27,0.277107015999718
+6,2,2,explore,choose_frontier_route,go to the yellow key,o5,True,0.0,False,False,507,27,0.2988281569996616
+7,2,2,explore,choose_frontier_route,go to the yellow key,o0,True,0.0,False,False,527,27,0.3059841590002179
+8,2,2,explore,choose_frontier_route,go to the yellow key,o0,True,0.0,False,False,540,27,0.30821520700010296
+9,2,2,explore,choose_frontier_route,go to the yellow key,o0,True,0.0,False,False,557,27,0.27964854299989383
+10,0,0,explore,choose_frontier_route,go to the yellow key,o0,,0.0,False,False,569,27,0.3245690849998937
+11,2,2,approach,route_to_mission_target,go to the yellow key,o0,True,0.0,False,False,600,27,0.35739818000001833
+12,2,2,approach,route_to_mission_target,go to the yellow key,o11,True,0.0,False,False,621,28,0.41471939999973984
+13,2,2,approach,route_to_mission_target,go to the yellow key,o12,True,0.0,False,False,641,28,0.49857075700037967
+14,2,2,approach,route_to_mission_target,go to the yellow key,o13,True,0.0,False,False,661,28,0.42236060599952907
+15,2,2,approach,route_to_mission_target,go to the yellow key,o14,True,0.0,False,False,681,28,0.40198181199957617
+16,0,4,approach,route_to_mission_target,go to the yellow key,visible,,0.9319999999999999,True,False,701,26,0.41724907099978736

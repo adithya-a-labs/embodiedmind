@@ -1,0 +1,9 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,explore,choose_frontier_route,go to the blue key,explore,,0.0,False,False,396,28,0.3039765550001903
+1,2,2,explore,choose_frontier_route,go to the blue key,explore,True,0.0,False,False,403,27,0.25913537599990377
+2,0,0,explore,choose_frontier_route,go to the blue key,explore,,0.0,False,False,397,28,0.31608647299981385
+3,2,3,approach,route_to_mission_target,go to the blue key,f3.2,True,0.0,False,False,433,29,0.3362333919994853
+4,2,4,approach,route_to_mission_target,go to the blue key,f3.2,True,0.0,False,False,432,29,0.3072054209987982
+5,0,4,approach,route_to_mission_target,go to the blue key,f3.2,,0.0,False,False,431,29,0.2878727679999429
+6,2,4,approach,route_to_mission_target,go to the blue key,f3.2,True,0.0,False,False,433,29,0.31093238900029974
+7,2,4,approach,route_to_mission_target,go to the blue key,f3.2,True,0.8,True,False,432,29,0.3016211080011999

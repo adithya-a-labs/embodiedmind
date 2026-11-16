@@ -1,0 +1,36 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,441,27,0.29887614200197277
+1,5,0,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,425,27,0.26831659200252034
+2,0,2,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,442,27,0.29285912699924666
+3,0,2,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,439,27,0.2664725510003336
+4,5,0,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,425,27,0.28018155899917474
+5,2,2,explore,explore_for_subgoal,Find and pick up key,explore,True,0.0,False,False,442,27,0.24599366199981887
+6,0,2,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,412,27,0.26621942999918247
+7,1,0,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,446,27,0.30424339399905875
+8,2,2,explore,explore_for_subgoal,Find and pick up key,explore,True,0.0,False,False,412,27,0.26245296799970674
+9,0,6,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,406,27,0.31876325799748884
+10,5,6,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,445,27,0.2961941030007438
+11,2,3,approach,explore_for_subgoal,Find and pick up key,visible,True,0.0,False,False,450,26,0.3185362049989635
+12,2,2,explore,explore_for_subgoal,Find and pick up key,explore,True,0.0,False,False,412,27,0.25268722500186414
+13,0,6,explore,explore_for_subgoal,Find and pick up key,visible,,0.0,False,False,406,26,0.3269176249996235
+14,5,6,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,462,27,0.29527306399904774
+15,2,2,explore,explore_for_subgoal,Find and pick up key,explore,True,0.0,False,False,466,27,0.25210105999940424
+16,2,2,explore,explore_for_subgoal,Find and pick up key,explore,True,0.0,False,False,434,27,0.28189391499836347
+17,5,0,explore,explore_for_subgoal,Find and pick up key,explore,,0.0,False,False,427,27,0.2868090689989913
+18,2,2,explore,route_to_subgoal,Find and pick up key,f18.13,True,0.0,False,False,453,31,0.31330023299960885
+19,3,6,explore,attempt_subgoal_interaction,Find and pick up key,f18.13,,0.0,False,False,428,31,0.27288299599968013
+20,0,2,explore,route_to_subgoal,Unlock matching door,f3.1,,0.0,False,False,421,29,0.3169470969987742
+21,0,0,explore,route_to_subgoal,Unlock matching door,f3.1,,0.0,False,False,476,29,0.30973899800301297
+22,2,2,explore,route_to_subgoal,Unlock matching door,f3.1,True,0.0,False,False,440,29,0.29257416000109515
+23,1,2,explore,route_to_subgoal,Unlock matching door,f3.1,,0.0,False,False,438,29,0.2661097169984714
+24,2,2,explore,route_to_subgoal,Unlock matching door,f3.1,True,0.0,False,False,491,29,0.2977401779971842
+25,2,2,explore,route_to_subgoal,Unlock matching door,f3.1,True,0.0,False,False,451,29,0.2700934929998766
+26,2,2,explore,route_to_subgoal,Unlock matching door,f3.1,True,0.0,False,False,449,29,0.31299697199938237
+27,2,2,explore,route_to_subgoal,Unlock matching door,f3.1,True,0.0,False,False,430,29,0.2612571620011295
+28,0,6,explore,route_to_subgoal,Unlock matching door,f3.1,,0.0,False,False,424,29,0.2962624069987214
+29,5,0,explore,attempt_subgoal_interaction,Unlock matching door,f3.1,,0.0,False,False,435,29,0.3247786760002782
+30,0,3,approach,find_key_drop_tile,Pick up target ball,f30.13,,0.0,False,False,475,31,0.33182592899902374
+31,4,4,approach,release_key_after_unlock,Pick up target ball,f30.13,,0.0,False,False,521,31,0.3280280840008345
+32,1,4,approach,route_to_subgoal,Pick up target ball,f30.13,,0.0,False,False,525,31,0.3598085779995017
+33,2,4,approach,route_to_subgoal,Pick up target ball,f30.13,True,0.0,False,False,483,31,0.3723229459974391
+34,3,6,explore,attempt_subgoal_interaction,Pick up target ball,f30.13,,0.8833333333333333,True,False,441,32,0.3365330009983154

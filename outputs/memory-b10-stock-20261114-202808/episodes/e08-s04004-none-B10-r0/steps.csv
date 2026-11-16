@@ -1,0 +1,9 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,3,approach,choose_frontier_route,Find and pick up source,f0.21,,0.0,False,False,462,30,0.3324224970128853
+1,0,3,approach,route_to_mission_target,Find and pick up source,f0.21,,0.0,False,False,497,30,0.3515860020124819
+2,2,2,explore,route_to_mission_target,Find and pick up source,f1.7,True,0.0,False,False,484,29,0.35974009400524665
+3,3,0,explore,verified_pickup_precondition,Find and pick up source,f1.7,,0.0,False,False,477,29,0.3326130519999424
+4,1,6,approach,route_to_drop_position,Place beside reference,f0.21,,0.0,False,False,456,30,0.37650275199848693
+5,1,2,explore,route_to_drop_position,Place beside reference,f0.21,,0.0,False,False,465,31,0.35457898600725457
+6,2,2,explore,route_to_drop_position,Place beside reference,f0.21,True,0.0,False,False,484,31,0.41302776799420826
+7,4,3,approach,verified_drop_precondition,Place beside reference,f0.21,,0.964,True,False,474,30,0.36119097500341013

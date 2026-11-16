@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible0,True,0.0,False,False,336,12,0.19517880300008983
+1,2,2,primitive,,,o0,True,0.0,False,False,346,12,0.13752021000073
+2,0,0,primitive,,,o1,,0.0,False,False,356,15,0.1818412079992413
+3,2,2,primitive,,,o1,True,0.0,False,False,390,12,0.13362830999903963
+4,2,2,primitive,,,o3,True,0.0,False,False,409,15,0.19674941899938858
+5,2,2,primitive,,,o2,True,0.0,False,False,428,15,0.16988780599967868
+6,2,2,primitive,,,o5,True,0.0,False,False,447,15,0.19295974399938132
+7,6,6,primitive,,,o6,,0.0,False,False,461,13,0.16036162700038403
+8,6,6,primitive,,,prev,,0.0,False,False,481,12,0.1699479490016529
+9,0,0,primitive,,,o8,,0.0,False,False,501,15,0.21354886799963424
+10,2,2,primitive,,,o9,True,0.0,False,False,539,12,0.16442913199898612
+11,2,2,primitive,,,o1,True,0.0,False,False,568,12,0.1835924499991961
+12,2,2,primitive,,,o1 step 1 prev=2 facing=3: no named objects,True,0.0,False,False,588,25,0.2945382759990025
+13,2,2,primitive,,,o1,True,0.0,False,False,609,12,0.20289100999980292
+14,2,2,primitive,,,o13,False,0.0,False,False,625,13,0.190820732001157
+15,2,2,primitive,,,o1,False,0.0,False,False,647,12,0.1575881529988692
+16,2,2,primitive,,,o1,False,0.0,False,False,656,12,0.19686663599895837
+17,0,0,primitive,,,o16,,0.0,False,False,659,16,0.24108731699925556
+18,5,5,primitive,,,"o17 step 17 prev=2 facing=1: red door closed@1,-2",,0.0,False,False,668,32,0.36904260299888847
+19,5,5,primitive,,,"o18 step 18 prev=0 facing=0: red door closed@2,1",,0.0,False,False,670,31,0.3291371760005859
+20,5,5,primitive,,,"o19 step 19 prev=5 facing=0: red door closed@2,1",,0.0,False,False,672,32,0.3469188729995949
+21,2,2,primitive,,,"o20 step 20 prev=5 facing=0: red door closed@2,1",True,0.0,False,False,661,31,0.336016032999396
+22,2,2,primitive,,,"o21 step 21 prev=5 facing=0: red door closed@2,1",True,0.0,False,False,662,31,0.33583714099950157
+23,2,2,primitive,,,"o22 step 22 prev=2 facing=0: red door closed@1,1",True,0.0,False,False,663,31,0.33159975899980054
+24,2,2,primitive,,,"o11 step 11 prev=2 facing=1: red door closed@0,1; red door closed@4,-2",True,0.0,False,False,657,39,0.42579167999974743
+25,0,0,primitive,,,o9 step 9,,0.0,False,False,659,16,0.2406460780002817
+26,2,2,primitive,,,o24,True,0.0,False,False,666,13,0.2190277360004984
+27,2,2,primitive,,,o20,True,0.0,False,False,666,13,0.22862041799999133
+28,2,2,primitive,,,o20,True,0.0,False,False,661,13,0.24114755899972806
+29,2,2,primitive,,,o2,True,0.0,False,False,659,12,0.3782635229999869
+30,0,0,primitive,,,o29,,0.0,False,False,653,14,0.24179798899967864
+31,2,2,primitive,,,o24,True,0.0,False,False,669,13,0.21206536200043047
+32,2,2,primitive,,,o31,True,0.0,False,False,668,13,0.20840158500141115
+33,2,2,primitive,,,o23,True,0.0,False,False,667,13,0.21596569099892804
+34,2,2,primitive,,,o23,True,0.0,False,False,666,13,0.22272483900087536
+35,0,0,primitive,,,o34,,0.0,False,False,660,14,0.3395745409998199
+36,2,2,primitive,,,o31,True,0.0,False,False,678,13,0.2067069149998133
+37,2,2,primitive,,,o23,True,0.0,False,False,663,13,0.267213310000443
+38,2,2,primitive,,,o37,True,0.0,False,False,661,13,0.27261629900021944
+39,2,2,primitive,,,o38,True,0.0,False,False,660,13,0.1838913979991048
+40,2,2,primitive,,,o39,False,0.0,False,False,658,13,0.2345024900005228
+41,2,2,primitive,,,o40,False,0.0,False,False,657,13,0.21361960800095403
+42,5,5,primitive,,,o41,,0.0,False,False,661,14,0.2593845989995316
+43,2,2,primitive,,,"o40 step 40 prev=2 facing=1: red door closed@1,-2",False,0.0,False,False,652,31,0.3546267130004708
+44,2,2,primitive,,,o43,False,0.0,False,False,656,13,0.19098299700090138
+45,0,0,primitive,,,"o40 step 40 prev=2 facing=1: red door closed@1,-2",,0.0,False,False,660,32,0.33565715000077034
+46,2,2,primitive,,,"o40 step 40 prev=2 facing=1: red door closed@1,-2",True,0.0,False,False,667,31,0.34644064199892455
+47,2,2,primitive,,,"o46 step 46 prev=0 facing=0: red door closed@2,1",True,0.0,False,False,666,31,0.3771950129994366

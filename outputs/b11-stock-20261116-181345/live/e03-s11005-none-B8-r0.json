@@ -1,0 +1,740 @@
+{
+  "phase": "finished",
+  "step": 14,
+  "observation": {
+    "mission": "go to the matching object at the end of the hallway",
+    "direction": 3,
+    "cells": [
+      {
+        "forward": 5,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 4,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 5,
+        "right": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 4,
+        "right": 0,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": 0,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 0,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 0,
+        "object": "ball",
+        "color": "green",
+        "state": ""
+      },
+      {
+        "forward": 5,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 4,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      }
+    ],
+    "carrying": null
+  },
+  "board": {
+    "width": 13,
+    "height": 13,
+    "objects": [
+      {
+        "x": 0,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 4,
+        "object": "ball",
+        "color": "green",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "object": "ball",
+        "color": "green",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 6,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 8,
+        "object": "key",
+        "color": "green",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 9,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 9,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 9,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 10,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 10,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 10,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 11,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 11,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 11,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 12,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      }
+    ],
+    "agent": {
+      "x": 11,
+      "y": 5,
+      "direction": 3
+    }
+  },
+  "decision": {
+    "action": 2,
+    "evidence": "f6.1",
+    "valid": true,
+    "error": null,
+    "proposed_action": 2,
+    "planning": {
+      "goal": "explore",
+      "reason": "approach_matching_branch",
+      "route": [
+        2
+      ]
+    },
+    "subgoal": "Find mission target",
+    "moved": true,
+    "reward": 0.9850887573964497,
+    "terminated": true,
+    "truncated": false,
+    "inference_seconds": 0.33108523699957004,
+    "hint": "No visible route to objective. Explore by moving forward (2) if memory has no better clue.",
+    "success": true
+  },
+  "job": {
+    "id": "e03-s11005-none-B8-r0",
+    "environment": "MiniGrid-MemoryS13-v0",
+    "seed": 11005,
+    "variant": "B8",
+    "intervention": "none",
+    "replicate": 0
+  },
+  "at": "2026-11-16T15:48:55+00:00",
+  "attempt": "1794844131126448329-0"
+}

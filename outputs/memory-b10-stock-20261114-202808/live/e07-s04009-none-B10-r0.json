@@ -1,0 +1,443 @@
+{
+  "phase": "finished",
+  "step": 38,
+  "observation": {
+    "mission": "pick up the box",
+    "direction": 3,
+    "cells": [
+      {
+        "forward": 3,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 0,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 0,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": 1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 2,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 2,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": 2,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 3,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 3,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": 3,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      }
+    ],
+    "carrying": {
+      "forward": 0,
+      "right": 0,
+      "object": "box",
+      "color": "grey",
+      "state": ""
+    }
+  },
+  "board": {
+    "width": 11,
+    "height": 6,
+    "objects": [
+      {
+        "x": 0,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 3,
+        "object": "ball",
+        "color": "blue",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "object": "key",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "object": "door",
+        "color": "red",
+        "state": "open"
+      },
+      {
+        "x": 10,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      }
+    ],
+    "agent": {
+      "x": 6,
+      "y": 3,
+      "direction": 3
+    }
+  },
+  "decision": {
+    "action": 3,
+    "evidence": "f30.11",
+    "valid": true,
+    "error": null,
+    "proposed_action": 3,
+    "planning": {
+      "goal": "approach",
+      "reason": "verified_pickup_precondition",
+      "route": []
+    },
+    "subgoal": "Pick up target box",
+    "moved": null,
+    "reward": 0.940625,
+    "terminated": true,
+    "truncated": false,
+    "inference_seconds": 0.3478580299997702,
+    "hint": "No visible route to objective. Explore by turning toward free space (1).",
+    "success": true
+  },
+  "job": {
+    "id": "e07-s04009-none-B10-r0",
+    "environment": "BabyAI-BlockedUnlockPickup-v0",
+    "seed": 4009,
+    "variant": "B10",
+    "intervention": "none",
+    "replicate": 0
+  },
+  "at": "2026-11-14T15:23:38+00:00",
+  "attempt": "1794669804614242791-0"
+}

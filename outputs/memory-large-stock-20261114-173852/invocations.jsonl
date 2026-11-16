@@ -1,0 +1,2 @@
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-large-stock-dev.yaml","--output","outputs/memory-large-stock-20261114-173852","--parallel","1","--monitor"],"started":"2026-11-14T12:09:52+00:00"}
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-large-stock-dev.yaml","--output","outputs/memory-large-stock-20261114-173852","--parallel","1","--monitor"],"started":"2026-11-14T12:09:52+00:00","finished":"2026-11-14T14:00:14+00:00","status":"complete"}

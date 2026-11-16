@@ -1,0 +1,22 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,Find mission target,,,0.0,False,False,,,0.0
+1,0,0,primitive,,Find mission target,,,0.0,False,False,,,0.0
+2,0,6,explore,,Find mission target,f0.34,,0.0,False,False,429,30,0.3439810010022484
+3,2,2,explore,,Find mission target,f0.34,True,0.0,False,False,420,30,0.3612961449980503
+4,2,0,explore,forward_burst,Find mission target,f0.34,True,0.0,False,False,420,30,0.33165272000042023
+5,2,2,explore,forward_burst,Find mission target,f0.34,True,0.0,False,False,420,30,0.3384564579973812
+6,2,2,explore,forward_burst,Find mission target,f0.34,True,0.0,False,False,421,30,0.37543230199662503
+7,2,2,explore,forward_burst,Find mission target,f0.34,True,0.0,False,False,415,30,0.3441898349992698
+8,2,2,explore,forward_burst,Find mission target,f0.34,True,0.0,False,False,416,30,0.3352073779969942
+9,2,6,approach,forward_burst,Find mission target,f0.34,True,0.0,False,False,417,30,0.3915156789953471
+10,0,0,approach,,Find mission target,f0.34,,0.0,False,False,413,30,0.3726301990027423
+11,2,6,approach,,Find mission target,f11.2,True,0.0,False,False,447,30,0.45943637199525256
+12,2,4,approach,,Find mission target,f11.2,True,0.0,False,False,446,30,0.4236966649987153
+13,2,4,approach,,Find mission target,f11.2,True,0.0,False,False,445,30,0.4312354840003536
+14,2,6,approach,,Find mission target,f11.2,True,0.0,False,False,444,30,0.39630217700323556
+15,2,3,approach,,Find mission target,f0.34,True,0.0,False,False,443,30,0.37082607000047574
+16,0,2,explore,,Find mission target,f0.34,,0.0,False,False,444,30,0.40051102500001434
+17,2,4,approach,,Find mission target,f11.2,True,0.0,False,False,433,30,0.421303919996717
+18,2,4,approach,,Find mission target,f11.2,True,0.0,False,False,433,30,0.44388038299803156
+19,2,4,approach,,Find mission target,f11.2,True,0.0,False,False,433,30,0.410030753002502
+20,0,3,approach,,Find mission target,f11.2,,0.916,True,False,442,30,0.3713428470000508

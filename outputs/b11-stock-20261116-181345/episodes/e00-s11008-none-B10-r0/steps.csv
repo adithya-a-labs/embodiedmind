@@ -1,0 +1,8 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,choose_frontier_route,go to the green key,explore,,0.0,False,False,400,27,0.261587810000492
+1,0,0,explore,choose_frontier_route,go to the green key,explore,,0.0,False,False,397,28,0.28385234200140985
+2,2,4,approach,route_to_mission_target,go to the green key,f2.1,True,0.0,False,False,432,29,0.3111938130005001
+3,2,3,approach,route_to_mission_target,go to the green key,f2.1,True,0.0,False,False,431,29,0.29252304600049683
+4,0,4,approach,route_to_mission_target,go to the green key,f2.1,,0.0,False,False,430,29,0.2801456959987263
+5,2,3,approach,route_to_mission_target,go to the green key,f2.1,True,0.0,False,False,433,29,0.30512076199920557
+6,2,3,approach,route_to_mission_target,go to the green key,f2.1,True,0.825,True,False,432,29,0.29303330999937316

@@ -1,0 +1,27 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,3,3,primitive,,Find key,f0.10,,0.0,False,False,388,16,0.2353347850003047
+1,2,2,primitive,,Find and cross door,f0.2,True,0.0,False,False,383,15,0.2124845459984499
+2,0,0,primitive,,Find and cross door,f0.2,,0.0,False,False,380,15,0.23041510300026857
+3,2,2,primitive,,Find and cross door,f0.2,True,0.0,False,False,375,15,0.19031928299955325
+4,5,5,primitive,,Find and cross door,f0.2,,0.0,False,False,375,15,0.17080252800224116
+5,2,2,primitive,,Find and cross door,f5.22,True,0.0,False,False,385,16,0.17394129099920974
+6,2,2,primitive,,Reach goal,f5,True,0.0,False,False,374,12,0.17410587799895438
+7,2,2,primitive,,Reach goal,f5,True,0.0,False,False,372,12,0.1734417819970986
+8,2,2,primitive,,Reach goal,f5,True,0.0,False,False,372,13,0.16996405800091452
+9,0,2,primitive,blocked_by_visible_wall,Reach goal,f5,,0.0,False,False,372,12,0.16339702799814404
+10,2,2,primitive,,Reach goal,visible,True,0.0,False,False,391,11,0.12599058799969498
+11,2,2,primitive,,Reach goal,f5,True,0.0,False,False,382,12,0.15070466399993165
+12,2,2,primitive,,Reach goal,f5,True,0.0,False,False,380,12,0.1676230699995358
+13,2,2,primitive,,Reach goal,f5,True,0.0,False,False,378,12,0.17209889500009012
+14,0,0,primitive,,Reach goal,visible,,0.0,False,False,371,14,0.18368030300189275
+15,2,2,primitive,,Reach goal,f5,True,0.0,False,False,377,12,0.18559796100089443
+16,2,2,primitive,,Reach goal,f5,True,0.0,False,False,376,12,0.14472263200150337
+17,0,0,primitive,,Reach goal,visible,,0.0,False,False,370,14,0.15561180399890873
+18,2,2,primitive,,Reach goal,visible 5.24,True,0.0,False,False,391,16,0.18865429499783204
+19,2,2,primitive,,Reach goal,f5,True,0.0,False,False,389,12,0.1511620050005149
+20,2,2,primitive,,Reach goal,f5,True,0.0,False,False,387,15,0.1780811669996183
+21,2,2,primitive,,Reach goal,f5,True,0.0,False,False,385,12,0.13636407100057113
+22,2,2,primitive,,Reach goal,visible,True,0.0,False,False,383,12,0.1465425429996685
+23,0,2,primitive,blocked_by_visible_wall,Reach goal,f5,,0.0,False,False,374,15,0.15626822600097512
+24,2,2,primitive,,Reach goal,f5,True,0.0,False,False,376,12,0.14604855600191513
+25,2,2,primitive,,Reach goal,f5,True,0.9634375,True,False,375,12,0.15764345999923535

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EmbodiedMind · Experiment viewer</title>
+  <link rel="stylesheet" href="/viewer.css">
+  <script defer src="/viewer.js"></script>
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span>EmbodiedMind</div>
+    <nav aria-label="Viewer mode">
+      <button type="button" data-mode="replay" aria-pressed="true">Replay</button>
+      <button type="button" data-mode="live" aria-pressed="false">Live monitor</button>
+      <button type="button" data-mode="sandbox" aria-pressed="false">Sandbox</button>
+    </nav>
+  </header>
+  <main>
+    <div class="heading"><div><p class="eyebrow" id="mode-label">Recorded episodes</p><h1 id="title">DoorKey comparison</h1><p id="subtitle">Seed 1015 · B0 Reactive vs B2 Structured</p></div></div>
+    <p id="error" role="alert" hidden></p>
+    <section id="replay" aria-label="Replay">
+      <div class="toolbar replay-filters" aria-label="Filter saved runs" role="group">
+        <label>Game<select id="replay-game"></select></label>
+        <label>Agent in replay<select id="replay-agent"></select></label>
+      </div>
+      <div class="toolbar">
+        <label>Run<select id="replay-run"></select></label>
+        <label>Scenario<select id="scenario"></select></label>
+        <label>Seed<select id="seed"></select></label>
+        <label>Left agent<select id="left"></select></label>
+        <label>Right agent<select id="right"></select></label>
+      </div>
+      <div class="timeline">
+        <div class="transport"><button id="prev" type="button" aria-label="Previous action">Back</button><button id="play" type="button">Play</button><button id="next" type="button" aria-label="Next action">Next</button></div>
+        <label class="scrubber"><span id="step-label">Action 8</span><input id="step" aria-label="Replay action" type="range" min="0" max="36" value="7"></label>
+        <button id="blocked" type="button">First blocked move</button>
+        <button id="pickup" type="button">Key pickup</button>
+        <button id="door" type="button">Door opens</button>
+      </div>
+      <div id="comparison" class="comparison" aria-live="off"></div>
+    </section>
+    <section id="live" aria-label="Live monitor" hidden>
+      <div class="toolbar">
+        <label>Run<select id="live-run"></select></label>
+        <button id="follow-live" type="button" aria-pressed="true">Follow active run</button>
+        <button id="refresh-live" type="button">Refresh runs</button>
+        <button id="replay-live" type="button" hidden>Open in Replay</button>
+      </div>
+      <div class="live-progress"><p id="live-status" role="status"></p><progress id="progress" aria-label="Episode progress" value="0" max="1"></progress></div>
+      <div id="live-boards" class="comparison"></div>
+    </section>
+    <section id="sandbox" aria-label="Sandbox" hidden>
+      <form id="sandbox-form" class="toolbar">
+        <label>Environment<select id="sandbox-env"></select></label>
+        <label>Seed<input id="sandbox-seed" type="number" min="0" max="2147483647" value="1015" required></label>
+        <label id="intervention-field" hidden>Intervention<select id="sandbox-intervention"></select></label>
+        <button type="submit">New episode</button>
+      </form>
+      <p id="branch"></p>
+      <div id="sandbox-board"></div>
+      <div class="sandbox-actions" id="sandbox-actions">
+        <fieldset id="manual"><legend>Manual control</legend><div id="actions" class="button-row"></div></fieldset>
+        <fieldset><legend>Agent control</legend><div class="button-row"><select id="sandbox-variant" aria-label="Sandbox agent"></select><button id="agent-step" type="button">Agent move</button><button id="agent-run" type="button">Auto-play</button></div></fieldset>
+        <button id="save" type="button">Save sandbox run</button>
+      </div>
+      <p id="sandbox-status" role="status"></p>
+    </section>
+  </main>
+</body>
+</html>

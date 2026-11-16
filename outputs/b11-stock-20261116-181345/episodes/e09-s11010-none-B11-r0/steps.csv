@@ -1,0 +1,22 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,1,explore,,Find mission target,explore,,0.0,False,False,342,27,0.34463526000035927
+1,0,0,explore,,Find mission target,explore,,0.0,False,False,333,27,0.26561823000156437
+2,0,0,explore,,Find mission target,explore,,0.0,False,False,326,28,0.33290018000116106
+3,0,0,explore,,Find mission target,explore,,0.0,False,False,351,27,0.3159882550025941
+4,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,359,27,0.31000226000105613
+5,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,338,27,0.28648333300225204
+6,0,0,explore,,Find mission target,visible,,0.0,False,False,333,26,0.2900011629972141
+7,0,0,explore,,Find mission target,visible,,0.0,False,False,326,26,0.3059989430003043
+8,0,0,explore,,Find mission target,explore,,0.0,False,False,350,27,0.3609708160001901
+9,0,0,explore,,Find mission target,explore,,0.0,False,False,361,28,0.3726697689999128
+10,1,1,explore,,Find mission target,explore,,0.0,False,False,353,27,0.3339610260009067
+11,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,367,27,0.2948480719969666
+12,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,339,27,0.31031135299781454
+13,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,339,27,0.2806373969979177
+14,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,338,27,0.26848827700086986
+15,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,331,27,0.25344740400032606
+16,0,0,explore,,Find mission target,visible,,0.0,False,False,326,26,0.2973960890012677
+17,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,347,27,0.300736846998916
+18,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,338,27,0.32802657399952295
+19,2,2,explore,forward_burst,Find mission target,explore,,0.0,False,False,338,27,0.32319968299998436
+20,2,2,explore,forward_burst,Find mission target,explore,,0.926171875,True,False,338,27,0.2762639059983485

@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,352,11,0.1568714690001798
+1,2,2,primitive,,,o0,True,0.0,False,False,373,12,0.14100255599987577
+2,6,6,primitive,,,o1,,0.0,False,False,393,13,0.19753023000157555
+3,5,5,primitive,,,o2,,0.0,False,False,420,15,0.19492382099997485
+4,6,6,primitive,,,o3,,0.0,False,False,447,13,0.18057606400179793
+5,6,6,primitive,,,o4,,0.0,False,False,474,13,0.17018639399975655
+6,6,6,primitive,,,o5,,0.0,False,False,501,15,0.1982168529975752
+7,6,6,primitive,,,o6,,0.0,False,False,528,13,0.16905928500273149
+8,6,6,primitive,,,o7,,0.0,False,False,555,13,0.19292738600051962
+9,5,5,primitive,,,o8,,0.0,False,False,582,12,0.18481447299927822
+10,6,6,primitive,,,o9,,0.0,False,False,609,13,0.19457870299811475
+11,6,6,primitive,,,o1,,0.0,False,False,638,13,0.20763236300263088
+12,5,5,primitive,,,o1,,0.0,False,False,667,13,0.18110145100217778
+13,5,5,primitive,,,o1,,0.0,False,False,672,13,0.2131914159981534
+14,5,5,primitive,,,o1,,0.0,False,False,674,13,0.22484503400119138
+15,5,5,primitive,,,"o10 step 10 prev=6 facing=0: blue ball@0,2; red door locked@1,2",,0.0,False,False,676,39,0.3841197080000711
+16,5,5,primitive,,,"o10 step 10 prev=6 facing=0: blue ball@0,2; red door locked@1,2",,0.0,False,False,678,39,0.3984427750001487
+17,2,2,primitive,,,"o10 step 10 prev=6 facing=0: blue ball@0,2; red door locked@1,2",False,0.0,False,False,680,38,0.4216995160022634
+18,5,5,primitive,,,"o18 step 18 prev=5 facing=0: blue ball@0,2; red door locked@1,2",,0.0,False,False,682,39,0.4072321120002016
+19,5,5,primitive,,,"o18 step 18 prev=2 facing=0: blue ball@0,2; red door locked@1,2",,0.0,False,False,684,39,0.3885557460016571
+20,5,5,primitive,,,"o10 step 8 prev=6 facing=0: blue ball@0,2; red door locked@1,2",,0.0,False,False,686,38,0.4066054789982445
+21,5,5,primitive,,,"o20 step 20 prev=5 facing=0: blue ball@0,2; red door locked@1,2",,0.0,False,False,688,39,0.4032065049977973
+22,0,0,primitive,,,o21,,0.0,False,False,690,16,0.25129589299831423
+23,2,2,primitive,,,o11,True,0.0,False,False,687,13,0.22358314099983545
+24,5,5,primitive,,,"o23 step 23 prev=0 facing=3: red key@1,-3",,0.0,False,False,673,31,0.3658191629983776
+25,5,5,primitive,,,"o24 step 24 prev=2 facing=3: red key@0,-3",,0.0,False,False,665,30,0.32658947099844227
+26,2,2,primitive,,,"o25 step 25 prev=5 facing=3: red key@0,-3",False,0.0,False,False,686,30,0.34674373300003936
+27,5,5,primitive,,,"o26 step 26 prev=5 facing=3: red key@0,-3",,0.0,False,False,678,31,0.35712558000159333
+28,5,5,primitive,,,"o27 step 27 prev=2 facing=3: red key@0,-3",,0.0,False,False,670,30,0.35140854499695706
+29,5,5,primitive,,,"o28 step 28 prev=5 facing=3: red key@0,-3",,0.0,False,False,691,31,0.34507482100161724
+30,5,5,primitive,,,"o29 step 29 prev=5 facing=3: red key@0,-3",,0.0,False,False,683,31,0.36126131099808845
+31,5,5,primitive,,,"o30 step 30 prev=5 facing=3: red key@0,-3",,0.0,False,False,675,31,0.3507102249968739
+32,4,4,primitive,,,o31,,0.0,False,False,696,16,0.24373470800128416
+33,2,2,primitive,,,"o28 step 28 prev=5 facing=3: red key@0,-3",False,0.0,False,False,688,30,0.3258009999990463
+34,5,5,primitive,,,o22,,0.0,False,False,680,14,0.2472413029972813
+35,5,5,primitive,,,"o22 step 22 prev=5 facing=0: blue ball@0,2; red door locked@1,2",,0.0,False,False,701,39,0.41478944000118645
+36,6,6,primitive,,,o20,,0.0,False,False,693,16,0.295785498998157
+37,5,5,primitive,,,"o22 step 22 prev=5 facing=0: blue ball@0,2; red door locked@1,2",,0.0,False,False,685,39,0.4333248809998622
+38,5,5,primitive,,,o22,,0.0,False,False,706,13,0.23464883199994802
+39,5,5,primitive,,,"o23 step 23 prev=0 facing=3: red key@1,-3",,0.0,False,False,698,31,0.34420730600322713
+40,5,5,primitive,,,"o30 step 30 prev=5 facing=3: red key@0,-3",,0.0,False,False,714,31,0.3660821779994876
+41,5,5,primitive,,,o40,,0.0,False,False,711,14,0.2627204310010711
+42,5,5,primitive,,,"o41 step 41 prev=5 facing=3: red key@0,-3",,0.0,False,False,711,31,0.3943477749999147
+43,5,5,primitive,,,o42,,0.0,False,False,711,14,0.2556677040010982
+44,5,5,primitive,,,o43,,0.0,False,False,711,14,0.23806433199933963
+45,5,5,primitive,,,"o40 step 40 prev=5 facing=3: red key@0,-3",,0.0,False,False,711,31,0.36407698500261176
+46,5,5,primitive,,,"o40 step 40 prev=5 facing=3: red key@0,-3",,0.0,False,False,711,31,0.4025210360014171
+47,5,5,primitive,,,"o30 step 30 prev=5 facing=3: red key@0,-3",,0.0,False,False,711,31,0.373332434999611

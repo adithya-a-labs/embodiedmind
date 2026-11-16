@@ -1,0 +1,9 @@
+{
+  "id": "e04-s03002-none-B1-r0",
+  "environment": "BabyAI-PutNextS5N2-v0",
+  "seed": 3002,
+  "variant": "B1",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-14T08:20:23+00:00"
+}

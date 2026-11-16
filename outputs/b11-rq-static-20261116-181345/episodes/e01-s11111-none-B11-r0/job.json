@@ -1,0 +1,9 @@
+{
+  "id": "e01-s11111-none-B11-r0",
+  "environment": "BabyAI-GoToObjMazeS7-v0",
+  "seed": 11111,
+  "variant": "B11",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-16T14:36:51+00:00"
+}

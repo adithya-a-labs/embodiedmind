@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,remembered,True,0.0,False,False,374,12,0.14936633599791094
+1,2,2,primitive,,,"f0.11 empty (-1, -1) observed at step 0",True,0.0,False,False,451,27,0.2604152019994217
+2,2,2,primitive,,,f0,True,0.0,False,False,540,12,0.18361048299993854
+3,2,2,primitive,,,f0.15,True,0.0,False,False,620,15,0.21157894000134547
+4,2,2,primitive,,,f0.14,False,0.0,False,False,648,15,0.19668196800193982
+5,2,2,primitive,,,f0.14,False,0.0,False,False,648,15,0.2190926399998716
+6,2,2,primitive,,,f0.14,False,0.0,False,False,648,15,0.13300217600044562
+7,2,2,primitive,,,f0.14,False,0.0,False,False,648,15,0.1354433220003557
+8,2,2,primitive,,,f0.14,False,0.0,False,False,648,15,0.13795003300037934
+9,2,2,primitive,,,f0.14,False,0.0,False,False,648,15,0.14661717700073496
+10,2,2,primitive,,,f0.14,False,0.0,False,False,648,15,0.12977111100190086
+11,2,2,primitive,,,f0.14,False,0.0,False,False,648,15,0.13496293400021386
+12,2,2,primitive,,,f0.14,False,0.0,False,False,648,15,0.1321563889978279
+13,2,2,primitive,,,f0.14,False,0.0,False,False,648,15,0.14671342800284037
+14,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.22782205499970587
+15,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17276407800090965
+16,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.1737654829994426
+17,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17684883900074055
+18,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17615739600296365
+19,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17406931799996528
+20,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.1772169780015247
+21,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.1792359259998193
+22,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.18015825000111363
+23,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17709247500170022
+24,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17686897200110252
+25,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17425023900068481
+26,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17653521399915917
+27,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17857042600007844
+28,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17869341899859137
+29,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17503102699993178
+30,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17685496299964143
+31,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17474777800089214
+32,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.1774536659977457
+33,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.18032753499937826
+34,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17493714900047053
+35,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17354100499869674
+36,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17341280700202333
+37,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17292575700048474
+38,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.1765702520024206
+39,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17500971499976004
+40,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.18463171799885458
+41,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.1811252389998117
+42,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.17491364200031967
+43,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.1735733360001177
+44,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.1779036729967629
+45,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.18163047599955462
+46,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.18404747800013865
+47,2,2,primitive,,,"f0.9 red ball (-2, -1)",False,0.0,False,False,652,22,0.18097282600137987

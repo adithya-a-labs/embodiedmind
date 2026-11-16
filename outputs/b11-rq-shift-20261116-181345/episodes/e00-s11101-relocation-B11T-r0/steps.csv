@@ -1,0 +1,20 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the green key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the green key,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,425,27,0.29558582999970895
+3,0,2,explore,choose_frontier_route,go to the green key,o2,,0.0,False,False,451,27,0.28335957999979655
+4,2,2,explore,choose_frontier_route,go to the green key,o1,True,0.0,False,False,468,27,0.2724506190002103
+5,2,0,explore,choose_frontier_route,go to the green key,o4,True,0.0,False,False,487,27,0.3159327610001128
+6,2,2,explore,choose_frontier_route,go to the green key,o5,True,0.0,False,False,506,27,0.2720267290001175
+7,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,526,27,0.27409573700015244
+8,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,539,27,0.26174292699988655
+9,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,556,27,0.2714023799999268
+10,2,2,explore,choose_frontier_route,go to the green key,o0,True,0.0,False,False,573,27,0.26663235299974986
+11,0,0,explore,choose_frontier_route,go to the green key,o0,,0.0,False,False,587,27,0.30078013999991526
+12,2,2,approach,route_to_mission_target,go to the green key,o0,True,0.0,False,False,619,27,0.2877996180000082
+13,2,0,explore,route_to_mission_target,go to the green key,o12,True,0.0,False,False,640,28,0.3310193099996468
+14,2,2,approach,route_to_mission_target,go to the green key,o13,True,0.0,False,False,660,28,0.3594957450000038
+15,2,2,approach,route_to_mission_target,go to the green key,o14,True,0.0,False,False,680,28,0.41469645199958904
+16,2,2,approach,route_to_mission_target,go to the green key,o15,True,0.0,False,False,700,28,0.4445927799997662
+17,0,0,approach,route_to_mission_target,go to the green key,o0,,0.0,False,False,719,27,0.37481465500013655
+18,2,2,approach,route_to_mission_target,go to the green key,o13,True,0.924,True,False,709,28,0.41478499400000146

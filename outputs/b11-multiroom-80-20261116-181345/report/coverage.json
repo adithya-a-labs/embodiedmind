@@ -1,0 +1,145 @@
+{
+  "planned": 150,
+  "attempted": 150,
+  "unattempted": 0,
+  "attempt_records": 150,
+  "valid": 150,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "b11-multiroom-80",
+      "environment": "MiniGrid-MultiRoom-N6-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B0": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B0G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B1": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B2": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B3G": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B4": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B5": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B6": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B7": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B8": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9N": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

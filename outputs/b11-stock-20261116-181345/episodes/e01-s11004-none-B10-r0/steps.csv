@@ -1,0 +1,18 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,4,approach,route_to_mission_target,Find matching key,f0.1,,0.0,False,False,444,29,0.33669673199983663
+1,2,6,approach,route_to_mission_target,Find matching key,f0.1,True,0.0,False,False,439,29,0.3408044269999664
+2,2,6,approach,route_to_mission_target,Find matching key,f0.1,True,0.0,False,False,438,29,0.3356203910007025
+3,3,6,approach,verified_pickup_precondition,Find matching key,f0.1,,0.0,False,False,437,29,0.3266947939991951
+4,2,4,approach,choose_frontier_route,Unlock matching door,f0.7,True,0.0,False,False,441,29,0.32279536300120526
+5,0,0,approach,choose_frontier_route,Unlock matching door,f0.7,,0.0,False,False,435,29,0.33877890199983085
+6,0,4,approach,route_to_mission_target,Unlock matching door,f0.7,,0.0,False,False,443,29,0.3645132260007813
+7,2,6,approach,route_to_mission_target,Unlock matching door,f0.7,True,0.0,False,False,436,29,0.3993809319999855
+8,2,6,approach,route_to_mission_target,Unlock matching door,f0.7,True,0.0,False,False,436,29,0.34774092999941786
+9,2,4,approach,route_to_mission_target,Unlock matching door,f0.7,True,0.0,False,False,436,29,0.3195991549982864
+10,2,6,approach,route_to_mission_target,Unlock matching door,f0.7,True,0.0,False,False,437,29,0.35288064399901486
+11,0,6,approach,route_to_mission_target,Unlock matching door,f0.7,,0.0,False,False,437,29,0.303312146999815
+12,5,4,verify,verified_toggle_precondition,Unlock matching door,f0.7,,0.0,False,False,439,28,0.3218768459992134
+13,2,4,approach,route_to_mission_target,Reach goal beyond the door,f13.14,True,0.0,False,False,454,31,0.42883382699983486
+14,2,6,approach,route_to_mission_target,Reach goal beyond the door,f13.16,True,0.0,False,False,445,31,0.3535571529992012
+15,1,4,approach,route_to_mission_target,Reach goal beyond the door,f13.16,,0.0,False,False,443,31,0.31553261800036125
+16,2,6,approach,route_to_mission_target,Reach goal beyond the door,f13.16,True,0.97609375,True,False,453,31,0.3210714140004711

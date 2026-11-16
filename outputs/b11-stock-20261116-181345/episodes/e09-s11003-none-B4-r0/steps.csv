@@ -1,0 +1,19 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,1,2,primitive,blocked_by_visible_ball,Find mission target,visible 6,,0.0,False,False,299,13,0.12399467299837852
+1,2,2,primitive,,Find mission target,visible0,,0.0,False,False,323,12,0.14405867900131852
+2,2,2,primitive,,Find mission target,visible0,,0.0,False,False,323,13,0.13384085099824006
+3,0,2,primitive,blocked_by_visible_ball,Find mission target,,,0.0,False,False,318,11,0.1512752089984133
+4,0,2,primitive,blocked_by_visible_ball,Find mission target,,,0.0,False,False,312,11,0.1531251609994797
+5,2,2,primitive,,Find mission target,visible,,0.0,False,False,296,12,0.13116617500054417
+6,1,2,primitive,blocked_by_visible_wall,Find mission target,visible 0,,0.0,False,False,283,15,0.1603619699999399
+7,2,2,primitive,,Find mission target,visible0,,0.0,False,False,316,15,0.18700901299962425
+8,2,2,primitive,,Find mission target,visible0,,0.0,False,False,306,13,0.13881005800067214
+9,2,2,primitive,,Find mission target,visible,,0.0,False,False,296,12,0.14103029599937145
+10,2,2,primitive,,Find mission target,visible 5,,0.0,False,False,295,13,0.136184430000867
+11,2,2,primitive,,Find mission target,visible0,,0.0,False,False,288,13,0.13728765999985626
+12,1,2,primitive,blocked_by_visible_wall,Find mission target,visible 0,,0.0,False,False,283,15,0.14557576100196457
+13,2,2,primitive,,Find mission target,visible0,,0.0,False,False,315,15,0.15988296000068658
+14,2,2,primitive,,Find mission target,visible0,,0.0,False,False,315,13,0.13382563199775177
+15,2,2,primitive,,Find mission target,visible,,0.0,False,False,305,12,0.12589577500330051
+16,2,2,primitive,,Find mission target,Subgoal: Find mission target.,,0.0,False,False,304,18,0.17338909699901706
+17,2,2,primitive,,Find mission target,visible,,0.93671875,True,False,295,12,0.13113915500071016

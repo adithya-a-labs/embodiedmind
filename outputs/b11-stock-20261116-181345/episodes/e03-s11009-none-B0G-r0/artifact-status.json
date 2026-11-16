@@ -1,0 +1,9 @@
+{
+  "missing": {
+    "stdout.log": "The runner does not redirect process-wide streams into per-attempt files.",
+    "stderr.log": "The runner does not redirect process-wide streams into per-attempt files."
+  },
+  "recorded_steps": 6,
+  "status": "finalized",
+  "recorded_frames": 7
+}

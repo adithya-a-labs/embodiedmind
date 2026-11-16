@@ -1,0 +1,6 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,explore,choose_frontier_route,go to the grey box,explore,,0.0,False,False,396,28,0.3014411440017284
+1,2,4,approach,route_to_mission_target,go to the grey box,f1.1,True,0.0,False,False,431,29,0.31963436899968656
+2,0,4,approach,route_to_mission_target,go to the grey box,f1.1,,0.0,False,False,430,29,0.27373119899857556
+3,2,4,approach,route_to_mission_target,go to the grey box,f1.1,True,0.0,False,False,433,29,0.30500501099595567
+4,2,4,approach,route_to_mission_target,go to the grey box,f1.1,True,0.875,True,False,432,29,0.2953591969999252

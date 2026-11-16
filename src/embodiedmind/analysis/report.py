@@ -9,6 +9,8 @@ from dataclasses import asdict, fields
 from pathlib import Path
 from statistics import fmean
 
+from embodiedmind.agents import VARIANTS as KNOWN_VARIANTS
+
 from .statistics import METRICS, Comparison, compare, numeric, stratify
 
 
@@ -21,7 +23,6 @@ EPISODE_FIELDS = (
 )
 SPLIT_NAMES = {"dev": "development", "pilot": "development", "test": "static"}
 COVERAGE_STATUSES = ("valid", "excluded", "failed", "pending", "invalid")
-KNOWN_VARIANTS = {"B0", "B1", "B2", "B3"}
 VISUAL_TYPES = {".gif": "replay", ".mp4": "replay", ".png": "image", ".webp": "image"}
 
 
@@ -127,7 +128,9 @@ def _validate_integrity(directory, required):
     if not {"summary.json", "trajectory.jsonl", "evaluator.json"} <= hashes.keys():
         raise ValueError("Integrity record is missing required episode files")
     for name, expected in hashes.items():
-        if Path(name).name != name or not isinstance(expected, str):
+        artifact = Path(name)
+        if (artifact.is_absolute() or ".." in artifact.parts or not isinstance(expected, str)
+                or not (directory / artifact).resolve().is_relative_to(directory.resolve())):
             raise ValueError("Malformed integrity record")
         if _digest(directory / name) != expected:
             raise ValueError(f"Episode file checksum failed: {name}")
@@ -182,7 +185,7 @@ def _load_episode(run_dir, run_id, default_split, job, root, integrity_required)
     attempts = _attempt_paths(run_dir, directory, job_id)
     row["attempts"] = len(attempts)
     if not summary_path.is_file():
-        row["reason"] = "No finalized episode summary"
+        row["reason"] = ("An attempt ended before finalizing" if attempts else "Episode never started")
         errors = []
         for path in attempts:
             error_path = path / "error.json"
@@ -340,7 +343,8 @@ def _artifact_index(run_dirs, out, metadata):
     seen = set()
     for tree in [*run_dirs, out]:
         for path in sorted(tree.rglob("*")):
-            if not path.is_file() or path.is_symlink() or path.name in {"artifact-index.json", ".gitkeep"} or path in seen:
+            if (not path.is_file() or path.is_symlink()
+                    or path.name in {"artifact-index.json", ".gitkeep", "supervisor.lock"} or path in seen):
                 continue
             seen.add(path)
             run_id = job_id = ""
@@ -381,7 +385,18 @@ def _comparison_table(comparisons):
         primary = (item.split == "static" and item.metric == "success" and item.control == "B1") or (
             item.split == "dynamic" and item.metric == "stale_action_rate" and item.control == "B2"
         )
-        if not primary:
+        development_comparison = (item.split == "development" and item.treatment in
+                                  {"B0G", "B3G", "B4", "B5", "B6", "B7", "B8", "B9N", "B9", "B10"} and
+                                  item.metric in {"success", "blocked_actions", "verification_requests"})
+        b11_comparison = (
+            item.split.startswith("b11-") and item.treatment.startswith("B11") and (
+                item.metric in {"success", "steps", "total_tokens", "calls", "episode_wall_seconds"}
+                or item.intervention != "none" and item.metric in {
+                    "verification_actions", "informative_checks", "stale_commitments", "reacquired",
+                }
+            )
+        )
+        if not (primary or development_comparison or b11_comparison):
             continue
         interval = "—"
         if item.lower_95 is not None and item.upper_95 is not None:
@@ -425,6 +440,24 @@ def _write_report(path, manifests, rows, summary, comparisons, plots, argv_examp
             )
     lines.extend(["", "## Primary paired contrasts", ""])
     lines.extend(_comparison_table(comparisons))
+    if any(split.startswith("b11-") for split in roster):
+        lines.extend([
+            "", "## Cost per completed mission", "",
+            "Costs sum across every valid episode, including failures. A dash means zero completions.",
+            "", "| Environment | Intervention | Agent | Completions | Actions / completion | "
+            "Tokens / completion | Seconds / completion |",
+            "| --- | --- | --- | ---: | ---: | ---: | ---: |",
+        ])
+        for (_, environment, intervention), group in sorted(stratify(episodes=rows).items()):
+            for variant in sorted({row["variant"] for row in group}):
+                valid = [row for row in group if row["variant"] == variant and row["status"] == "valid"]
+                wins = sum(bool(row.get("success")) for row in valid)
+                costs = [
+                    f"{sum(row[metric] for row in valid) / wins:.2f}"
+                    if wins and all(metric in row for row in valid) else "—"
+                    for metric in ("steps", "total_tokens", "episode_wall_seconds")
+                ]
+                lines.append(f"| {environment} | {intervention} | {variant} | {wins} | " + " | ".join(costs) + " |")
     lines.extend([
         "", "Differences use only identical environment, intervention, mission, seed and replicate. "
         "Replicate differences are averaged within seed before estimating intervals with a deterministic "

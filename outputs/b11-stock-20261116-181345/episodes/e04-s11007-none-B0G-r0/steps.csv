@@ -1,0 +1,10 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible 0,True,0.0,False,False,383,14,0.33278674599932856
+1,2,2,primitive,,,,True,0.0,False,False,390,11,0.16834310099875438
+2,2,2,primitive,,,visible 2,True,0.0,False,False,387,14,0.188575795998986
+3,2,2,primitive,,,visible 4,True,0.0,False,False,386,14,0.20879949900154315
+4,2,2,primitive,,,visible 3,True,0.0,False,False,384,13,0.15930276800099819
+5,2,2,primitive,,,visible 2 -2 green ball,True,0.0,False,False,382,17,0.171533388998796
+6,2,2,primitive,,,,True,0.0,False,False,380,11,0.1503706740004418
+7,0,0,primitive,,,visible0,,0.0,False,False,373,15,0.15642398000090907
+8,2,2,primitive,,,visible,True,0.99439446366782,True,False,382,14,0.17803317300058552

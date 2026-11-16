@@ -1,0 +1,9 @@
+{
+  "id": "e00-s04005-none-B10-r0",
+  "environment": "MiniGrid-MultiRoom-N6-v0",
+  "seed": 4005,
+  "variant": "B10",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-14T15:39:44+00:00"
+}

@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,remembered,True,0.0,False,False,362,12,0.1316544619985507
+1,1,1,primitive,,,"f0.10 empty (-1, 1) observed at step 0",,0.0,False,False,435,27,0.2701096300006611
+2,0,0,primitive,,,visible,,0.0,False,False,477,14,0.22177265899881604
+3,1,1,primitive,,,"f2.7 empty (-1, 0) observed at step 2",,0.0,False,False,563,26,0.2821168030022818
+4,1,2,primitive,blocked_by_visible_box,,visible,,0.0,False,False,477,11,0.17442753199793515
+5,2,2,primitive,,,visible,True,0.0,False,False,489,14,0.3394786229982856
+6,2,2,primitive,,,f0.0,True,0.0,False,False,560,14,0.1890755429994897
+7,1,1,primitive,,,f0.4,,0.0,False,False,643,14,0.25100171599842724
+8,1,2,primitive,blocked_by_visible_key,,visible,,0.0,False,False,554,11,0.18893018000017037
+9,2,2,primitive,,,visible,True,0.0,False,False,482,11,0.18003457200029516
+10,2,2,primitive,,,"f2.13 yellow door closed (-2, 0) observed at step 8",True,0.0,False,False,556,29,0.2899286760002724
+11,1,1,primitive,,,"f2.13 yellow door closed (-3, 0) observed at step 8",,0.0,False,False,644,29,0.30480038099995
+12,1,1,primitive,,,visible,,0.0,False,False,559,14,0.2256834660001914
+13,2,2,primitive,,,"f0.6 grey wall (-1, 0) observed at step 12",True,0.0,False,False,494,28,0.30593304300055024
+14,2,2,primitive,,,f0.0,True,0.0,False,False,570,14,0.24882573599825264
+15,1,1,primitive,,,f0.4,,0.0,False,False,658,14,0.22941121099938755
+16,1,1,primitive,,,visible,,0.0,False,False,564,14,0.22724247400037711
+17,2,2,primitive,,,visible,True,0.0,False,False,487,14,0.22404726999957347
+18,2,2,primitive,,,"f2.13 yellow door closed (-2, 0) observed at step 16",True,0.0,False,False,566,30,0.2809838489993126
+19,1,1,primitive,,,"f2.13 yellow door closed (-3, 0) observed at step 16",,0.0,False,False,655,30,0.3145932650004397
+20,0,0,primitive,,,visible,,0.0,False,False,563,14,0.2282028800000262
+21,1,1,primitive,,,"f2.13 yellow door closed (-3, 0) observed at step 20",,0.0,False,False,654,30,0.40108296900143614
+22,0,0,primitive,,,visible,,0.0,False,False,563,14,0.23720615699858172
+23,1,1,primitive,,,"f2.13 yellow door closed (-3, 0) observed at step 22",,0.0,False,False,654,30,0.3305496469984064
+24,1,1,primitive,,,visible,,0.0,False,False,563,14,0.22518873200169764
+25,2,2,primitive,,,"f0.6 grey wall (-1, 0) observed at step 24",True,0.0,False,False,494,28,0.3230074450002576
+26,2,2,primitive,,,f0.4,True,0.0,False,False,570,14,0.22330414899988682
+27,1,1,primitive,,,"f0.4 purple ball (-2, 1) observed at step 25",,0.0,False,False,658,28,0.3264600080001401
+28,1,1,primitive,,,visible,,0.0,False,False,564,14,0.23541950499929953
+29,2,2,primitive,,,visible,True,0.0,False,False,487,14,0.24233593899771222
+30,2,2,primitive,,,"f2.13 yellow door closed (-2, 0) observed at step 28",True,0.0,False,False,566,30,0.31066327600274235
+31,1,1,primitive,,,"f2.13 yellow door closed (-3, 0) observed at step 28",,0.0,False,False,655,30,0.31780193600206985
+32,0,0,primitive,,,visible,,0.0,False,False,563,14,0.25675342899921816
+33,1,1,primitive,,,"f2.13 yellow door closed (-3, 0) observed at step 32",,0.0,False,False,654,30,0.31189902299956884
+34,0,0,primitive,,,visible,,0.0,False,False,563,14,0.2020173920027446
+35,1,1,primitive,,,"f2.13 yellow door closed (-3, 0) observed at step 34",,0.0,False,False,654,30,0.3071315349989163
+36,0,0,primitive,,,visible,,0.0,False,False,563,14,0.21477751600104966
+37,1,1,primitive,,,"f2.13 yellow door closed (-3, 0) observed at step 36",,0.0,False,False,654,30,0.3426482130016666
+38,0,0,primitive,,,visible,,0.0,False,False,563,14,0.24167927999951644
+39,1,1,primitive,,,"f2.13 yellow door closed (-3, 0) observed at step 38",,0.0,False,False,654,30,0.3187106200020935
+40,0,0,primitive,,,visible,,0.0,False,False,563,14,0.2078349020011956
+41,1,1,primitive,,,"f2.13 yellow door closed (-3, 0) observed at step 40",,0.0,False,False,658,30,0.3275836259999778
+42,1,1,primitive,,,visible,,0.0,False,False,567,14,0.24025063199951546
+43,2,2,primitive,,,"f0.6 grey wall (-1, 0) observed at step 42",True,0.0,False,False,494,28,0.299885947999428
+44,2,2,primitive,,,f0.0,True,0.0,False,False,570,14,0.20385325899769668
+45,1,1,primitive,,,f0.4,,0.0,False,False,658,14,0.20624504200168303
+46,1,1,primitive,,,visible,,0.0,False,False,564,14,0.24329085700082942
+47,2,2,primitive,,,visible,True,0.0,False,False,487,14,0.22910814699935145

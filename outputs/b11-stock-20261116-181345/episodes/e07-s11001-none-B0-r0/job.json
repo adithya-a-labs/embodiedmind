@@ -1,0 +1,9 @@
+{
+  "id": "e07-s11001-none-B0-r0",
+  "environment": "BabyAI-BlockedUnlockPickup-v0",
+  "seed": 11001,
+  "variant": "B0",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-16T17:06:16+00:00"
+}

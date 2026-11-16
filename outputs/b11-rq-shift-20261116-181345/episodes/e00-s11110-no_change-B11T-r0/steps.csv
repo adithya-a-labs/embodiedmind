@@ -1,0 +1,26 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the purple ball,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the purple ball,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the purple ball,o1,True,0.0,False,False,425,27,0.29141542400020626
+3,0,2,explore,choose_frontier_route,go to the purple ball,o1,,0.0,False,False,451,27,0.2929632070004118
+4,2,2,explore,choose_frontier_route,go to the purple ball,o1,True,0.0,False,False,468,27,0.31189938399984385
+5,2,0,explore,choose_frontier_route,go to the purple ball,o4,True,0.0,False,False,487,27,0.3034993450000911
+6,2,2,explore,choose_frontier_route,go to the purple ball,o5,True,0.0,False,False,506,27,0.33628852699985146
+7,2,2,explore,choose_frontier_route,go to the purple ball,o0,True,0.0,False,False,526,27,0.28568334200008394
+8,2,2,explore,choose_frontier_route,go to the purple ball,o0,True,0.0,False,False,539,27,0.29266659499990055
+9,2,2,explore,choose_frontier_route,go to the purple ball,o0,True,0.0,False,False,556,27,0.297203976000219
+10,2,2,explore,choose_frontier_route,go to the purple ball,o0,True,0.0,False,False,573,27,0.3190946800000347
+11,0,0,explore,choose_frontier_route,go to the purple ball,o0,,0.0,False,False,587,27,0.31393586800004414
+12,2,2,explore,continue_frontier_route,go to the purple ball,o0,True,0.0,False,False,619,27,0.3330222300000969
+13,2,2,explore,choose_frontier_route,go to the purple ball,o0,True,0.0,False,False,637,27,0.2918604440001218
+14,2,2,explore,choose_frontier_route,go to the purple ball,o0,True,0.0,False,False,654,27,0.3349396359999446
+15,2,2,explore,choose_frontier_route,go to the purple ball,o0,True,0.0,False,False,671,27,0.48473213899978873
+16,2,2,explore,choose_frontier_route,go to the purple ball,o0,True,0.0,False,False,688,27,0.443818199999896
+17,2,2,explore,choose_frontier_route,go to the purple ball,o0,True,0.0,False,False,705,27,0.3753760790000342
+18,2,2,explore,choose_frontier_route,go to the purple ball,o1,True,0.0,False,False,699,27,0.4417138789999626
+19,0,0,explore,choose_frontier_route,go to the purple ball,o2,,0.0,False,False,692,27,0.3906714589998046
+20,2,2,approach,route_to_mission_target,go to the purple ball,visible,True,0.0,False,False,694,26,0.3980893859998105
+21,2,2,approach,route_to_mission_target,go to the purple ball,o20,True,0.0,False,False,689,28,0.41261609000002863
+22,2,2,approach,route_to_mission_target,go to the purple ball,o21,True,0.0,False,False,691,28,0.48132191000013336
+23,2,2,approach,route_to_mission_target,go to the purple ball,o22,True,0.0,False,False,702,28,0.40638565200015364
+24,2,2,approach,route_to_mission_target,go to the purple ball,visible,True,0.9,True,False,692,26,0.42538797599991085

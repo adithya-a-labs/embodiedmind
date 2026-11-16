@@ -1,0 +1,782 @@
+{
+  "phase": "finished",
+  "step": 48,
+  "observation": {
+    "mission": "put the blue ball next to a box",
+    "direction": 3,
+    "cells": [
+      {
+        "forward": 4,
+        "right": -2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": -2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": -2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": -2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 4,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": -1,
+        "object": "key",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": -1,
+        "object": "ball",
+        "color": "yellow",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": -1,
+        "object": "box",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 4,
+        "right": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": 0,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 0,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 0,
+        "object": "box",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "forward": 4,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": 1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 4,
+        "right": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 3,
+        "right": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 2,
+        "right": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      }
+    ],
+    "carrying": {
+      "forward": 0,
+      "right": 0,
+      "object": "ball",
+      "color": "blue",
+      "state": ""
+    }
+  },
+  "board": {
+    "width": 13,
+    "height": 9,
+    "objects": [
+      {
+        "x": 0,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 1,
+        "object": "key",
+        "color": "yellow",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 1,
+        "object": "key",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "object": "key",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 2,
+        "object": "key",
+        "color": "green",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "object": "key",
+        "color": "blue",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 2,
+        "object": "key",
+        "color": "yellow",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 2,
+        "object": "ball",
+        "color": "yellow",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "object": "door",
+        "color": "yellow",
+        "state": "locked"
+      },
+      {
+        "x": 8,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 3,
+        "object": "box",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 3,
+        "object": "box",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "object": "door",
+        "color": "red",
+        "state": "closed"
+      },
+      {
+        "x": 6,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 4,
+        "object": "door",
+        "color": "purple",
+        "state": "open"
+      },
+      {
+        "x": 11,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 5,
+        "object": "key",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 5,
+        "object": "box",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "object": "key",
+        "color": "blue",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 5,
+        "object": "door",
+        "color": "grey",
+        "state": "closed"
+      },
+      {
+        "x": 9,
+        "y": 5,
+        "object": "key",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 6,
+        "object": "key",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "object": "ball",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 6,
+        "object": "door",
+        "color": "grey",
+        "state": "closed"
+      },
+      {
+        "x": 8,
+        "y": 6,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 6,
+        "object": "ball",
+        "color": "yellow",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 6,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 7,
+        "object": "box",
+        "color": "blue",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 7,
+        "object": "key",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      }
+    ],
+    "agent": {
+      "x": 10,
+      "y": 4,
+      "direction": 3
+    }
+  },
+  "decision": {
+    "action": 6,
+    "evidence": "f6.15",
+    "valid": true,
+    "error": null,
+    "proposed_action": 3,
+    "planning": {
+      "goal": "approach",
+      "reason": null,
+      "route": [],
+      "purpose": "other",
+      "target": null,
+      "model_call": true
+    },
+    "subgoal": "Place beside reference",
+    "moved": null,
+    "reward": 0.0,
+    "terminated": false,
+    "truncated": false,
+    "inference_seconds": 0.3077379229980579,
+    "hint": "No visible route to objective. Turn right (1) to inspect another direction.",
+    "success": false
+  },
+  "job": {
+    "id": "e10-s11009-none-B11-r0",
+    "environment": "BabyAI-SynthS5R2-v0",
+    "seed": 11009,
+    "variant": "B11",
+    "intervention": "none",
+    "replicate": 0
+  },
+  "at": "2026-11-16T18:39:07+00:00",
+  "attempt": "1794854333033975407-0"
+}

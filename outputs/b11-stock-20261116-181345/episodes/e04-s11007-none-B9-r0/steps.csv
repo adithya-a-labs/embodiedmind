@@ -1,0 +1,12 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,search_hallway,Find hallway fork,f0.10,,0.0,False,False,473,30,0.2726047079995624
+1,1,6,explore,search_hallway,Find hallway fork,f0.10,,0.0,False,False,455,30,0.26431557499927294
+2,2,2,explore,search_hallway,Find hallway fork,f0.10,True,0.0,False,False,473,30,0.31813455400151724
+3,2,2,explore,approach_matching_branch,Choose matching branch,f3.1,True,0.0,False,False,495,29,0.2968531170008646
+4,2,2,explore,approach_matching_branch,Choose matching branch,f3.1,True,0.0,False,False,492,29,0.3042467659997783
+5,2,2,explore,approach_matching_branch,Choose matching branch,f3.1,True,0.0,False,False,491,29,0.34979290299997956
+6,2,2,explore,approach_matching_branch,Choose matching branch,f3.1,True,0.0,False,False,489,29,0.2836817240004166
+7,2,2,explore,approach_matching_branch,Choose matching branch,f3.1,True,0.0,False,False,487,29,0.2904473170001438
+8,2,2,explore,approach_matching_branch,Choose matching branch,f3.1,True,0.0,False,False,485,29,0.2718327299990051
+9,0,6,explore,approach_matching_branch,Choose matching branch,f3.1,,0.0,False,False,478,29,0.2893291969994607
+10,2,2,explore,approach_matching_branch,Choose matching branch,f3.1,True,0.9931487889273356,True,False,487,29,0.30780314299954625

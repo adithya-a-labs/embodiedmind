@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,visible,,0.0,False,False,369,14,0.17238957399968058
+1,2,2,primitive,,,"f0.5 purple door closed (-1, 1) observed at step 0",True,0.0,False,False,478,28,0.28078132800146705
+2,1,1,primitive,,,"f0.5 purple door closed (-2, 1) observed at step 0",,0.0,False,False,509,28,0.2860613099983311
+3,0,0,primitive,,,f1.1,,0.0,False,False,455,17,0.250218479999603
+4,1,1,primitive,,,"f0.5 purple door closed (-2, 1) observed at step 3",,0.0,False,False,525,28,0.30283333599800244
+5,0,0,primitive,,,f1.1,,0.0,False,False,455,17,0.23266575199886574
+6,1,1,primitive,,,"f0.5 purple door closed (-2, 1) observed at step 5",,0.0,False,False,525,28,0.30189827399954083
+7,1,1,primitive,,,visible,,0.0,False,False,455,14,0.20722980400023516
+8,2,2,primitive,,,f0.0,True,0.0,False,False,466,14,0.2465348069999891
+9,2,2,primitive,,,f0.2,True,0.0,False,False,502,14,0.19973911099805264
+10,2,2,primitive,,,"f0.2 grey door closed (-2, -1) observed at step 8",True,0.0,False,False,553,28,0.32144309500290547
+11,2,2,primitive,,,"f0.5 purple door closed (-1, -1) observed at step 10",True,0.0,False,False,591,29,0.3203949900016596
+12,1,1,primitive,,,"f0.5 purple door closed (-2, -1) observed at step 10",,0.0,False,False,642,29,0.31516304400065565
+13,0,0,primitive,,,visible,,0.0,False,False,568,14,0.21011219700085348
+14,1,1,primitive,,,"f0.5 purple door closed (-2, -1) observed at step 10",,0.0,False,False,644,29,0.31246056399686495
+15,0,0,primitive,,,visible,,0.0,False,False,568,14,0.20430544600094436
+16,1,1,primitive,,,visible,,0.0,False,False,644,11,0.1673404670000309
+17,0,0,primitive,,,visible,,0.0,False,False,568,14,0.2042175460010185
+18,1,1,primitive,,,"f0.5 purple door closed (-2, -1) observed at step 10",,0.0,False,False,644,29,0.3069577729984303
+19,0,0,primitive,,,visible,,0.0,False,False,568,14,0.21945830899858265
+20,1,1,primitive,,,"f0.2 grey door closed (-4, -1) observed at step 8",,0.0,False,False,634,28,0.3551335000011022
+21,0,0,primitive,,,visible,,0.0,False,False,576,14,0.21920371300075203
+22,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.34138416599671473
+23,0,0,primitive,,,visible,,0.0,False,False,580,14,0.21125123599995277
+24,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.3575183620014286
+25,0,0,primitive,,,visible,,0.0,False,False,580,14,0.21988171100019827
+26,1,1,primitive,,,"f0.1 grey wall (-5, 0) observed at step 7",,0.0,False,False,638,27,0.2933569050001097
+27,0,0,primitive,,,visible,,0.0,False,False,580,14,0.22150748199783266
+28,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.3440403940003307
+29,0,0,primitive,,,visible,,0.0,False,False,580,14,0.23224467399995774
+30,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.382823953001207
+31,0,0,primitive,,,visible,,0.0,False,False,580,14,0.21308040700023412
+32,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.33238839600016945
+33,0,0,primitive,,,visible,,0.0,False,False,580,14,0.2145417070023541
+34,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.340395389997866
+35,0,0,primitive,,,visible,,0.0,False,False,580,14,0.20771596199847409
+36,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.3403473939979449
+37,0,0,primitive,,,visible,,0.0,False,False,580,14,0.22041483400244033
+38,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.33990808500311687
+39,0,0,primitive,,,visible,,0.0,False,False,580,14,0.21365947899903404
+40,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.3511212550001801
+41,0,0,primitive,,,visible,,0.0,False,False,580,14,0.20872880200113286
+42,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.33743497199975536
+43,0,0,primitive,,,visible,,0.0,False,False,580,14,0.26623213199854945
+44,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.3928493019993766
+45,0,0,primitive,,,visible,,0.0,False,False,580,14,0.2179633659980027
+46,1,1,primitive,,,"f0.5 purple door closed (-2, -1) STALE; reobserve at step 10",,0.0,False,False,638,33,0.34125313999902573
+47,0,0,primitive,,,visible,,0.0,False,False,580,14,0.21923502400022699

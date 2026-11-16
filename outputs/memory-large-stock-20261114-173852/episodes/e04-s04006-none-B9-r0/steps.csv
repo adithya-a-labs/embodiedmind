@@ -1,0 +1,8 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,6,approach,inspect_toward_start_room,Find start-room cue,explore,,0.0,False,False,450,28,0.3780522649976774
+1,1,2,explore,approach_matching_branch,Choose matching branch,f0.3,,0.0,False,False,484,29,0.3126494889947935
+2,2,2,explore,approach_matching_branch,Choose matching branch,f0.3,True,0.0,False,False,487,29,0.3342509270005394
+3,2,2,explore,approach_matching_branch,Choose matching branch,f0.3,True,0.0,False,False,486,29,0.3386522810033057
+4,2,2,explore,approach_matching_branch,Choose matching branch,f0.3,True,0.0,False,False,484,29,0.29025103699677857
+5,0,6,explore,approach_matching_branch,Choose matching branch,f0.3,,0.0,False,False,477,29,0.30958259800536325
+6,2,2,explore,approach_matching_branch,Choose matching branch,f0.3,True,0.9956401384083045,True,False,486,29,0.327256122000108

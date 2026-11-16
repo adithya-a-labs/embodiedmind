@@ -1,0 +1,9 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,visible,,0.0,False,False,340,14,0.17213733100106765
+1,2,2,primitive,,,"f0.6 empty (-1, 0) observed at step 0",True,0.0,False,False,459,26,0.31292762200064317
+2,0,0,primitive,,,"f0.4 grey wall (-1, 1) observed at step 1",,0.0,False,False,523,30,0.34405829699971946
+3,2,2,primitive,,,f0.2,True,0.0,False,False,480,14,0.17499464100001205
+4,2,2,primitive,,,"f0.3 empty (-1, 0) observed at step 1",True,0.0,False,False,567,26,0.2518662429993128
+5,0,0,primitive,,,f1.7,,0.0,False,False,634,14,0.16265968900006555
+6,2,2,primitive,,,f1.0,True,0.0,False,False,462,15,0.19549390700012736
+7,2,2,primitive,,,"f1.0 grey wall (-2, 1) observed at step 5",True,0.8,True,False,567,27,0.2931779459995596

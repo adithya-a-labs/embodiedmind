@@ -1,0 +1,23 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,Find mission target,,,0.0,False,False,,,0.0
+1,0,0,primitive,,Find mission target,,,0.0,False,False,,,0.0
+2,0,6,explore,,Find mission target,f0.34,,0.0,False,False,429,30,0.3409683530044276
+3,2,2,explore,,Find mission target,f0.34,True,0.0,False,False,420,30,0.3292236229972332
+4,2,0,explore,forward_burst,Find mission target,f0.34,True,0.0,False,False,420,30,0.33447007500217296
+5,2,2,explore,forward_burst,Find mission target,f0.34,True,0.0,False,False,420,30,0.315350593002222
+6,2,2,explore,forward_burst,Find mission target,f0.34,True,0.0,False,False,421,30,0.3214425059995847
+7,2,2,explore,forward_burst,Find mission target,f0.34,True,0.0,False,False,415,30,0.3461462830018718
+8,2,2,explore,forward_burst,Find mission target,f0.34,True,0.0,False,False,416,30,0.3815078760017059
+9,2,6,approach,forward_burst,Find mission target,f0.34,True,0.0,False,False,417,30,0.3633650029951241
+10,0,0,approach,,Find mission target,f0.34,,0.0,False,False,413,30,0.37090080000052694
+11,2,4,approach,,Find mission target,f0.34,True,0.0,False,False,427,30,0.3870880260001286
+12,2,4,approach,,Find mission target,f0.34,True,0.0,False,False,426,30,0.4151805700021214
+13,2,4,approach,,Find mission target,f0.34,True,0.0,False,False,425,30,0.3507333989982726
+14,2,4,approach,,Find mission target,f0.34,True,0.0,False,False,424,30,0.34886519499559654
+15,2,4,approach,,Find mission target,f0.34,True,0.0,False,False,423,30,0.39058336000016425
+16,2,4,approach,,Find mission target,f0.34,True,0.0,False,False,422,30,0.35451675199874444
+17,0,0,approach,,Find mission target,f0.34,,0.0,False,False,416,30,0.37710419799986994
+18,2,4,approach,,Find mission target,f0.34,True,0.0,False,False,426,30,0.382697349996306
+19,2,4,approach,,Find mission target,f0.34,True,0.0,False,False,426,30,0.37573917099507526
+20,2,4,approach,,Find mission target,f0.34,True,0.0,False,False,426,30,0.3814965659985319
+21,2,4,approach,,Find mission target,f0.34,True,0.912,True,False,435,30,0.4006053399934899

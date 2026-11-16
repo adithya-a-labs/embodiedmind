@@ -1,0 +1,24 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the purple key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the purple key,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,425,27,0.2823796509992462
+3,0,2,explore,choose_frontier_route,go to the purple key,o1,,0.0,False,False,451,27,0.2729980140002226
+4,2,2,explore,choose_frontier_route,go to the purple key,o1,True,0.0,False,False,468,27,0.307727917000193
+5,2,0,explore,choose_frontier_route,go to the purple key,o4,True,0.0,False,False,487,27,0.32755757100039773
+6,2,2,explore,choose_frontier_route,go to the purple key,o5,True,0.0,False,False,507,27,0.3322420719996444
+7,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,527,27,0.2917067529997439
+8,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,540,27,0.2667267480001101
+9,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,557,27,0.29123445999994146
+10,0,0,explore,choose_frontier_route,go to the purple key,o0,,0.0,False,False,569,27,0.3354188650000651
+11,2,2,explore,continue_frontier_route,go to the purple key,o0,True,0.0,False,False,601,27,0.3604947039993931
+12,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,619,27,0.2651668600001358
+13,2,2,explore,choose_frontier_route,go to the purple key,o12,True,0.0,False,False,636,28,0.29921904699949664
+14,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,653,27,0.28743437899993296
+15,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,670,27,0.35382521399969846
+16,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,687,27,0.3159301730001971
+17,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,704,27,0.3060701060003339
+18,0,0,explore,choose_frontier_route,go to the purple key,o13,,0.0,False,False,693,28,0.38398482899992814
+19,2,2,approach,route_to_mission_target,go to the purple key,o3,True,0.0,False,False,702,27,0.38307484699998895
+20,2,2,approach,route_to_mission_target,go to the purple key,visible,True,0.0,False,False,697,26,0.409959937000167
+21,2,4,explore,route_to_mission_target,go to the purple key,o7,True,0.0,False,False,701,27,0.38173331699999835
+22,2,2,approach,route_to_mission_target,go to the purple key,o21,True,0.908,True,False,710,28,0.4009865099997114

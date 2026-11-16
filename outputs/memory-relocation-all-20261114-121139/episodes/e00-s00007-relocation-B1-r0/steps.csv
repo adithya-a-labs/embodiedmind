@@ -1,0 +1,25 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,o0,True,0.0,False,False,382,15,0.18541824099520454
+3,2,2,primitive,,,o2,True,0.0,False,False,408,12,0.18513762800284894
+4,2,2,primitive,,,o3,True,0.0,False,False,435,12,0.16379949099791702
+5,2,2,primitive,,,o4,True,0.0,False,False,453,12,0.19388015400181757
+6,2,2,primitive,,,o5,True,0.0,False,False,473,12,0.16340786599903367
+7,2,2,primitive,,,o4,True,0.0,False,False,486,12,0.1759510020056041
+8,0,0,primitive,,,o7,,0.0,False,False,498,12,0.18153779999556718
+9,2,2,primitive,,,o0,True,0.0,False,False,528,12,0.20852902500337223
+10,2,2,primitive,,,o0,True,0.0,False,False,543,12,0.19701533899933565
+11,2,2,primitive,,,o0,True,0.0,False,False,560,12,0.20687442300550174
+12,2,2,primitive,,,o4,True,0.0,False,False,577,12,0.2032699949995731
+13,2,2,primitive,,,o4,True,0.0,False,False,594,12,0.1974570649981615
+14,2,2,primitive,,,o4,True,0.0,False,False,611,12,0.21156349100056104
+15,5,5,primitive,,,o0,,0.0,False,False,623,12,0.22729822900146246
+16,0,0,primitive,,,o1,,0.0,False,False,641,13,0.2812865099986084
+17,2,2,primitive,,,"o4 step 4 prev=2 facing=1: purple key@0,-3; green box@2,1",True,0.0,False,False,654,35,0.4385102320011356
+18,2,2,primitive,,,o12 step 12 prev=2 facing=0: no named objects,True,0.0,False,False,656,27,0.36966657800076064
+19,2,2,primitive,,,o4,True,0.0,False,False,651,12,0.2891445499990368
+20,2,2,primitive,,,"o19 step 19 prev=2 facing=3: purple key@2,-3",True,0.0,False,False,646,30,0.436904695998237
+21,2,2,primitive,,,"o20 step 20 prev=2 facing=3: purple key@1,-3",True,0.0,False,False,661,30,0.37791328000457725
+22,2,2,primitive,,,"o21 step 21 prev=2 facing=3: yellow key@6,-1",True,0.0,False,False,642,30,0.47012862999690697
+23,2,2,primitive,,,"o22 step 22 prev=2 facing=3: yellow key@5,-1",True,0.0,False,False,644,30,0.34640391399443615

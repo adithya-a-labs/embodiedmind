@@ -1,0 +1,12 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,explore,route_to_subgoal,Find and pick up source,f0.22,True,0.0,False,False,463,30,0.3114607280003838
+1,2,2,explore,route_to_subgoal,Find and pick up source,f0.22,True,0.0,False,False,455,30,0.3336857600006624
+2,2,2,explore,route_to_subgoal,Find and pick up source,f0.22,True,0.0,False,False,454,30,0.30604202700124006
+3,3,1,explore,attempt_subgoal_interaction,Find and pick up source,f0.22,,0.0,False,False,447,30,0.34913795800093794
+4,0,6,approach,explore_for_subgoal,Place beside reference,f0.22,,0.0,False,False,432,30,0.35448693599755643
+5,0,0,explore,explore_for_subgoal,Place beside reference,f0.22,,0.0,False,False,420,30,0.3192544920020737
+6,2,2,explore,route_to_placement,Place beside reference,f6.15,True,0.0,False,False,491,31,0.37817725100103416
+7,2,2,explore,route_to_placement,Place beside reference,f6.15,True,0.0,False,False,481,31,0.3953002859998378
+8,2,2,explore,route_to_placement,Place beside reference,f6.15,True,0.0,False,False,479,31,0.36272120399735286
+9,2,2,explore,route_to_placement,Place beside reference,f6.15,True,0.0,False,False,476,31,0.33543988699966576
+10,4,2,explore,attempt_verified_placement,Place beside reference,f0.22,,0.9505,True,False,468,31,0.3254680840000219

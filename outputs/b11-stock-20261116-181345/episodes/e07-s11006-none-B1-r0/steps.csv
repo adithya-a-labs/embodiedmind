@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,visible,,0.0,False,False,335,14,0.1556082349998178
+1,2,2,primitive,,,o0,True,0.0,False,False,366,12,0.13449357400168083
+2,0,0,primitive,,,o1,,0.0,False,False,386,15,0.16447932599839987
+3,2,2,primitive,,,o2,True,0.0,False,False,428,12,0.15887452399692847
+4,2,2,primitive,,,o3,True,0.0,False,False,452,12,0.1835338140008389
+5,2,2,primitive,,,o4,True,0.0,False,False,478,12,0.1324374549985805
+6,5,5,primitive,,,o5,,0.0,False,False,498,15,0.18583982599739102
+7,6,6,primitive,,,o6,,0.0,False,False,525,13,0.15216225999756716
+8,2,2,primitive,,,"o7 step 7 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",False,0.0,False,False,552,36,0.3135888510005316
+9,2,2,primitive,,,o8,False,0.0,False,False,579,12,0.1627170739993744
+10,2,2,primitive,,,o9,False,0.0,False,False,606,12,0.1464550259988755
+11,2,2,primitive,,,"o10 step 10 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",False,0.0,False,False,635,38,0.38325562099998933
+12,5,5,primitive,,,"o1 step 1 prev=0 facing=1: purple key@2,0; purple ball@3,-3",,0.0,False,False,648,35,0.3659186979966762
+13,2,2,primitive,,,o1,False,0.0,False,False,651,12,0.24296328399941558
+14,2,2,primitive,,,o12,False,0.0,False,False,654,13,0.1851279059992521
+15,5,5,primitive,,,"o10 step 10 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,649,38,0.39763613900140626
+16,5,5,primitive,,,"o14 step 14 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,651,38,0.42317481599820894
+17,5,5,primitive,,,"o15 step 15 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,653,39,0.4052940869987651
+18,5,5,primitive,,,"o18 step 18 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,655,39,0.3716187469981378
+19,5,5,primitive,,,"o18 step 18 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,657,39,0.4402574880004977
+20,5,5,primitive,,,"o10 step 10 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,659,39,0.4359449229996244
+21,2,2,primitive,,,"o10 step 10 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",False,0.0,False,False,661,38,0.42734190199917066
+22,5,5,primitive,,,o20,,0.0,False,False,661,14,0.31993168299959507
+23,5,5,primitive,,,"o12 step 12 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.48062420600035693
+24,5,5,primitive,,,"o22 step 22 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.3886964800003625
+25,5,5,primitive,,,"o14 step 14 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.40400663299806183
+26,6,6,primitive,,,"o20 step 20 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.4165855120008928
+27,5,5,primitive,,,"o27 step 27 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.4201641620020382
+28,5,5,primitive,,,"o28 step 28 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.3929283800025587
+29,5,5,primitive,,,"o20 step 20 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.40471143500326434
+30,5,5,primitive,,,"o20 step 20 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.3877497690009477
+31,5,5,primitive,,,"o20 step 20 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.40021969199733576
+32,5,5,primitive,,,"o21 step 21 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.41389610699843615
+33,2,2,primitive,,,o22,False,0.0,False,False,661,13,0.23215444100060267
+34,5,5,primitive,,,"o23 step 23 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.396048193997558
+35,5,5,primitive,,,"o30 step 30 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.38889542299875757
+36,5,5,primitive,,,"o25 step 25 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.40062563700121245
+37,5,5,primitive,,,"o30 step 30 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.3958079980002367
+38,5,5,primitive,,,"o38 step 38 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.39243006000106107
+39,5,5,primitive,,,"o30 step 30 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.39534309999726247
+40,2,2,primitive,,,"o30 step 30 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",False,0.0,False,False,661,38,0.46223552399897017
+41,2,2,primitive,,,o30,False,0.0,False,False,661,13,0.2782830699979968
+42,5,5,primitive,,,"o40 step 40 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.4686688839974522
+43,5,5,primitive,,,"o32 step 32 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.3866287429991644
+44,5,5,primitive,,,"o34 step 34 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.3912763400003314
+45,6,6,primitive,,,"o34 step 34 prev=2 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.39141871299943887
+46,5,5,primitive,,,"o40 step 40 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.38181095300024026
+47,5,5,primitive,,,"o45 step 45 prev=5 facing=0: purple ball@0,2; purple door locked@1,2",,0.0,False,False,661,39,0.3965659940004116

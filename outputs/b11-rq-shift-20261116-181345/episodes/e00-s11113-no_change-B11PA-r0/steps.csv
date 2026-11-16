@@ -1,0 +1,12 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the purple ball,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the purple ball,,,0.0,False,False,,,0.0
+2,0,4,approach,route_to_mission_target,go to the purple ball,f0.34,,0.0,False,False,431,30,0.32895290700025726
+3,2,2,explore,route_to_mission_target,go to the purple ball,f0.34,True,0.0,False,False,422,30,0.307869557000231
+4,2,0,explore,route_to_mission_target,go to the purple ball,f0.34,True,0.0,False,False,422,30,0.2901496109998334
+5,0,2,explore,route_to_mission_target,go to the purple ball,f0.34,,0.0,False,False,422,30,0.2916331810001793
+6,2,2,approach,route_to_mission_target,go to the purple ball,f0.34,True,0.0,False,False,413,30,0.31248433799964914
+7,2,2,approach,route_to_mission_target,go to the purple ball,f0.34,True,0.0,False,False,413,30,0.31993895699997665
+8,2,2,approach,route_to_mission_target,go to the purple ball,f0.34,True,0.0,False,False,414,30,0.30863486399994144
+9,2,2,approach,route_to_mission_target,go to the purple ball,f0.34,True,0.0,False,False,415,30,0.29917118599996684
+10,2,4,approach,route_to_mission_target,go to the purple ball,f0.34,True,0.956,True,False,417,30,0.31492577199969674

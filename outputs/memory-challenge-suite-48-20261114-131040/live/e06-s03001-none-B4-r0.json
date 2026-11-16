@@ -1,0 +1,689 @@
+{
+  "phase": "finished",
+  "step": 48,
+  "observation": {
+    "mission": "pick up the purple key",
+    "direction": 1,
+    "cells": [
+      {
+        "forward": 1,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": -1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 0,
+        "object": "door",
+        "color": "red",
+        "state": "closed"
+      },
+      {
+        "forward": 1,
+        "right": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": 1,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": 2,
+        "object": "empty",
+        "color": "",
+        "state": ""
+      },
+      {
+        "forward": 1,
+        "right": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "forward": 0,
+        "right": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      }
+    ],
+    "carrying": null
+  },
+  "board": {
+    "width": 13,
+    "height": 9,
+    "objects": [
+      {
+        "x": 0,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 0,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 1,
+        "object": "box",
+        "color": "yellow",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 1,
+        "object": "box",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 1,
+        "object": "key",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 1,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 2,
+        "object": "key",
+        "color": "blue",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 2,
+        "object": "key",
+        "color": "green",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 2,
+        "object": "key",
+        "color": "blue",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 2,
+        "object": "door",
+        "color": "yellow",
+        "state": "closed"
+      },
+      {
+        "x": 9,
+        "y": 2,
+        "object": "key",
+        "color": "blue",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 2,
+        "object": "box",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 2,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 3,
+        "object": "ball",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 3,
+        "object": "key",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 3,
+        "object": "box",
+        "color": "red",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 3,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "object": "door",
+        "color": "red",
+        "state": "closed"
+      },
+      {
+        "x": 4,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 4,
+        "object": "door",
+        "color": "green",
+        "state": "closed"
+      },
+      {
+        "x": 8,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 4,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "object": "key",
+        "color": "blue",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 5,
+        "object": "key",
+        "color": "green",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 5,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 6,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 6,
+        "object": "box",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 6,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 6,
+        "object": "door",
+        "color": "green",
+        "state": "locked"
+      },
+      {
+        "x": 10,
+        "y": 6,
+        "object": "box",
+        "color": "green",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 6,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 7,
+        "object": "door",
+        "color": "grey",
+        "state": "closed"
+      },
+      {
+        "x": 5,
+        "y": 7,
+        "object": "key",
+        "color": "purple",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 7,
+        "object": "box",
+        "color": "green",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 7,
+        "object": "ball",
+        "color": "yellow",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 7,
+        "object": "key",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 7,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 0,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 1,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 2,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 3,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 4,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 5,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 6,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 7,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 8,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 9,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 10,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 11,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      },
+      {
+        "x": 12,
+        "y": 8,
+        "object": "wall",
+        "color": "grey",
+        "state": ""
+      }
+    ],
+    "agent": {
+      "x": 3,
+      "y": 3,
+      "direction": 1
+    }
+  },
+  "decision": {
+    "action": 1,
+    "evidence": "visible0",
+    "valid": true,
+    "error": null,
+    "proposed_action": 1,
+    "planning": {
+      "goal": "primitive",
+      "reason": null,
+      "route": []
+    },
+    "subgoal": "Find mission target",
+    "moved": null,
+    "reward": 0.0,
+    "terminated": false,
+    "truncated": false,
+    "inference_seconds": 0.14777561299706576,
+    "hint": "No visible route to objective. Turn right (1) to inspect another direction.",
+    "success": false
+  },
+  "job": {
+    "id": "e06-s03001-none-B4-r0",
+    "environment": "BabyAI-SynthS5R2-v0",
+    "seed": 3001,
+    "variant": "B4",
+    "intervention": "none",
+    "replicate": 0
+  },
+  "at": "2026-11-14T08:34:20+00:00",
+  "attempt": "1794645251044713458-0"
+}

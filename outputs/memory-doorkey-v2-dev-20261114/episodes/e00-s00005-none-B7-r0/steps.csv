@@ -1,0 +1,16 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,6,approach,,Find key,f0.9,True,0.0,False,False,434,29,0.34272516800047015
+1,2,6,approach,,Find key,f0.9,True,0.0,False,False,435,29,0.2944620620000933
+2,0,3,approach,,Find key,f0.9,,0.0,False,False,435,29,0.29303600499770255
+3,3,6,approach,,Find key,f0.9,,0.0,False,False,453,29,0.32679130299948156
+4,2,6,approach,,Find and cross door,f3.3,True,0.0,False,False,450,29,0.3074926539993612
+5,0,6,approach,,Find and cross door,f3.3,,0.0,False,False,448,29,0.31488892500055954
+6,2,6,approach,,Find and cross door,f3.3,True,0.0,False,False,440,29,0.3012916640000185
+7,2,6,approach,,Find and cross door,f3.3,True,0.0,False,False,441,29,0.3134900929981086
+8,5,6,approach,,Find and cross door,f3.3,,0.0,False,False,442,29,0.29441590799979167
+9,2,6,approach,,Find and cross door,f9.18,True,0.0,False,False,449,30,0.3105230239998491
+10,2,6,approach,,Reach goal,f9.25,True,0.0,False,False,436,30,0.336308291000023
+11,2,6,approach,,Reach goal,f9.25,True,0.0,False,False,435,30,0.313852315000986
+12,1,6,approach,,Reach goal,f9.25,,0.0,False,False,435,30,0.3325157079998462
+13,2,6,approach,,Reach goal,f9.25,True,0.0,False,False,449,30,0.3458428070007358
+14,2,6,approach,,Reach goal,f9.25,True,0.97890625,True,False,439,30,0.32790326299800654

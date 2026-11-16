@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,explore,progress_aware_explore,Find key,visible,,0.0,False,False,404,26,0.31442429699927743
+1,2,6,approach,,Find key,f1.4,True,0.0,False,False,427,29,0.36365520100116555
+2,0,6,approach,,Find key,f1.4,,0.0,False,False,425,29,0.2954394129992579
+3,2,6,approach,,Find key,f1.4,True,0.0,False,False,450,29,0.3412646879987733
+4,3,4,approach,,Find key,f1.4,,0.0,False,False,447,29,0.3444432180003787
+5,2,6,approach,,Find and cross door,f3.21,True,0.0,False,False,444,30,0.3499040059996332
+6,2,6,approach,,Find and cross door,f3.21,True,0.0,False,False,441,30,0.35603136499958055
+7,2,6,approach,,Find and cross door,f3.21,True,0.0,False,False,438,30,0.3691805620001105
+8,2,6,approach,,Find and cross door,f3.21,True,0.0,False,False,435,30,0.32682439099880867
+9,1,6,approach,,Find and cross door,f3.21,,0.0,False,False,432,30,0.35307644400018035
+10,1,4,verify,verify_target_visible,Find and cross door,f3.21,,0.0,False,False,431,29,0.3516355530009605
+11,0,6,approach,,Find and cross door,f3.21,,0.0,False,False,441,30,0.32945429800020065
+12,1,4,verify,verify_target_visible,Find and cross door,f3.21,,0.0,False,False,431,29,0.3496041250000417
+13,0,6,approach,,Find and cross door,f3.21,,0.0,False,False,441,30,0.34605767199900583
+14,0,4,verify,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,431,29,0.40056203399944934
+15,1,6,approach,,Find and cross door,f3.21,,0.0,False,False,433,30,0.3603861230003531
+16,0,4,verify,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,431,29,0.3127847340001608
+17,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,433,30,0.3807642890005809
+18,0,6,approach,,Find and cross door,f3.21,,0.0,False,False,434,30,0.40979055400021025
+19,1,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,441,30,0.3441763569990144
+20,0,6,approach,,Find and cross door,f3.21,,0.0,False,False,434,30,0.37019162599972333
+21,1,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,441,30,0.3936075970013917
+22,1,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,434,30,0.3999028130001534
+23,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,433,30,0.32564096900023287
+24,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,434,30,0.3289599060008186
+25,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,441,30,0.3234331019993988
+26,0,4,verify,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,431,29,0.34372778900069534
+27,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,433,30,0.3399439609984256
+28,0,3,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,434,30,0.3617553029998817
+29,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,441,30,0.3497020849990804
+30,0,4,verify,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,431,29,0.33089647400083777
+31,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,433,30,0.43762258400056453
+32,0,3,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,434,30,0.34671143000014126
+33,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,441,30,0.38647579699863854
+34,0,4,verify,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,431,29,0.4136717109995516
+35,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,433,30,0.35444649399869377
+36,0,3,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,434,30,0.3476802259992837
+37,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,441,30,0.34503407000011066
+38,0,4,verify,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,431,29,0.3850342530004127
+39,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,433,30,0.33147074400039855
+40,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,434,30,0.3353330640002241
+41,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,441,30,0.4271605100002489
+42,0,4,verify,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,431,29,0.3640326959994127
+43,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,433,30,0.3729707620004774
+44,0,4,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,434,30,0.32483194500127865
+45,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,441,30,0.38565024899980926
+46,0,4,verify,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,431,29,0.3290570730005129
+47,0,6,approach,progress_aware_explore,Find and cross door,f3.21,,0.0,False,False,433,30,0.37129374899996037

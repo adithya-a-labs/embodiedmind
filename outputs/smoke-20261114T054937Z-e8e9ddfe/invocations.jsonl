@@ -1,0 +1,2 @@
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/smoke.yaml"],"started":"2026-11-14T05:49:37+00:00"}
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/smoke.yaml"],"started":"2026-11-14T05:49:37+00:00","finished":"2026-11-14T05:49:42+00:00","status":"complete"}

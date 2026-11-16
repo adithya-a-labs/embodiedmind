@@ -1,0 +1,26 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,f0.26,True,0.0,False,False,661,15,0.24896225900010904
+3,2,2,primitive,,,f0.20,True,0.0,False,False,661,15,0.22654060399872833
+4,2,2,primitive,,,"f0.27 blue ball (-8, -1) observed at step 0",True,0.0,False,False,661,28,0.3492017879980267
+5,2,2,primitive,,,"f0.27 blue ball (-9, -1) observed at step 0",True,0.0,False,False,655,28,0.38914307600134634
+6,2,2,primitive,,,f0.27,True,0.0,False,False,652,15,0.25984122500085505
+7,2,2,primitive,,,f0.27,True,0.0,False,False,647,15,0.2380686329997843
+8,0,0,primitive,,,f0.27,,0.0,False,False,643,18,0.2711845080011699
+9,2,2,primitive,,,f0.27,True,0.0,False,False,662,15,0.2652311220008414
+10,2,2,primitive,,,f0.27,True,0.0,False,False,661,15,0.20194471099966904
+11,2,2,primitive,,,f0.27,True,0.0,False,False,648,15,0.2591202700023132
+12,2,2,primitive,,,f0.27,True,0.0,False,False,647,15,0.21024442899943097
+13,2,2,primitive,,,f0.27,True,0.0,False,False,644,15,0.21717916800116654
+14,0,0,primitive,,,f0.27,,0.0,False,False,639,18,0.24344804499924066
+15,2,2,primitive,,,f0.27,True,0.0,False,False,665,15,0.21525080299761612
+16,2,2,primitive,,,f0.27,True,0.0,False,False,666,15,0.22394396000163397
+17,5,5,primitive,,,f0.27,,0.0,False,False,667,15,0.20074073399882764
+18,2,2,primitive,,,f0.27,True,0.0,False,False,667,18,0.16471724299844936
+19,2,2,primitive,,,"f0.27 blue ball (9, -4) observed at step 0",True,0.0,False,False,662,28,0.3014222800011339
+20,2,2,primitive,,,"f0.27 blue ball (8, -4) observed at step 0",True,0.0,False,False,659,28,0.30849398000282235
+21,2,2,primitive,,,f0.27,True,0.0,False,False,654,15,0.21923029600293376
+22,2,2,primitive,,,"f0.27 blue ball (6, -4) observed at step 0",True,0.0,False,False,659,28,0.2878686910007673
+23,2,2,primitive,,,f0.40,True,0.0,False,False,665,15,0.2057333609991474
+24,2,2,primitive,,,f0.27,True,0.9,True,False,665,15,0.21493738900244352

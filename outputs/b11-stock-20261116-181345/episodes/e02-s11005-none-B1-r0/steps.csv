@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,341,11,0.1430811009995523
+1,2,2,primitive,,,o0,True,0.0,False,False,356,12,0.12756872699901578
+2,0,0,primitive,,,o1,,0.0,False,False,371,15,0.1839275300008012
+3,2,2,primitive,,,o2,True,0.0,False,False,398,15,0.23542551199898298
+4,2,2,primitive,,,o3,True,0.0,False,False,417,12,0.16305263799949898
+5,0,0,primitive,,,visible,,0.0,False,False,424,14,0.16925328000070294
+6,2,2,primitive,,,o0,True,0.0,False,False,449,12,0.14745785299965064
+7,2,2,primitive,,,o0,True,0.0,False,False,464,12,0.1345936100005929
+8,2,2,primitive,,,o0,True,0.0,False,False,479,12,0.13851405099921976
+9,2,2,primitive,,,o0,True,0.0,False,False,494,12,0.1378211109986296
+10,0,0,primitive,,,o0,,0.0,False,False,504,13,0.1509148479999567
+11,2,2,primitive,,,o0,True,0.0,False,False,531,12,0.15748877499936498
+12,2,2,primitive,,,o0,True,0.0,False,False,548,12,0.15540318399871467
+13,2,2,primitive,,,o1,True,0.0,False,False,565,12,0.17417436800133146
+14,2,2,primitive,,,o0,True,0.0,False,False,582,12,0.16224966300069354
+15,0,0,primitive,,,o0,,0.0,False,False,594,13,0.18749570599902654
+16,2,2,primitive,,,o0,True,0.0,False,False,629,12,0.18493342799956736
+17,2,2,primitive,,,o1,True,0.0,False,False,633,12,0.16986375200031034
+18,2,2,primitive,,,o12 step 12 prev=2 facing=1: no named objects,True,0.0,False,False,634,27,0.3031132770011027
+19,2,2,primitive,,,o3,True,0.0,False,False,635,12,0.22267193500010762
+20,6,6,primitive,,,"o19 step 19 prev=2 facing=0: blue door closed@2,-3",,0.0,False,False,631,32,0.3507251669998368
+21,6,6,primitive,,,"o20 step 20 prev=2 facing=0: blue door closed@1,-3",,0.0,False,False,633,32,0.3363005190003605
+22,0,0,primitive,,,o21,,0.0,False,False,639,16,0.24685092199979408
+23,2,2,primitive,,,"o22 step 22 prev=6 facing=0: blue door closed@1,-3",True,0.0,False,False,653,31,0.32847576799940725
+24,2,2,primitive,,,"o23 step 23 prev=0 facing=3: blue door closed@3,1",True,0.0,False,False,659,31,0.3421663399985846
+25,2,2,primitive,,,"o24 step 24 prev=2 facing=3: blue door closed@2,1",True,0.0,False,False,647,31,0.35619404799945187
+26,2,2,primitive,,,"o25 step 25 prev=2 facing=3: blue door closed@1,1",True,0.0,False,False,650,31,0.33513562500047556
+27,0,0,primitive,,,o25,,0.0,False,False,641,13,0.21148995099974854
+28,2,2,primitive,,,o26,True,0.0,False,False,650,13,0.19634865900115983
+29,2,2,primitive,,,o27,True,0.0,False,False,649,13,0.20387773500078765
+30,2,2,primitive,,,o20,True,0.0,False,False,648,13,0.2227252230004524
+31,2,2,primitive,,,o20,True,0.0,False,False,647,13,0.22226334600054543
+32,0,0,primitive,,,o30,,0.0,False,False,637,14,0.2134221329997672
+33,2,2,primitive,,,o20,True,0.0,False,False,642,13,0.1905601430007664
+34,2,2,primitive,,,"o20 step 20 prev=2 facing=0: blue door closed@1,-3",True,0.0,False,False,654,31,0.3278631030007091
+35,2,2,primitive,,,o20,True,0.0,False,False,650,13,0.19680299399988144
+36,2,2,primitive,,,o20,True,0.0,False,False,649,13,0.2122744699991017
+37,0,0,primitive,,,o21 step 21,,0.0,False,False,639,18,0.24128943499999878
+38,2,2,primitive,,,o22,True,0.0,False,False,652,13,0.19695194800078752
+39,2,2,primitive,,,"o26 step 26 prev=2 facing=3: blue door closed@0,1",True,0.0,False,False,651,31,0.341417151999849
+40,2,2,primitive,,,"o24 step 24 prev=2 facing=3: blue door closed@2,1",True,0.0,False,False,650,31,0.32652037700063374
+41,2,2,primitive,,,o26,True,0.0,False,False,649,13,0.20998751499973878
+42,2,2,primitive,,,o41,False,0.0,False,False,643,13,0.1909188699992228
+43,2,2,primitive,,,o42,False,0.0,False,False,643,13,0.18897448499956226
+44,0,0,primitive,,,o40,,0.0,False,False,647,16,0.23178751200066472
+45,2,2,primitive,,,o44,True,0.0,False,False,657,13,0.20364178699855984
+46,2,2,primitive,,,o45,True,0.0,False,False,644,13,0.19612822599992796
+47,2,2,primitive,,,"o46 step 46 prev=2 facing=3: blue door closed@2,1",True,0.0,False,False,647,31,0.301517177000278

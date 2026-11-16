@@ -1,0 +1,10 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,,True,0.0,False,False,389,11,0.318519713000569
+1,2,2,primitive,,,f0.19,True,0.0,False,False,440,15,0.22512232800363563
+2,2,2,primitive,,,f0.19,True,0.0,False,False,492,15,0.23678380199999083
+3,2,2,primitive,,,"f0.12 empty (-2, 0) observed at step 0",True,0.0,False,False,545,27,0.29905005400360096
+4,2,2,primitive,,,f0.12,True,0.0,False,False,598,15,0.29643257099814946
+5,2,2,primitive,,,f0.15,True,0.0,False,False,650,15,0.2564413939981023
+6,2,2,primitive,,,f0.8,True,0.0,False,False,684,14,0.25260848100151634
+7,0,0,primitive,,,f0.7,,0.0,False,False,675,17,0.20985491299506975
+8,2,2,primitive,,,"f1.22 green key (-2, 0) observed at step 7",True,0.0,True,False,690,28,0.2596441429996048

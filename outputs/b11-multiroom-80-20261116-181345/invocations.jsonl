@@ -1,0 +1,2 @@
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/b11-multiroom-80.yaml","--output","outputs/b11-multiroom-80-20261116-181345","--monitor","--parallel","1"],"started":"2026-11-16T19:32:45+00:00"}
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/b11-multiroom-80.yaml","--output","outputs/b11-multiroom-80-20261116-181345","--monitor","--parallel","1"],"started":"2026-11-16T19:32:45+00:00","finished":"2026-11-16T20:19:17+00:00","status":"complete"}

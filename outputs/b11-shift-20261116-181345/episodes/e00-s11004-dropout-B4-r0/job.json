@@ -1,0 +1,9 @@
+{
+  "id": "e00-s11004-dropout-B4-r0",
+  "environment": "EmbodiedMind-GoToShift-v0",
+  "seed": 11004,
+  "variant": "B4",
+  "intervention": "dropout",
+  "replicate": 0,
+  "started": "2026-11-16T19:05:51+00:00"
+}

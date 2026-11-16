@@ -1,0 +1,32 @@
+{
+  "split": "sandbox",
+  "commit": "9f69f8041572cc2c41d70178d14da4489649b091",
+  "jobs": [
+    {
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "seed": 1015,
+      "intervention": "none",
+      "variant": "B5",
+      "id": "exploration",
+      "replicate": 0
+    }
+  ],
+  "settings": {
+    "limits": {
+      "memory_bytes": 768,
+      "dynamics": {
+        "step": 2,
+        "dropout_until": 9,
+        "dropout_probability": 0.25
+      }
+    }
+  },
+  "created": "2026-11-14T06:21:27.656655+00:00",
+  "branch": null,
+  "command": "POST /api/sandbox",
+  "config_sha256": "dbf225d9aa460f02d1e00cda39d78a2b0f5d9ad0d0a61c1632181540289b5a22",
+  "python": "3.12.16",
+  "minigrid": "3.2.0",
+  "gymnasium": "1.4.0",
+  "model": []
+}

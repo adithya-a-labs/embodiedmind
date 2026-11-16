@@ -1,0 +1,25 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,Find mission target,,,0.0,False,False,,,0.0
+1,0,0,primitive,,Find mission target,,,0.0,False,False,,,0.0
+2,0,3,approach,,Find mission target,f0.34,,0.0,False,False,429,30,0.31579166400115355
+3,0,2,explore,,Find mission target,f0.34,,0.0,False,False,420,30,0.29227010699833045
+4,2,2,explore,,Find mission target,explore,True,0.0,False,False,413,27,0.2607772310002474
+5,0,2,explore,,Find mission target,explore,,0.0,False,False,413,27,0.24621158499940066
+6,2,2,explore,,Find mission target,explore,True,0.0,False,False,412,27,0.2493314189996454
+7,2,2,explore,,Find mission target,explore,True,0.0,False,False,412,27,0.2391113410012622
+8,2,2,explore,,Find mission target,explore,True,0.0,False,False,412,27,0.2411185540004226
+9,2,2,explore,,Find mission target,explore,True,0.0,False,False,406,27,0.28740536800250993
+10,1,2,explore,,Find mission target,explore,,0.0,False,False,407,27,0.26700779300153954
+11,0,0,explore,,Find mission target,explore,,0.0,False,False,412,27,0.2993214189991704
+12,0,2,explore,,Find mission target,explore,,0.0,False,False,407,27,0.27008352800112334
+13,2,2,explore,,Find mission target,explore,True,0.0,False,False,412,27,0.26588468400223064
+14,2,2,explore,,Find mission target,explore,True,0.0,False,False,412,27,0.261033093000151
+15,2,2,explore,,Find mission target,explore,True,0.0,False,False,412,27,0.24236778300110018
+16,2,2,explore,,Find mission target,explore,True,0.0,False,False,413,27,0.2686230979998072
+17,1,2,explore,,Find mission target,explore,,0.0,False,False,414,27,0.2582645179973042
+18,0,2,explore,,Find mission target,explore,,0.0,False,False,407,27,0.25787000299897045
+19,0,2,explore,,Find mission target,explore,,0.0,False,False,414,27,0.26099305900061154
+20,2,2,explore,,Find mission target,explore,True,0.0,False,False,412,27,0.27006532400264405
+21,2,2,explore,,Find mission target,explore,True,0.0,False,False,421,27,0.26081584400162683
+22,2,2,explore,,Find mission target,explore,True,0.0,False,False,421,27,0.24484693399790558
+23,2,2,explore,,Find mission target,explore,True,0.0,False,False,421,27,0.31323299600262544

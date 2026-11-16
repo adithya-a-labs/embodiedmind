@@ -1,0 +1,9 @@
+{
+  "id": "e00-s11130-dropout-B11T-r0",
+  "environment": "EmbodiedMind-GoToShift-v0",
+  "seed": 11130,
+  "variant": "B11T",
+  "intervention": "dropout",
+  "replicate": 0,
+  "started": "2026-11-16T13:26:09+00:00"
+}

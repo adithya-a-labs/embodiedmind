@@ -1,0 +1,18 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,explore,choose_frontier_route,Find matching key,explore,,0.0,False,False,403,27,0.2883733669987123
+1,2,4,approach,route_to_mission_target,Find matching key,f1.9,True,0.0,False,False,428,29,0.27982487700137426
+2,2,4,approach,route_to_mission_target,Find matching key,f1.9,True,0.0,False,False,427,29,0.27272044500023185
+3,0,6,explore,route_to_mission_target,Find matching key,f1.9,,0.0,False,False,425,29,0.2825601099993946
+4,3,4,approach,verified_pickup_precondition,Find matching key,f1.9,,0.0,False,False,427,29,0.3341120770000998
+5,0,2,explore,route_to_mission_target,Unlock matching door,f0.14,,0.0,False,False,433,30,0.31139817999974184
+6,2,4,approach,route_to_mission_target,Unlock matching door,f0.14,True,0.0,False,False,433,30,0.3662959109988151
+7,2,4,approach,route_to_mission_target,Unlock matching door,f0.14,True,0.0,False,False,432,30,0.3513440269998682
+8,2,4,approach,route_to_mission_target,Unlock matching door,f0.14,True,0.0,False,False,431,30,0.3355313810006919
+9,2,4,approach,route_to_mission_target,Unlock matching door,f0.14,True,0.0,False,False,430,30,0.3876418609997927
+10,0,4,approach,route_to_mission_target,Unlock matching door,f0.14,,0.0,False,False,430,30,0.3200317190003261
+11,2,4,approach,route_to_mission_target,Unlock matching door,f0.14,True,0.0,False,False,430,30,0.31505418400047347
+12,5,4,approach,verified_toggle_precondition,Unlock matching door,f0.14,,0.0,False,False,430,30,0.33005283800048346
+13,2,2,approach,route_to_mission_target,Reach goal beyond the door,f13.14,True,0.0,False,False,443,31,0.3109148479998112
+14,2,6,explore,route_to_mission_target,Reach goal beyond the door,f13.16,True,0.0,False,False,434,31,0.29963218299963046
+15,1,6,explore,route_to_mission_target,Reach goal beyond the door,f13.16,,0.0,False,False,432,31,0.3061829630005377
+16,2,4,approach,route_to_mission_target,Reach goal beyond the door,f13.16,True,0.97609375,True,False,442,31,0.30530904199986253

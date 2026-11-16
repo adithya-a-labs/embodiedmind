@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,6,6,primitive,,,visible,,0.0,False,False,350,14,0.18659233599464642
+1,0,0,primitive,,,visible,,0.0,False,False,355,14,0.20177615899592638
+2,2,2,primitive,,,f0.10,True,0.0,False,False,497,15,0.1946542709993082
+3,0,0,primitive,,,f0.12,,0.0,False,False,556,18,0.23743367800489068
+4,2,2,primitive,,,f0.12,True,0.0,False,False,644,15,0.4047776459992747
+5,2,2,primitive,,,"f0.4 grey wall (-2, 0) observed at step 3",True,0.0,False,False,654,27,0.32191395400150213
+6,0,0,primitive,,,visible,,0.0,False,False,640,14,0.18111736500577535
+7,0,0,primitive,,,"f2.3 grey wall (-1, 1) observed at step 6",,0.0,False,False,663,30,0.6177224320053938
+8,2,2,primitive,,,"f7.10 grey wall (1, 4) observed at step 7",True,0.0,False,False,660,28,0.425229328997375
+9,2,2,primitive,,,"f2.8 red key (-1, -2) observed at step 8",True,0.0,False,False,644,27,0.42199429699394386
+10,2,2,primitive,,,"f4.6 grey key (-1, 2) observed at step 9",False,0.0,False,False,632,27,0.8506174130016007
+11,0,0,primitive,,,visible,,0.0,False,False,632,14,0.5242029779983568
+12,0,0,primitive,,,visible,,0.0,False,False,653,14,0.4412441940003191
+13,2,2,primitive,,,visible,True,0.0,False,False,675,11,0.17221840199636063
+14,2,2,primitive,,,"f0.4 grey wall (-2, 0) observed at step 12",True,0.0,False,False,667,28,0.37182111099536996
+15,2,2,primitive,,,"f4.6 grey key (-1, -2) observed at step 14",False,0.0,False,False,652,28,0.7112199510011123
+16,2,2,primitive,,,visible,False,0.0,False,False,652,11,0.16432529499434168
+17,2,2,primitive,,,"f4.6 grey key (-1, -2) observed at step 14",False,0.0,False,False,652,28,0.20966808799857972
+18,2,2,primitive,,,"f4.6 grey key (-1, -2) observed at step 14",False,0.0,False,False,652,28,0.21206230200186837
+19,2,2,primitive,,,"f4.6 grey key (-1, -2) observed at step 14",False,0.0,False,False,652,28,0.2217360889990232
+20,2,2,primitive,,,"f4.6 grey key (-1, -2) observed at step 14",False,0.0,False,False,652,28,0.2310922459946596
+21,2,2,primitive,,,"f4.6 grey key (-1, -2) observed at step 14",False,0.0,False,False,652,28,0.2416327699975227
+22,2,2,primitive,,,"f4.6 grey key (-1, -2) observed at step 14",False,0.0,False,False,652,28,0.22396699900127714
+23,2,2,primitive,,,"f4.6 grey key (-1, -2) observed at step 14",False,0.0,False,False,652,28,0.23123551499884343
+24,2,2,primitive,,,"f4.6 grey key (-1, -2) observed at step 14",False,0.0,False,False,652,28,0.23832533200038597
+25,2,2,primitive,,,"f4.6 grey key (-1, -2) observed at step 14",False,0.0,False,False,652,28,0.2249075579966302
+26,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.3098190979944775
+27,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.24310339800285874
+28,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.25083556799654616
+29,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.26636747899465263
+30,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.27478685100504663
+31,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.24167936100275256
+32,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.27451195799949346
+33,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.24505593399953796
+34,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.25218411400419427
+35,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.27827727199473884
+36,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.2559771440064651
+37,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.26812060399970505
+38,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.2528747340038535
+39,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.2521523879986489
+40,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.2582064359958167
+41,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.23590783499821555
+42,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.24485271500452654
+43,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.259026192004967
+44,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.27082290399994235
+45,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.26637329799996223
+46,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.2500780129994382
+47,2,2,primitive,,,"f4.6 grey key (-1, -2) STALE; reobserve at step 14",False,0.0,False,False,656,32,0.2634607549989596

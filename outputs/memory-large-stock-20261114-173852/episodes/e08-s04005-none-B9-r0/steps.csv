@@ -1,0 +1,18 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,1,explore,explore_for_subgoal,Find and pick up source,explore,,0.0,False,False,400,27,0.2912528850065428
+1,0,0,explore,explore_for_subgoal,Find and pick up source,explore,,0.0,False,False,401,27,0.3967536159980227
+2,2,4,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,493,30,0.43292380700586364
+3,2,3,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,490,30,0.4307894820012734
+4,2,4,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,480,30,0.4448279959979118
+5,2,3,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,470,30,0.3895276930052205
+6,2,3,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,468,30,0.46208881799975643
+7,2,3,approach,route_to_subgoal,Find and pick up source,f2.12,True,0.0,False,False,466,30,0.44396208499529166
+8,0,3,approach,route_to_subgoal,Find and pick up source,f2.12,,0.0,False,False,460,30,0.38030797700048424
+9,3,0,explore,attempt_subgoal_interaction,Find and pick up source,f2.12,,0.0,False,False,462,30,0.37807047899696045
+10,2,6,explore,route_to_placement,Place beside reference,f2.12,True,0.0,False,False,446,31,0.39227763199596666
+11,0,0,explore,route_to_placement,Place beside reference,f2.12,,0.0,False,False,440,31,0.38638830999843776
+12,2,2,explore,route_to_placement,Place beside reference,f2.12,True,0.0,False,False,474,31,0.4146859660031623
+13,2,2,explore,route_to_placement,Place beside reference,f2.12,True,0.0,False,False,463,31,0.4645557870026096
+14,2,2,explore,route_to_placement,Place beside reference,f2.12,True,0.0,False,False,461,31,0.4910337400069693
+15,2,2,explore,route_to_placement,Place beside reference,f2.12,True,0.0,False,False,459,31,0.4259751360004884
+16,4,2,explore,attempt_verified_placement,Place beside reference,f2.12,,0.9235,True,False,457,31,0.4654653359975782

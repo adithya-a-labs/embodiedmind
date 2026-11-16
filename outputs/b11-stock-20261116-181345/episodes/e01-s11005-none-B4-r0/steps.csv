@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,1,2,primitive,blocked_by_visible_wall,Find key,f0.4,,0.0,False,False,380,15,0.21016226000028837
+1,3,3,primitive,,Find key,f0.4,,0.0,False,False,391,15,0.18542111100032344
+2,2,2,primitive,,Find and cross door,f0.3,True,0.0,False,False,387,14,0.17034499699911976
+3,3,3,primitive,,Find and cross door,f0.3,,0.0,False,False,385,17,0.1963509699999122
+4,3,3,primitive,,Find and cross door,f0.3,,0.0,False,False,385,17,0.16238507600064622
+5,3,3,primitive,,Find and cross door,f0.3,,0.0,False,False,385,17,0.17093678299897874
+6,3,3,primitive,,Find and cross door,f0.3,,0.0,False,False,385,17,0.16838194399861095
+7,3,3,primitive,,Find and cross door,f0.3,,0.0,False,False,385,17,0.1771438539999508
+8,3,3,primitive,,Find and cross door,f0.3,,0.0,False,False,385,17,0.1649965440010419
+9,3,3,primitive,,Find and cross door,f0.3,,0.0,False,False,385,17,0.16796840999995766
+10,3,3,primitive,,Find and cross door,f0.3,,0.0,False,False,386,17,0.1633808170008706
+11,3,3,primitive,,Find and cross door,f0.3,,0.0,False,False,386,17,0.1727736199991341
+12,0,0,primitive,,Find and cross door,f0.3,,0.0,False,False,386,15,0.15493438500016055
+13,5,5,primitive,,Find and cross door,f0.3,,0.0,False,False,376,15,0.1973509669987834
+14,2,2,primitive,,Find and cross door,f14.19,True,0.0,False,False,389,16,0.16938361499887833
+15,2,2,primitive,,Reach goal,Subgoal: Reach goal.,True,0.0,False,False,358,16,0.15068996099944343
+16,2,2,primitive,,Reach goal,Subgoal: Reach goal.,True,0.0,False,False,355,16,0.15434772499975224
+17,2,2,primitive,,Reach goal,Subgoal: Reach goal.,True,0.0,False,False,354,16,0.15042113600065932
+18,2,2,primitive,,Reach goal,Subgoal: Reach goal.,True,0.0,False,False,353,16,0.15917612699922756
+19,5,5,primitive,,Reach goal,visible,,0.0,False,False,347,14,0.18258773399975325
+20,0,0,primitive,,Reach goal,visible,,0.0,False,False,347,14,0.1443966669994552
+21,2,2,primitive,,Reach goal,Subgoal: Reach goal.,True,0.0,False,False,355,16,0.16774454999904265
+22,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.18958963799923367
+23,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.1438879260003887
+24,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.14223143699928187
+25,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.1391927949989622
+26,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.15981782900053076
+27,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.15442013699976087
+28,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.1633582309987105
+29,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.16280812300101388
+30,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.1525479150004685
+31,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.14582785700076784
+32,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.14412943800016365
+33,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.1429076559998066
+34,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.1537471319988981
+35,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.1407612010007142
+36,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.13992435700129136
+37,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.14632717899985437
+38,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.14077324000027147
+39,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.15413937999983318
+40,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.15958860399950936
+41,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.14901118099987798
+42,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.14157385699945735
+43,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.14093669100111583
+44,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.1485202069998195
+45,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.14518616100031068
+46,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.14234018199931597
+47,6,6,primitive,,Reach goal,visible,,0.0,False,False,349,14,0.1417122050006583

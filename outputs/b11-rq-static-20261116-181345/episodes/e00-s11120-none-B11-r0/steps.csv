@@ -1,0 +1,30 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,explore,choose_frontier_route,Find and pick up key,visible,,0.0,False,False,393,26,0.30456272199990053
+1,2,4,approach,route_to_mission_target,Find matching key,f1.8,True,0.0,False,False,443,29,0.3321581239997613
+2,2,4,approach,route_to_mission_target,Find matching key,f1.8,True,0.0,False,False,432,29,0.31983684500119125
+3,2,4,approach,route_to_mission_target,Find matching key,f1.8,True,0.0,False,False,430,29,0.289425114999176
+4,0,6,explore,route_to_mission_target,Find matching key,f1.8,,0.0,False,False,427,29,0.33536743999866303
+5,2,4,approach,route_to_mission_target,Find matching key,f1.8,True,0.0,False,False,433,29,0.3211712020001869
+6,3,4,approach,verified_pickup_precondition,Find matching key,f1.8,,0.0,False,False,433,29,0.30940416600060416
+7,0,4,approach,route_to_mission_target,Unlock matching door,f1.5,,0.0,False,False,426,29,0.2934932789994491
+8,2,4,approach,route_to_mission_target,Unlock matching door,f1.5,True,0.0,False,False,435,29,0.3196768220004742
+9,2,4,approach,route_to_mission_target,Unlock matching door,f1.5,True,0.0,False,False,433,29,0.3390256189995853
+10,2,4,approach,route_to_mission_target,Unlock matching door,f1.5,True,0.0,False,False,432,29,0.31065703199965355
+11,1,4,approach,route_to_mission_target,Unlock matching door,f1.5,,0.0,False,False,430,29,0.3204221129999496
+12,2,4,approach,route_to_mission_target,Unlock matching door,f1.5,True,0.0,False,False,429,29,0.34221670999977505
+13,5,4,approach,verified_toggle_precondition,Unlock matching door,f1.5,,0.0,False,False,428,29,0.29524650199891767
+14,2,2,explore,route_to_mission_target,Reach goal beyond the door,f14.13,True,0.0,False,False,443,31,0.3218333650002023
+15,2,2,explore,choose_frontier_route,Reach goal beyond the door,explore,True,0.0,False,False,402,27,0.2794969159986067
+16,2,2,explore,choose_frontier_route,Reach goal beyond the door,explore,True,0.0,False,False,399,27,0.25491160999990825
+17,0,0,explore,choose_frontier_route,Reach goal beyond the door,visible,,0.0,False,False,393,26,0.2631936350007891
+18,2,2,explore,continue_frontier_route,Reach goal beyond the door,explore,True,0.0,False,False,411,27,0.26469010899927525
+19,0,0,explore,choose_frontier_route,Reach goal beyond the door,visible,,0.0,False,False,397,26,0.31686958499994944
+20,2,0,explore,continue_frontier_route,Reach goal beyond the door,visible,True,0.0,False,False,413,26,0.27412286900107574
+21,0,0,explore,choose_frontier_route,Reach goal beyond the door,visible,,0.0,False,False,407,26,0.26903109199884057
+22,2,5,explore,route_to_mission_target,Reach goal beyond the door,f22.8,True,0.0,False,False,449,30,0.3090958530010539
+23,2,5,explore,route_to_mission_target,Reach goal beyond the door,f22.8,True,0.0,False,False,446,30,0.3226201809993654
+24,2,5,explore,route_to_mission_target,Reach goal beyond the door,f22.8,True,0.0,False,False,441,30,0.3351134819986328
+25,2,6,explore,route_to_mission_target,Reach goal beyond the door,f22.8,True,0.0,False,False,438,30,0.2928684529997554
+26,2,6,explore,route_to_mission_target,Reach goal beyond the door,f22.8,True,0.0,False,False,435,30,0.2892817339998146
+27,0,6,explore,route_to_mission_target,Reach goal beyond the door,f22.8,,0.0,False,False,433,30,0.3066911669993715
+28,2,6,explore,route_to_mission_target,Reach goal beyond the door,f22.8,True,0.95921875,True,False,432,30,0.3047010859991133

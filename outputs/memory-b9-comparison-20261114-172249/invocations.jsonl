@@ -1,0 +1,2 @@
+{"argv":["/home/adithyaa/Projects/EmbodiedMind/.venv/bin/embodiedmind","run","--config","configs/memory-b9-dev.yaml","--output","outputs/memory-b9-comparison-20261114-172249","--parallel","1","--monitor"],"started":"2026-11-14T11:56:33+00:00"}
+{"argv":["/home/adithyaa/Projects/EmbodiedMind/.venv/bin/embodiedmind","run","--config","configs/memory-b9-dev.yaml","--output","outputs/memory-b9-comparison-20261114-172249","--parallel","1","--monitor"],"started":"2026-11-14T11:56:33+00:00","finished":"2026-11-14T12:03:51+00:00","status":"complete"}

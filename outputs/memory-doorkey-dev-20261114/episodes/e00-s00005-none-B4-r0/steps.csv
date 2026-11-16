@@ -1,0 +1,34 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,Find key,f0.9,True,0.0,False,False,368,15,0.2565246779995505
+1,2,2,primitive,,Find key,f0.9,True,0.0,False,False,369,15,0.18715237799915485
+2,3,3,primitive,,Find key,f0.9,,0.0,False,False,369,17,0.21441279999999097
+3,1,2,primitive,blocked_by_visible_wall,Find key,f0.9,,0.0,False,False,369,15,0.15924545600137208
+4,2,2,primitive,,Find key,f0.9,True,0.0,False,False,374,14,0.17279270000290126
+5,2,2,primitive,,Find key,f0.9,True,0.0,False,False,373,14,0.15385956799946143
+6,1,2,primitive,blocked_by_visible_wall,Find key,f0.9,,0.0,False,False,367,14,0.16165143000034732
+7,1,1,primitive,,Find key,f0.9,,0.0,False,False,381,16,0.19151597499876516
+8,2,2,primitive,,Find key,f0.9,True,0.0,False,False,391,14,0.18189441700087627
+9,2,2,primitive,,Find key,f0.9,True,0.0,False,False,389,14,0.1829039730000659
+10,3,3,primitive,,Find key,f0.9,,0.0,False,False,388,15,0.18716153399873292
+11,2,2,primitive,,Find and cross door,f7,True,0.0,False,False,384,12,0.18106693899972015
+12,0,0,primitive,,Find and cross door,f7.15,,0.0,False,False,382,16,0.1977127690006455
+13,2,2,primitive,,Find and cross door,f7,True,0.0,False,False,374,13,0.17842605500118225
+14,2,2,primitive,,Find and cross door,f7,True,0.0,False,False,375,12,0.17873315600081696
+15,5,5,primitive,,Find and cross door,f7.15,,0.0,False,False,376,16,0.20839572900149506
+16,2,2,primitive,,Find and cross door,f16.18,True,0.0,False,False,383,17,0.1868312260012317
+17,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,373,16,0.21711565999794402
+18,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,372,17,0.2193498679989716
+19,0,2,primitive,blocked_by_visible_wall,Reach goal,f16.25,,0.0,False,False,372,17,0.2233897430014622
+20,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,394,16,0.20147315500071272
+21,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,385,16,0.1991904530004831
+22,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,382,16,0.21014319200185128
+23,0,0,primitive,,Reach goal,f16.25,,0.0,False,False,374,19,0.24598797100043157
+24,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,389,19,0.23672212699966622
+25,0,0,primitive,,Reach goal,visible,,0.0,False,False,383,14,0.20779090500218445
+26,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,395,19,0.2624155600024096
+27,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,392,16,0.20921938399987994
+28,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,389,16,0.2126436129983631
+29,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,386,16,0.2240328000007139
+30,2,2,primitive,,Reach goal,f16.25,True,0.0,False,False,379,17,0.22676111300097546
+31,0,0,primitive,,Reach goal,f16.25,,0.0,False,False,377,17,0.20821067799988668
+32,2,2,primitive,,Reach goal,f16.25,True,0.95359375,True,False,376,16,0.2090731969983608

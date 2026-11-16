@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,visible,,0.0,False,False,345,14,0.16319175500029814
+1,2,2,primitive,,,f0.5,True,0.0,False,False,429,17,0.18951060799736297
+2,1,1,primitive,,,f0.4,,0.0,False,False,493,14,0.17703626100046677
+3,1,1,primitive,,,f1.1,,0.0,False,False,501,17,0.21369127899743035
+4,2,2,primitive,,,f0.0,True,0.0,False,False,454,14,0.18467946899909293
+5,2,2,primitive,,,f0.0,True,0.0,False,False,532,14,0.15627053099888144
+6,1,1,primitive,,,"f0.4 grey wall (-1, -1) observed at step 5",,0.0,False,False,614,27,0.28373078999720747
+7,2,2,primitive,,,f0.0,False,0.0,False,False,474,14,0.29370946700146305
+8,1,1,primitive,,,visible,,0.0,False,False,474,14,0.11941031199967256
+9,2,2,primitive,,,"f7.15 yellow box (1, -4) observed at step 8",True,0.0,False,False,657,28,0.3243469080007344
+10,2,2,primitive,,,remembered,True,0.0,False,False,647,12,0.17726801699973294
+11,1,1,primitive,,,"f4.8 green box (-2, -1) observed at step 9",,0.0,False,False,659,27,0.28048387600210845
+12,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.28923429299902637
+13,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22019280399763375
+14,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.2197007009999652
+15,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.21343979100129218
+16,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22710881999955745
+17,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.2318485289979435
+18,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.223107081001217
+19,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.21765579100247123
+20,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.21710043900020537
+21,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.21554059800109826
+22,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.2231043369974941
+23,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.2172781679983018
+24,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22862496900052065
+25,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.21221617899936973
+26,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22246491700207116
+27,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.21989008799937437
+28,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22420008799963398
+29,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.2145605069999874
+30,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22419466999781434
+31,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22286504799922113
+32,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.2233058780002466
+33,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22125149999919813
+34,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22142234400234884
+35,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.214725489000557
+36,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.2210013589974551
+37,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.21601940899927285
+38,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22489302699977998
+39,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.2197215310006868
+40,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22210005700253532
+41,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22031865500321146
+42,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.23318902100072592
+43,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.2191120099996624
+44,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22438539400172886
+45,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.2181337860019994
+46,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.22852402100033942
+47,2,2,primitive,,,"f4.8 green box (-1, 2) observed at step 9",False,0.0,False,False,655,27,0.21498807100215345

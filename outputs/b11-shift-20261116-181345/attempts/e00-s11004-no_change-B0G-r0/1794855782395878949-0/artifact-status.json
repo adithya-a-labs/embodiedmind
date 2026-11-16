@@ -1,0 +1,10 @@
+{
+  "missing": {
+    "summary": "Attempt did not finalize an episode result.",
+    "stdout.log": "The runner does not redirect process-wide streams into per-attempt files.",
+    "stderr.log": "The runner does not redirect process-wide streams into per-attempt files."
+  },
+  "recorded_steps": 5,
+  "status": "failed",
+  "recorded_frames": 6
+}

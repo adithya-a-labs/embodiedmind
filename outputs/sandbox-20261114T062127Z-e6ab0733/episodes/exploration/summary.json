@@ -1,0 +1,15 @@
+{
+  "environment": "MiniGrid-DoorKey-8x8-v0",
+  "seed": 1015,
+  "intervention": "none",
+  "variant": "B5",
+  "id": "exploration",
+  "replicate": 0,
+  "steps": 1,
+  "status": "completed",
+  "mission": "use the key to open the door and then get to the goal",
+  "success": false,
+  "outcome": "sandbox_snapshot",
+  "reward": 0.0,
+  "calls": 0
+}

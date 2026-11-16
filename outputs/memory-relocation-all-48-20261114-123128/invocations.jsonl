@@ -1,0 +1,2 @@
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-relocation-all-48-dev.yaml","--output","outputs/memory-relocation-all-48-20261114-123128","--monitor"],"started":"2026-11-14T07:09:13+00:00"}
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-relocation-all-48-dev.yaml","--output","outputs/memory-relocation-all-48-20261114-123128","--monitor"],"started":"2026-11-14T07:09:13+00:00","finished":"2026-11-14T07:13:03+00:00","status":"complete"}

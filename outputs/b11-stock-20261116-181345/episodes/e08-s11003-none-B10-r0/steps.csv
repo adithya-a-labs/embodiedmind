@@ -1,0 +1,13 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,3,approach,route_to_mission_target,Find and pick up source,f0.9,True,0.0,False,False,459,29,0.33432053399883443
+1,2,6,approach,route_to_mission_target,Find and pick up source,f0.9,True,0.0,False,False,457,29,0.31825617399954353
+2,0,6,approach,route_to_mission_target,Find and pick up source,f0.9,,0.0,False,False,455,29,0.3156748569999763
+3,3,0,explore,verified_pickup_precondition,Find and pick up source,f0.9,,0.0,False,False,443,29,0.3119109399995068
+4,2,2,explore,choose_frontier_route,Place beside reference,explore,True,0.0,False,False,422,27,0.30020344399963506
+5,0,0,explore,choose_frontier_route,Place beside reference,explore,,0.0,False,False,417,28,0.291616670001531
+6,2,4,approach,route_to_drop_position,Place beside reference,f6.7,True,0.0,False,False,452,29,0.3393413820012938
+7,2,3,approach,route_to_drop_position,Place beside reference,f6.7,True,0.0,False,False,450,29,0.3160815970004478
+8,2,3,approach,route_to_drop_position,Place beside reference,f6.7,True,0.0,False,False,448,29,0.3318491380014166
+9,0,0,explore,route_to_drop_position,Place beside reference,visible,,0.0,False,False,441,26,0.32516181499886443
+10,2,2,explore,route_to_drop_position,Place beside reference,explore,True,0.0,False,False,443,28,0.34779651700227987
+11,4,2,explore,verified_drop_precondition,Place beside reference,f6.7,,0.946,True,False,434,30,0.3737837180015049

@@ -1,0 +1,18 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the blue key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the blue key,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,425,27,0.3807581389992265
+3,0,2,explore,choose_frontier_route,go to the blue key,o2,,0.0,False,False,451,27,0.30730339999990974
+4,2,2,explore,choose_frontier_route,go to the blue key,o1,True,0.0,False,False,468,27,0.30169655900044745
+5,2,0,explore,choose_frontier_route,go to the blue key,o4,True,0.0,False,False,487,27,0.3001996570001211
+6,2,0,explore,choose_frontier_route,go to the blue key,o5,True,0.0,False,False,507,27,0.3155255479996413
+7,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,527,27,0.28604944800008525
+8,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,540,27,0.2763679999998203
+9,2,2,explore,choose_frontier_route,go to the blue key,o0,True,0.0,False,False,557,27,0.29062492799948814
+10,0,0,explore,choose_frontier_route,go to the blue key,o0,,0.0,False,False,569,27,0.3408326960006889
+11,2,2,approach,route_to_mission_target,go to the blue key,o0,True,0.0,False,False,600,27,0.374616930999764
+12,2,2,approach,route_to_mission_target,go to the blue key,o11,True,0.0,False,False,621,28,0.4251564010000948
+13,2,2,approach,route_to_mission_target,go to the blue key,o12,True,0.0,False,False,641,28,0.38775278299999627
+14,2,2,approach,route_to_mission_target,go to the blue key,o13,True,0.0,False,False,661,28,0.4091185300003417
+15,2,2,approach,route_to_mission_target,go to the blue key,o14,True,0.0,False,False,681,28,0.39774777200000244
+16,0,4,approach,route_to_mission_target,go to the blue key,visible,,0.9319999999999999,True,False,701,26,0.4065147829996931

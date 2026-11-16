@@ -1,0 +1,25 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,explore,,Find key,visible,,0.0,False,False,402,26,0.2817192460061051
+1,0,2,explore,,Find key,explore,,0.0,False,False,418,27,0.2984058410002035
+2,2,4,approach,,Find key,f2.16,True,0.0,False,False,440,30,0.36431651200109627
+3,2,4,approach,,Find key,f2.16,True,0.0,False,False,439,30,0.3370950440003071
+4,2,4,approach,,Find key,f2.16,True,0.0,False,False,428,30,0.330001752001408
+5,3,4,approach,,Find key,f2.16,,0.0,False,False,427,30,0.3450758940016385
+6,0,6,approach,,Find and cross door,f1.8,,0.0,False,False,432,29,0.3054790120004327
+7,2,2,explore,forward_burst,Find and cross door,f1.8,True,0.0,False,False,428,29,0.2811169199994765
+8,0,0,explore,,Find and cross door,f1.8,,0.0,False,False,424,29,0.2945664279977791
+9,2,3,approach,,Find and cross door,f1.8,True,0.0,False,False,434,29,0.34082477699848823
+10,2,3,approach,,Find and cross door,f1.8,True,0.0,False,False,433,29,0.3192322070026421
+11,0,6,approach,,Find and cross door,f1.8,,0.0,False,False,432,29,0.31952579700009665
+12,2,6,approach,,Find and cross door,f1.8,True,0.0,False,False,430,29,0.36185169399686856
+13,2,6,approach,,Find and cross door,f1.8,True,0.0,False,False,430,29,0.31386365900107194
+14,2,6,approach,,Find and cross door,f1.8,True,0.0,False,False,430,29,0.2825211500021396
+15,0,4,verify,verify_target_visible,Find and cross door,f1.8,,0.0,False,False,430,28,0.32591803499963135
+16,1,6,approach,,Find and cross door,f1.8,,0.0,False,False,434,29,0.3029649989985046
+17,0,4,verify,verify_target_visible,Find and cross door,f1.8,,0.0,False,False,430,28,0.310047847997339
+18,1,6,approach,,Find and cross door,f1.8,,0.0,False,False,434,29,0.31667312299396144
+19,5,6,approach,,Find and cross door,f1.8,,0.0,False,False,430,29,0.34851262000302086
+20,2,6,approach,,Find and cross door,f20.14,True,0.0,False,False,441,31,0.3436447890053387
+21,2,6,approach,,Reach goal,f20.16,True,0.0,False,False,430,31,0.4010967729991535
+22,1,6,approach,,Reach goal,f20.16,,0.0,False,False,428,31,0.33277953299693763
+23,2,6,approach,,Reach goal,f20.16,True,0.96625,True,False,438,31,0.3407249009978841

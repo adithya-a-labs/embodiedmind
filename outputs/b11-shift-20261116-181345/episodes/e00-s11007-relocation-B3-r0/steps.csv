@@ -1,0 +1,25 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,f0.0,True,0.0,False,False,665,17,0.279743213999609
+3,2,2,primitive,,,f0.26,True,0.0,False,False,649,15,0.2070230770004855
+4,2,2,primitive,,,f0.25,True,0.0,False,False,650,15,0.1923802080018504
+5,2,2,primitive,,,"f0.27 blue ball (-9, -1) observed at step 0",True,0.0,False,False,643,28,0.2787278089999745
+6,2,2,primitive,,,"f0.27 blue ball (-10, -1) observed at step 0",True,0.0,False,False,640,29,0.2962889410009666
+7,2,2,primitive,,,"f0.27 blue ball (-11, -1) observed at step 0",True,0.0,False,False,635,29,0.3023086510002031
+8,0,0,primitive,,,f0.27,,0.0,False,False,632,15,0.24923643800138962
+9,2,2,primitive,,,"f0.27 blue ball (1, -12) observed at step 0",True,0.0,False,False,650,29,0.3080393130003358
+10,2,2,primitive,,,"f0.27 blue ball (0, -12) observed at step 0",True,0.0,False,False,650,29,0.389163167001243
+11,2,2,primitive,,,f0.27,True,0.0,False,False,654,15,0.23693917900163797
+12,2,2,primitive,,,"f0.27 blue ball (-2, -12) STALE",True,0.0,False,False,638,26,0.3117913210007828
+13,2,2,primitive,,,"f0.27 blue ball (-3, -12) STALE; reobserve at step 0",True,0.0,False,False,638,33,0.34333353900001384
+14,0,0,primitive,,,f0.27,,0.0,False,False,634,18,0.2559306450020813
+15,2,2,primitive,,,"f0.27 blue ball (12, -4) STALE; reobserve at step 0",True,0.0,False,False,660,33,0.3146361130020523
+16,2,2,primitive,,,"f0.27 blue ball (11, -4) STALE; reobserve at step 0",True,0.0,False,False,662,33,0.3656980910018319
+17,2,2,primitive,,,"f0.27 blue ball (10, -4) STALE; reobserve at step 0",True,0.0,False,False,662,33,0.3742288380017271
+18,2,2,primitive,,,"f0.27 blue ball (9, -4) STALE; reobserve at step 0",True,0.0,False,False,660,32,0.32705261199953384
+19,2,2,primitive,,,"f0.27 blue ball (8, -4) STALE; reobserve at step 0",True,0.0,False,False,658,32,0.3241300849986146
+20,2,2,primitive,,,"f0.27 blue ball (7, -4) STALE; reobserve at step 0",True,0.0,False,False,653,32,0.3490658579976298
+21,2,2,primitive,,,"f0.27 blue ball (6, -4) STALE; reobserve at step 0",True,0.0,False,False,659,32,0.34323254199989606
+22,2,2,primitive,,,"f0.40 empty (-1, -3)",True,0.0,False,False,662,22,0.24968355400051223
+23,2,2,primitive,,,"f0.27 blue ball (4, -4) STALE; reobserve at step 0",True,0.904,True,False,662,32,0.33456405000106315

@@ -1,0 +1,19 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,visible,,0.0,False,False,348,14,0.15349955199963006
+1,2,2,primitive,,,f0.7,True,0.0,False,False,458,14,0.1440630870001769
+2,2,2,primitive,,,"f0.7 green door closed (-2, 1) observed at step 0",True,0.0,False,False,527,28,0.23803345000123954
+3,0,0,primitive,,,"f0.11 grey wall (-5, 1) observed at step 0",,0.0,False,False,608,31,0.3156984929992177
+4,2,2,primitive,,,f0.7,True,0.0,False,False,515,14,0.17545474899998226
+5,2,2,primitive,,,f0.0,True,0.0,False,False,601,14,0.1806092200004059
+6,2,2,primitive,,,"f0.7 green door closed (-3, -3) observed at step 0",True,0.0,False,False,632,28,0.3008668399997987
+7,2,2,primitive,,,"f0.7 green door closed (-4, -3) observed at step 0",True,0.0,False,False,646,28,0.2970627089998743
+8,0,0,primitive,,,"f0.7 green door closed (-5, -3) observed at step 0",,0.0,False,False,638,28,0.2778622850000829
+9,2,2,primitive,,,f0.7 green door closed,True,0.0,False,False,647,17,0.2560035370006517
+10,2,2,primitive,,,f0.7 green door closed,True,0.0,False,False,645,17,0.20174042799953895
+11,2,2,primitive,,,f0.7,True,0.0,False,False,649,14,0.21975525400011975
+12,2,2,primitive,,,f0.7,True,0.0,False,False,650,17,0.2176166839999496
+13,5,5,primitive,,,"f0.7 green door closed (-1, -5) observed at step 0",,0.0,False,False,661,28,0.310163805999764
+14,2,2,primitive,,,"f0.7 green door closed (-1, -5) observed at step 0",True,0.0,False,False,672,28,0.3196305420005956
+15,2,2,primitive,,,"f0.7 green door closed (-2, -5) observed at step 0",True,0.0,False,False,648,28,0.3457698780002829
+16,2,2,primitive,,,"f14.26 red door open (-1, 0) observed at step 14",True,0.0,False,False,656,31,0.3319138019996899
+17,2,2,primitive,,,"f14.18 empty (-1, -1) observed at step 16",True,0.963265306122449,True,False,645,29,0.3034929530003865

@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,Remembered cells,True,0.0,False,False,378,13,0.15346759000021848
+1,2,2,primitive,,,f0,True,0.0,False,False,419,12,0.19055906200082973
+2,2,2,primitive,,,f0.13,True,0.0,False,False,463,15,0.1642852810000477
+3,1,1,primitive,,,f0.12,,0.0,False,False,511,15,0.22013489899836713
+4,0,0,primitive,,,f0.1,,0.0,False,False,454,17,0.23106761800227105
+5,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 4",,0.0,False,False,527,29,0.3030366140010301
+6,0,0,primitive,,,f0.1,,0.0,False,False,454,17,0.21929595899928245
+7,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 6",,0.0,False,False,527,29,0.30544989299960434
+8,0,0,primitive,,,f0.1,,0.0,False,False,454,17,0.2807487339996442
+9,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 8",,0.0,False,False,527,29,0.29419023399896105
+10,0,0,primitive,,,f0.1,,0.0,False,False,454,17,0.2423006799981522
+11,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 10",,0.0,False,False,533,30,0.2986612220011011
+12,0,0,primitive,,,f0.1,,0.0,False,False,456,17,0.22372915600135457
+13,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 12",,0.0,False,False,533,30,0.3426766119991953
+14,0,0,primitive,,,f0.1,,0.0,False,False,456,17,0.22805781399802072
+15,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 14",,0.0,False,False,533,30,0.30217674799860106
+16,0,0,primitive,,,f0.1,,0.0,False,False,456,17,0.21246674999929382
+17,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 16",,0.0,False,False,533,30,0.3044560159978573
+18,0,0,primitive,,,f0.1,,0.0,False,False,456,17,0.21384962600131985
+19,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 18",,0.0,False,False,533,30,0.3127218020017608
+20,1,1,primitive,,,visible,,0.0,False,False,456,14,0.18751064499883796
+21,2,2,primitive,,,f0.0,True,0.0,False,False,451,14,0.25913888300055987
+22,2,2,primitive,,,"f0.1 red door locked (-1, 1) observed at step 21",True,0.0,False,False,490,29,0.2969908769991889
+23,2,2,primitive,,,"f0.1 red door locked (-2, 1) observed at step 21",True,0.0,False,False,545,29,0.28953777899732813
+24,2,2,primitive,,,"f0.12 red door closed (-1, -1) observed at step 23",True,0.0,False,False,592,30,0.28053537199957645
+25,1,1,primitive,,,visible,,0.0,False,False,643,11,0.18457655499878456
+26,1,2,primitive,blocked_by_visible_door,,visible,,0.0,False,False,568,11,0.20710306399996625
+27,2,2,primitive,,,f21.0,True,0.0,False,False,455,15,0.21982117800143897
+28,2,2,primitive,,,f21.7,True,0.0,False,False,506,15,0.17109616800007643
+29,2,2,primitive,,,"f21.12 green door closed (-2, -1) observed at step 27",True,0.0,False,False,561,31,0.3295392260006338
+30,2,2,primitive,,,"f0.12 red door closed (-1, 1) observed at step 29",True,0.0,False,False,608,30,0.37263364200043725
+31,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 29",,0.0,False,False,659,30,0.33108983999773045
+32,0,0,primitive,,,visible,,0.0,False,False,581,14,0.2415608119990793
+33,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 32",,0.0,False,False,658,30,0.34110357600002317
+34,0,0,primitive,,,visible,,0.0,False,False,581,14,0.22411540300163324
+35,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 34",,0.0,False,False,658,30,0.3436443539976608
+36,0,0,primitive,,,visible,,0.0,False,False,581,14,0.22329326600083732
+37,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 36",,0.0,False,False,658,30,0.3376121549990785
+38,0,0,primitive,,,visible,,0.0,False,False,581,14,0.21748011599993333
+39,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 38",,0.0,False,False,662,30,0.3177831880020676
+40,0,0,primitive,,,visible,,0.0,False,False,585,14,0.23858652399940183
+41,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 40",,0.0,False,False,662,30,0.32389289300044766
+42,0,0,primitive,,,visible,,0.0,False,False,585,14,0.23121601700040628
+43,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 42",,0.0,False,False,662,30,0.3198177410013159
+44,0,0,primitive,,,visible,,0.0,False,False,585,14,0.21451199500006624
+45,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 44",,0.0,False,False,662,30,0.3325090660000569
+46,0,0,primitive,,,visible,,0.0,False,False,585,14,0.2152582379967498
+47,1,1,primitive,,,"f0.12 red door closed (-2, 1) observed at step 46",,0.0,False,False,662,30,0.3096863630016742

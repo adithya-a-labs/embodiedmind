@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,remembered,True,0.0,False,False,362,12,0.14651668700025766
+1,0,2,primitive,blocked_by_visible_wall,,"f0.16 empty (-1, 3) observed at step 0",,0.0,False,False,451,27,0.29155755899955693
+2,2,2,primitive,,,f0.14,True,0.0,False,False,524,15,0.15487882399975206
+3,0,0,primitive,,,"f0.14 yellow door locked (-4, 1) observed at step 1",,0.0,False,False,605,30,0.2874738280006568
+4,2,2,primitive,,,f0.15,True,0.0,False,False,509,15,0.18725612399975944
+5,2,2,primitive,,,"f0.14 yellow door locked (-2, -4) observed at step 1",True,0.0,False,False,596,29,0.3222028030013462
+6,2,2,primitive,,,"f0.14 yellow door locked (-3, -4) observed at step 1",True,0.0,False,False,646,29,0.24605337100001634
+7,0,0,primitive,,,"f0.14 yellow door locked (-4, -4) observed at step 1",,0.0,False,False,636,30,0.314217324999845
+8,2,2,primitive,,,"f0.14 yellow door locked (4, -4)",True,0.0,False,False,565,24,0.2379393879982672
+9,2,2,primitive,,,"f0.14 yellow door locked (3, -4)",True,0.0,False,False,633,25,0.23658850500032713
+10,2,2,primitive,,,"f0.14 yellow door locked (2, -4) observed at step 1",True,0.0,False,False,647,29,0.24910386900046433
+11,2,2,primitive,,,"f0.14 yellow door locked (-4, -1) observed at step 1",True,0.0,False,False,649,29,0.2583772689995385
+12,2,2,primitive,,,"f0.14 yellow door locked (-4, -4) observed at step 1",True,0.0,False,False,651,29,0.2603676880007697
+13,0,0,primitive,,,"f0.14 yellow door locked (-1, -4)",,0.0,False,False,643,24,0.21395330899940745
+14,3,3,primitive,,,f8.29,,0.0,False,False,664,16,0.23119416100053058
+15,0,0,primitive,,,f8.15,,0.0,False,False,642,15,0.16163293099998555
+16,2,2,primitive,,,"f0.14 yellow door locked (1, 4) observed at step 15",True,0.0,False,False,612,30,0.2825968010001816
+17,2,2,primitive,,,"f0.14 yellow door locked (0, 4) observed at step 15",True,0.0,False,False,654,30,0.26618730399968626
+18,2,2,primitive,,,"f0.14 yellow door locked (-1, 4) observed at step 15",True,0.0,False,False,651,30,0.24919729700013704
+19,2,2,primitive,,,"f0.14 yellow door locked (-2, 4) observed at step 15",True,0.0,False,False,648,30,0.26062715999978536
+20,2,2,primitive,,,"f0.14 yellow door locked (-3, 4) observed at step 15",True,0.0,False,False,660,30,0.26642506799908006
+21,1,2,primitive,blocked_by_visible_wall,,"f0.14 yellow door locked (-4, 4) observed at step 15",,0.0,False,False,651,30,0.24911786500160815
+22,2,2,primitive,,,"f0.14 yellow door locked (4, 4) observed at step 15",True,0.0,False,False,652,30,0.3222850460006157
+23,2,2,primitive,,,"f0.14 yellow door locked (3, 4) observed at step 15",True,0.0,False,False,646,30,0.30810352100161253
+24,2,2,primitive,,,"f0.14 yellow door locked (2, 4) observed at step 15",True,0.0,False,False,660,30,0.3238698610002757
+25,1,2,primitive,blocked_by_visible_wall,,"f0.14 yellow door locked (1, 4) observed at step 15",,0.0,False,False,653,30,0.3216749469993374
+26,2,2,primitive,,,f0.1,True,0.0,False,False,610,14,0.2070339479996619
+27,2,2,primitive,,,"f0.5 empty (-1, 1) observed at step 26",True,0.0,False,False,642,27,0.26694812899950193
+28,2,2,primitive,,,"f0.4 empty (-2, 0) observed at step 24",True,0.0,False,False,655,27,0.2952019129988912
+29,2,2,primitive,,,"f0.9 empty (-1, 0) observed at step 27",True,0.0,False,False,652,27,0.29423528799998167
+30,2,2,primitive,,,"f0.13 empty (-1, 1) observed at step 29",True,0.0,False,False,655,28,0.3252131160006684
+31,1,2,primitive,blocked_by_visible_wall,,"f0.14 yellow door locked (-1, -1) observed at step 30",,0.0,False,False,657,30,0.34863193800083536
+32,2,2,primitive,,,"f0.14 yellow door locked (-1, 1) observed at step 30",True,0.0,False,False,662,30,0.335745976999533
+33,2,2,primitive,,,"f0.14 yellow door locked (-2, 1) observed at step 30",True,0.0,False,False,645,30,0.31611763200089626
+34,2,2,primitive,,,"f0.14 yellow door locked (-3, 1) observed at step 30",True,0.0,False,False,647,30,0.31641445599962026
+35,1,2,primitive,blocked_by_visible_wall,,"f0.14 yellow door locked (-4, 1) observed at step 30",,0.0,False,False,658,30,0.34547212700090313
+36,2,2,primitive,,,"f0.14 yellow door locked (1, 4) observed at step 30",True,0.0,False,False,615,30,0.3623883019990899
+37,2,2,primitive,,,"f0.14 yellow door locked (0, 4) observed at step 30",True,0.0,False,False,654,30,0.33454400099981285
+38,2,2,primitive,,,"f0.14 yellow door locked (-1, 4) observed at step 30",True,0.0,False,False,651,30,0.340179556998919
+39,2,2,primitive,,,"f0.14 yellow door locked (-2, 4) observed at step 30",True,0.0,False,False,648,30,0.31905174699932104
+40,2,2,primitive,,,"f0.14 yellow door locked (-3, 4) observed at step 30",True,0.0,False,False,661,30,0.32803090600100404
+41,1,2,primitive,blocked_by_visible_wall,,"f0.14 yellow door locked (-4, 4) observed at step 30",,0.0,False,False,652,30,0.3319004060012958
+42,2,2,primitive,,,"f0.14 yellow door locked (4, 4) STALE; reobserve at step 30",True,0.0,False,False,656,34,0.36522681700080284
+43,2,2,primitive,,,"f0.14 yellow door locked (3, 4) STALE; reobserve at step 30",True,0.0,False,False,650,34,0.3393779779999022
+44,2,2,primitive,,,f0.14,True,0.0,False,False,645,15,0.19715784099935263
+45,1,2,primitive,blocked_by_visible_wall,,"f0.14 yellow door locked (-1, 4) STALE; reobserve at step 30",,0.0,False,False,639,35,0.42379042300126457
+46,2,2,primitive,,,"f0.0 grey wall (-1, -1) observed at step 45",True,0.0,False,False,610,28,0.30796484500024235
+47,2,2,primitive,,,"f0.5 empty (-1, 1) observed at step 46",True,0.0,False,False,642,27,0.28733784100040793

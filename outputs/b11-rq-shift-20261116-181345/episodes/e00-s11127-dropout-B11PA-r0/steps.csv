@@ -1,0 +1,12 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the purple key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the purple key,,,0.0,False,False,,,0.0
+2,0,2,explore,route_to_mission_target,go to the purple key,f0.34,,0.0,False,False,426,30,0.35507120700003725
+3,2,2,explore,route_to_mission_target,go to the purple key,f0.34,True,0.0,False,False,428,30,0.31236106699998345
+4,2,0,explore,route_to_mission_target,go to the purple key,f0.34,True,0.0,False,False,433,30,0.286541405999742
+5,0,2,explore,route_to_mission_target,go to the purple key,f0.34,,0.0,False,False,425,30,0.2998047040000529
+6,2,4,approach,route_to_mission_target,go to the purple key,f0.34,True,0.0,False,False,421,30,0.3388908429997173
+7,2,2,explore,route_to_mission_target,go to the purple key,f0.34,True,0.0,False,False,426,30,0.30986816699987685
+8,2,4,approach,route_to_mission_target,go to the purple key,f0.34,True,0.0,False,False,423,30,0.3237804779992075
+9,2,4,approach,route_to_mission_target,go to the purple key,f0.34,True,0.0,False,False,421,30,0.3155818620007267
+10,2,4,approach,route_to_mission_target,go to the purple key,f0.34,True,0.956,True,False,417,30,0.3498417219998373

@@ -1,0 +1,9 @@
+{
+  "id": "e04-s11010-none-B3-r0",
+  "environment": "MiniGrid-MemoryS17Random-v0",
+  "seed": 11010,
+  "variant": "B3",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-16T16:10:59+00:00"
+}

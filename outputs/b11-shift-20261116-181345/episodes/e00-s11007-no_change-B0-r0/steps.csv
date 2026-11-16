@@ -1,0 +1,32 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,visible,True,0.0,False,False,342,14,0.1726620039989939
+3,2,2,primitive,,,visible,True,0.0,False,False,342,11,0.13008680699931574
+4,2,2,primitive,,,visible,True,0.0,False,False,343,11,0.17062684899792657
+5,2,2,primitive,,,visible,True,0.0,False,False,335,11,0.16944422899905476
+6,2,2,primitive,,,visible,True,0.0,False,False,336,11,0.15985632199954125
+7,2,2,primitive,,,visible 0,True,0.0,False,False,330,13,0.17273291599849472
+8,0,0,primitive,,,visible,,0.0,False,False,326,14,0.2089453330008837
+9,2,2,primitive,,,visible0,True,0.0,False,False,339,13,0.16267395000249962
+10,2,2,primitive,,,visible,True,0.0,False,False,338,13,0.16166420599984122
+11,2,2,primitive,,,visible0,True,0.0,False,False,337,12,0.1358087769986014
+12,2,2,primitive,,,visible0,True,0.0,False,False,336,12,0.18809518300258787
+13,2,2,primitive,,,visible0,True,0.0,False,False,335,12,0.16798557600122876
+14,0,0,primitive,,,visible,,0.0,False,False,329,14,0.18896423899786896
+15,2,2,primitive,,,visible,True,0.0,False,False,348,11,0.14500874200166436
+16,2,2,primitive,,,visible,True,0.0,False,False,348,14,0.16069267599959858
+17,2,2,primitive,,,visible,True,0.0,False,False,348,14,0.18791104899719357
+18,2,2,primitive,,,visible,True,0.0,False,False,348,11,0.14640556700032903
+19,2,2,primitive,,,visible,True,0.0,False,False,347,11,0.14921203099947888
+20,2,2,primitive,,,visible0,True,0.0,False,False,340,13,0.16723425300006056
+21,2,2,primitive,,,visible0,True,0.0,False,False,340,13,0.1210995669971453
+22,2,2,primitive,,,visible0,True,0.0,False,False,339,12,0.14371191900136182
+23,2,2,primitive,,,visible,True,0.0,False,False,338,12,0.15219503399930545
+24,2,2,primitive,,,visible0,True,0.0,False,False,337,12,0.14843344600012642
+25,2,2,primitive,,,visible0,True,0.0,False,False,336,12,0.12970880099965143
+26,2,2,primitive,,,visible 0,True,0.0,False,False,335,13,0.13943504499911796
+27,0,0,primitive,,,visible,,0.0,False,False,329,14,0.16102586499982863
+28,2,2,primitive,,,visible0,True,0.0,False,False,339,13,0.19722901500063017
+29,2,2,primitive,,,visible 4,True,0.0,False,False,348,14,0.15549800200096797
+30,2,2,primitive,,,visible 0,True,0.876,True,False,348,14,0.1594277719996171

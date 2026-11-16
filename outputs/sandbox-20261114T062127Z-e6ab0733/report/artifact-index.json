@@ -1,0 +1,186 @@
+{
+  "paths_relative_to": "..",
+  "hash_algorithm": "sha256",
+  "files": [
+    {
+      "path": "episodes/exploration/artifact-status.json",
+      "kind": "json",
+      "size_bytes": 354,
+      "sha256": "b4073feaa2efc34a80200393a2a505c706c3811b538b76d5f1e77e52d870c9fd",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/exploration/evaluator-steps.jsonl",
+      "kind": "private-evaluator",
+      "size_bytes": 5022,
+      "sha256": "0fecf40a8bb26f91cf3e84a414c720bdb4fd8ee6fb82af2174b9ad5218a69cb8",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/exploration/evaluator.json",
+      "kind": "private-evaluator",
+      "size_bytes": 19,
+      "sha256": "1a46c0402c164e450fc729a327a7f36d64cf4e4425fc9fd7063a788623706f19",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/exploration/finish.png",
+      "kind": "image",
+      "size_bytes": 1444,
+      "sha256": "a189138a77934245d6cbd3bd7f2ea3384487d882146f6db0e128ec48cf341ab0",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/exploration/frames/000000.png",
+      "kind": "image",
+      "size_bytes": 1433,
+      "sha256": "bccf1672fb792d6903124f6c79b8d22217333096c93eadb15d24e3fd736a7691",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/exploration/frames/000001.png",
+      "kind": "image",
+      "size_bytes": 1444,
+      "sha256": "a189138a77934245d6cbd3bd7f2ea3384487d882146f6db0e128ec48cf341ab0",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/exploration/replay.gif",
+      "kind": "replay",
+      "size_bytes": 4493,
+      "sha256": "30f69cdf2ed60f76ce8013717ba060c605e9065237a493a36eb2f2708c16494a",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/exploration/start.png",
+      "kind": "image",
+      "size_bytes": 1433,
+      "sha256": "bccf1672fb792d6903124f6c79b8d22217333096c93eadb15d24e3fd736a7691",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/exploration/steps.csv",
+      "kind": "csv",
+      "size_bytes": 193,
+      "sha256": "19293aa810c73935c7dd7486908ee993fd471c8039e09c9a31e5f76ed40d7037",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/exploration/summary.json",
+      "kind": "json",
+      "size_bytes": 342,
+      "sha256": "a1739a5f994377a0b848dce1eb1707b5527c0cc3009312f7913d917aaf72f3e0",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "episodes/exploration/trajectory.jsonl",
+      "kind": "trajectory",
+      "size_bytes": 5159,
+      "sha256": "92583e05b6f386140fbc29d494b40bd0ba85fdc9f7b3635ab7f3ca49533ebc7e",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "exploration",
+      "visibility": "private"
+    },
+    {
+      "path": "invocation.json",
+      "kind": "json",
+      "size_bytes": 123,
+      "sha256": "b140852eadd3245da76ba2983c00596f7c299ffeb6a728f656192df94566fc84",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "",
+      "visibility": "private"
+    },
+    {
+      "path": "manifest.json",
+      "kind": "manifest",
+      "size_bytes": 733,
+      "sha256": "1580464d3b1f7ed00383cfea15f8a8c827e48d8c819e60925cb28c7836e2f7f7",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "",
+      "visibility": "private"
+    },
+    {
+      "path": "report/application-summary.md",
+      "kind": "md",
+      "size_bytes": 840,
+      "sha256": "cf4b1b79233e2f9b869b4ef57aeb4a3f07274ac3fecf6164426c4894e7bf0ec8",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/comparisons.csv",
+      "kind": "csv",
+      "size_bytes": 145,
+      "sha256": "1523301ec5cff14f15ac0cd62315415a504cf13b1d965ee1d3733c5d5ee27cb3",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/coverage.json",
+      "kind": "json",
+      "size_bytes": 619,
+      "sha256": "0a0df7e3676d62f0cd23722f89dd078b265c157d9f7a313342bf6bd3136bac81",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/figures/efficiency.png",
+      "kind": "image",
+      "size_bytes": 61231,
+      "sha256": "64726f032c44b15e31661c40743c3e90aee09a8e49904a4fb14e78aca0b199c4",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/figures/success.png",
+      "kind": "image",
+      "size_bytes": 29464,
+      "sha256": "4cc027c6ffc319e14e97d82a71eb98bea4de1698ad6a7ea4c49b28ea38ad986d",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/metrics.csv",
+      "kind": "csv",
+      "size_bytes": 1010,
+      "sha256": "3961bd0626e32d388306d4538a8a2ddb18b8fc1572ef8cc2bf973f67631a0e77",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "",
+      "visibility": "derived"
+    },
+    {
+      "path": "report/report.md",
+      "kind": "md",
+      "size_bytes": 4191,
+      "sha256": "47153f797c91bde6799ba490f69176e0bfdd91f24258cbcb957a32fa4c0ebcba",
+      "run_id": "sandbox-20261114T062127Z-e6ab0733",
+      "job_id": "",
+      "visibility": "derived"
+    }
+  ]
+}

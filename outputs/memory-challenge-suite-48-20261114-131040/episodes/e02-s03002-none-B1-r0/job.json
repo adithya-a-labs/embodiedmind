@@ -1,0 +1,9 @@
+{
+  "id": "e02-s03002-none-B1-r0",
+  "environment": "BabyAI-KeyCorridorS3R3-v0",
+  "seed": 3002,
+  "variant": "B1",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-14T08:01:22+00:00"
+}

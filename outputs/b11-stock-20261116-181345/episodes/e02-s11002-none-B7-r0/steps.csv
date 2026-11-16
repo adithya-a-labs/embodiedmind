@@ -1,0 +1,3 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,4,approach,,Find mission target,f0.12,True,0.0,False,False,429,30,0.3062925609992817
+1,1,6,approach,,Find mission target,f0.12,,0.9959183673469387,True,False,428,30,0.33457020099922374

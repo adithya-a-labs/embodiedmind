@@ -1,0 +1,95 @@
+{
+  "planned": 60,
+  "attempted": 60,
+  "unattempted": 0,
+  "attempt_records": 60,
+  "valid": 60,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "development",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "dropout",
+      "planned": 20,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "development",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "no_change",
+      "planned": 20,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "development",
+      "environment": "EmbodiedMind-GoToShift-v0",
+      "intervention": "relocation",
+      "planned": 20,
+      "planned_matched_cells": 10,
+      "matched_cells": 10,
+      "matched_seeds": 10,
+      "variants": {
+        "B10": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B9": {
+          "planned": 10,
+          "valid": 10,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,350,14,0.19115007600157696
+1,2,2,primitive,,,o0,False,0.0,False,False,359,12,0.149283700999149
+2,0,0,primitive,,,o1,,0.0,False,False,379,15,0.17208096899958036
+3,2,2,primitive,,,o2,True,0.0,False,False,398,12,0.15600997100045788
+4,0,0,primitive,,,o2,,0.0,False,False,408,15,0.20272144299997308
+5,2,2,primitive,,,o2,True,0.0,False,False,432,12,0.16724680199877184
+6,2,2,primitive,,,o2,True,0.0,False,False,447,12,0.15523048999966704
+7,2,2,primitive,,,o2,True,0.0,False,False,462,12,0.13573866799924872
+8,6,6,primitive,,,o0,,0.0,False,False,472,13,0.1999872870001127
+9,6,6,primitive,,,o0,,0.0,False,False,488,13,0.21845695699994394
+10,0,0,primitive,,,o0,,0.0,False,False,504,13,0.186465684999348
+11,2,2,primitive,,,o0,True,0.0,False,False,531,12,0.16442782199919748
+12,2,2,primitive,,,o1,True,0.0,False,False,551,12,0.15794208599982085
+13,2,2,primitive,,,o1,True,0.0,False,False,571,12,0.21082437799850595
+14,2,2,primitive,,,o1,True,0.0,False,False,591,12,0.2148218940001243
+15,2,2,primitive,,,o1,True,0.0,False,False,611,12,0.19848333700065268
+16,0,0,primitive,,,o1,,0.0,False,False,631,13,0.21694502199898125
+17,3,3,primitive,,,o1,,0.0,False,False,666,13,0.21010526200007007
+18,0,0,primitive,,,o17 step 17 prev=0 facing=0,,0.0,False,False,650,24,0.2773304839993216
+19,2,2,primitive,,,o17,True,0.0,False,False,646,13,0.20415023900022788
+20,2,2,primitive,,,o17,True,0.0,False,False,648,13,0.20663894899917068
+21,2,2,primitive,,,o17,True,0.0,False,False,650,13,0.23069434500030184
+22,2,2,primitive,,,o17,True,0.0,False,False,652,13,0.19697714799985988
+23,2,2,primitive,,,o17,True,0.0,False,False,654,13,0.19305683899983705
+24,2,2,primitive,,,o17,False,0.0,False,False,651,13,0.19802935699954105
+25,2,2,primitive,,,o17,False,0.0,False,False,653,13,0.1849194639999041
+26,2,2,primitive,,,o17,False,0.0,False,False,655,14,0.2104392290002579
+27,2,2,primitive,,,o17,False,0.0,False,False,655,13,0.19362890200136462
+28,2,2,primitive,,,o17,False,0.0,False,False,652,13,0.18406628299999284
+29,2,2,primitive,,,o17,False,0.0,False,False,649,13,0.23763170700112823
+30,2,2,primitive,,,o17,False,0.0,False,False,646,13,0.20175848100006988
+31,2,2,primitive,,,o17,False,0.0,False,False,643,13,0.25587542500034033
+32,2,2,primitive,,,o17,False,0.0,False,False,640,13,0.2001766649991623
+33,5,5,primitive,,,o18,,0.0,False,False,637,14,0.22221190500022203
+34,5,5,primitive,,,o19,,0.0,False,False,626,14,0.20674235499973292
+35,5,5,primitive,,,o30 step 30 prev=2 facing=3,,0.0,False,False,622,24,0.2820357420005166
+36,5,5,primitive,,,o20,,0.0,False,False,622,14,0.3152556019995245
+37,5,5,primitive,,,o21 step 21 prev=2 facing=3,,0.0,False,False,622,24,0.286627438999858
+38,5,5,primitive,,,o22,,0.0,False,False,622,14,0.21386584500032768
+39,5,5,primitive,,,o23 step 23 prev=2 facing=3,,0.0,False,False,622,24,0.266749644999436
+40,5,5,primitive,,,o35 step 35 prev=5 facing=3,,0.0,False,False,622,24,0.2987209279999661
+41,5,5,primitive,,,o25,,0.0,False,False,622,14,0.23491939599989564
+42,5,5,primitive,,,o33,,0.0,False,False,622,14,0.20728429199880338
+43,5,5,primitive,,,o33,,0.0,False,False,622,14,0.2297710550010379
+44,5,5,primitive,,,o33,,0.0,False,False,622,14,0.22938263899959566
+45,5,5,primitive,,,o33 step 33 prev=2 facing=3,,0.0,False,False,622,24,0.28310494600009406
+46,5,5,primitive,,,o33,,0.0,False,False,622,14,0.20978280499912216
+47,5,5,primitive,,,o31,,0.0,False,False,622,14,0.20993773000009242

@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,Remembered cells,True,0.0,False,False,364,13,0.2832371009972121
+1,2,2,primitive,,,"f0.2 empty (-1, 0) observed at step 0",True,0.0,False,False,459,26,0.2935791859999881
+2,0,0,primitive,,,visible,,0.0,False,False,560,14,0.22266489599860506
+3,2,2,primitive,,,"f0.11 grey wall (-1, 1) observed at step 2",True,0.0,False,False,582,28,0.29118129899870837
+4,0,0,primitive,,,visible,,0.0,False,False,645,14,0.24395903599724988
+5,2,2,primitive,,,"f0.15 red door locked (-1, -3) observed at step 2",True,0.0,False,False,538,29,0.3157644650018483
+6,2,2,primitive,,,f0.0,True,0.0,False,False,618,14,0.20524842899976647
+7,0,0,primitive,,,f0.15,,0.0,False,False,625,18,0.25396321399966837
+8,2,2,primitive,,,f0.1,True,0.0,False,False,486,14,0.24404805599988322
+9,2,2,primitive,,,"f3.1 red key (-1, 1) observed at step 8",True,0.0,False,False,583,27,0.31030502400244586
+10,2,2,primitive,,,"f3.1 red key (-2, 1) observed at step 8",True,0.0,False,False,652,27,0.31369361500037485
+11,2,2,primitive,,,"f0.14 empty (-1, 0) observed at step 9",False,0.0,False,False,650,27,0.37035933200240834
+12,0,0,primitive,,,visible,,0.0,False,False,650,14,0.20652384399727453
+13,2,2,primitive,,,visible,True,0.0,False,False,648,11,0.23120883100273204
+14,0,0,primitive,,,visible,,0.0,False,False,645,14,0.23606276300051832
+15,2,2,primitive,,,f0.20,True,0.0,False,False,497,15,0.19846348200007924
+16,2,2,primitive,,,"f0.15 red door locked (-1, 2) observed at step 15",True,0.0,False,False,596,30,0.33265023100102553
+17,2,2,primitive,,,"f0.15 red door locked (-2, 2) observed at step 15",True,0.0,False,False,649,30,0.3696563339981367
+18,0,0,primitive,,,"f0.15 red door locked (-3, 2) observed at step 15",,0.0,False,False,639,33,0.36775970800226787
+19,2,2,primitive,,,"f0.15 red door locked (-2, -3) observed at step 15",True,0.0,False,False,651,33,0.35273958000107086
+20,0,0,primitive,,,"f0.15 red door locked (-3, -3) observed at step 15",,0.0,False,False,640,33,0.36333439399822964
+21,2,2,primitive,,,f0.0,True,0.0,False,False,492,14,0.17938399400009075
+22,2,2,primitive,,,"f3.1 red key (-1, 1) observed at step 21",True,0.0,False,False,595,28,0.2854066090003471
+23,2,2,primitive,,,"f3.1 red key (-2, 1) observed at step 21",True,0.0,False,False,648,28,0.3808444389978831
+24,2,2,primitive,,,"f0.1 blue ball (-1, 1) observed at step 22",False,0.0,False,False,661,28,0.32888686200021766
+25,2,2,primitive,,,visible,False,0.0,False,False,661,11,0.19585696599824587
+26,2,2,primitive,,,visible,False,0.0,False,False,661,11,0.12278383599914378
+27,2,2,primitive,,,visible,False,0.0,False,False,661,11,0.11807673700241139
+28,2,2,primitive,,,visible,False,0.0,False,False,661,11,0.11399997099942993
+29,2,2,primitive,,,visible,False,0.0,False,False,661,11,0.11017158599861432
+30,2,2,primitive,,,visible,False,0.0,False,False,661,11,0.10924603799867327
+31,2,2,primitive,,,visible,False,0.0,False,False,661,11,0.10959633299717098
+32,2,2,primitive,,,visible,False,0.0,False,False,661,11,0.11175728799935314
+33,0,0,primitive,,,visible,,0.0,False,False,646,14,0.20328200999938417
+34,2,2,primitive,,,"f5.0 empty (-1, 0) observed at step 33",True,0.0,False,False,661,27,0.31070865700166905
+35,0,0,primitive,,,visible,,0.0,False,False,653,14,0.20399007800006075
+36,2,2,primitive,,,f0.20,True,0.0,False,False,497,15,0.16442078899854096
+37,2,2,primitive,,,f0.15,True,0.0,False,False,596,18,0.2330209020001348
+38,2,2,primitive,,,"f0.15 red door locked (-2, 2) observed at step 36",True,0.0,False,False,649,30,0.36361848800152075
+39,0,0,primitive,,,"f0.15 red door locked (-3, 2) observed at step 36",,0.0,False,False,639,33,0.35575653500200133
+40,2,2,primitive,,,"f0.15 red door locked (-2, -3) observed at step 36",True,0.0,False,False,651,30,0.3301115909998771
+41,0,0,primitive,,,f0.15,,0.0,False,False,640,18,0.23911778399997274
+42,2,2,primitive,,,visible,True,0.0,False,False,492,11,0.17209493799964548
+43,2,2,primitive,,,visible,True,0.0,False,False,595,14,0.21694847300022957
+44,2,2,primitive,,,"f3.1 red key (-2, 1) observed at step 42",True,0.0,False,False,648,28,0.30245358400134137
+45,0,0,primitive,,,visible,,0.0,False,False,661,14,0.2007620139993378
+46,2,2,primitive,,,visible,True,0.0,False,False,657,11,0.19059979899975588
+47,0,0,primitive,,,visible,,0.0,False,False,649,14,0.22182285500093712

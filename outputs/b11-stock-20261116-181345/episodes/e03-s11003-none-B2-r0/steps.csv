@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,Remembered cells,True,0.0,False,False,394,14,0.24072035999961372
+1,2,2,primitive,,,f0.14,True,0.0,False,False,429,15,0.21814420299961057
+2,2,2,primitive,,,f0.14,False,0.0,False,False,477,16,0.2702214989985805
+3,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.3159617410001374
+4,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.29135598199900414
+5,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2868792629997188
+6,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.27322643200022867
+7,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2765774959989358
+8,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2417931159998261
+9,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.24677743899883353
+10,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2505959179998172
+11,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2885515830002987
+12,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2460024810006871
+13,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.24977077199946507
+14,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2928609239988873
+15,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.3071166279987665
+16,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2920046210001601
+17,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2527912479999941
+18,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.24411521799993352
+19,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2691902629994729
+20,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.3024667749996297
+21,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2705065860009199
+22,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.24079499199979182
+23,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.256052359000023
+24,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2595037699993554
+25,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.25791688699973747
+26,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2682403290000366
+27,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2351537719987391
+28,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.3010330930010241
+29,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2576819030000479
+30,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2523225259992614
+31,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.278387254998961
+32,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.33587101100056316
+33,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2634260720005841
+34,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.3369569919996138
+35,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2898365670007479
+36,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.26546871599930455
+37,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2491381449999608
+38,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2540558400014561
+39,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.24344862600082706
+40,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2427720430005138
+41,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2545253469997988
+42,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2972032699999545
+43,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2606451270003163
+44,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.2676885119999497
+45,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.3131400769998436
+46,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.3138082580007904
+47,2,2,primitive,,,"f0.14 empty (-2, 1) observed at step 0",False,0.0,False,False,477,27,0.24636381900018023

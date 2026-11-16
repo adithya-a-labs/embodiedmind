@@ -1,0 +1,12 @@
+split: b11-multiroom-80
+environments: [MiniGrid-MultiRoom-N6-v0]
+variants: [B0, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B0G, B3G, B9N]
+seed_start: 11001
+seed_count: 10
+interventions: [none]
+workflows: workflows.json
+limits:
+  max_steps: 80
+  max_calls: 80
+  memory_bytes: 768
+  infrastructure_retries: 2

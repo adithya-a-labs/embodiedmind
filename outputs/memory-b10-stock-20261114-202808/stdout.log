@@ -1,0 +1,10 @@
+Run archive: outputs/memory-b10-stock-20261114-202808
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+{"completed": 220, "errors": 0, "pid": 26127, "planned": 220, "status": "complete"}

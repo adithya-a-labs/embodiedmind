@@ -1,0 +1,20 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the green ball,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the green ball,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the green ball,o1,True,0.0,False,False,425,27,0.36705471300047066
+3,0,2,explore,choose_frontier_route,go to the green ball,o2,,0.0,False,False,451,27,0.33432360500046343
+4,2,2,explore,choose_frontier_route,go to the green ball,o1,True,0.0,False,False,468,27,0.3753737010001714
+5,2,0,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,487,27,0.3685469579995697
+6,2,2,explore,choose_frontier_route,go to the green ball,o5,True,0.0,False,False,506,27,0.33036931800052116
+7,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,526,27,0.32661969999935536
+8,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,539,27,0.33947374500075966
+9,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,556,27,0.30420140199930756
+10,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,573,27,0.29267411599994375
+11,0,0,explore,choose_frontier_route,go to the green ball,o0,,0.0,False,False,587,27,0.32462555799975235
+12,2,2,approach,route_to_mission_target,go to the green ball,o0,True,0.0,False,False,619,27,0.40871375299957435
+13,2,2,approach,route_to_mission_target,go to the green ball,o0,True,0.0,False,False,640,27,0.37563941000007617
+14,2,2,approach,route_to_mission_target,go to the green ball,o13,True,0.0,False,False,660,28,0.3939343470001404
+15,2,2,approach,route_to_mission_target,go to the green ball,o14,True,0.0,False,False,680,28,0.43584859000020515
+16,2,2,approach,route_to_mission_target,go to the green ball,o15,True,0.0,False,False,700,28,0.4485883539991846
+17,0,0,approach,route_to_mission_target,go to the green ball,o0,,0.0,False,False,719,27,0.39633480199972837
+18,2,2,approach,route_to_mission_target,go to the green ball,o13,True,0.924,True,False,709,28,0.4396340349994716

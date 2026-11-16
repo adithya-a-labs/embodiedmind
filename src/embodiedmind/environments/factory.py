@@ -8,22 +8,25 @@ import minigrid
 from embodiedmind.environments.observation_adapter import adapt_observation
 
 
+DYNAMIC_OBSTACLES = "MiniGrid-Dynamic-Obstacles-8x8-v0"
 OFFICIAL_ENVIRONMENTS = (
     "BabyAI-GoToObjS6-v1",
     "MiniGrid-DoorKey-8x8-v0",
     "BabyAI-GoToObjMazeS7-v0",
+    "MiniGrid-MemoryS13-v0",
+    "MiniGrid-MemoryS17Random-v0",
+    "MiniGrid-MultiRoom-N6-v0",
+    "BabyAI-KeyCorridorS3R3-v0",
+    "BabyAI-BlockedUnlockPickup-v0",
+    "BabyAI-PutNextS5N2-v0",
+    DYNAMIC_OBSTACLES,
+    "BabyAI-SynthS5R2-v0",
 )
 
 
 def make_environment(env_id: str, *, render_mode: str | None = None) -> gym.Env:
     if env_id not in OFFICIAL_ENVIRONMENTS or env_id not in gym.registry:
-        candidates = sorted(
-            name for name in gym.registry if name.startswith(("BabyAI-", "MiniGrid-"))
-        )
-        raise ValueError(
-            f"Unsupported MiniGrid task {env_id!r} in MiniGrid {minigrid.__version__}. "
-            f"Registered tasks: {', '.join(candidates)}"
-        )
+        raise ValueError(f"Unsupported MiniGrid task {env_id!r} in this build (MiniGrid {minigrid.__version__}).")
     return gym.make(env_id, render_mode=render_mode)
 
 
@@ -43,8 +46,9 @@ def smoke_environment(
         expected = {"left": 0, "right": 1, "forward": 2, "pickup": 3, "drop": 4,
                     "toggle": 5, "done": 6}
         env_actions = env.unwrapped.actions
-        if {action.name: int(action) for action in env_actions} != expected or any(
-            not env.action_space.contains(index) for index in expected.values()
+        action_count = 3 if env_id == DYNAMIC_OBSTACLES else len(expected)
+        if {action.name: int(action) for action in env_actions} != expected or (
+            env.action_space.n != action_count or env.action_space.start != 0
         ):
             raise ValueError(f"unexpected stock action space: {env.action_space}")
         frame = None
@@ -53,11 +57,12 @@ def smoke_environment(
             frame = env.render()
             if frame is None or frame.ndim != 3 or frame.shape[2] != 3:
                 raise ValueError("expected a headless RGB visualization")
+        min_reward = -1 if env_id == DYNAMIC_OBSTACLES else 0
         for step in range(1, max_steps + 1):
             action = (0, 2, 1, 2)[(step - 1) % 4]
             updated, reward, terminated, truncated, _ = env.step(action)
             current = adapt_observation(updated)
-            if current.mission != observation.mission or not 0 <= float(reward) <= 1:
+            if current.mission != observation.mission or not min_reward <= float(reward) <= 1:
                 raise ValueError("invalid mission or reward during smoke rollout")
             if terminated or truncated:
                 break

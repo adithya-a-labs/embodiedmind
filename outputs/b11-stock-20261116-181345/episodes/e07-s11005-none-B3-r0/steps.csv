@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,remembered,True,0.0,False,False,361,12,0.14212699199924828
+1,1,1,primitive,,,visible,,0.0,False,False,434,14,0.187345300000743
+2,2,2,primitive,,,f0.0,True,0.0,False,False,448,14,0.19725978700080304
+3,2,2,primitive,,,f0.5,True,0.0,False,False,540,14,0.19639975400059484
+4,2,2,primitive,,,"f0.5 purple ball (-2, -1) observed at step 2",True,0.0,False,False,628,27,0.30541002999962075
+5,2,2,primitive,,,"f0.5 purple ball (-3, -1) observed at step 2",False,0.0,False,False,639,27,0.37187894999806304
+6,2,2,primitive,,,"f0.5 purple ball (-3, -1) observed at step 2",False,0.0,False,False,639,27,0.28868175800016616
+7,0,0,primitive,,,f0.5,,0.0,False,False,639,17,0.16317163799976697
+8,2,2,primitive,,,"f2.18 empty (-1, -1) observed at step 4",True,0.0,False,False,663,27,0.30910080300236586
+9,0,0,primitive,,,"f0.1 grey wall (0, -4) observed at step 1",,0.0,False,False,656,30,0.327809451999201
+10,2,2,primitive,,,f2.28,True,0.0,False,False,565,15,0.3744139910013473
+11,2,2,primitive,,,f2.28,True,0.0,False,False,652,18,0.3434998299999279
+12,0,0,primitive,,,f0.12,,0.0,False,False,647,18,0.2762498170013714
+13,2,2,primitive,,,visible,True,0.0,False,False,485,11,0.19299607900029514
+14,2,2,primitive,,,f0.0,True,0.0,False,False,589,14,0.17997849400126142
+15,2,2,primitive,,,f0.2,True,0.0,False,False,644,14,0.2394980620010756
+16,2,2,primitive,,,"f0.1 empty (-1, 0) observed at step 14",False,0.0,False,False,637,27,0.4313756379997358
+17,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.17451327500020852
+18,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.10885032499936642
+19,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.11328989100002218
+20,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.1139606239994464
+21,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.12508141299986164
+22,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.11639358899992658
+23,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.1236302399993292
+24,0,0,primitive,,,"f0.10 empty (-1, 0) observed at step 14",,0.0,False,False,641,31,0.31354885900145746
+25,2,2,primitive,,,"f0.2 grey wall (-2, -1)",True,0.0,False,False,656,22,0.29936520000046585
+26,0,0,primitive,,,f0.5,,0.0,False,False,651,17,0.22695270799886202
+27,2,2,primitive,,,f2.24,True,0.0,False,False,500,15,0.19149049900079262
+28,2,2,primitive,,,f2.22,True,0.0,False,False,608,18,0.25401620699994965
+29,2,2,primitive,,,"f2.20 grey key (-2, 1) observed at step 27",True,0.0,False,False,661,29,0.37846354199791676
+30,0,0,primitive,,,visible,,0.0,False,False,669,14,0.21889275500143413
+31,2,2,primitive,,,"f2.20 grey key (-1, -3) observed at step 27",True,0.0,False,False,662,29,0.30847588400138193
+32,0,0,primitive,,,"f2.20 grey key (-2, -3) observed at step 27",,0.0,False,False,653,32,0.3265119349998713
+33,2,2,primitive,,,visible,True,0.0,False,False,486,11,0.16391904299962334
+34,2,2,primitive,,,"f0.12 empty (-1, -1) observed at step 33",True,0.0,False,False,590,28,0.2810938399998122
+35,2,2,primitive,,,f0.2,True,0.0,False,False,644,14,0.3190650539982016
+36,3,3,primitive,,,visible,,0.0,False,False,637,14,0.2046157469994796
+37,2,2,primitive,,,visible,False,0.0,False,False,655,11,0.1593746629987436
+38,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.31779522099895985
+39,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.10593528299796162
+40,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.11790208800084656
+41,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.10662281300028553
+42,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.11351220999858924
+43,2,2,primitive,,,visible,False,0.0,False,False,637,11,0.10639270599858719
+44,0,0,primitive,,,"f0.5 purple ball (-3, 1) observed at step 33",,0.0,False,False,641,31,0.29267755700129783
+45,2,2,primitive,,,f0.0,True,0.0,False,False,657,17,0.21587798800101154
+46,0,0,primitive,,,f0.5,,0.0,False,False,651,17,0.5418648150007357
+47,2,2,primitive,,,f2.24,True,0.0,False,False,500,15,0.31493789800151717

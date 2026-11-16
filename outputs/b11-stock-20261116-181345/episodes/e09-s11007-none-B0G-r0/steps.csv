@@ -1,0 +1,13 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible0,,0.0,False,False,293,14,0.19549597700097365
+1,2,2,primitive,,,visible,,0.0,False,False,294,13,0.17078617399965879
+2,1,2,primitive,blocked_by_visible_ball,,visible0,,0.0,False,False,288,13,0.15615390300081344
+3,2,2,primitive,,,visible,,0.0,False,False,323,13,0.1958093059984094
+4,2,2,primitive,,,visible,,0.0,False,False,313,13,0.1779241539989016
+5,2,2,primitive,,,visible,,0.0,False,False,314,13,0.20565256899863016
+6,2,2,primitive,,,visible 0,,0.0,False,False,310,15,0.2338690360011242
+7,2,2,primitive,,,visible,,0.0,False,False,302,13,0.14872177600045688
+8,0,2,primitive,blocked_by_visible_wall,,visible,,0.0,False,False,279,13,0.16657821300032083
+9,2,2,primitive,,,visible,,0.0,False,False,292,13,0.1780777840031078
+10,2,2,primitive,,,visible,,0.0,False,False,283,12,0.14210462700066273
+11,2,2,primitive,,,visible,,0.9578125,True,False,283,12,0.14717100899724755

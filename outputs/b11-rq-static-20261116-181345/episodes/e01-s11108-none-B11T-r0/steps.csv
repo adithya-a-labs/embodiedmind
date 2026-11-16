@@ -1,0 +1,24 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,choose_frontier_route,go to the green ball,explore,,0.0,False,False,378,27,0.26745598200068343
+1,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,387,27,0.28722806199948536
+2,0,0,explore,choose_frontier_route,go to the green ball,o1,,0.0,False,False,397,27,0.2696464639993792
+3,0,0,explore,choose_frontier_route,go to the green ball,o2,,0.0,False,False,429,27,0.25864017300045816
+4,2,2,explore,continue_frontier_route,go to the green ball,o1,True,0.0,False,False,456,27,0.2748487410008238
+5,2,0,explore,continue_frontier_route,go to the green ball,o4,True,0.0,False,False,484,27,0.25496514899896283
+6,2,2,explore,continue_frontier_route,go to the green ball,o5,True,0.0,False,False,512,27,0.2626691049990768
+7,1,2,explore,continue_frontier_route,go to the green ball,o0,,0.0,False,False,540,27,0.31694236200019077
+8,2,2,explore,continue_frontier_route,go to the green ball,o0,True,0.0,False,False,569,27,0.2726265469991631
+9,5,0,explore,verified_toggle_precondition,go to the green ball,o8,,0.0,False,False,582,27,0.30571136599974125
+10,2,2,explore,choose_frontier_route,go to the green ball,o1,True,0.0,False,False,621,27,0.292519717999312
+11,2,2,explore,choose_frontier_route,go to the green ball,o10,True,0.0,False,False,653,28,0.34915679400000954
+12,2,2,explore,continue_frontier_route,go to the green ball,o11,True,0.0,False,False,680,28,0.32987830199999735
+13,2,2,explore,continue_frontier_route,go to the green ball,o12,True,0.0,False,False,696,28,0.35641319299975294
+14,0,2,explore,continue_frontier_route,go to the green ball,o13,,0.0,False,False,693,28,0.33974603000024217
+15,2,2,explore,continue_frontier_route,go to the green ball,o10,True,0.0,False,False,693,28,0.3879298230003769
+16,5,0,explore,verified_toggle_precondition,go to the green ball,visible,,0.0,False,False,681,26,0.38358649799920386
+17,2,2,approach,route_to_mission_target,go to the green ball,o10,True,0.0,False,False,709,28,0.3889304299991636
+18,2,2,approach,route_to_mission_target,go to the green ball,visible,True,0.0,False,False,712,26,0.4194904239993775
+19,2,2,approach,route_to_mission_target,go to the green ball,visible,True,0.0,False,False,715,26,0.41589370899964706
+20,2,2,approach,route_to_mission_target,go to the green ball,o19,True,0.0,False,False,700,28,0.43664626099962334
+21,2,4,explore,route_to_mission_target,go to the green ball,explore,True,0.0,False,False,688,27,0.40350102900083584
+22,0,4,approach,route_to_mission_target,go to the green ball,o20,,0.9530612244897959,True,False,686,28,0.3640578699996695

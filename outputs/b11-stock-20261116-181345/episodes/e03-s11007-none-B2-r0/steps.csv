@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,,True,0.0,False,False,388,11,0.2851573569987522
+1,2,2,primitive,,,f0.0,True,0.0,False,False,498,14,0.18160966300092696
+2,2,2,primitive,,,f0.23,True,0.0,False,False,567,15,0.17909941600009915
+3,2,2,primitive,,,"f0.14 empty (-2, 0) observed at step 0",True,0.0,False,False,619,27,0.28302055099993595
+4,2,2,primitive,,,f0.12,True,0.0,False,False,672,15,0.29232082499947865
+5,2,2,primitive,,,"f0.12 empty (-2, 0) observed at step 2",True,0.0,False,False,688,27,0.33443327699933434
+6,2,2,primitive,,,"f0.15 empty (-4, -2) observed at step 0",True,0.0,False,False,687,27,0.3820684340007574
+7,2,2,primitive,,,f0.9,True,0.0,False,False,684,15,0.31914147899988166
+8,2,2,primitive,,,"f1.7 empty (-1, 0) observed at step 6",False,0.0,False,False,676,27,0.6417556709984638
+9,2,2,primitive,,,,False,0.0,False,False,676,11,0.14627020999978413
+10,2,2,primitive,,,,False,0.0,False,False,676,11,0.12956997200126352
+11,2,2,primitive,,,,False,0.0,False,False,676,11,0.14506432300004235
+12,2,2,primitive,,,,False,0.0,False,False,676,11,0.1300980800006073
+13,2,2,primitive,,,,False,0.0,False,False,676,11,0.12783696800033795
+14,2,2,primitive,,,,False,0.0,False,False,676,11,0.12633641100001114
+15,2,2,primitive,,,,False,0.0,False,False,676,11,0.12942244599980768
+16,2,2,primitive,,,,False,0.0,False,False,676,11,0.13149811499897623
+17,2,2,primitive,,,,False,0.0,False,False,676,11,0.1433511750001344
+18,2,2,primitive,,,,False,0.0,False,False,676,11,0.1612172750010359
+19,2,2,primitive,,,,False,0.0,False,False,676,11,0.14190195300034247
+20,2,2,primitive,,,,False,0.0,False,False,676,11,0.1541468220002571
+21,2,2,primitive,,,,False,0.0,False,False,676,11,0.1367942619999667
+22,2,2,primitive,,,,False,0.0,False,False,676,11,0.1454319860004034
+23,2,2,primitive,,,,False,0.0,False,False,676,11,0.1391172870007722
+24,2,2,primitive,,,,False,0.0,False,False,676,11,0.13721904600060952
+25,2,2,primitive,,,,False,0.0,False,False,676,11,0.12408281399984844
+26,2,2,primitive,,,,False,0.0,False,False,676,11,0.1328097430014168
+27,2,2,primitive,,,,False,0.0,False,False,676,11,0.12989144399944053
+28,2,2,primitive,,,,False,0.0,False,False,676,11,0.12406819499847188
+29,2,2,primitive,,,,False,0.0,False,False,676,11,0.13162215199918137
+30,2,2,primitive,,,,False,0.0,False,False,676,11,0.13892702699922665
+31,2,2,primitive,,,,False,0.0,False,False,676,11,0.14639463899948169
+32,2,2,primitive,,,,False,0.0,False,False,676,11,0.16531430299983185
+33,2,2,primitive,,,,False,0.0,False,False,676,11,0.15314881499944022
+34,2,2,primitive,,,,False,0.0,False,False,676,11,0.1550152910003817
+35,2,2,primitive,,,,False,0.0,False,False,676,11,0.14039854100155935
+36,2,2,primitive,,,,False,0.0,False,False,676,11,0.13443505600116623
+37,2,2,primitive,,,,False,0.0,False,False,676,11,0.13160828599939123
+38,2,2,primitive,,,,False,0.0,False,False,676,11,0.12264693100041768
+39,2,2,primitive,,,,False,0.0,False,False,676,11,0.12719781799933116
+40,2,2,primitive,,,,False,0.0,False,False,676,11,0.1272520219990838
+41,2,2,primitive,,,,False,0.0,False,False,676,11,0.12139292500069132
+42,2,2,primitive,,,,False,0.0,False,False,676,11,0.12428988400097296
+43,2,2,primitive,,,,False,0.0,False,False,676,11,0.13312834699900122
+44,2,2,primitive,,,,False,0.0,False,False,676,11,0.1514589829985198
+45,2,2,primitive,,,,False,0.0,False,False,676,11,0.13557879799918737
+46,2,2,primitive,,,,False,0.0,False,False,676,11,0.1280440999998973
+47,2,2,primitive,,,,False,0.0,False,False,676,11,0.13031604800016794

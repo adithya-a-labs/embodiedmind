@@ -1,0 +1,2 @@
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-b10-multiroom-80-dev.yaml","--output","outputs/memory-b10-multiroom-80-20261114-202808","--parallel","1","--monitor"],"started":"2026-11-14T15:36:51+00:00"}
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-b10-multiroom-80-dev.yaml","--output","outputs/memory-b10-multiroom-80-20261114-202808","--parallel","1","--monitor"],"started":"2026-11-14T15:36:51+00:00","finished":"2026-11-14T15:43:18+00:00","status":"complete"}

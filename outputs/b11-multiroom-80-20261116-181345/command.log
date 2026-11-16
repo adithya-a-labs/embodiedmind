@@ -1,0 +1,2 @@
+[2026-11-17T01:02:44+05:30] .venv/bin/embodiedmind run --config configs/b11-multiroom-80.yaml --output outputs/b11-multiroom-80-20261116-181345 --monitor --parallel 1
+[2026-11-17T01:53:09+05:30] runner exit 0

@@ -1,0 +1,116 @@
+{
+  "planned": 300,
+  "attempted": 300,
+  "unattempted": 0,
+  "attempt_records": 300,
+  "valid": 300,
+  "excluded": 0,
+  "failed": 0,
+  "pending": 0,
+  "invalid": 0,
+  "strata": [
+    {
+      "split": "b11-mechanisms",
+      "environment": "BabyAI-GoToObjMazeS7-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 30,
+      "matched_cells": 30,
+      "matched_seeds": 30,
+      "variants": {
+        "B11": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11C": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11P": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11R": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11T": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    },
+    {
+      "split": "b11-mechanisms",
+      "environment": "MiniGrid-DoorKey-8x8-v0",
+      "intervention": "none",
+      "planned": 150,
+      "planned_matched_cells": 30,
+      "matched_cells": 30,
+      "matched_seeds": 30,
+      "variants": {
+        "B11": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11C": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11P": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11R": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        },
+        "B11T": {
+          "planned": 30,
+          "valid": 30,
+          "excluded": 0,
+          "failed": 0,
+          "pending": 0,
+          "invalid": 0
+        }
+      }
+    }
+  ],
+  "nonvalid_cells": []
+}

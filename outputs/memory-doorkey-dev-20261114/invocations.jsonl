@@ -1,0 +1,2 @@
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-doorkey-dev.yaml","--output","outputs/memory-doorkey-dev-20261114","--monitor"],"started":"2026-11-14T06:11:40+00:00"}
+{"argv":[".venv/bin/embodiedmind","run","--config","configs/memory-doorkey-dev.yaml","--output","outputs/memory-doorkey-dev-20261114","--monitor"],"started":"2026-11-14T06:11:40+00:00","finished":"2026-11-14T06:16:39+00:00","status":"complete"}

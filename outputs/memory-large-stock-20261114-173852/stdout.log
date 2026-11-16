@@ -1,0 +1,22 @@
+Run archive: outputs/memory-large-stock-20261114-173852
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Sampling rejected: objs already next to each other
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+Timeout during mission generation: rejection sampling failed in place_obj
+{"completed": 550, "errors": 0, "pid": 95008, "planned": 550, "status": "complete"}

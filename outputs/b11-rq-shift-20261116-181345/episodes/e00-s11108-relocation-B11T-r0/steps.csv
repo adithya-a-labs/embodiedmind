@@ -1,0 +1,18 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the red ball,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the red ball,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the red ball,o1,True,0.0,False,False,425,27,0.2691190430000461
+3,0,2,explore,choose_frontier_route,go to the red ball,o1,,0.0,False,False,451,27,0.2722611879999022
+4,2,2,explore,choose_frontier_route,go to the red ball,o1,True,0.0,False,False,468,27,0.2850914410000769
+5,2,0,explore,choose_frontier_route,go to the red ball,o4,True,0.0,False,False,487,27,0.306536404000326
+6,2,2,explore,choose_frontier_route,go to the red ball,o0,True,0.0,False,False,507,27,0.2888985290001074
+7,2,2,explore,choose_frontier_route,go to the red ball,o0,True,0.0,False,False,527,27,0.2854081899999983
+8,2,2,explore,choose_frontier_route,go to the red ball,o0,True,0.0,False,False,540,27,0.27411051800027053
+9,2,2,explore,choose_frontier_route,go to the red ball,o0,True,0.0,False,False,557,27,0.2751296569999795
+10,0,0,explore,choose_frontier_route,go to the red ball,o0,,0.0,False,False,569,27,0.3293446600000607
+11,2,2,approach,route_to_mission_target,go to the red ball,o0,True,0.0,False,False,600,27,0.5377691570001844
+12,2,2,approach,route_to_mission_target,go to the red ball,o11,True,0.0,False,False,621,28,0.5747970439997516
+13,2,2,approach,route_to_mission_target,go to the red ball,o12,True,0.0,False,False,641,28,0.5716286449996915
+14,2,2,approach,route_to_mission_target,go to the red ball,o13,True,0.0,False,False,661,28,0.48212519700018674
+15,2,2,approach,route_to_mission_target,go to the red ball,o14,True,0.0,False,False,681,28,0.5471679010001935
+16,0,0,approach,route_to_mission_target,go to the red ball,o12,,0.9319999999999999,True,False,701,28,0.6331427879999865

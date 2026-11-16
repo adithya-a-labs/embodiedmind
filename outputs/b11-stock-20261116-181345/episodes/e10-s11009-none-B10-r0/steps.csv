@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,1,explore,choose_frontier_route,Find and pick up source,explore,,0.0,False,False,399,27,0.2594162929999584
+1,0,6,approach,route_to_mission_target,Find and pick up source,f1.5,,0.0,False,False,465,29,0.3439434470019478
+2,3,0,approach,verified_pickup_precondition,Find and pick up source,f1.5,,0.0,False,False,477,29,0.3329821039988019
+3,2,6,approach,choose_frontier_route,Place beside reference,visible,True,0.0,False,False,458,26,0.3523810289989342
+4,1,1,approach,continue_frontier_route,Place beside reference,visible,,0.0,False,False,452,26,0.2890679129995988
+5,5,0,explore,verified_toggle_precondition,Place beside reference,explore,,0.0,False,False,438,27,0.27089657799660927
+6,2,2,explore,choose_frontier_route,Place beside reference,f6.15,True,0.0,False,False,494,31,0.35173796199887875
+7,0,3,approach,choose_frontier_route,Place beside reference,f6.15,,0.0,False,False,463,30,0.3153806469999836
+8,0,0,explore,choose_frontier_route,Place beside reference,explore,,0.0,False,False,481,28,0.39281524699981674
+9,2,3,approach,continue_frontier_route,Place beside reference,f6.15,True,0.0,False,False,458,30,0.30913767400124925
+10,0,5,approach,choose_frontier_route,Place beside reference,visible,,0.0,False,False,450,26,0.30343910199735546
+11,2,3,approach,choose_frontier_route,Place beside reference,f6.15,True,0.0,False,False,452,30,0.2984580869997444
+12,1,1,explore,continue_frontier_route,Place beside reference,f6.15,,0.0,False,False,422,31,0.34664361999966786
+13,2,2,explore,choose_frontier_route,Place beside reference,explore,True,0.0,False,False,453,28,0.3360773869972036
+14,2,3,approach,choose_frontier_route,Place beside reference,f6.15,True,0.0,False,False,435,30,0.33977185299954726
+15,1,6,approach,choose_frontier_route,Place beside reference,explore,,0.0,False,False,422,27,0.29283873999884236
+16,2,2,explore,continue_frontier_route,Place beside reference,f6.15,True,0.0,False,False,465,31,0.35654763500133413
+17,2,2,explore,choose_frontier_route,Place beside reference,f6.15,True,0.0,False,False,464,31,0.3862663360014267
+18,1,6,approach,choose_frontier_route,Place beside reference,explore,,0.0,False,False,438,27,0.30609024400109774
+19,2,2,explore,continue_frontier_route,Place beside reference,f6.9,True,0.0,False,False,501,30,0.45791603899851907
+20,0,6,explore,choose_frontier_route,Place beside reference,explore,,0.0,False,False,495,28,0.3678926089996821
+21,0,5,approach,choose_frontier_route,Place beside reference,explore,,0.0,False,False,440,27,0.3268889009996201
+22,2,3,approach,continue_frontier_route,Place beside reference,f6.9,True,0.0,False,False,437,29,0.3081143740018888
+23,0,0,approach,choose_frontier_route,Place beside reference,f6.9,,0.0,False,False,423,29,0.2959976199999801
+24,2,3,approach,continue_frontier_route,Place beside reference,f6.9,True,0.0,False,False,455,29,0.33701098399978946
+25,2,3,approach,choose_frontier_route,Place beside reference,f6.15,True,0.0,False,False,446,30,0.3159402499986754
+26,0,0,approach,choose_frontier_route,Place beside reference,f6.15,,0.0,False,False,424,30,0.3004305829999794
+27,2,5,explore,continue_frontier_route,Place beside reference,explore,True,0.0,False,False,508,28,0.3732223080005497
+28,0,2,explore,choose_frontier_route,Place beside reference,explore,,0.0,False,False,506,28,0.34234734200072126
+29,0,0,approach,choose_frontier_route,Place beside reference,f6.15,,0.0,False,False,478,30,0.3717336100016837
+30,0,2,explore,continue_frontier_route,Place beside reference,explore,,0.0,False,False,435,28,0.31125322799925925
+31,1,0,approach,choose_frontier_route,Place beside reference,f6.15,,0.0,False,False,423,30,0.31060651799998595
+32,2,2,explore,continue_frontier_route,Place beside reference,explore,True,0.0,False,False,435,28,0.3113118699984625
+33,1,6,approach,continue_frontier_route,Place beside reference,explore,,0.0,False,False,422,27,0.286426921000384
+34,2,2,explore,continue_frontier_route,Place beside reference,f6.15,True,0.0,False,False,465,31,0.3839904669985117
+35,0,2,explore,continue_frontier_route,Place beside reference,f6.15,,0.0,False,False,464,31,0.3386368930005119
+36,0,0,explore,choose_frontier_route,Place beside reference,f6.15,,0.0,False,False,423,30,0.3333478300010029
+37,0,2,explore,continue_frontier_route,Place beside reference,f6.15,,0.0,False,False,446,31,0.3541008130014234
+38,0,0,approach,choose_frontier_route,Place beside reference,f6.15,,0.0,False,False,501,30,0.3616369439987466
+39,2,2,explore,continue_frontier_route,Place beside reference,f6.15,True,0.0,False,False,464,31,0.3774766409987933
+40,1,6,approach,continue_frontier_route,Place beside reference,explore,,0.0,False,False,438,27,0.3208608870008902
+41,2,2,explore,continue_frontier_route,Place beside reference,f6.9,True,0.0,False,False,501,30,0.4269534279992513
+42,1,6,explore,continue_frontier_route,Place beside reference,explore,,0.0,False,False,495,28,0.3433458880026592
+43,1,5,approach,choose_frontier_route,Place beside reference,explore,,0.0,False,False,457,27,0.319331503000285
+44,2,3,approach,continue_frontier_route,Place beside reference,f6.9,True,0.0,False,False,437,29,0.28624309899896616
+45,0,0,approach,continue_frontier_route,Place beside reference,f6.9,,0.0,False,False,423,29,0.3068950439992477
+46,2,3,approach,continue_frontier_route,Place beside reference,f6.9,True,0.0,False,False,455,29,0.3585787119991437
+47,2,3,approach,continue_frontier_route,Place beside reference,f6.15,True,0.0,False,False,446,30,0.30703812199863023

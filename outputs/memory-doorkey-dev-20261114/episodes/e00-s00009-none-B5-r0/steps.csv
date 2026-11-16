@@ -1,0 +1,37 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible; verified at 0",,0.0,False,False,443,39,0.38698891199965146
+1,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible; verified at 1",,0.0,False,False,435,39,0.33976521200020215
+2,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible; verified at 2",,0.0,False,False,443,39,0.3705205490005028
+3,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,435,34,0.34587352399830706
+4,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible; verified at 4",,0.0,False,False,443,39,0.3608311500029231
+5,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,435,34,0.3141520239987585
+6,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,443,34,0.32382231800147565
+7,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,435,34,0.32863743100097054
+8,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible; verified at 8",,0.0,False,False,443,39,0.36981489599929773
+9,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,435,34,0.33325001100092777
+10,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.338360529000056
+11,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.3413860759974341
+12,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.326673801002471
+13,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.32077594000293175
+14,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.3439983049975126
+15,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.42280993000167655
+16,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.41979900899968925
+17,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.3408622770002694
+18,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.3580665189983847
+19,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.34186088099886547
+20,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.31925933900129166
+21,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.3330924390029395
+22,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.362694632000057
+23,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.3196949669982132
+24,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.34483373500188463
+25,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.3386262069980148
+26,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.3233751259976998
+27,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.3509133320003457
+28,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.3889511129964376
+29,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.4282897570010391
+30,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.3973178129999724
+31,0,3,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.347259946000122
+32,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.3470553410006687
+33,0,3,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.5176235580001958
+34,1,4,approach,unknown_fact_reference,Find key,"yellow key (0, 1) visible",,0.0,False,False,444,34,0.3673468019987922
+35,0,4,approach,unknown_fact_reference,Find key,"yellow key (1, 0) visible",,0.0,False,False,436,34,0.45974597500025993

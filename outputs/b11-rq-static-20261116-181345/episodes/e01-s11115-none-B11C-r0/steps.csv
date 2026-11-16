@@ -1,0 +1,26 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,5,0,explore,verified_toggle_precondition,go to the grey box,explore,,0.0,False,False,,,0.0
+1,2,0,explore,choose_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+3,2,0,explore,continue_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+4,0,0,explore,continue_frontier_route,go to the grey box,explore,,0.0,False,False,,,0.0
+5,5,0,explore,verified_toggle_precondition,go to the grey box,explore,,0.0,False,False,,,0.0
+6,2,0,explore,choose_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+7,2,0,explore,choose_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+8,2,0,explore,continue_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+9,0,0,explore,continue_frontier_route,go to the grey box,explore,,0.0,False,False,,,0.0
+10,2,0,explore,continue_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+11,5,0,explore,verified_toggle_precondition,go to the grey box,explore,,0.0,False,False,,,0.0
+12,2,0,explore,choose_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+13,2,0,explore,choose_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+14,2,0,explore,continue_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+15,2,0,explore,continue_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+16,0,0,explore,continue_frontier_route,go to the grey box,explore,,0.0,False,False,,,0.0
+17,2,0,explore,continue_frontier_route,go to the grey box,explore,True,0.0,False,False,,,0.0
+18,5,0,explore,verified_toggle_precondition,go to the grey box,explore,,0.0,False,False,,,0.0
+19,2,0,explore,route_to_mission_target,go to the grey box,explore,True,0.0,False,False,,,0.0
+20,2,0,explore,route_to_mission_target,go to the grey box,explore,True,0.0,False,False,,,0.0
+21,2,0,explore,route_to_mission_target,go to the grey box,explore,True,0.0,False,False,,,0.0
+22,2,0,explore,route_to_mission_target,go to the grey box,explore,True,0.0,False,False,,,0.0
+23,2,0,explore,route_to_mission_target,go to the grey box,explore,True,0.0,False,False,,,0.0
+24,0,0,explore,route_to_mission_target,go to the grey box,explore,,0.9489795918367347,True,False,,,0.0

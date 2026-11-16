@@ -1,0 +1,31 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,f0.26,True,0.0,False,False,661,15,0.2748697029965115
+3,2,2,primitive,,,f0.20,True,0.0,False,False,661,15,0.23617300300247734
+4,2,2,primitive,,,f0.27,True,0.0,False,False,661,15,0.2665600450054626
+5,2,2,primitive,,,f0.27,True,0.0,False,False,655,15,0.28993632800120395
+6,2,2,primitive,,,f0.27,True,0.0,False,False,652,15,0.264359056003741
+7,2,2,primitive,,,f0.27,True,0.0,False,False,647,15,0.25045200400199974
+8,0,0,primitive,,,f0.27,,0.0,False,False,643,18,0.27473387599457055
+9,2,2,primitive,,,f0.27,True,0.0,False,False,663,15,0.3208045569990645
+10,2,2,primitive,,,f0.27,True,0.0,False,False,664,15,0.22192602999712108
+11,2,2,primitive,,,f0.27,True,0.0,False,False,650,15,0.33804097100073704
+12,2,2,primitive,,,f0.27,True,0.0,False,False,649,15,0.28961892100051045
+13,2,2,primitive,,,f0.27,True,0.0,False,False,646,15,0.355589863997011
+14,2,2,primitive,,,f0.27,True,0.0,False,False,646,15,0.2763087839994114
+15,2,2,primitive,,,f0.27,True,0.0,False,False,648,15,0.309008284995798
+16,0,0,primitive,,,f0.27,,0.0,False,False,645,18,0.2731716959970072
+17,2,2,primitive,,,f0.27,True,0.0,False,False,658,15,0.2526526579968049
+18,2,2,primitive,,,f0.27,True,0.0,False,False,664,15,0.22262918399792397
+19,2,2,primitive,,,f0.27,True,0.0,False,False,667,15,0.2216306580012315
+20,2,2,primitive,,,f0.27,True,0.0,False,False,659,15,0.20676299600017956
+21,2,2,primitive,,,"f0.27 red key (8, -6) observed at step 0",True,0.0,False,False,654,28,0.3068157899979269
+22,2,2,primitive,,,f0.27,True,0.0,False,False,657,15,0.20374987900140695
+23,2,2,primitive,,,f0.27,True,0.0,False,False,662,15,0.23207136299606645
+24,2,2,primitive,,,f0.27,True,0.0,False,False,665,16,0.22151888599910308
+25,2,2,primitive,,,f0.27,True,0.0,False,False,664,15,0.20971776700025657
+26,2,2,primitive,,,f0.27,True,0.0,False,False,663,15,0.22889496599964332
+27,0,0,primitive,,,f0.27,,0.0,False,False,662,16,0.23759751999750733
+28,2,2,primitive,,,"f2.4 purple key (4, -6) observed at step 4",True,0.0,False,False,661,27,0.29760386099951575
+29,2,2,primitive,,,"f2.4 purple key (3, -6) observed at step 4",True,0.88,True,False,661,27,0.35269711400178494

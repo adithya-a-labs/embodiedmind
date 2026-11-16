@@ -1,0 +1,7 @@
+Run archive: outputs/b11-rq-static-20261116-181345
+Sampling rejected: unreachable object at (6, 9)
+Sampling rejected: unreachable object at (6, 9)
+Sampling rejected: unreachable object at (6, 9)
+Sampling rejected: unreachable object at (6, 9)
+Sampling rejected: unreachable object at (6, 9)
+{"completed": 300, "errors": 0, "pid": 40771, "planned": 300, "status": "complete"}

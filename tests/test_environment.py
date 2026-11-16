@@ -2,6 +2,7 @@ import pytest
 
 from embodiedmind.control.controller import PrimitiveController
 from embodiedmind.environments.factory import (
+    DYNAMIC_OBSTACLES,
     OFFICIAL_ENVIRONMENTS,
     make_environment,
     smoke_environment,
@@ -19,7 +20,7 @@ def test_seeded_official_environments_complete_smoke(env_id):
 
 
 def test_unrecognized_environment_is_not_substituted():
-    with pytest.raises(ValueError, match="Registered tasks"):
+    with pytest.raises(ValueError, match="Unsupported MiniGrid task 'Unregistered-v0'"):
         make_environment("Unregistered-v0")
 
 
@@ -32,6 +33,8 @@ def test_public_forward_rule_matches_evaluator_motion(env_id):
         blocked = 0
         moved = 0
         for action in (2, 2, 0, 2, 3, 5, 2, 1) * 12:
+            if not env.action_space.contains(action):
+                continue
             previous = tuple(env.unwrapped.agent_pos)
             result = controller.step(action)
             actual_motion = previous != tuple(env.unwrapped.agent_pos)
@@ -41,6 +44,8 @@ def test_public_forward_rule_matches_evaluator_motion(env_id):
                     moved += 1
                 else:
                     blocked += 1
+            if env_id == DYNAMIC_OBSTACLES:
+                assert result.moved is None
             if action == 0:
                 assert result.observation.direction == (observation.direction - 1) % 4
             if action == 1:
@@ -48,6 +53,6 @@ def test_public_forward_rule_matches_evaluator_motion(env_id):
             observation = result.observation
             if result.terminated or result.truncated:
                 break
-        assert moved + blocked > 0
+        assert env_id == DYNAMIC_OBSTACLES or moved + blocked > 0
     finally:
         env.close()

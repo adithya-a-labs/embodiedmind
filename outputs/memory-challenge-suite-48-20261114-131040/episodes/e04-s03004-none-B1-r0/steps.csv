@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,348,11,0.1719213519972982
+1,1,1,primitive,,,o0,,0.0,False,False,356,12,0.1752928409987362
+2,2,2,primitive,,,o1,False,0.0,False,False,364,12,0.16773346900299657
+3,1,1,primitive,,,o1,,0.0,False,False,380,12,0.13950161400134675
+4,2,2,primitive,,,o1,True,0.0,False,False,443,12,0.1969008199957898
+5,2,2,primitive,,,o4,True,0.0,False,False,472,12,0.16737975100113545
+6,2,2,primitive,,,o5,True,0.0,False,False,504,12,0.20618151799862972
+7,2,2,primitive,,,o6,True,0.0,False,False,527,12,0.18654661499749636
+8,2,2,primitive,,,o7,False,0.0,False,False,547,12,0.21673112999997102
+9,2,2,primitive,,,o8,False,0.0,False,False,573,12,0.16491382000094745
+10,2,2,primitive,,,o9,False,0.0,False,False,599,12,0.17920012199465418
+11,2,2,primitive,,,o1,False,0.0,False,False,627,12,0.22452170999895316
+12,2,2,primitive,,,o1,False,0.0,False,False,655,12,0.19769940299738664
+13,2,2,primitive,,,o1,False,0.0,False,False,683,12,0.18821141400258057
+14,2,2,primitive,,,o1,False,0.0,False,False,692,12,0.2574103360020672
+15,2,2,primitive,,,o4,False,0.0,False,False,688,12,0.5266672319994541
+16,2,2,primitive,,,o4,False,0.0,False,False,700,12,0.38943310100148665
+17,2,2,primitive,,,o5,False,0.0,False,False,688,12,0.19506270100100664
+18,5,5,primitive,,,o3 step 3 prev=2 facing=3: no named objects,,0.0,False,False,699,26,0.4476553479980794
+19,2,2,primitive,,,o7,True,0.0,False,False,690,12,0.49234861500008265
+20,2,2,primitive,,,"o10 step 10 prev=2 facing=0: purple box@1,0; purple key@2,1",True,0.0,False,False,694,37,0.5814505180023843
+21,1,1,primitive,,,"o20 step 20 prev=2 facing=0: purple key@1,1",,0.0,False,False,684,30,0.804878105998796
+22,2,2,primitive,,,o21,False,0.0,False,False,693,13,0.39510534099827055
+23,2,2,primitive,,,"o22 step 22 prev=1 facing=1: purple key@1,0",False,0.0,False,False,688,30,1.0476384749999852
+24,2,2,primitive,,,"o23 step 23 prev=2 facing=1: purple key@1,0",False,0.0,False,False,693,30,0.5866063759967801
+25,2,2,primitive,,,"o11 step 11 prev=2 facing=0: purple box@1,0; purple key@2,1",False,0.0,False,False,686,37,0.5328575219973573
+26,2,2,primitive,,,"o24 step 24 prev=2 facing=1: purple key@1,0",False,0.0,False,False,695,30,0.6860438869989594
+27,2,2,primitive,,,o3 step 3 prev=2 facing=3: no named objects,False,0.0,False,False,688,25,0.41907991499465425
+28,2,2,primitive,,,"o23 step 23 prev=2 facing=1: purple key@1,0",False,0.0,False,False,693,30,0.680270393997489
+29,2,2,primitive,,,"o24 step 24 prev=2 facing=1: purple key@1,0",False,0.0,False,False,686,30,0.4950447490045917
+30,2,2,primitive,,,"o24 step 24 prev=2 facing=1: purple key@1,0",False,0.0,False,False,695,30,0.49602989599952707
+31,0,0,primitive,,,o15,,0.0,False,False,700,14,0.36971077799535124
+32,1,1,primitive,,,"o20 step 20 prev=2 facing=0: purple key@1,1",,0.0,False,False,695,30,0.5472245499986457
+33,2,2,primitive,,,o18,False,0.0,False,False,686,13,0.31695168900478166
+34,5,5,primitive,,,o3 step 3 prev=2 facing=3: no named objects,,0.0,False,False,695,25,0.3075086399985594
+35,2,2,primitive,,,"o20 step 20 prev=2 facing=0: purple key@1,1",False,0.0,False,False,700,30,0.3530094590023509
+36,2,2,primitive,,,o34,False,0.0,False,False,693,13,0.3892750459999661
+37,5,5,primitive,,,"o32 step 32 prev=2 facing=1: purple key@1,0",,0.0,False,False,693,31,0.6586467699962668
+38,2,2,primitive,,,o32,False,0.0,False,False,693,13,0.5539682059970801
+39,5,5,primitive,,,"o34 step 34 prev=2 facing=1: purple key@1,0",,0.0,False,False,693,31,0.4454298869968625
+40,2,2,primitive,,,o32,False,0.0,False,False,693,13,0.36874320799688576
+41,2,2,primitive,,,o34,False,0.0,False,False,693,13,0.479862840998976
+42,5,5,primitive,,,o41,,0.0,False,False,693,14,0.53731561099994
+43,2,2,primitive,,,o35,False,0.0,False,False,693,13,0.2753524619984091
+44,2,2,primitive,,,o32,False,0.0,False,False,693,13,0.48969993500213604
+45,2,2,primitive,,,o32,False,0.0,False,False,693,13,0.5760071100012283
+46,2,2,primitive,,,o30,False,0.0,False,False,693,13,0.5694336939995992
+47,5,5,primitive,,,"o32 step 32 prev=0 facing=0: purple key@0,1",,0.0,False,False,693,31,0.7131942339983652

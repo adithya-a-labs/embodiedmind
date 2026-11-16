@@ -1,0 +1,21 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the purple key,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the purple key,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,425,27,0.3320197959997131
+3,0,2,explore,choose_frontier_route,go to the purple key,o2,,0.0,False,False,451,27,0.33440889499979676
+4,2,2,explore,choose_frontier_route,go to the purple key,o1,True,0.0,False,False,468,27,0.3261636060001365
+5,2,0,explore,choose_frontier_route,go to the purple key,o4,True,0.0,False,False,487,27,0.29275397600031283
+6,2,2,explore,choose_frontier_route,go to the purple key,o5,True,0.0,False,False,506,27,0.31890991099999155
+7,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,526,27,0.30382955300001413
+8,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,539,27,0.30570322300036423
+9,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,556,27,0.2830130550000831
+10,2,2,explore,choose_frontier_route,go to the purple key,o0,True,0.0,False,False,573,27,0.27311384699987684
+11,0,0,explore,choose_frontier_route,go to the purple key,o0,,0.0,False,False,587,27,0.2837322979999044
+12,2,2,approach,route_to_mission_target,go to the purple key,o0,True,0.0,False,False,618,27,0.3378829789999145
+13,2,2,approach,route_to_mission_target,go to the purple key,o12,True,0.0,False,False,639,28,0.38050719099965136
+14,2,2,approach,route_to_mission_target,go to the purple key,o13,True,0.0,False,False,659,28,0.40637202499965497
+15,2,2,approach,route_to_mission_target,go to the purple key,o14,True,0.0,False,False,679,28,0.4328794369998832
+16,2,2,approach,route_to_mission_target,go to the purple key,o15,True,0.0,False,False,699,28,0.47641189000023587
+17,0,0,approach,route_to_mission_target,go to the purple key,o16,,0.0,False,False,719,28,0.4373053190001883
+18,2,2,approach,route_to_mission_target,go to the purple key,o13,True,0.0,False,False,709,28,0.4337661490003484
+19,2,2,approach,route_to_mission_target,go to the purple key,o3,True,0.92,True,False,711,27,0.4523052119998283

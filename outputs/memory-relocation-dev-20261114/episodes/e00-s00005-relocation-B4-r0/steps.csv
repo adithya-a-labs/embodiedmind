@@ -1,0 +1,25 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,Find mission target,,,0.0,False,False,,,0.0
+1,0,0,primitive,,Find mission target,,,0.0,False,False,,,0.0
+2,2,2,primitive,,Find mission target,f0,True,0.0,False,False,375,15,0.22312802500164253
+3,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,375,15,0.1721587929969246
+4,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,376,18,0.17663711599743692
+5,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,368,15,0.1614104899999802
+6,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,370,15,0.14642648800145253
+7,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,364,15,0.15097958700062009
+8,0,0,primitive,,Find mission target,f0.34,,0.0,False,False,360,18,0.21449943100014934
+9,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,373,15,0.17897622500095167
+10,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,372,15,0.14452158999847597
+11,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,371,15,0.14474574199994095
+12,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,370,15,0.1554900170012843
+13,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,369,15,0.17990713299877825
+14,0,0,primitive,,Find mission target,f0.34,,0.0,False,False,363,18,0.19373070399888093
+15,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,382,18,0.1803975820002961
+16,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,382,18,0.20187380500283325
+17,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,382,18,0.19849422900006175
+18,2,2,primitive,,Find mission target,f0.34,True,0.0,False,False,381,18,0.19648123100341763
+19,2,2,primitive,,Find mission target,f19.14,True,0.0,False,False,403,17,0.17602274900127668
+20,2,2,primitive,,Find mission target,f19.14,True,0.0,False,False,394,17,0.17776049000167404
+21,2,2,primitive,,Find mission target,f19.14,True,0.0,False,False,386,16,0.16340143400157103
+22,2,2,primitive,,Find mission target,f19.14,True,0.0,False,False,385,16,0.17462487900047563
+23,2,2,primitive,,Find mission target,f19.14,True,0.0,False,False,384,16,0.16079145599724143

@@ -1,0 +1,28 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,o0,True,0.0,False,False,382,15,0.19653818599908845
+3,2,2,primitive,,,o2,True,0.0,False,False,408,12,0.17848718400273356
+4,2,2,primitive,,,o3,True,0.0,False,False,435,12,0.13884240300103556
+5,2,2,primitive,,,o0,True,0.0,False,False,453,12,0.15987486599988188
+6,2,2,primitive,,,o5,True,0.0,False,False,473,12,0.1717605240010016
+7,2,2,primitive,,,o1,True,0.0,False,False,486,12,0.14375103400016087
+8,0,0,primitive,,,o1,,0.0,False,False,498,12,0.14950532600050792
+9,2,2,primitive,,,o0,True,0.0,False,False,528,12,0.1747024659998715
+10,2,2,primitive,,,o0,True,0.0,False,False,543,12,0.17650878800122882
+11,2,2,primitive,,,o0,True,0.0,False,False,560,12,0.17094062099931762
+12,2,2,primitive,,,o0,True,0.0,False,False,577,12,0.1974542170028144
+13,2,2,primitive,,,"o1 step 1 prev=0 facing=2: blue ball@2,3",True,0.0,False,False,594,28,0.3199214460000803
+14,2,2,primitive,,,o0,True,0.0,False,False,611,12,0.19004429500273545
+15,0,0,primitive,,,o0,,0.0,False,False,623,13,0.23016930100129684
+16,2,2,primitive,,,o1,True,0.0,False,False,659,12,0.19823832000110997
+17,2,2,primitive,,,o1,True,0.0,False,False,657,12,0.18154713900003117
+18,2,2,primitive,,,o4,True,0.0,False,False,659,12,0.18541498200283968
+19,2,2,primitive,,,o4,True,0.0,False,False,654,12,0.17975484400085406
+20,2,2,primitive,,,o4,True,0.0,False,False,669,12,0.19134086499980185
+21,2,2,primitive,,,"o20 step 20 prev=2 facing=3: red ball@6,-1; purple key@0,-3",True,0.0,False,False,643,37,0.3744228550021944
+22,2,2,primitive,,,"o21 step 21 prev=2 facing=3: red ball@5,-1",True,0.0,False,False,645,30,0.35215781799706747
+23,2,2,primitive,,,"o22 step 22 prev=2 facing=3: red ball@4,-1",True,0.0,False,False,646,30,0.33056860999931814
+24,2,2,primitive,,,o23,True,0.0,False,False,650,13,0.19392539000182296
+25,2,2,primitive,,,"o24 step 24 prev=2 facing=3: red ball@2,-1",True,0.0,False,False,654,30,0.32654315199761186
+26,0,0,primitive,,,o25,,0.892,True,False,658,13,0.24851178099925164

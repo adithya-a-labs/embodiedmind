@@ -12,7 +12,9 @@ from matplotlib import pyplot as plt
 from .statistics import numeric, stratify
 
 
-COLORS = {"B0": "#64748b", "B1": "#31736b", "B2": "#b47035", "B3": "#344e90"}
+COLORS = {"B0": "#64748b", "B1": "#31736b", "B2": "#b47035", "B3": "#344e90",
+          "B0G": "#723e59", "B3G": "#566826", "B4": "#296074", "B5": "#735e18", "B6": "#734e8d",
+          "B7": "#9b5240", "B8": "#32655a", "B9N": "#69449c", "B9": "#2064a0", "B10": "#b65d27"}
 PLOT_GROUPS = {
     "success": (("success", "Mission success", "Share of episodes"),),
     "efficiency": (
@@ -26,6 +28,14 @@ PLOT_GROUPS = {
         ("unsupported_claims", "Unsupported evidence references", "Count per episode"),
         ("post_contradiction_recovered", "Recovery after contradiction", "Share of eligible episodes"),
         ("steps_to_recovery", "Steps to recovery", "Steps among recovered episodes"),
+        ("stale_commitments", "Continued routes to contradicted target", "Count per episode"),
+        ("reacquired", "Reacquired relocated target", "Share of assigned episodes"),
+    ),
+    "grounding": (
+        ("blocked_proposals", "Blocked forward proposals", "Proposals per episode"),
+        ("blocked_actions", "Executed blocked moves", "Moves per episode"),
+        ("verification_requests", "Verification requests", "Requests per episode"),
+        ("informative_checks", "Verification actions that exposed their target", "Count per episode"),
     ),
 }
 
@@ -85,9 +95,10 @@ def make_plots(episodes, comparisons, destination: Path) -> list[Path]:
         fig, ax = plt.subplots(figsize=(10, max(2.7, 0.46 * len(selected) + 1)))
         for index, result in enumerate(selected):
             point = result.difference
+            color = COLORS.get(result.treatment, "#4c5d70")
             if result.lower_95 is not None and result.upper_95 is not None:
-                ax.hlines(index, result.lower_95, result.upper_95, color=COLORS[result.treatment], linewidth=1.5)
-            ax.scatter([point], [index], color=COLORS[result.treatment], zorder=3)
+                ax.hlines(index, result.lower_95, result.upper_95, color=color, linewidth=1.5)
+            ax.scatter([point], [index], color=color, zorder=3)
         ax.set_yticks(range(len(selected)), [
             f"{result.split} · {result.environment} · {result.intervention} · {result.metric}\n"
             f"{result.treatment} − {result.control} (matched n={result.paired_n})" for result in selected

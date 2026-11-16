@@ -1,0 +1,2 @@
+[2026-11-16T18:19:17+05:30] .venv/bin/embodiedmind run --config configs/b11-rq-shift.yaml --output outputs/b11-rq-shift-20261116-181345 --monitor --parallel 1
+[2026-11-16T18:59:14+05:30] runner exit 1

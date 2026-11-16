@@ -1,0 +1,13 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,348,11,0.14372262100005173
+1,2,2,primitive,,,"f0.11 empty (-1, -1) observed at step 0",True,0.0,False,False,443,27,0.29833643100027984
+2,0,0,primitive,,,"f0.10 empty (-1, -1) observed at step 1",,0.0,False,False,545,30,0.31096129799880146
+3,2,2,primitive,,,f0.15,True,0.0,False,False,502,15,0.21303623999847332
+4,2,2,primitive,,,"f0.12 grey wall (-1, 1) observed at step 3",True,0.0,False,False,591,28,0.26786651099973824
+5,0,0,primitive,,,"f0.10 empty (-1, -1) observed at step 4",,0.0,False,False,636,27,0.29781729899877973
+6,2,2,primitive,,,f0.22,True,0.0,False,False,521,15,0.19912020300034783
+7,2,2,primitive,,,f0.22,True,0.0,False,False,609,15,0.20041957499961427
+8,2,2,primitive,,,"f0.12 grey wall (-3, -2) observed at step 3",True,0.0,False,False,640,28,0.2866719349985942
+9,0,0,primitive,,,"f0.7 empty (-1, 0) observed at step 7",,0.0,False,False,634,26,0.2719589359985548
+10,2,2,primitive,,,visible,True,0.0,False,False,555,11,0.15087086399944383
+11,2,2,primitive,,,visible,True,0.7,True,False,627,11,0.19821885800047312

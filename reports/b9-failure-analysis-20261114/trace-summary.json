@@ -1,0 +1,1366 @@
+{
+  "development inference / KeyCorridorS3R3 / B9": {
+    "n": 5,
+    "wins": 5,
+    "totals": {
+      "turn": 65,
+      "forward": 51,
+      "pickup": 10,
+      "drop": 5,
+      "toggle": 25,
+      "done": 0,
+      "effective_pickups": 10,
+      "verify": 0,
+      "explore": 129,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 156,
+      "moves": 51,
+      "actual_blocked_forward": 0,
+      "door_crossings": 23,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 5,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 5
+    },
+    "means": {
+      "steps": 31.2,
+      "tokens": 14670.4,
+      "unique_tiles": 8.4,
+      "max_no_move": 4.8,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 5,
+      "held_ball": 5,
+      "doors_open_at_end": 5,
+      "first_target_seen": 5,
+      "first_key_seen": 5,
+      "first_locked_door_seen": 5,
+      "toggle": 5,
+      "pickup": 5,
+      "drop": 5
+    },
+    "outcomes": {
+      "success": 5
+    },
+    "win_seeds": [
+      3001,
+      3002,
+      3003,
+      3004,
+      3005
+    ],
+    "reasons": {
+      "explore_for_subgoal": 86,
+      "route_to_subgoal": 45,
+      "attempt_subgoal_interaction": 15,
+      "find_key_drop_tile": 5,
+      "release_key_after_unlock": 5
+    }
+  },
+  "development inference / MemoryS17Random / B9": {
+    "n": 5,
+    "wins": 5,
+    "totals": {
+      "turn": 25,
+      "forward": 40,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 64,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 65,
+      "moves": 40,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 13.0,
+      "tokens": 6561.0,
+      "unique_tiles": 9.0,
+      "max_no_move": 2.8,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 0,
+      "first_key_seen": 5,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 5
+    },
+    "win_seeds": [
+      3001,
+      3002,
+      3003,
+      3004,
+      3005
+    ],
+    "reasons": {
+      "inspect_toward_start_room": 5,
+      "approach_matching_branch": 35,
+      "search_hallway": 25
+    }
+  },
+  "development inference / PutNextS5N2 / B9": {
+    "n": 5,
+    "wins": 5,
+    "totals": {
+      "turn": 20,
+      "forward": 26,
+      "pickup": 5,
+      "drop": 5,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 5,
+      "verify": 0,
+      "explore": 37,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 56,
+      "moves": 26,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 11.2,
+      "tokens": 5391.6,
+      "unique_tiles": 5.4,
+      "max_no_move": 3.2,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 2,
+      "held_ball": 1,
+      "doors_open_at_end": 0,
+      "first_target_seen": 5,
+      "first_key_seen": 5,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 5,
+      "drop": 5
+    },
+    "outcomes": {
+      "success": 5
+    },
+    "win_seeds": [
+      3001,
+      3002,
+      3003,
+      3004,
+      3005
+    ],
+    "reasons": {
+      "route_to_subgoal": 14,
+      "attempt_subgoal_interaction": 5,
+      "explore_for_subgoal": 7,
+      "route_to_placement": 25,
+      "attempt_verified_placement": 5
+    }
+  },
+  "fixed-explore feasibility / KeyCorridorS3R3 / B9": {
+    "n": 5,
+    "wins": 5,
+    "totals": {
+      "turn": 65,
+      "forward": 51,
+      "pickup": 10,
+      "drop": 5,
+      "toggle": 25,
+      "done": 0,
+      "effective_pickups": 10,
+      "verify": 0,
+      "explore": 0,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 0,
+      "moves": 51,
+      "actual_blocked_forward": 0,
+      "door_crossings": 23,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 5,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 5
+    },
+    "means": {
+      "steps": 31.2,
+      "tokens": 0.0,
+      "unique_tiles": 8.4,
+      "max_no_move": 4.8,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 5,
+      "held_ball": 5,
+      "doors_open_at_end": 5,
+      "first_target_seen": 5,
+      "first_key_seen": 5,
+      "first_locked_door_seen": 5,
+      "toggle": 5,
+      "pickup": 5,
+      "drop": 5
+    },
+    "outcomes": {
+      "success": 5
+    },
+    "win_seeds": [
+      3001,
+      3002,
+      3003,
+      3004,
+      3005
+    ],
+    "reasons": {
+      "unspecified": 156
+    }
+  },
+  "fixed-explore feasibility / MemoryS17Random / B9": {
+    "n": 5,
+    "wins": 5,
+    "totals": {
+      "turn": 25,
+      "forward": 40,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 0,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 0,
+      "moves": 40,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 13.0,
+      "tokens": 0.0,
+      "unique_tiles": 9.0,
+      "max_no_move": 2.8,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 0,
+      "first_key_seen": 5,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 5
+    },
+    "win_seeds": [
+      3001,
+      3002,
+      3003,
+      3004,
+      3005
+    ],
+    "reasons": {
+      "unspecified": 65
+    }
+  },
+  "fixed-explore feasibility / PutNextS5N2 / B9": {
+    "n": 5,
+    "wins": 5,
+    "totals": {
+      "turn": 20,
+      "forward": 26,
+      "pickup": 5,
+      "drop": 5,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 5,
+      "verify": 0,
+      "explore": 0,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 0,
+      "moves": 26,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 11.2,
+      "tokens": 0.0,
+      "unique_tiles": 5.4,
+      "max_no_move": 3.2,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 2,
+      "held_ball": 1,
+      "doors_open_at_end": 0,
+      "first_target_seen": 5,
+      "first_key_seen": 5,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 5,
+      "drop": 5
+    },
+    "outcomes": {
+      "success": 5
+    },
+    "win_seeds": [
+      3001,
+      3002,
+      3003,
+      3004,
+      3005
+    ],
+    "reasons": {
+      "unspecified": 56
+    }
+  },
+  "large shift / dropout / B9": {
+    "n": 10,
+    "wins": 10,
+    "totals": {
+      "turn": 56,
+      "forward": 70,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 14,
+      "progress": 18,
+      "burst": 2,
+      "task_steps": 0,
+      "moves": 70,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 13,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 13,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 12.6,
+      "tokens": 4818.7,
+      "unique_tiles": 8.0,
+      "max_no_move": 3.7,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 10,
+      "first_key_seen": 10,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 10
+    },
+    "win_seeds": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010
+    ],
+    "reasons": {
+      "unspecified": 106,
+      "progress_aware_explore": 18,
+      "forward_burst": 2
+    }
+  },
+  "large shift / no_change / B9": {
+    "n": 10,
+    "wins": 10,
+    "totals": {
+      "turn": 43,
+      "forward": 66,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 6,
+      "progress": 6,
+      "burst": 2,
+      "task_steps": 0,
+      "moves": 66,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 5,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 5,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 10.9,
+      "tokens": 3995.2,
+      "unique_tiles": 7.6,
+      "max_no_move": 3.2,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 10,
+      "first_key_seen": 10,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 10
+    },
+    "win_seeds": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010
+    ],
+    "reasons": {
+      "unspecified": 100,
+      "progress_aware_explore": 6,
+      "unknown_fact_reference": 1,
+      "forward_burst": 2
+    }
+  },
+  "large shift / relocation / B9": {
+    "n": 10,
+    "wins": 10,
+    "totals": {
+      "turn": 69,
+      "forward": 112,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 76,
+      "progress": 76,
+      "burst": 4,
+      "task_steps": 0,
+      "moves": 112,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 27,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 27,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 18.1,
+      "tokens": 7250.4,
+      "unique_tiles": 12.2,
+      "max_no_move": 3.2,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 10,
+      "first_key_seen": 10,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 10
+    },
+    "win_seeds": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010
+    ],
+    "reasons": {
+      "unspecified": 100,
+      "progress_aware_explore": 76,
+      "unknown_fact_reference": 1,
+      "forward_burst": 4
+    }
+  },
+  "large stock / BlockedUnlockPickup / B9": {
+    "n": 10,
+    "wins": 0,
+    "totals": {
+      "turn": 479,
+      "forward": 1,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 480,
+      "progress": 480,
+      "burst": 0,
+      "task_steps": 0,
+      "moves": 1,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 479,
+      "one_action_progress_turns": 455,
+      "progress_turns_with_empty_front": 371,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 48.0,
+      "tokens": 21036.6,
+      "unique_tiles": 1.1,
+      "max_no_move": 47.7,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 0,
+      "first_key_seen": 10,
+      "first_locked_door_seen": 10,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "budget_timeout": 10
+    },
+    "win_seeds": [],
+    "reasons": {
+      "progress_aware_explore": 480
+    }
+  },
+  "large stock / DoorKey-8x8 / B7": {
+    "n": 10,
+    "wins": 10,
+    "totals": {
+      "turn": 47,
+      "forward": 105,
+      "pickup": 10,
+      "drop": 0,
+      "toggle": 10,
+      "done": 0,
+      "effective_pickups": 10,
+      "verify": 1,
+      "explore": 22,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 0,
+      "moves": 105,
+      "actual_blocked_forward": 0,
+      "door_crossings": 10,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 11,
+      "verify_facing_locked_with_key": 1,
+      "toggle_facing_locked_with_key": 10
+    },
+    "means": {
+      "steps": 17.2,
+      "tokens": 8106.7,
+      "unique_tiles": 10.7,
+      "max_no_move": 2.9,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 10,
+      "held_ball": 0,
+      "doors_open_at_end": 10,
+      "first_target_seen": 10,
+      "first_key_seen": 10,
+      "first_locked_door_seen": 10,
+      "toggle": 10,
+      "pickup": 10,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 10
+    },
+    "win_seeds": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010
+    ],
+    "reasons": {
+      "unspecified": 171,
+      "verify_target_visible": 1
+    }
+  },
+  "large stock / DoorKey-8x8 / B9": {
+    "n": 10,
+    "wins": 2,
+    "totals": {
+      "turn": 359,
+      "forward": 61,
+      "pickup": 10,
+      "drop": 0,
+      "toggle": 2,
+      "done": 0,
+      "effective_pickups": 10,
+      "verify": 83,
+      "explore": 48,
+      "progress": 277,
+      "burst": 5,
+      "task_steps": 0,
+      "moves": 61,
+      "actual_blocked_forward": 0,
+      "door_crossings": 2,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 273,
+      "one_action_progress_turns": 260,
+      "progress_turns_with_empty_front": 162,
+      "facing_locked_with_key": 85,
+      "verify_facing_locked_with_key": 83,
+      "toggle_facing_locked_with_key": 2
+    },
+    "means": {
+      "steps": 43.2,
+      "tokens": 19892.2,
+      "unique_tiles": 6.0,
+      "max_no_move": 31.1,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 10,
+      "held_ball": 0,
+      "doors_open_at_end": 2,
+      "first_target_seen": 2,
+      "first_key_seen": 10,
+      "first_locked_door_seen": 10,
+      "toggle": 2,
+      "pickup": 10,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 2,
+      "budget_timeout": 8
+    },
+    "win_seeds": [
+      4001,
+      4007
+    ],
+    "reasons": {
+      "progress_aware_explore": 277,
+      "unspecified": 130,
+      "forward_burst": 5,
+      "verify_target_visible": 20
+    }
+  },
+  "large stock / Dynamic-Obstacles-8x8 / B8": {
+    "n": 10,
+    "wins": 7,
+    "totals": {
+      "turn": 99,
+      "forward": 169,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 268,
+      "progress": 0,
+      "burst": 167,
+      "task_steps": 0,
+      "moves": 156,
+      "actual_blocked_forward": 13,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 26.8,
+      "tokens": 10291.6,
+      "unique_tiles": 11.7,
+      "max_no_move": 4.3,
+      "segments": 17.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 10,
+      "first_key_seen": 0,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 7,
+      "budget_timeout": 3
+    },
+    "win_seeds": [
+      4001,
+      4002,
+      4003,
+      4006,
+      4007,
+      4009,
+      4010
+    ],
+    "reasons": {
+      "unspecified": 101,
+      "forward_burst": 167
+    }
+  },
+  "large stock / Dynamic-Obstacles-8x8 / B9": {
+    "n": 10,
+    "wins": 0,
+    "totals": {
+      "turn": 391,
+      "forward": 89,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 480,
+      "progress": 480,
+      "burst": 0,
+      "task_steps": 0,
+      "moves": 81,
+      "actual_blocked_forward": 8,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 391,
+      "one_action_progress_turns": 121,
+      "progress_turns_with_empty_front": 297,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 48.0,
+      "tokens": 18724.5,
+      "unique_tiles": 6.0,
+      "max_no_move": 15.1,
+      "segments": 9.9
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 10,
+      "first_key_seen": 0,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "budget_timeout": 10
+    },
+    "win_seeds": [],
+    "reasons": {
+      "progress_aware_explore": 480
+    }
+  },
+  "large stock / GoToObjMazeS7 / B9": {
+    "n": 10,
+    "wins": 2,
+    "totals": {
+      "turn": 375,
+      "forward": 19,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 387,
+      "progress": 387,
+      "burst": 0,
+      "task_steps": 0,
+      "moves": 19,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 373,
+      "one_action_progress_turns": 337,
+      "progress_turns_with_empty_front": 313,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 39.4,
+      "tokens": 17019.0,
+      "unique_tiles": 2.9,
+      "max_no_move": 35.4,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 2,
+      "first_key_seen": 1,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "budget_timeout": 8,
+      "success": 2
+    },
+    "win_seeds": [
+      4004,
+      4009
+    ],
+    "reasons": {
+      "progress_aware_explore": 387,
+      "unspecified": 4,
+      "unknown_fact_reference": 3
+    }
+  },
+  "large stock / GoToObjS6 / B9": {
+    "n": 10,
+    "wins": 10,
+    "totals": {
+      "turn": 13,
+      "forward": 19,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 5,
+      "progress": 5,
+      "burst": 0,
+      "task_steps": 0,
+      "moves": 19,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 5,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 1,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 3.2,
+      "tokens": 1420.3,
+      "unique_tiles": 2.9,
+      "max_no_move": 0.9,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 10,
+      "first_key_seen": 4,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 10
+    },
+    "win_seeds": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010
+    ],
+    "reasons": {
+      "unspecified": 17,
+      "unknown_fact_reference": 10,
+      "progress_aware_explore": 5
+    }
+  },
+  "large stock / KeyCorridorS3R3 / B9": {
+    "n": 10,
+    "wins": 10,
+    "totals": {
+      "turn": 137,
+      "forward": 111,
+      "pickup": 20,
+      "drop": 10,
+      "toggle": 45,
+      "done": 0,
+      "effective_pickups": 20,
+      "verify": 0,
+      "explore": 273,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 323,
+      "moves": 111,
+      "actual_blocked_forward": 0,
+      "door_crossings": 38,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 10,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 10
+    },
+    "means": {
+      "steps": 32.3,
+      "tokens": 15066.8,
+      "unique_tiles": 7.8,
+      "max_no_move": 5.0,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 10,
+      "held_ball": 10,
+      "doors_open_at_end": 10,
+      "first_target_seen": 10,
+      "first_key_seen": 10,
+      "first_locked_door_seen": 10,
+      "toggle": 10,
+      "pickup": 10,
+      "drop": 10
+    },
+    "outcomes": {
+      "success": 10
+    },
+    "win_seeds": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010
+    ],
+    "reasons": {
+      "explore_for_subgoal": 170,
+      "route_to_subgoal": 103,
+      "attempt_subgoal_interaction": 30,
+      "find_key_drop_tile": 10,
+      "release_key_after_unlock": 10
+    }
+  },
+  "large stock / MemoryS13 / B9": {
+    "n": 10,
+    "wins": 10,
+    "totals": {
+      "turn": 50,
+      "forward": 74,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 116,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 124,
+      "moves": 74,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 12.4,
+      "tokens": 6227.6,
+      "unique_tiles": 7.7,
+      "max_no_move": 2.6,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 0,
+      "first_key_seen": 10,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 10
+    },
+    "win_seeds": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010
+    ],
+    "reasons": {
+      "inspect_toward_start_room": 17,
+      "return_toward_start_room": 7,
+      "search_hallway": 22,
+      "approach_matching_branch": 78
+    }
+  },
+  "large stock / MemoryS17Random / B9": {
+    "n": 10,
+    "wins": 10,
+    "totals": {
+      "turn": 42,
+      "forward": 88,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 125,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 130,
+      "moves": 88,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 13.0,
+      "tokens": 6553.7,
+      "unique_tiles": 8.8,
+      "max_no_move": 2.5,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 0,
+      "first_key_seen": 10,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 10
+    },
+    "win_seeds": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010
+    ],
+    "reasons": {
+      "search_hallway": 32,
+      "approach_matching_branch": 77,
+      "inspect_toward_start_room": 12,
+      "return_toward_start_room": 9
+    }
+  },
+  "large stock / MultiRoom-N6 / B9": {
+    "n": 10,
+    "wins": 0,
+    "totals": {
+      "turn": 471,
+      "forward": 9,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 480,
+      "progress": 480,
+      "burst": 0,
+      "task_steps": 0,
+      "moves": 9,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 471,
+      "one_action_progress_turns": 440,
+      "progress_turns_with_empty_front": 386,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 48.0,
+      "tokens": 20825.0,
+      "unique_tiles": 1.9,
+      "max_no_move": 45.7,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 0,
+      "first_key_seen": 0,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "budget_timeout": 10
+    },
+    "win_seeds": [],
+    "reasons": {
+      "progress_aware_explore": 480
+    }
+  },
+  "large stock / PutNextS5N2 / B9": {
+    "n": 10,
+    "wins": 10,
+    "totals": {
+      "turn": 30,
+      "forward": 55,
+      "pickup": 10,
+      "drop": 10,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 10,
+      "verify": 0,
+      "explore": 67,
+      "progress": 0,
+      "burst": 0,
+      "task_steps": 105,
+      "moves": 55,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 0,
+      "one_action_progress_turns": 0,
+      "progress_turns_with_empty_front": 0,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 10.5,
+      "tokens": 5194.9,
+      "unique_tiles": 6.2,
+      "max_no_move": 2.4,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 2,
+      "held_ball": 3,
+      "doors_open_at_end": 0,
+      "first_target_seen": 10,
+      "first_key_seen": 9,
+      "first_locked_door_seen": 0,
+      "toggle": 0,
+      "pickup": 10,
+      "drop": 10
+    },
+    "outcomes": {
+      "success": 10
+    },
+    "win_seeds": [
+      4001,
+      4002,
+      4003,
+      4004,
+      4005,
+      4006,
+      4007,
+      4008,
+      4009,
+      4010
+    ],
+    "reasons": {
+      "explore_for_subgoal": 8,
+      "route_to_subgoal": 35,
+      "attempt_subgoal_interaction": 10,
+      "route_to_placement": 42,
+      "attempt_verified_placement": 10
+    }
+  },
+  "large stock / SynthS5R2 / B9": {
+    "n": 10,
+    "wins": 1,
+    "totals": {
+      "turn": 433,
+      "forward": 2,
+      "pickup": 0,
+      "drop": 0,
+      "toggle": 0,
+      "done": 0,
+      "effective_pickups": 0,
+      "verify": 0,
+      "explore": 367,
+      "progress": 422,
+      "burst": 0,
+      "task_steps": 0,
+      "moves": 2,
+      "actual_blocked_forward": 0,
+      "door_crossings": 0,
+      "unchanged_open_set_toggles": 0,
+      "progress_turns": 422,
+      "one_action_progress_turns": 408,
+      "progress_turns_with_empty_front": 250,
+      "facing_locked_with_key": 0,
+      "verify_facing_locked_with_key": 0,
+      "toggle_facing_locked_with_key": 0
+    },
+    "means": {
+      "steps": 43.5,
+      "tokens": 20027.9,
+      "unique_tiles": 1.2,
+      "max_no_move": 43.3,
+      "segments": 1.0
+    },
+    "episodes": {
+      "held_key": 0,
+      "held_ball": 0,
+      "doors_open_at_end": 0,
+      "first_target_seen": 2,
+      "first_key_seen": 7,
+      "first_locked_door_seen": 1,
+      "toggle": 0,
+      "pickup": 0,
+      "drop": 0
+    },
+    "outcomes": {
+      "success": 1,
+      "budget_timeout": 9
+    },
+    "win_seeds": [
+      4001
+    ],
+    "reasons": {
+      "unspecified": 5,
+      "progress_aware_explore": 422,
+      "no_known_route": 8
+    }
+  }
+}

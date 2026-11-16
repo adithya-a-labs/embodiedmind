@@ -1,0 +1,25 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,f0.23,True,0.0,False,False,665,18,0.44474945700130775
+3,2,2,primitive,,,"f0.27 green key (-7, -1) observed at step 0",True,0.0,False,False,649,28,0.30612949900023523
+4,2,2,primitive,,,"f0.27 green key (-8, -1) observed at step 0",True,0.0,False,False,650,28,0.2962780490015575
+5,2,2,primitive,,,"f0.27 green key (-9, -1) observed at step 0",True,0.0,False,False,643,28,0.3015255540012731
+6,2,2,primitive,,,"f0.27 green key (-10, -1) observed at step 0",True,0.0,False,False,640,29,0.3056306630023755
+7,2,2,primitive,,,"f0.27 green key (-11, -1) observed at step 0",True,0.0,False,False,635,29,0.32753150400094455
+8,0,0,primitive,,,visible,,0.0,False,False,632,14,0.2310977439992712
+9,2,2,primitive,,,f0.27,True,0.0,False,False,650,15,0.2278318010030489
+10,2,2,primitive,,,f0.27,True,0.0,False,False,650,15,0.3956346070008294
+11,2,2,primitive,,,f0.27,True,0.0,False,False,654,15,0.21765955799855874
+12,2,2,primitive,,,"f0.27 green key (-2, -12) STALE; reobserve at step 0",True,0.0,False,False,638,33,0.35197533300015493
+13,2,2,primitive,,,"f0.27 green key (-3, -12) STALE; reobserve at step 0",True,0.0,False,False,638,33,0.501286752998567
+14,0,0,primitive,,,f0.27,,0.0,False,False,634,18,0.2840022570017027
+15,2,2,primitive,,,"f0.27 green key (12, -4) observed at step 0",True,0.0,False,False,660,29,0.3395618040012778
+16,2,2,primitive,,,"f0.27 green key (11, -4) observed at step 0",True,0.0,False,False,662,29,0.3213808400032576
+17,2,2,primitive,,,"f0.27 green key (10, -4) observed at step 0",True,0.0,False,False,662,29,0.3250730699983251
+18,2,2,primitive,,,"f0.27 green key (9, -4) STALE; reobserve at step 0",True,0.0,False,False,660,32,0.330478159001359
+19,2,2,primitive,,,"f0.27 green key (8, -4) STALE; reobserve at step 0",True,0.0,False,False,658,32,0.33957336099774693
+20,2,2,primitive,,,visible,True,0.0,False,False,653,12,0.21967548199972953
+21,2,2,primitive,,,"f0.27 green key (6, -4) STALE; reobserve at step 0",True,0.0,False,False,659,32,0.3293142760012415
+22,2,2,primitive,,,"f0.27 green key (5, -4) STALE; reobserve at step 0",True,0.0,False,False,662,32,0.33118098599879886
+23,2,2,primitive,,,"f0.27 green key (4, -4) STALE; reobserve at step 0",True,0.904,True,False,662,32,0.3310155639992445

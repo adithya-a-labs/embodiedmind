@@ -1,0 +1,8 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,explore,approach_matching_branch,Choose matching branch,f0.3,True,0.0,False,False,501,29,0.3271329230046831
+1,2,2,explore,approach_matching_branch,Choose matching branch,f0.3,True,0.0,False,False,490,29,0.37899393400584813
+2,2,2,explore,approach_matching_branch,Choose matching branch,f0.3,True,0.0,False,False,488,29,0.34085236299142707
+3,2,2,explore,approach_matching_branch,Choose matching branch,f0.3,True,0.0,False,False,487,29,0.3253993169928435
+4,2,2,explore,approach_matching_branch,Choose matching branch,f0.3,True,0.0,False,False,485,29,0.3392139180068625
+5,0,6,explore,approach_matching_branch,Choose matching branch,f0.3,,0.0,False,False,478,29,0.3386192389880307
+6,2,2,explore,approach_matching_branch,Choose matching branch,f0.3,True,0.9956401384083045,True,False,487,29,0.3919197459908901

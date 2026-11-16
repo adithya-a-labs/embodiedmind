@@ -1,0 +1,106 @@
+{
+  "actions": [
+    0,
+    1,
+    2,
+    0,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    0,
+    2
+  ],
+  "method": "fixed_explore",
+  "planning": [
+    {
+      "step": 0,
+      "phase": "Find start-room cue",
+      "reason": "inspect_toward_start_room",
+      "action": 0
+    },
+    {
+      "step": 1,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 1
+    },
+    {
+      "step": 2,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 2
+    },
+    {
+      "step": 3,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 0
+    },
+    {
+      "step": 4,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 1
+    },
+    {
+      "step": 5,
+      "phase": "Find hallway fork",
+      "reason": "search_hallway",
+      "action": 2
+    },
+    {
+      "step": 6,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 7,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 8,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 9,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 10,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 11,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    },
+    {
+      "step": 12,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 0
+    },
+    {
+      "step": 13,
+      "phase": "Choose matching branch",
+      "reason": "approach_matching_branch",
+      "action": 2
+    }
+  ],
+  "recorded_at": "2026-11-14T11:57:35.116426+00:00"
+}

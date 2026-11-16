@@ -1,0 +1,22 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,2,explore,choose_frontier_route,go to the blue ball,explore,,0.0,False,False,401,27,0.30357862699929683
+1,2,2,explore,choose_frontier_route,go to the blue ball,explore,True,0.0,False,False,418,27,0.2721570760004397
+2,0,2,explore,continue_frontier_route,go to the blue ball,explore,,0.0,False,False,418,27,0.2862781019994145
+3,2,2,explore,continue_frontier_route,go to the blue ball,explore,True,0.0,False,False,419,27,0.2829939260009269
+4,2,2,explore,continue_frontier_route,go to the blue ball,explore,True,0.0,False,False,419,27,0.28968799600079365
+5,5,0,explore,verified_toggle_precondition,go to the blue ball,explore,,0.0,False,False,404,28,0.29439472900048713
+6,2,2,explore,choose_frontier_route,go to the blue ball,explore,True,0.0,False,False,419,27,0.27794532500047353
+7,0,2,explore,choose_frontier_route,go to the blue ball,explore,,0.0,False,False,410,27,0.3018127329996787
+8,0,0,explore,continue_frontier_route,go to the blue ball,explore,,0.0,False,False,394,28,0.3555468459999247
+9,2,2,explore,continue_frontier_route,go to the blue ball,explore,True,0.0,False,False,409,27,0.3059391560000222
+10,2,2,explore,continue_frontier_route,go to the blue ball,explore,True,0.0,False,False,408,27,0.2825893429999269
+11,0,2,explore,continue_frontier_route,go to the blue ball,explore,,0.0,False,False,408,27,0.2738854560011532
+12,2,2,explore,continue_frontier_route,go to the blue ball,explore,True,0.0,False,False,419,27,0.2768741689997114
+13,2,2,explore,continue_frontier_route,go to the blue ball,explore,True,0.0,False,False,410,27,0.31169233699984034
+14,5,0,explore,verified_toggle_precondition,go to the blue ball,explore,,0.0,False,False,404,28,0.32379181400028756
+15,2,1,approach,route_to_mission_target,go to the blue ball,f15.21,True,0.0,False,False,458,31,0.31483667400061677
+16,2,4,approach,route_to_mission_target,go to the blue ball,f15.21,True,0.0,False,False,460,31,0.32189921399913146
+17,2,2,approach,route_to_mission_target,go to the blue ball,f15.21,True,0.0,False,False,457,31,0.3284454040003766
+18,2,1,approach,route_to_mission_target,go to the blue ball,f15.21,True,0.0,False,False,456,31,0.3404285339984199
+19,2,1,approach,route_to_mission_target,go to the blue ball,f15.21,True,0.0,False,False,446,31,0.3134782630004338
+20,1,4,approach,route_to_mission_target,go to the blue ball,f15.21,,0.9571428571428572,True,False,445,31,0.30889904600007867

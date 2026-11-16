@@ -1,0 +1,9 @@
+{
+  "id": "e04-s11001-none-B6-r0",
+  "environment": "MiniGrid-MemoryS17Random-v0",
+  "seed": 11001,
+  "variant": "B6",
+  "intervention": "none",
+  "replicate": 0,
+  "started": "2026-11-16T15:57:08+00:00"
+}

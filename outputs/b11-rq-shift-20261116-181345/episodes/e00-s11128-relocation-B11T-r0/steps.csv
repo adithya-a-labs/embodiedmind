@@ -1,0 +1,19 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,go to the green ball,,,0.0,False,False,,,0.0
+1,0,0,primitive,,go to the green ball,,,0.0,False,False,,,0.0
+2,2,0,explore,choose_frontier_route,go to the green ball,o1,True,0.0,False,False,425,27,0.29225668199978827
+3,0,2,explore,choose_frontier_route,go to the green ball,o1,,0.0,False,False,451,27,0.27390817400009837
+4,2,2,explore,choose_frontier_route,go to the green ball,o1,True,0.0,False,False,468,27,0.2733377690001362
+5,2,0,explore,choose_frontier_route,go to the green ball,o4,True,0.0,False,False,487,27,0.2984096239997598
+6,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,507,27,0.2941428679996534
+7,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,527,27,0.26719964099993376
+8,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,540,27,0.2862561560004906
+9,2,2,explore,choose_frontier_route,go to the green ball,o0,True,0.0,False,False,557,27,0.2956991770006425
+10,0,0,explore,choose_frontier_route,go to the green ball,o0,,0.0,False,False,569,27,0.315195741000025
+11,2,2,approach,route_to_mission_target,go to the green ball,o0,True,0.0,False,False,601,27,0.3170011409993094
+12,2,2,approach,route_to_mission_target,go to the green ball,o11,True,0.0,False,False,622,28,0.41395101499983866
+13,2,2,approach,route_to_mission_target,go to the green ball,o12,True,0.0,False,False,642,28,0.41656238100040355
+14,2,2,approach,route_to_mission_target,go to the green ball,o13,True,0.0,False,False,662,28,0.4970350180001333
+15,2,2,approach,route_to_mission_target,go to the green ball,o14,True,0.0,False,False,682,28,0.5263236549999419
+16,0,0,approach,route_to_mission_target,go to the green ball,o15,,0.0,False,False,701,28,0.4007446929999787
+17,2,2,approach,route_to_mission_target,go to the green ball,o0,True,0.9279999999999999,True,False,714,27,0.5345855449995724

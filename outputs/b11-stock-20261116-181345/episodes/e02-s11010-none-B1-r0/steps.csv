@@ -1,0 +1,49 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,visible,True,0.0,False,False,339,11,0.17827213800046593
+1,2,2,primitive,,,o0,True,0.0,False,False,354,12,0.17513917100041
+2,6,6,primitive,,,o1,,0.0,False,False,362,14,0.2142473929998232
+3,6,6,primitive,,,o0,,0.0,False,False,378,14,0.21164221000071848
+4,6,6,primitive,,,o3,,0.0,False,False,394,13,0.2344873309994
+5,1,1,primitive,,,o1,,0.0,False,False,410,15,0.2364174220001587
+6,2,2,primitive,,,o0,True,0.0,False,False,431,12,0.1908906160006154
+7,2,2,primitive,,,o0,True,0.0,False,False,447,12,0.1944160790008027
+8,2,2,primitive,,,o0,True,0.0,False,False,463,12,0.16064031700079795
+9,2,2,primitive,,,o0,True,0.0,False,False,479,12,0.15806178099956014
+10,6,6,primitive,,,o0,,0.0,False,False,490,13,0.21838127999944845
+11,2,2,primitive,,,o0,False,0.0,False,False,508,12,0.21110407100059092
+12,6,6,primitive,,,o0,,0.0,False,False,526,13,0.21237978000135627
+13,6,6,primitive,,,o0,,0.0,False,False,544,13,0.21128084100018896
+14,2,2,primitive,,,o1,False,0.0,False,False,562,12,0.21362831800070126
+15,2,2,primitive,,,o1,False,0.0,False,False,580,12,0.21287091100020916
+16,0,0,primitive,,,o1,,0.0,False,False,598,12,0.23198048999984167
+17,6,6,primitive,,,o0,,0.0,False,False,618,13,0.27023809800084564
+18,0,0,primitive,,,o1,,0.0,False,False,619,13,0.18642218700006197
+19,2,2,primitive,,,o2,True,0.0,False,False,635,12,0.2761868620000314
+20,2,2,primitive,,,o19,True,0.0,False,False,624,13,0.22344422599962854
+21,2,2,primitive,,,o20,True,0.0,False,False,629,13,0.3203201979995356
+22,2,2,primitive,,,o21,True,0.0,False,False,634,16,0.29724725499909255
+23,6,6,primitive,,,"o22 step 22 prev=2 facing=2: blue door closed@2,-1",,0.0,False,False,634,32,0.5790787870009808
+24,5,5,primitive,,,"o23 step 23 prev=2 facing=2: blue door closed@1,-1",,0.0,False,False,640,32,0.4400589790002414
+25,0,0,primitive,,,"o20 step 20 prev=2 facing=2: blue door closed@1,-1",,0.0,False,False,646,34,0.43793720599933295
+26,2,2,primitive,,,"o25 step 25 prev=5 facing=2: blue door closed@1,-1",True,0.0,False,False,657,31,0.3987269040007959
+27,2,2,primitive,,,"o26 step 26 prev=0 facing=1: blue door closed@1,1",True,0.0,False,False,644,31,0.35782316800032277
+28,2,2,primitive,,,"o20 step 20 prev=2 facing=2: blue door closed@1,-1",True,0.0,False,False,640,31,0.42607316300018283
+29,2,2,primitive,,,"o27 step 27 prev=2 facing=1: blue door closed@0,1",True,0.0,False,False,639,31,0.37011936599992623
+30,6,6,primitive,,,o29 step 29 prev=2 facing=1: no named objects,,0.0,False,False,633,28,0.34914329999992333
+31,0,0,primitive,,,o16 step 16,,0.0,False,False,633,18,0.31631478000053903
+32,2,2,primitive,,,"o20 step 20 prev=2 facing=2: blue door closed@5,-1",True,0.0,False,False,642,31,0.5307251190006355
+33,2,2,primitive,,,"o20 step 20 prev=2 facing=2: blue door closed@5,-1",True,0.0,False,False,641,31,0.36187259600046673
+34,2,2,primitive,,,o27,True,0.0,False,False,640,13,0.2526707050001278
+35,2,2,primitive,,,o27 step 27,True,0.0,False,False,635,17,0.2522376240012818
+36,0,0,primitive,,,o21 step 18 prev=6 facing=3,,0.0,False,False,643,23,0.3133389390004595
+37,2,2,primitive,,,"o21 step 21 prev=2 facing=2: blue door closed@3,-1",True,0.0,False,False,652,31,0.39005384799929743
+38,2,2,primitive,,,o27,True,0.0,False,False,647,13,0.23753126300107397
+39,2,2,primitive,,,o25 step 23 prev=2 facing=2,True,0.0,False,False,642,23,0.2898826040000131
+40,2,2,primitive,,,"o25 step 25 prev=5 facing=2: blue door closed@1,-1",True,0.0,False,False,637,31,0.37220499400064
+41,5,5,primitive,,,o27,,0.0,False,False,627,14,0.2495535670004756
+42,5,5,primitive,,,o27,,0.0,False,False,623,14,0.22505078199901618
+43,0,0,primitive,,,o30 step 30,,0.0,False,False,619,18,0.3367433240000537
+44,2,2,primitive,,,o30,True,0.0,False,False,633,13,0.24289865500031738
+45,2,2,primitive,,,o44,True,0.0,False,False,636,13,0.47725423499832687
+46,2,2,primitive,,,o45,True,0.0,False,False,639,13,0.21155584799998906
+47,2,2,primitive,,,o46,True,0.0,False,False,642,13,0.2517618110014155

@@ -1,0 +1,20 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,explore,route_to_mission_target,Find and pick up source,f0.22,True,0.0,False,False,463,30,0.3034484829986468
+1,2,2,explore,route_to_mission_target,Find and pick up source,f0.22,True,0.0,False,False,455,30,0.3254215130000375
+2,2,2,explore,route_to_mission_target,Find and pick up source,f0.22,True,0.0,False,False,454,30,0.3014241109995055
+3,3,1,explore,verified_pickup_precondition,Find and pick up source,f0.22,,0.0,False,False,447,30,0.3068597679994127
+4,2,6,approach,choose_frontier_route,Place beside reference,f0.22,True,0.0,False,False,432,30,0.3318514159982442
+5,1,1,explore,choose_frontier_route,Place beside reference,f0.22,,0.0,False,False,420,30,0.2835510549994069
+6,2,6,explore,continue_frontier_route,Place beside reference,f0.22,True,0.0,False,False,431,30,0.31301736000023084
+7,2,6,approach,choose_frontier_route,Place beside reference,f0.22,True,0.0,False,False,431,30,0.3171732720002183
+8,0,6,approach,choose_frontier_route,Place beside reference,f0.22,,0.0,False,False,427,30,0.3331033140020736
+9,0,0,explore,choose_frontier_route,Place beside reference,f0.22,,0.0,False,False,422,30,0.3188098640021053
+10,2,6,approach,continue_frontier_route,Place beside reference,f0.22,True,0.0,False,False,435,30,0.38997386100163567
+11,2,2,explore,choose_frontier_route,Place beside reference,f0.22,True,0.0,False,False,427,30,0.2963735160010401
+12,0,0,explore,choose_frontier_route,Place beside reference,f0.22,,0.0,False,False,421,30,0.29433169300318696
+13,2,2,explore,route_to_drop_position,Place beside reference,f13.14,True,0.0,False,False,498,32,0.38406666000082623
+14,2,2,explore,route_to_drop_position,Place beside reference,f13.14,True,0.0,False,False,495,32,0.39712438700007624
+15,2,6,explore,route_to_drop_position,Place beside reference,f13.14,True,0.0,False,False,485,32,0.3886028150009224
+16,2,2,explore,route_to_drop_position,Place beside reference,f13.14,True,0.0,False,False,483,32,0.3364447560015833
+17,2,2,explore,route_to_drop_position,Place beside reference,f13.14,True,0.0,False,False,480,32,0.35296337500039954
+18,4,2,explore,verified_drop_precondition,Place beside reference,f13.14,,0.9145,True,False,471,32,0.340708394000103

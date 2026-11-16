@@ -1,0 +1,26 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,0,0,primitive,,,,,0.0,False,False,,,0.0
+1,0,0,primitive,,,,,0.0,False,False,,,0.0
+2,2,2,primitive,,,o0,True,0.0,False,False,382,15,0.20940258400150924
+3,2,2,primitive,,,o2,True,0.0,False,False,408,12,0.16495282699906966
+4,2,2,primitive,,,o3,True,0.0,False,False,435,15,0.17443865499808453
+5,2,2,primitive,,,o4,True,0.0,False,False,453,12,0.1656205660001433
+6,2,2,primitive,,,o5,True,0.0,False,False,473,12,0.14516585499950452
+7,2,2,primitive,,,o4,True,0.0,False,False,486,12,0.14176257200233522
+8,0,0,primitive,,,o7,,0.0,False,False,498,12,0.1734775439981604
+9,2,2,primitive,,,o0,True,0.0,False,False,527,12,0.19767506700009108
+10,2,2,primitive,,,o0,True,0.0,False,False,542,12,0.17337844099893118
+11,2,2,primitive,,,o0,True,0.0,False,False,559,12,0.17651583000042592
+12,2,2,primitive,,,"o1 step 1 prev=0 facing=2: blue ball@2,3",True,0.0,False,False,576,28,0.27686413699848345
+13,2,2,primitive,,,o4,True,0.0,False,False,593,12,0.1850047270017967
+14,0,0,primitive,,,o0,,0.0,False,False,605,13,0.22078847699958715
+15,2,2,primitive,,,o0,True,0.0,False,False,642,12,0.1748496719992545
+16,2,2,primitive,,,o15,True,0.0,False,False,663,13,0.2100103000011586
+17,5,5,primitive,,,"o1 step 1 prev=0 facing=2: blue ball@2,3",,0.0,False,False,661,28,0.33451644700107863
+18,2,2,primitive,,,o14 step 14 prev=2 facing=0: no named objects,True,0.0,False,False,663,27,0.2812261020008009
+19,2,2,primitive,,,"o1 step 1 prev=0 facing=2: blue ball@2,3",True,0.0,False,False,677,28,0.3225378549977904
+20,2,2,primitive,,,o10 step 10 prev=2 facing=0: no named objects,True,0.0,False,False,679,28,0.32148095699812984
+21,2,2,primitive,,,"o20 step 20 prev=2 facing=3: green key@6,0; red key@0,-2",True,0.0,False,False,672,37,0.567623311002535
+22,2,2,primitive,,,"o21 step 21 prev=2 facing=3: green key@5,0",True,0.0,False,False,667,30,0.3407617310003843
+23,2,2,primitive,,,"o22 step 22 prev=2 facing=3: green key@4,0",True,0.0,False,False,668,30,0.33096329100226285
+24,2,2,primitive,,,"o23 step 23 prev=2 facing=3: green key@3,0",True,0.9,True,False,669,30,0.3726894929968694

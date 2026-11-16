@@ -1,0 +1,26 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,empty,True,0.0,False,False,388,12,0.16705835799984925
+1,2,2,primitive,,,o0,True,0.0,False,False,407,12,0.17299092699977336
+2,2,2,primitive,,,o1,True,0.0,False,False,431,12,0.15821027899983164
+3,2,2,primitive,,,o0,True,0.0,False,False,455,12,0.15535112299949105
+4,2,2,primitive,,,o0,True,0.0,False,False,479,12,0.1480976279999595
+5,6,6,primitive,,,o0,,0.0,False,False,498,14,0.20285497899931215
+6,6,6,primitive,,,o0,,0.0,False,False,524,14,0.18449189599959936
+7,6,6,primitive,,,o0,,0.0,False,False,550,14,0.153801239999666
+8,2,2,primitive,,,o7,False,0.0,False,False,576,13,0.18575710599907325
+9,2,2,primitive,,,o8,False,0.0,False,False,602,12,0.17204536800090864
+10,2,2,primitive,,,o0,False,0.0,False,False,628,12,0.1598581220005144
+11,5,5,primitive,,,o0,,0.0,False,False,656,14,0.18351029100085725
+12,2,2,primitive,,,o0,False,0.0,False,False,684,13,0.1889300769998954
+13,2,2,primitive,,,o0,False,0.0,False,False,712,13,0.2035520279987395
+14,5,5,primitive,,,"o1 prev=2 facing=0: green ball@4,-2; green key@4,2",,0.0,False,False,717,32,0.31325323099918023
+15,2,2,primitive,,,"o2 step 2 prev=2 facing=0: green ball@3,-2; green key@3,2",False,0.0,False,False,719,36,0.4727202499998384
+16,2,2,primitive,,,"o4 step 4 prev=2 facing=0: green ball@1,-2; green key@1,2",False,0.0,False,False,721,36,0.390637198001059
+17,2,2,primitive,,,o4,False,0.0,False,False,723,13,0.20617327699983434
+18,5,5,primitive,,,"o17 step 17 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,722,37,0.3762386119997245
+19,5,5,primitive,,,"o18 step 18 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,724,37,0.3733298690003721
+20,5,5,primitive,,,"o10 step 10 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,726,37,0.3713855850000982
+21,2,2,primitive,,,"o20 step 20 prev=5 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,728,37,0.38708460700036085
+22,2,2,primitive,,,"o10 step 10 prev=2 facing=0: green ball@0,-2; green key@0,2",False,0.0,False,False,707,38,0.43547290800051996
+23,1,1,primitive,,,"o22 step 22 prev=2 facing=0: green ball@0,-2; green key@0,2",,0.0,False,False,707,40,0.3908657800002402
+24,2,2,primitive,,,"o23 step 23 prev=2 facing=0: green ball@0,-2; green key@0,2",True,0.9844290657439446,True,False,714,37,0.37500225700023293

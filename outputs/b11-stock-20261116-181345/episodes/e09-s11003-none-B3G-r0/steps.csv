@@ -1,0 +1,19 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,1,2,primitive,blocked_by_visible_ball,,visible 5,,0.0,False,False,299,13,0.14117902900034096
+1,2,2,primitive,,,f0.20,,0.0,False,False,611,15,0.240758742998878
+2,2,2,primitive,,,visible,,0.0,False,False,328,12,0.2156043149989273
+3,0,2,primitive,blocked_by_visible_ball,,,,0.0,False,False,323,11,0.20066827200207626
+4,0,2,primitive,blocked_by_visible_ball,,f3.23,,0.0,False,False,592,16,0.2990475250007876
+5,2,2,primitive,,,f4.23,,0.0,False,False,598,15,0.21967568900072365
+6,1,1,primitive,,,visible 6,,0.0,False,False,288,16,0.18156032499973662
+7,2,2,primitive,,,"f6.13 grey wall (-2, 0) observed at step 6",,0.0,False,False,603,28,0.3101260410003306
+8,2,2,primitive,,,visible,,0.0,False,False,311,13,0.1972657389997039
+9,2,2,primitive,,,visible,,0.0,False,False,301,12,0.13523117400109186
+10,2,2,primitive,,,visible 5,,0.0,False,False,300,14,0.16902331500023138
+11,2,2,primitive,,,visible 5,,0.0,False,False,293,14,0.18731868800023221
+12,1,1,primitive,,,visible 6,,0.0,False,False,288,16,0.1799863819978782
+13,2,2,primitive,,,"f12.29 grey wall (1, -4) observed at step 12",,0.0,False,False,612,31,0.32081031200141297
+14,2,2,primitive,,,visible 4,,0.0,False,False,320,15,0.1919742350000888
+15,2,2,primitive,,,visible,,0.0,False,False,310,13,0.14732115200240514
+16,2,2,primitive,,,visible 6,,0.0,False,False,309,15,0.18178631899718312
+17,2,2,primitive,,,visible 6,,0.93671875,True,False,300,13,0.1573137079976732

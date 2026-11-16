@@ -1,0 +1,12 @@
+step,action,proposed_action,goal,controller_reason,subgoal,evidence,moved,reward,terminated,truncated,prompt_tokens,completion_tokens,inference_seconds
+0,2,2,primitive,,,,True,0.0,False,False,388,11,0.16202624900142837
+1,2,2,primitive,,,f0.0,True,0.0,False,False,504,14,0.17767177899986564
+2,2,2,primitive,,,"f0.14 empty (-1, 0) observed at step 0",True,0.0,False,False,559,27,0.27717278199997963
+3,2,2,primitive,,,"f0.13 empty (-1, 0) observed at step 0",True,0.0,False,False,628,27,0.31349340199994913
+4,2,2,primitive,,,"f0.12 empty (-1, 0) observed at step 2",True,0.0,False,False,680,27,0.3814962500000547
+5,2,2,primitive,,,"f0.12 empty (-2, 0) observed at step 2",True,0.0,False,False,696,27,0.28871599299964146
+6,2,2,primitive,,,"f0.11 empty (-2, 0) observed at step 3",True,0.0,False,False,695,27,0.24434903399924224
+7,2,2,primitive,,,f0.9,True,0.0,False,False,692,14,0.1879108230004931
+8,2,2,primitive,,,"f1.7 empty (-1, 0) observed at step 6",True,0.0,False,False,689,26,0.245500181999887
+9,0,2,primitive,blocked_by_visible_wall,,"f2.0 empty (-1, -1) observed at step 8",,0.0,False,False,681,29,0.3304226710006333
+10,2,2,primitive,,,visible,True,0.0,True,False,696,11,0.1770638020007027
