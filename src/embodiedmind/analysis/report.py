@@ -388,7 +388,15 @@ def _comparison_table(comparisons):
         development_comparison = (item.split == "development" and item.treatment in
                                   {"B0G", "B3G", "B4", "B5", "B6", "B7", "B8", "B9N", "B9", "B10"} and
                                   item.metric in {"success", "blocked_actions", "verification_requests"})
-        if not (primary or development_comparison):
+        b11_comparison = (
+            item.split.startswith("b11-") and item.treatment.startswith("B11") and (
+                item.metric in {"success", "steps", "total_tokens", "calls", "episode_wall_seconds"}
+                or item.intervention != "none" and item.metric in {
+                    "verification_actions", "informative_checks", "stale_commitments", "reacquired",
+                }
+            )
+        )
+        if not (primary or development_comparison or b11_comparison):
             continue
         interval = "—"
         if item.lower_95 is not None and item.upper_95 is not None:
@@ -432,6 +440,24 @@ def _write_report(path, manifests, rows, summary, comparisons, plots, argv_examp
             )
     lines.extend(["", "## Primary paired contrasts", ""])
     lines.extend(_comparison_table(comparisons))
+    if any(split.startswith("b11-") for split in roster):
+        lines.extend([
+            "", "## Cost per completed mission", "",
+            "Costs sum across every valid episode, including failures. A dash means zero completions.",
+            "", "| Environment | Intervention | Agent | Completions | Actions / completion | "
+            "Tokens / completion | Seconds / completion |",
+            "| --- | --- | --- | ---: | ---: | ---: | ---: |",
+        ])
+        for (_, environment, intervention), group in sorted(stratify(episodes=rows).items()):
+            for variant in sorted({row["variant"] for row in group}):
+                valid = [row for row in group if row["variant"] == variant and row["status"] == "valid"]
+                wins = sum(bool(row.get("success")) for row in valid)
+                costs = [
+                    f"{sum(row[metric] for row in valid) / wins:.2f}"
+                    if wins and all(metric in row for row in valid) else "—"
+                    for metric in ("steps", "total_tokens", "episode_wall_seconds")
+                ]
+                lines.append(f"| {environment} | {intervention} | {variant} | {wins} | " + " | ".join(costs) + " |")
     lines.extend([
         "", "Differences use only identical environment, intervention, mission, seed and replicate. "
         "Replicate differences are averaged within seed before estimating intervals with a deterministic "

@@ -16,7 +16,7 @@ from embodiedmind.environments.dynamic_world import DYNAMIC_ENV_ID, INTERVENTION
 from embodiedmind.environments.factory import OFFICIAL_ENVIRONMENTS
 from embodiedmind.environments.visual_state import board_snapshot, viewer_environment
 from embodiedmind.reasoning.action_validator import ACTION_NAMES
-from embodiedmind.reasoning.grounding import action_request, resolve_response
+from embodiedmind.reasoning.grounding import CONTROLLER_DECISION, action_request, resolve_response
 from embodiedmind.reasoning.llm_client import Ollama
 from embodiedmind.viewer.sandbox_archive import save_sandbox
 MAX_ACTIONS = 256
@@ -250,16 +250,21 @@ class ViewerData:
                 raise ValueError("Start a new sandbox episode before asking the agent to move.")
             index = len(prefix) + len(actions)
             agent.observe(observation, index, previous, moved)
-            model_values = yaml.safe_load(self.models.read_text(encoding="utf-8"))
-            model_values.pop("temperature")
-            model_values["endpoint"] = os.environ.get("OLLAMA_HOST", model_values["endpoint"])
-            model = Ollama(**model_values)
-            model_info = model.verify()
-            context = agent.context(observation, limits["memory_bytes"])
-            request = action_request(model, observation, context, (job["seed"] * 1000 + index) % (2**31),
-                                     variant, agent.audit()["selected_facts"])
-            raw, elapsed = model.generate(request)
-            resolved = resolve_response(raw["response"], observation, agent, variant)
+            if getattr(agent, "use_model", True):
+                model_values = yaml.safe_load(self.models.read_text(encoding="utf-8"))
+                model_values.pop("temperature")
+                model_values["endpoint"] = os.environ.get("OLLAMA_HOST", model_values["endpoint"])
+                model = Ollama(**model_values)
+                model_info = model.verify()
+                context = agent.context(observation, limits["memory_bytes"])
+                request = action_request(model, observation, context, (job["seed"] * 1000 + index) % (2**31),
+                                         variant, agent.audit()["selected_facts"])
+                raw, elapsed = model.generate(request)
+                response = raw["response"]
+            else:
+                request, raw, elapsed, model_info = None, {}, 0.0, {"mode": "controller_only"}
+                response = CONTROLLER_DECISION
+            resolved = resolve_response(response, observation, agent, variant)
             selected = resolved.proposed
             result = controller.step(resolved.action)
             observation = result.observation

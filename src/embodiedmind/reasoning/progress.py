@@ -10,10 +10,16 @@ def adjacent(point):
     return [(point[0] + dx, point[1] + dy) for dx, dy in DIRECTION_VECTORS]
 
 
+def navigation_facts(agent):
+    if hasattr(agent, "navigation_facts"):
+        return agent.navigation_facts()
+    return agent.index.recall(agent.odometry.segment)
+
+
 def route(agent, targets=(), *, stand=False, doors=False, centerline=False):
     odom = agent.odometry
     origin, heading = odom.position, odom.direction
-    cells = {f.position: f.appearance for f in agent.index.recall(odom.segment)}
+    cells = {f.position: f.appearance for f in navigation_facts(agent)}
     queue = [(0, (), origin, heading)]
     seen = set()
     while queue:
@@ -73,7 +79,7 @@ def task_action(agent, obs):
     if agent.target:
         if (agent.phase == "Pick up target ball" and obs.carrying
                 and obs.carrying.object == "key"):
-            cells = {f.position: f.appearance[0] for f in agent.index.recall(agent.odometry.segment)}
+            cells = {f.position: f.appearance[0] for f in navigation_facts(agent)}
             target = tuple(agent.target["position"])
             holding_cells = [p for p, kind in cells.items() if kind == "empty"
                              and p not in adjacent(target)]
@@ -93,7 +99,7 @@ def task_action(agent, obs):
 
     if agent.phase == "Place beside reference" and agent.reference:
         ref = tuple(agent.reference["position"])
-        cells = {f.position: f.appearance[0] for f in agent.index.recall(agent.odometry.segment)}
+        cells = {f.position: f.appearance[0] for f in navigation_facts(agent)}
         free = [p for p in adjacent(ref) if cells.get(p) in {"empty", "floor"}
                 or p == agent.odometry.position]
         if free:

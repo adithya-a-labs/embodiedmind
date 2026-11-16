@@ -1,0 +1,11 @@
+split: b11-mechanisms
+environments: [MiniGrid-DoorKey-8x8-v0, BabyAI-GoToObjMazeS7-v0]
+variants: [B11T, B11P, B11R, B11, B11C]
+seed_start: 11101
+seed_count: 30
+interventions: [none]
+limits:
+  max_steps: 48
+  max_calls: 48
+  memory_bytes: 768
+  infrastructure_retries: 2

@@ -19,6 +19,11 @@ METRICS = (
     "blocked_proposals",
     "blocked_actions",
     "verification_requests",
+    "verification_actions",
+    "informative_checks",
+    "stale_commitments",
+    "reacquired",
+    "episode_wall_seconds",
     "old_target_rechecked_step",
     "new_target_seen_step",
     "stale_actions",
@@ -98,7 +103,9 @@ def compare(episodes, draws: int = 4000):
                      ("B3G", "B3"), ("B3G", "B0G"), ("B4", "B3G"), ("B5", "B4"),
                      ("B6", "B5"), ("B7", "B5"), ("B6", "B7"),
                      ("B8", "B5"), ("B8", "B0"), ("B9N", "B8"),
-                     ("B9", "B9N"), ("B9", "B8"), ("B10", "B9"))
+                     ("B9", "B9N"), ("B9", "B8"), ("B10", "B9"), ("B11", "B10"),
+                     ("B11P", "B11T"), ("B11R", "B11T"), ("B11R", "B11P"),
+                     ("B11", "B11PA"), ("B11", "B11R"), ("B11PA", "B11P"), ("B11", "B11C"))
         for treatment, control in contrasts:
             if not {treatment, control} <= variants or treatment == "B3" and control == "B0" and "B0G" not in variants:
                 continue

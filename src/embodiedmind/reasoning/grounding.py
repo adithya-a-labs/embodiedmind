@@ -5,9 +5,10 @@ from collections import deque
 from dataclasses import dataclass
 
 from embodiedmind.memory.spatial import DIRECTION_VECTORS
+from embodiedmind.agents.evidence_memory import B11_ARMS
 from embodiedmind.reasoning.action_validator import ActionDecision, _unique_object, parse_action
 from embodiedmind.reasoning.mission_control import mission_action
-from embodiedmind.reasoning.progress import route as progress_route, task_action
+from embodiedmind.reasoning.progress import navigation_facts, route as progress_route, task_action
 from embodiedmind.reasoning.prompts import (
     DYNAMIC_OBSTACLES_MISSION,
     GOTO_INSTRUCTIONS,
@@ -20,6 +21,9 @@ from embodiedmind.reasoning.prompts import (
 
 GUARDED = {"B0G", "B3G", "B4", "B5", "B6", "B7", "B8", "B9N", "B9", "B10"}
 AGENTIC = {"B5", "B6", "B7", "B8", "B9N", "B9", "B10"}
+GUARDED.update(B11_ARMS)
+AGENTIC.update(B11_ARMS)
+CONTROLLER_DECISION = '{"goal":"explore","action":0,"evidence":"explore"}'
 GOALS = ("primitive", "approach", "verify", "explore")
 GOAL_SCHEMA = {
     "type": "object",
@@ -63,6 +67,11 @@ def action_request(model, observation, context, seed, variant, facts=()):
             "for non-primitive goals. Cite visible or explore if you do not cite a fact. "
             "An unknown cell can be observed before entering it."
         )
+    if variant in B11_ARMS:
+        system = system.replace(
+            "verify to look at a last-seen fact again; or explore",
+            "or explore",
+        )
     prompt = prompt_for(observation, context)
     if variant in AGENTIC:
         prompt = prompt.replace("Return one JSON action with a source citation.",
@@ -73,6 +82,10 @@ def action_request(model, observation, context, seed, variant, facts=()):
         request["format"] = {**GOAL_SCHEMA, "properties": {
             **GOAL_SCHEMA["properties"], "evidence": {"type": "string", "enum": allowed},
         }}
+        if variant in B11_ARMS:
+            request["format"]["properties"]["goal"] = {
+                "type": "string", "enum": ["primitive", "approach", "explore"],
+            }
     if dynamic_obstacles:
         schema = request["format"]
         properties = schema["properties"]
@@ -98,7 +111,7 @@ def _visible_objective_action(observation):
 
 def _route(agent, target=None):
     odometry = agent.odometry
-    facts = agent.index.recall(odometry.segment)
+    facts = navigation_facts(agent)
     cells = {fact.position: fact for fact in facts}
     position, heading = odometry.position, odometry.direction
     queue = deque([(position, heading, ())])
@@ -190,7 +203,16 @@ def resolve_response(raw, observation, agent, variant):
             action = local_alternative(observation) if visible_action is None else visible_action
             reason = "unknown_fact_reference"
 
-    if variant == "B10":
+    if variant in B11_ARMS:
+        if observation.mission == DYNAMIC_OBSTACLES_MISSION:
+            override = _cue_memory_action(agent, observation, goal, proposed.valid, route)
+        else:
+            override = agent.verify_action() or mission_action(agent, observation, explore=False)
+            if override is None and (not proposed.valid or goal == "explore"):
+                override = mission_action(agent, observation)
+        if override is not None:
+            action, reason, route = override
+    elif variant == "B10":
         override = mission_action(agent, observation)
         if observation.mission == DYNAMIC_OBSTACLES_MISSION:
             override = _cue_memory_action(agent, observation, goal, proposed.valid, route)

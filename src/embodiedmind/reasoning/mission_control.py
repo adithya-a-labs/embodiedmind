@@ -2,7 +2,7 @@
 
 from collections import deque
 
-from embodiedmind.reasoning.progress import adjacent, route, task_action
+from embodiedmind.reasoning.progress import adjacent, navigation_facts, route, task_action
 from embodiedmind.reasoning.prompts import DYNAMIC_OBSTACLES_MISSION
 
 
@@ -13,7 +13,7 @@ def _walkable(appearance):
 def _explore(agent, obs):
     odom = agent.odometry
     origin, direction = odom.position, odom.direction
-    cells = {fact.position: fact.appearance for fact in agent.index.recall(odom.segment)}
+    cells = {fact.position: fact.appearance for fact in navigation_facts(agent)}
     cells[origin] = ("empty", "", "")
     start = origin, direction
     queue = deque([(start, ())])
@@ -96,7 +96,7 @@ def _drop(agent, obs, point, *, near):
     odom = agent.odometry
     neighborhood = set(adjacent(point))
     candidates = [
-        f.position for f in agent.index.recall(odom.segment)
+        f.position for f in navigation_facts(agent)
         if f.appearance[0] == "empty" and (f.position in neighborhood) == near
     ]
     if not candidates:
@@ -109,7 +109,7 @@ def _drop(agent, obs, point, *, near):
     return None
 
 
-def mission_action(agent, obs):
+def mission_action(agent, obs, *, explore=True):
     if obs.mission == DYNAMIC_OBSTACLES_MISSION:
         # The caller retains B8's reactive fallback when a moving obstacle
         # makes forward odometry uncertain.
@@ -141,4 +141,4 @@ def mission_action(agent, obs):
         choice = _drop(agent, obs, tuple(agent.reference["position"]), near=True)
         if choice:
             return choice
-    return _explore(agent, obs)
+    return _explore(agent, obs) if explore else None

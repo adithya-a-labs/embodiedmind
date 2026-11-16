@@ -28,11 +28,14 @@ PLOT_GROUPS = {
         ("unsupported_claims", "Unsupported evidence references", "Count per episode"),
         ("post_contradiction_recovered", "Recovery after contradiction", "Share of eligible episodes"),
         ("steps_to_recovery", "Steps to recovery", "Steps among recovered episodes"),
+        ("stale_commitments", "Continued routes to contradicted target", "Count per episode"),
+        ("reacquired", "Reacquired relocated target", "Share of assigned episodes"),
     ),
     "grounding": (
         ("blocked_proposals", "Blocked forward proposals", "Proposals per episode"),
         ("blocked_actions", "Executed blocked moves", "Moves per episode"),
         ("verification_requests", "Verification requests", "Requests per episode"),
+        ("informative_checks", "Verification actions that exposed their target", "Count per episode"),
     ),
 }
 

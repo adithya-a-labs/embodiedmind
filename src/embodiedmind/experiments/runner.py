@@ -4,7 +4,7 @@ import json
 from contextlib import ExitStack
 from dataclasses import asdict
 from pathlib import Path
-from time import time_ns
+from time import monotonic, time_ns
 
 from PIL import Image
 
@@ -16,7 +16,7 @@ from embodiedmind.environments.visual_state import board_snapshot
 from embodiedmind.memory.episodic import Event
 from embodiedmind.memory.spatial import Odometry
 from embodiedmind.reasoning.action_validator import ActionDecision
-from embodiedmind.reasoning.grounding import Resolution, action_request, resolve_response
+from embodiedmind.reasoning.grounding import CONTROLLER_DECISION, Resolution, action_request, resolve_response
 
 
 def write_event(stream, value):
@@ -42,6 +42,8 @@ def episode(job, limits, model, path: Path, keep_visuals=True, monitor=None):
 
 
 def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=None):
+    start_time = monotonic()
+    use_model = getattr(agent, "use_model", True)
     controller = PrimitiveController(env)
     initial = controller.reset(job["seed"])
     observation = initial
@@ -59,6 +61,7 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
     last_action = None
     blocked_proposals = blocked_actions = verification_requests = 0
     checked_old_target = found_new_target = None
+    verification_actions = informative_checks = stale_commitments = 0
     target_cells = set()
     target_type = observation.mission.split()[-1]
     target_color = observation.mission.split()[-2]
@@ -100,7 +103,7 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
             context = agent.context(observation, limits["memory_bytes"])
             audit = agent.audit()
             scripted = index < len(prefix)
-            request = None if scripted else action_request(
+            request = None if scripted or not use_model else action_request(
                 model, observation, context, job["seed"] * 1000 + index, job["variant"],
                 audit.get("selected_facts", ()),
             )
@@ -111,6 +114,9 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
             if scripted:
                 request, raw, elapsed = None, {}, 0.0
                 resolved = Resolution(ActionDecision(prefix[index], "", True), prefix[index])
+            elif not use_model:
+                raw, elapsed = {}, 0.0
+                resolved = resolve_response(CONTROLLER_DECISION, observation, agent, job["variant"])
             else:
                 publish("thinking", index, observation, last_action)
                 raw, elapsed = model.generate(request)
@@ -121,6 +127,12 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
             decision = resolved.proposed
             executed = resolved.action
             planning = {"goal": resolved.goal, "reason": resolved.reason, "route": resolved.route}
+            if hasattr(agent, "verification"):
+                audit = agent.audit()
+                focus = audit.get("verification", {}).get("target") or audit.get("task_target")
+                purpose = ("verify" if resolved.reason == "verify_remembered_target" else
+                           "act_on_target" if resolved.reason == "route_to_mission_target" else "other")
+                planning.update(purpose=purpose, target=focus, model_call=request is not None)
             blocked_proposals += (
                 not scripted and decision.valid and resolved.goal == "primitive"
                 and decision.action == 2 and front_move_outcome(observation) is False
@@ -149,6 +161,8 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
                         found_new_target = index
                 else:
                     target_cells.update(matching)
+                if checked_old_target is not None and purpose_is_stale(planning, target_cells):
+                    stale_commitments += 1
             if contradicted_at is None and any(
                 previous[0] in {"ball", "key", "box", "door"} and visible.get(cell, previous) != previous
                 for cell, previous in last_view.items()
@@ -172,6 +186,16 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
                                  "decision": asdict(decision), "planning": planning,
                                  "executed_action": executed})
             result = controller.step(executed)
+            if planning.get("purpose") == "verify":
+                verification_actions += 1
+                fact = planning["target"]
+                after_pose = Odometry(scoring_odometry.position, scoring_odometry.direction, scoring_odometry.segment)
+                after_pose.update(Event(index + 1, result.observation, executed, result.moved))
+                if after_pose.segment == fact["segment"] and any(
+                    after_pose.locate(cell.forward, cell.right) == tuple(fact["position"])
+                    for cell in result.observation.cells
+                ):
+                    informative_checks += 1
             blocked_actions += result.moved is False
             last_action = {
                 **asdict(decision), "action": executed, "proposed_action": decision.action,
@@ -225,8 +249,18 @@ def _run_episode(env, agent, job, limits, model, path, keep_visuals, monitor=Non
         "invalid_actions": invalid, "unsupported_claims": unsupported, "stale_actions": stale,
         "blocked_proposals": blocked_proposals, "blocked_actions": blocked_actions,
         "verification_requests": verification_requests,
+        "verification_actions": verification_actions, "informative_checks": informative_checks,
+        "stale_commitments": stale_commitments if hasattr(agent, "verification") else None,
+        "reacquired": found_new_target is not None if job["intervention"] == "relocation" else None,
+        "episode_wall_seconds": monotonic() - start_time,
         "old_target_rechecked_step": checked_old_target, "new_target_seen_step": found_new_target,
         "post_contradiction_recovered": None if contradicted_at is None else recovered_at is not None,
         "steps_to_recovery": recovered_at, "reward": reward,
         "intervention_applied": any(event.get("applied") is True for event in interventions),
     }
+
+
+def purpose_is_stale(planning, old_cells):
+    target = planning.get("target")
+    return (planning.get("purpose") == "act_on_target" and target
+            and (target["segment"], tuple(target["position"])) in old_cells)
