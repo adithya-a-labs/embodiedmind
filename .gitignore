@@ -28,6 +28,9 @@ checkpoints/
 # Runtime lock used to coordinate writers, rather than run evidence
 /outputs/**/supervisor.lock
 
+# Local Codex run records
+/codex-runs/
+
 # OS and editors
 .DS_Store
 .vscode/
