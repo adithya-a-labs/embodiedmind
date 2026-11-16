@@ -95,9 +95,10 @@ def make_plots(episodes, comparisons, destination: Path) -> list[Path]:
         fig, ax = plt.subplots(figsize=(10, max(2.7, 0.46 * len(selected) + 1)))
         for index, result in enumerate(selected):
             point = result.difference
+            color = COLORS.get(result.treatment, "#4c5d70")
             if result.lower_95 is not None and result.upper_95 is not None:
-                ax.hlines(index, result.lower_95, result.upper_95, color=COLORS[result.treatment], linewidth=1.5)
-            ax.scatter([point], [index], color=COLORS[result.treatment], zorder=3)
+                ax.hlines(index, result.lower_95, result.upper_95, color=color, linewidth=1.5)
+            ax.scatter([point], [index], color=color, zorder=3)
         ax.set_yticks(range(len(selected)), [
             f"{result.split} · {result.environment} · {result.intervention} · {result.metric}\n"
             f"{result.treatment} − {result.control} (matched n={result.paired_n})" for result in selected

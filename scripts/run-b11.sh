@@ -10,6 +10,16 @@ cli=.venv/bin/embodiedmind
 for roster in rq-shift rq-static stock shift multiroom-80; do
     root="outputs/b11-$roster-$stamp"
     mkdir -p "$root"
+    if [[ -f "$root/heartbeat.json" ]] && .venv/bin/python -c '
+import json
+import sys
+from pathlib import Path
+beat = json.loads(Path(sys.argv[1]).read_text())
+raise SystemExit(beat["status"] != "complete" or beat["completed"] != beat["planned"] or bool(beat["errors"]))
+' "$root/heartbeat.json"; then
+        "$cli" package "$root"
+        continue
+    fi
     verb=run
     if [[ -f "$root/manifest.json" ]]; then
         verb=resume
