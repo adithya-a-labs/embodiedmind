@@ -15,7 +15,7 @@ The Python dependencies are defined by [pyproject.toml](../pyproject.toml) and [
 
 ## Reproduce from saved artifacts
 
-Use `viewer` for offline replay and `report` to regenerate analysis in a separate directory. The B11 campaign has five checked-in source archives.
+Use `viewer` for offline replay and `report` to regenerate analysis in a separate directory. The B11 campaign has five checked-in source archives. Preserve their exact bytes by setting Git `core.autocrlf=false` before checkout. Automatic line-ending conversion invalidates the archive checksums.
 
 ```bash
 stamp=20261116-181345
