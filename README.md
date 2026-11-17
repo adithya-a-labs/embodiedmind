@@ -1,12 +1,26 @@
 # EmbodiedMind
 
-*Memory, belief revision, and adaptive decision-making in partially observable embodied agents.*
+**Can an embodied agent revise its beliefs when a target moves out of sight?**
 
-EmbodiedMind studies how agents remember what they have seen, revise beliefs when new observations conflict with memory, and decide when to look again. It pairs policies on seeded MiniGrid and BabyAI missions, with controlled changes that hide observations or move a target out of sight. Model-backed experiments use a frozen Qwen 2.5 3B Instruct model served locally by Ollama on an NVIDIA GPU.
+EmbodiedMind compares memory and control strategies on matched MiniGrid and BabyAI missions. Agents navigate from partial symbolic observations. In GoToShift, controlled interventions mask parts of the view or move a target out of sight.
 
-**Python 3.12** · **NVIDIA GPU** · **Local LLM inference** · **MiniGrid / BabyAI**
+The experiments track mission success, actions after contradictory observations, and inference cost. Saved observations and decisions support offline replay and side-by-side comparisons.
 
 [Results](#results) · [Visualizations](docs/visualizations.md) · [Experiment viewer](#experiment-viewer) · [Quick start](#quick-start) · [Documentation](docs/README.md)
+
+[![Evaluator routes for B11P and B11R on the same GoToShift relocation seed](docs/figures/relocation-trajectories.png)](docs/visualizations.md#relocation-trajectory)
+
+*GoToShift, seed 11101. The target moved while both its original and new locations were out of view.*
+
+## Tech stack
+
+| Role | Stack |
+| --- | --- |
+| Runtime | Python 3.12 and `uv` |
+| Simulation | Gymnasium, MiniGrid, and BabyAI |
+| Local inference | Ollama, frozen Qwen 2.5 3B Instruct (Q4_K_M), and NVIDIA GPU |
+| Analysis and figures | NumPy and Matplotlib |
+| Experiment viewer | Python HTTP server with HTML, CSS, and JavaScript |
 
 ## Results
 
