@@ -1,4 +1,16 @@
-# EmbodiedMind status
+# EmbodiedMind research status
+
+The completed studies use symbolic MiniGrid/BabyAI simulation and a frozen local model. See the [README](README.md) for the research overview and [reproduction guide](docs/reproducibility.md) for archived analysis and GPU-backed execution.
+
+## B11 fresh-seed follow-up
+
+**Complete.** The archive finalizer verified 3,090 valid episodes and 141,830 indexed artifacts on 17 November 2026 IST. The campaign includes three broad rosters and two mechanism rosters. The GoToShift mechanism run records source `7070c1df`, and the remaining four record `9888e488` after a packaging recovery. The archive retains the single retried infrastructure attempt. The B11 and B11C executed action sequences matched in all 150 registered pairs.
+
+In the separate MultiRoom action-budget comparison, B10 and B11 each went from 6/10 at 48 actions to 10/10 on the same layouts at 80 actions. Fixed and adaptive verification matched executed actions in 150/150 revising pairs and 90/90 passive GoToShift pairs.
+
+[B11 protocol](experiments/manifests/b11-protocol.md) · [Combined report](outputs/b11-combined-20261116-181345/report/report.md) · [Coverage](outputs/b11-combined-20261116-181345/report/coverage.json) · [Finalization log](outputs/b11-combined-20261116-181345/finalize.log)
+
+## Original frozen B0–B3 study
 
 **Complete.** Both frozen held-out rosters finished on 14 November 2026 IST. The final report, independent regeneration and checksums were verified.
 
@@ -17,4 +29,4 @@ Study directory: `results/runs/embodiedmind-20261114-0428-ist/`.
 - `final-report/report.md`, `comparisons.csv`, `metrics.csv`, `figures/`, `application-summary.md`, `coverage.json`, `artifact-index.json`, and `reproduced-evidence/` are in the final report bundle.
 - `pilot-report/report.md` contains the stock and custom development results.
 - `final-audit.log`, `final-tests.log`, `report-regeneration.log`, and `checkpoint-journal.jsonl` document verification. `FAILURES.md` records recovered development issues.
-- There are no remaining scored jobs. To reproduce execution, use the frozen source commit in a checkout with the locked environment and the saved study directory. See the commands in [README](README.md) and [the frozen protocol](experiments/manifests/frozen-protocol.md).
+- There are no remaining scored jobs. To reproduce execution, use the frozen source commit in a checkout with the locked environment and the saved study directory. See the commands in [the reproduction guide](docs/reproducibility.md) and [the frozen protocol](experiments/manifests/frozen-protocol.md).

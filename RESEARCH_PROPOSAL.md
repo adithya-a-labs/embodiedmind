@@ -1,6 +1,10 @@
 <!-- Source: https://app.notion.com/p/417f975653bf81afa292d347c362b39d | snapshot 2026-11-14 IST | v1.0 with full-study amendment -->
 
-## LIVE PROGRESS SNAPSHOT — 14 November 2026 (04:02 IST conversation checkpoint)
+# EmbodiedMind research proposal
+
+This proposal preserves the original design and early project context. See the [research status](STATUS.md) for completed studies and the [registered protocols](docs/README.md) for the executed designs.
+
+## Historical progress snapshot · 14 November 2026, 04:02 IST
 
 <b>Status:</b> Infrastructure bootstrap completed as reported by user; <b>first autonomous LLM-controlled BabyAI episode has NOT been confirmed</b>. This section supersedes older “not yet implemented” infrastructure status language, but does not change the scientific hypotheses or protocol.
 
@@ -19,7 +23,7 @@
 | PyTorch CUDA | <b>Not verified</b> | Installation and CUDA matmul test pending confirmation |
 | Stable-Baselines3 / SB3-Contrib / TensorBoard | <b>Not verified</b> | Suggested for later RL extensions, NOT blocking frozen-LLM memory study |
 | Docker, GitHub remote and Codex CLI | <b>Not verified</b> | Existence/authentication/connectivity not yet established |
-| First BabyAI LLM episode | <b>Not verified / next milestone</b> | A \`first\_llm\_[episode.py](http://episode.py)\` example and run instructions were provided in chat, but there is no output proving the file was saved or the episode executed |
+| First BabyAI LLM episode | <b>Not verified / next milestone</b> | A \`first\_llm\_episode.py\` example and run instructions were provided in chat, but there is no output proving the file was saved or the episode executed |
 
 <b>Model output evidence (from pasted terminal):</b> \`NAME qwen2.5:3b-instruct \| ID 357c53fb659c \| SIZE 2.2 GB \| PROCESSOR 100% GPU \| CONTEXT 4096 \| RUNNER llamacpp\`. The model generated \`READY\` after download. This proves successful inference, not successful environment planning.
 
@@ -37,7 +41,7 @@ ollama list
 ollama ps
 ```
 
-<b>Pilot handoff:</b> Check whether \`first\_llm\_[episode.py](http://episode.py)\` exists before creating or modifying it. Inspect its observation coordinate convention and reward/termination logic; run \`python first\_llm\_[episode.py](http://episode.py)\` if present and appropriate. Capture seed, environment ID, model name and digest, observation text, actions, rewards, errors, token use (if available) and a run manifest. A successful single episode is a smoke-test result, not evidence that B3 outperforms B1.
+<b>Pilot handoff:</b> Check whether \`first\_llm\_episode.py\` exists before creating or modifying it. Inspect its observation coordinate convention and reward/termination logic; run \`python first\_llm\_episode.py\` if present and appropriate. Capture seed, environment ID, model name and digest, observation text, actions, rewards, errors, token use (if available) and a run manifest. A successful single episode is a smoke-test result, not evidence that B3 outperforms B1.
 
 <b>Priority constraint:</b> The CaCTüS application deadline is <date start="2026-11-16" />. Do not delay the application to finish research extensions.
 
@@ -48,7 +52,7 @@ Execution companion: <mention url="https://app.notion.com/p/417f975653bf81e3a17e
 </callout>
 
 <callout icon="🔬" color="blue_bg">
-RESEARCH DESIGN • v1.0 • Created <date start="2026-11-14" /> • Status: RESEARCH DESIGN COMPLETE; INFRASTRUCTURE BOOTSTRAPPED; FIRST LLM-CONTROLLED EPISODE NOT YET VERIFIED. See live progress snapshot above. This is an independent pilot inspired by the 2027 CaCTüS project descriptions; it is not an official Max Planck research project, lab affiliation, or validated result.
+RESEARCH DESIGN • v1.0 • Created <date start="2026-11-14" /> • Status: RESEARCH DESIGN COMPLETE; INFRASTRUCTURE BOOTSTRAPPED; FIRST LLM-CONTROLLED EPISODE NOT YET VERIFIED. See the historical progress snapshot above. This is an independent pilot inspired by the 2027 CaCTüS project descriptions; it is not an official Max Planck research project, lab affiliation, or validated result.
 </callout>
 
 <b>Canonical context:</b> <mention url="https://app.notion.com/p/3f6f975653bf812aa570e32057608b70">Max Planck Tübingen — CaCTüS</mention>. The application deadline in the opportunity record is <date start="2026-11-16" />. The CaCTüS project-description PDF provided by the applicant is the basis for the project-number mappings below. See companion execution runbook linked from this page.

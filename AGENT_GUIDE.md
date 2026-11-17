@@ -1,6 +1,8 @@
 <!-- Source: https://app.notion.com/p/417f975653bf81e3a17ee53d1430006e | snapshot 2026-11-14 IST | v1.0 with full-study amendment -->
 
-## LIVE EXECUTION CHECKPOINT — 14 November 2026 (04:02 IST)
+See [current research status](STATUS.md) and the [reproduction guide](docs/reproducibility.md) for the executed studies. The checkpoint below records the state before the first model-backed episode.
+
+## Historical execution checkpoint · 14 November 2026, 04:02 IST
 
 <callout icon="✅" color="green_bg">
 CURRENT STATE: Infrastructure + local GPU inference operational according to user-reported setup and pasted Ollama output. First LLM-controlled BabyAI episode <b>NOT YET VERIFIED</b>. The executing agent must inspect the actual workspace before marking any implementation gate as passed.
@@ -25,16 +27,16 @@ Begin with the checked scaffold commit in Phase 0. Then work through the infrast
 - [x] User-reported: WSL Ubuntu + isolated Python setup, native Linux workspace and MiniGrid smoke test.
 - [x] User-provided output: Qwen2.5 3B downloaded, generated \`READY\`, and loaded on \`100% GPU\`.
 - [x] User-confirmed: initial local Ollama JSON API test finished (“done”); return body not logged in conversation.
-- [ ] Inspect \`\~/Projects/EmbodiedMind\`; list files and Git status. Do not assume \`first\_llm\_[episode.py](http://episode.py)\` exists.
+- [ ] Inspect \`\~/Projects/EmbodiedMind\`; list files and Git status. Do not assume \`first\_llm\_episode.py\` exists.
 - [ ] Record \`python --version\`, \`pip show minigrid gymnasium\`, \`ollama list\`, \`ollama ps\`; pin model manifest/digest and dependencies in run manifest.
 - [ ] Confirm Ollama local structured JSON response via repeatable logged test; no need to reinstall it.
 - [ ] Verify observation orientation, 7×7 ego-grid decoding, legal action mapping and lack of privileged state.
-- [ ] Create/repair the minimal \`first\_llm\_[episode.py](http://episode.py)\` if not already present; an example was supplied in chat but no execution evidence exists.
+- [ ] Create/repair the minimal \`first\_llm\_episode.py\` if not already present; an example was supplied in chat but no execution evidence exists.
 - [ ] Run ONE seeded \`BabyAI-GoToObjS6-v1\` episode with frozen Qwen2.5 3B and no memory; save JSONL and exact outcome.
 - [ ] Add unit/smoke tests for invalid outputs and partial observation; ensure no world-state leak.
 - [ ] Only then implement B1 text memory, B2 structured memory without revision, B3 full hybrid with revision.
 - [ ] Defer PyTorch training, SB3, recurrent PPO, Docker and extra simulators unless directly needed for the next acceptance criterion.
-- [ ] Record outcomes, errors, commands and status in \`[STATUS.md](http://STATUS.md)\`, \`[DECISIONS.md](http://DECISIONS.md)\`, \`[FAILURES.md](http://FAILURES.md)\` and link the relevant commit and log.
+- [ ] Record outcomes, errors, commands and status in \`[STATUS.md](STATUS.md)\`, \`[DECISIONS.md](DECISIONS.md)\`, \`[FAILURES.md](FAILURES.md)\` and link the relevant commit and log.
 
 ### Safe resume commands (WSL terminal)
 
@@ -76,7 +78,7 @@ CANONICAL AGENT EXECUTION GUIDE • v1.0 • Created <date start="2026-11-14" />
 
 <b>Mission:</b> Implement and evaluate a reproducible, fully automated MiniGrid/BabyAI experiment testing whether evidence-grounded structured memory and belief revision improve language-conditioned embodied task performance versus reactive and text-history LLM baselines.
 
-<b>At session start:</b> (1) Read this entire guide and the linked Research Proposal. (2) Read the repository's AGENT\_[GUIDE.md](http://GUIDE.md), [STATUS.md](http://STATUS.md), [DECISIONS.md](http://DECISIONS.md) and [FAILURES.md](http://FAILURES.md). (3) Inspect current source code and test output, not just summaries. (4) Identify the first incomplete gate. (5) Announce the immediate task and acceptance test. (6) Implement, test, commit/log evidence, and repeat. If connector access to Notion is absent, use a current exported, versioned copy of these pages in the repository; do not claim a Notion reread occurred.
+<b>At session start:</b> (1) Read this entire guide and the linked Research Proposal. (2) Read the repository's [AGENT_GUIDE.md](AGENT_GUIDE.md), [STATUS.md](STATUS.md), [DECISIONS.md](DECISIONS.md) and [FAILURES.md](FAILURES.md). (3) Inspect current source code and test output, not just summaries. (4) Identify the first incomplete gate. (5) Announce the immediate task and acceptance test. (6) Implement, test, commit/log evidence, and repeat. If connector access to Notion is absent, use a current exported, versioned copy of these pages in the repository; do not claim a Notion reread occurred.
 
 <b>At each phase boundary:</b> Re-read the relevant heading and the proposal's hypotheses, world contract, baseline controls, and integrity rules. Compare actual artifacts to acceptance criteria. Never skip a gate because code “looks right.”
 
@@ -359,7 +361,7 @@ At the beginning AND after each meaningful code change:
 
 <b>Hard stop triggers:</b> unexplained privileged-state access; baseline condition leakage; invalid task success criteria; inability to reproduce pilot; loss of seed/model provenance; unsupported “improved” claims; request to perform external irreversible actions without user authorization.
 
-## 16. [STATUS.md](http://STATUS.md) template and checkpoint protocol
+## 16. [STATUS.md](STATUS.md) template and checkpoint protocol
 
 ```markdown
 # EmbodiedMind Status
@@ -392,7 +394,7 @@ After EVERY gate: mark PASS/FAIL with exact command, exit code, timestamps, comm
 | GPU/LLM too slow | Inspect tokens/calls and max\_context | Reduce equally for ALL variants; rerun comparison |
 | Evidence contradictory | Verify source event/timestamp + status transitions | Keep raw episodes; invalidate active claims |
 | Seeds no longer paired | Audit manifest and config hashes | Stop comparison and rerun paired seeds |
-| Notion page unreachable | Inspect local exported AGENT\_[GUIDE.md](http://GUIDE.md) protocol version | Continue against verified local snapshot; disclose Notion sync gap |
+| Notion page unreachable | Inspect local exported [AGENT_GUIDE.md](AGENT_GUIDE.md) protocol version | Continue against verified local snapshot; disclose Notion sync gap |
 
 ## 18. Acceptance checklist for final handoff
 

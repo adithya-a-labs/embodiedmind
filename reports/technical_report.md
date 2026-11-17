@@ -1,6 +1,6 @@
 # EmbodiedMind held-out results
 
-The completed run used frozen source commit `a44c34e0431322078a368453881366214993b900` and the [registered protocol](../experiments/manifests/frozen-protocol.md). Both held-out rosters passed the coverage audit. The generated [technical report](../results/runs/embodiedmind-20261114-0428-ist/final-report/report.md) and [evidence index](../results/runs/embodiedmind-20261114-0428-ist/final-report/artifact-index.json) are in the local study directory.
+The completed run used frozen source commit `a44c34e0431322078a368453881366214993b900` and the [registered protocol](../experiments/manifests/frozen-protocol.md). Both held-out rosters passed the coverage audit. The generated report and evidence index are in the local study directory at `results/runs/embodiedmind-20261114-0428-ist/final-report/`.
 
 ## Primary comparisons
 
@@ -12,8 +12,12 @@ The completed run used frozen source commit `a44c34e0431322078a36845388136621499
 
 The reactive B0 completed 17/30 DoorKey missions. Equal paired outcomes on GoToObjMaze describe this sample. The study found no reduction in cited stale actions for B3 versus B2. Stale-action estimates only cover explicit citations. All 90 assigned relocations occurred, and every dynamic arm included the same two scripted turns before policy control.
 
+[![Original study mission success by task, study split and agent](../docs/assets/original-study-success.png)](../docs/assets/original-study-success.png)
+
+*Mission success across the stock pilot and the two held-out rosters. Figure copied from the generated original study report at `final-report/figures/success.png`.*
+
 ## Coverage and reproduction
 
 The static benchmark accounted for 240/240 episodes, and the dynamic benchmark accounted for 270/270. The main report includes 40 paired stock pilot episodes and two separate held-out rosters. The dynamic development pilot is archived separately. No scored episode was excluded or retried.
 
-Reproduction commands are in [README](../README.md). The [research proposal](../RESEARCH_PROPOSAL.md) records hypotheses and references, including BabyAI, MiniGrid and ReAct. See [run status](../STATUS.md) for verification and artifact paths.
+Use the [reproduction guide](../docs/reproducibility.md#original-frozen-b0b3-study) to rebuild the report or resume the frozen rosters. The [research proposal](../RESEARCH_PROPOSAL.md) records hypotheses and references, including BabyAI, MiniGrid and ReAct. See [run status](../STATUS.md) for verification and artifact paths.
