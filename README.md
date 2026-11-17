@@ -72,12 +72,29 @@ flowchart TB
 
 The 11 stock tasks cover object search, mazes, doors and keys, hallway cue recall, object placement, room navigation, and moving obstacles. The custom **GoToShift** task isolates information loss and hidden target relocation by pairing layouts across no-change, dropout and relocation conditions.
 
-| GoToShift · B11P | GoToShift · B11R | MemoryS13 · B11 |
-| --- | --- | --- |
-| [![Final evaluator board after the passive memory agent times out](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11P-r0/finish.png)](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11P-r0/replay.gif) | [![Revising memory agent reaches the relocated target](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11R-r0/finish.png)](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11R-r0/replay.gif) | [![B11 reaches the branch that matches the remembered hallway cue](outputs/b11-stock-20261116-181345/episodes/e03-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e03-s11001-none-B11-r0/replay.gif) |
-| Relocation seed 11101, 48-action cap | Same seed and intervention, success in 13 actions | Cue recall seed 11001, success in 11 actions |
+The stock examples use B11 on seed 11001. GoToShift shows B11R under hidden relocation on seed 11101. Each archived final evaluator frame links to the episode replay.
 
-*Final evaluator frames from saved episodes. Select a frame to open its replay.*
+| GoToObjS6 | GoToObj Maze | GoToShift |
+| --- | --- | --- |
+| [![Final evaluator frame for BabyAI-GoToObjS6-v1](outputs/b11-stock-20261116-181345/episodes/e00-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e00-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for BabyAI-GoToObjMazeS7-v0](outputs/b11-stock-20261116-181345/episodes/e02-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e02-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for EmbodiedMind-GoToShift-v0](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11R-r0/finish.png)](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11R-r0/replay.gif) |
+| Success · 6 actions | Budget reached · 48 actions | Success · 13 actions |
+
+| DoorKey | KeyCorridor | BlockedUnlockPickup |
+| --- | --- | --- |
+| [![Final evaluator frame for MiniGrid-DoorKey-8x8-v0](outputs/b11-stock-20261116-181345/episodes/e01-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e01-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for BabyAI-KeyCorridorS3R3-v0](outputs/b11-stock-20261116-181345/episodes/e06-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e06-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for BabyAI-BlockedUnlockPickup-v0](outputs/b11-stock-20261116-181345/episodes/e07-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e07-s11001-none-B11-r0/replay.gif) |
+| Success · 15 actions | Success · 24 actions | Success · 24 actions |
+
+| MemoryS13 | MemoryS17 Random | MultiRoom N6 |
+| --- | --- | --- |
+| [![Final evaluator frame for MiniGrid-MemoryS13-v0](outputs/b11-stock-20261116-181345/episodes/e03-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e03-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for MiniGrid-MemoryS17Random-v0](outputs/b11-stock-20261116-181345/episodes/e04-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e04-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for MiniGrid-MultiRoom-N6-v0](outputs/b11-stock-20261116-181345/episodes/e05-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e05-s11001-none-B11-r0/replay.gif) |
+| Success · 11 actions | Success · 11 actions | Success · 44 actions |
+
+| PutNext | Synth | Dynamic Obstacles |
+| --- | --- | --- |
+| [![Final evaluator frame for BabyAI-PutNextS5N2-v0](outputs/b11-stock-20261116-181345/episodes/e08-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e08-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for BabyAI-SynthS5R2-v0](outputs/b11-stock-20261116-181345/episodes/e10-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e10-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for MiniGrid-Dynamic-Obstacles-8x8-v0](outputs/b11-stock-20261116-181345/episodes/e09-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e09-s11001-none-B11-r0/replay.gif) |
+| Success · 21 actions | Budget reached · 48 actions | Success · 14 actions |
+
+[GoToShift B11P replay](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11P-r0/replay.gif) · [Paired relocation trajectories](docs/visualizations.md#relocation-trajectory)
 
 ## Experiment viewer
 
