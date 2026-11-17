@@ -112,11 +112,11 @@ OLLAMA_HOST=127.0.0.1:11434 OLLAMA_NUM_PARALLEL=1 OLLAMA_MAX_LOADED_MODELS=1 oll
 In another shell, pull the tag if needed, warm the configured model at the experiment context size and check residency.
 
 ```sh
-export OLLAMA_HOST=127.0.0.1:11434
+export OLLAMA_HOST=http://127.0.0.1:11434
 ollama list
 ollama show qwen2.5:3b-instruct >/dev/null 2>&1 || ollama pull qwen2.5:3b-instruct
 curl --fail --silent --show-error http://127.0.0.1:11434/api/generate \
-  --json '{"model":"qwen2.5:3b-instruct","prompt":"Reply READY","stream":false,"options":{"num_ctx":4096,"num_predict":8}}'
+  --header 'Content-Type: application/json' --data '{"model":"qwen2.5:3b-instruct","prompt":"Reply READY","stream":false,"options":{"num_ctx":4096,"num_predict":8}}'
 ollama ps
 ```
 
