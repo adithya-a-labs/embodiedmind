@@ -1,16 +1,14 @@
-# EmbodiedMind
+<a name="embodiedmind"></a>
 
-**Can an embodied agent revise its beliefs when a target moves out of sight?**
+[![EmbodiedMind. Memory and belief revision in embodied agents, illustrated with the GoToShift routes of B11P and B11R.](docs/assets/readme-banner.png)](docs/visualizations.md#relocation-trajectory)
 
-EmbodiedMind compares memory and control strategies on matched MiniGrid and BabyAI missions. Agents navigate from partial symbolic observations. In GoToShift, controlled interventions mask parts of the view or move a target out of sight.
+`Python 3.12` · `MiniGrid / BabyAI` · `Local Ollama inference` · `NVIDIA GPU`
 
-The experiments track mission success, actions after contradictory observations, and inference cost. Saved observations and decisions support offline replay and side-by-side comparisons.
+**EmbodiedMind** studies how agents remember and revise beliefs when they see only part of their environment. Matched MiniGrid and BabyAI missions let us compare policies when observations are masked or a target moves out of sight.
 
 [Results](#results) · [Visualizations](docs/visualizations.md) · [Experiment viewer](#experiment-viewer) · [Quick start](#quick-start) · [Documentation](docs/README.md)
 
-[![Evaluator routes for B11P and B11R on the same GoToShift relocation seed](docs/figures/relocation-trajectories.png)](docs/visualizations.md#relocation-trajectory)
-
-*GoToShift, seed 11101. The target moved while both its original and new locations were out of view.*
+*The banner traces B11P and B11R on GoToShift relocation seed 11101. Select it to see the full comparison and replays.*
 
 ## Tech stack
 
