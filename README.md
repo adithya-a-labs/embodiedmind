@@ -1,42 +1,86 @@
+<div align="center">
+
 # EmbodiedMind
 
-EmbodiedMind studies how agents use memory and revise beliefs while navigating symbolic, partially observable MiniGrid and BabyAI worlds. Experiments pair agents on the same seeded missions and track mission success, actions, and inference cost. Policies receive agent-visible observations. Full board state is recorded separately for evaluation and replay.
+**Memory, belief revision, and grounded decision-making in partially observable worlds.**
+
+A research testbed for studying what agents remember, when they should revise their beliefs, and whether memory actually changes their actions.
+
+<p>
+  <img alt="Python 3.12" src="https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white">
+  <img alt="MiniGrid and BabyAI" src="https://img.shields.io/badge/Environments-MiniGrid%20%2B%20BabyAI-398A6C">
+  <img alt="Local inference" src="https://img.shields.io/badge/Inference-local%20Ollama-444444">
+  <img alt="Research status" src="https://img.shields.io/badge/Status-active%20research-9B6B35">
+</p>
+
+[**Explore the results**](#results) · [**Get started**](#quick-start) · [**Replay experiments**](#experiment-viewer) · [**Research protocol**](experiments/manifests/b11-protocol.md)
+
+</div>
+
+---
+
+## Overview
+
+EmbodiedMind investigates **memory and belief revision in embodied agents** using symbolic, partially observable MiniGrid and BabyAI environments. Agents are evaluated on matched, seeded missions; their decisions are traced against agent-visible observations while evaluator-only state remains separate.
+
+The focus is deliberately experimental: compare memory representations, test how agents react when previously observed information becomes wrong, and measure the effect of verification, planning, and inference cost.
+
+| Research dimension | What is evaluated |
+| --- | --- |
+| **Memory** | Text history, structured observations, episodic/spatial memory, and retrieval |
+| **Belief revision** | What happens when an agent re-observes evidence that contradicts a stored fact |
+| **Information acquisition** | Fixed vs adaptive verification under partial observability |
+| **Agent contribution** | Language-model proposals compared with deterministic controller behavior |
+| **Reliability** | Success, actions, stale commitments, inference costs, paired uncertainty estimates, and auditable traces |
+
+> **Research scope:** These are controlled studies in symbolic simulation, not demonstrations of general real-world robot intelligence. Some comparisons show null or negative effects; those results are retained.
 
 ## Results
 
-The original frozen B0–B3 study completed **240 static and 270 dynamic held-out episodes**. Compared with bounded text history, revising memory solved 8/30 versus 4/30 DoorKey layouts and tied at 5/30 on GoToObj Maze. The reactive baseline solved 17/30 DoorKey layouts. The relocation comparison recorded three explicitly cited stale actions for B3 and zero for B2. [Frozen protocol](experiments/manifests/frozen-protocol.md) · [Held-out results](reports/technical_report.md) · [Original run status](STATUS.md)
+**At a glance**
 
-The B11 follow-up completed **3,090 valid fresh-seed episodes** across five rosters. The broad comparison covers 15 policies, 11 stock games, and three GoToShift conditions. The separate mechanism rosters compare memory representation, belief revision, verification, and model contribution under a shared executor.
+| Study | Evaluated episodes | Design |
+| --- | ---: | --- |
+| Original B0–B3 held-out study | **510** | 240 static + 270 dynamic episodes |
+| B11 fresh-seed follow-up | **3,090** | Five rosters; broad benchmark and focused mechanism comparisons |
 
-| Comparison | Result |
+**Selected findings from the completed B11 follow-up**
+
+| Comparison | Observation |
 | --- | --- |
-| Broad benchmark at 48 actions | B10 and B11 each solved **115/140** episodes. B11 used **2.4% fewer total tokens**. |
-| MultiRoom at 48 and 80 actions | B10 and B11 both improved from **6/10 to 10/10** on the same layouts. |
-| Belief revision under GoToShift relocation | Fixed-verification success rose from **8/30 to 23/30**, and stale route commitments fell from **543 to zero**. Text history solved **30/30** on the same relocation roster. |
-| Fixed versus adaptive verification | Revising arms executed identical action sequences in **150/150** pairs. Passive arms matched in **90/90** GoToShift pairs. |
-| Model-enabled B11 versus controller-only B11C | All **150/150** paired action sequences matched. Each solved **125/150** and B11C made zero model calls. |
+| Broad benchmark, 48-action budget | B10 and B11 each completed **115/140** episodes; B11 used **2.4% fewer total tokens** |
+| MultiRoom, 48 vs 80 actions | B10 and B11 each improved from **6/10** to **10/10** on the same layouts |
+| Belief revision under target relocation | Fixed-verification success increased from **8/30** to **23/30**; stale route commitments fell from **543 to zero** |
+| Fixed vs adaptive verification | Revising arms had identical action sequences in **150/150** matched pairs |
+| Language model vs controller-only B11C | Both completed **125/150**; all **150/150** paired action sequences matched |
 
-The broad results compare complete policies on ten seeds per condition. The mechanism results use 30 matched seeds per condition and apply to the registered executor and tasks. The B11 archive preserves the single retried infrastructure attempt alongside all finalized episodes and includes a verified SHA-256 index.
+The model-vs-controller result is particularly important: **these tasks did not demonstrate an independent action-selection benefit from the model**. Results are specific to the registered task suites, budgets, and executor.
 
-[B11 protocol](experiments/manifests/b11-protocol.md) · [Combined report](outputs/b11-combined-20261116-181345/report/report.md) · [Paired comparisons](outputs/b11-combined-20261116-181345/report/comparisons.csv) · [Coverage](outputs/b11-combined-20261116-181345/report/coverage.json)
+The original frozen B0–B3 study found DoorKey success of **8/30 for revising memory (B3)** versus **4/30 for text history (B1)**, while the reactive baseline (B0) reached **17/30**. The original relocation study did **not** show a reduction in explicitly cited stale actions for B3 versus B2.
+
+![Paired comparison figure from the B11 report](outputs/b11-combined-20261116-181345/report/figures/paired-comparisons.png)
+
+**Read the evidence:** [B11 report](outputs/b11-combined-20261116-181345/report/report.md) · [Paired comparisons (CSV)](outputs/b11-combined-20261116-181345/report/comparisons.csv) · [Coverage audit](outputs/b11-combined-20261116-181345/report/coverage.json) · [Frozen B0–B3 report](reports/technical_report.md) · [B11 protocol](experiments/manifests/b11-protocol.md)
 
 ## Quick start
 
-Use Ubuntu or Ubuntu on WSL and the locked Python 3.12 environment. These commands install dependencies, run the tests, and check a seeded environment without Ollama.
+**Requirements:** Ubuntu or WSL, \`uv\`, and Python 3.12. The deterministic smoke test and test suite do not require Ollama.
 
-```sh
+\`\`\`bash
 uv sync --locked --inexact
 .venv/bin/python -m pytest -q
 .venv/bin/embodiedmind smoke --env BabyAI-GoToObjS6-v1 --seed 42
-```
+\`\`\`
 
-For model-backed runs, start local Ollama with the model and digest in [configs/models.yaml](configs/models.yaml). Keep `BABYAI_DONE_ACTIONS` unset and use one inference worker for the registered comparisons. This smoke run exercises inference and writes a new archive.
+For model-backed experiments, use the local Ollama model and exact digest in [configs/models.yaml](configs/models.yaml). Keep \`BABYAI_DONE_ACTIONS\` unset and run the registered comparisons with one inference worker.
 
-```sh
+\`\`\`bash
 run="outputs/smoke-$(date +%Y%m%d-%H%M%S)"
 .venv/bin/embodiedmind run --config configs/smoke.yaml --output "$run" --monitor --parallel 1
 .venv/bin/embodiedmind status "$run"
-```
+\`\`\`
+
+**Where to look next:** [Agent variants](#agent-variants) · [Experiment viewer](#experiment-viewer) · [Reproduce the reports](#reproduce-the-reports) · [Research proposal](RESEARCH_PROPOSAL.md)
 
 ## Experiment viewer
 
