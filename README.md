@@ -1,187 +1,167 @@
 # EmbodiedMind
 
-EmbodiedMind studies how agents use memory and revise beliefs while navigating symbolic, partially observable MiniGrid and BabyAI worlds. Experiments pair agents on the same seeded missions and track mission success, actions, and inference cost. Policies receive agent-visible observations. Full board state is recorded separately for evaluation and replay.
+*Memory, belief revision, and adaptive decision-making in partially observable embodied agents.*
+
+EmbodiedMind studies how agents remember what they have seen, revise beliefs when new observations conflict with memory, and decide when to look again. It pairs policies on seeded MiniGrid and BabyAI missions, with controlled changes that hide observations or move a target out of sight. Model-backed experiments use a frozen Qwen 2.5 3B Instruct model served locally by Ollama on an NVIDIA GPU.
+
+**Python 3.12** · **NVIDIA GPU** · **Local LLM inference** · **MiniGrid / BabyAI**
+
+[Results](#results) · [Experiment viewer](#experiment-viewer) · [Quick start](#quick-start) · [Documentation](docs/README.md)
 
 ## Results
 
-The original frozen B0–B3 study completed **240 static and 270 dynamic held-out episodes**. Compared with bounded text history, revising memory solved 8/30 versus 4/30 DoorKey layouts and tied at 5/30 on GoToObj Maze. The reactive baseline solved 17/30 DoorKey layouts. The relocation comparison recorded three explicitly cited stale actions for B3 and zero for B2. [Frozen protocol](experiments/manifests/frozen-protocol.md) · [Held-out results](reports/technical_report.md) · [Original run status](STATUS.md)
+### Original B0–B3 study
 
-The B11 follow-up completed **3,090 valid fresh-seed episodes** across five rosters. The broad comparison covers 15 policies, 11 stock games, and three GoToShift conditions. The separate mechanism rosters compare memory representation, belief revision, verification, and model contribution under a shared executor.
+The frozen study completed **240 static and 270 dynamic held-out episodes**, with 30 matched seeds per task or intervention. The original hypotheses concerned mission success, actions tied to contradicted evidence, the effects of information loss, and the cost of added memory structure.
 
-| Comparison | Result |
+| Registered comparison | Held-out result |
 | --- | --- |
-| Broad benchmark at 48 actions | B10 and B11 each solved **115/140** episodes. B11 used **2.4% fewer total tokens**. |
-| MultiRoom at 48 and 80 actions | B10 and B11 both improved from **6/10 to 10/10** on the same layouts. |
-| Belief revision under GoToShift relocation | Fixed-verification success rose from **8/30 to 23/30**, and stale route commitments fell from **543 to zero**. Text history solved **30/30** on the same relocation roster. |
-| Fixed versus adaptive verification | Revising arms executed identical action sequences in **150/150** pairs. Passive arms matched in **90/90** GoToShift pairs. |
-| Model-enabled B11 versus controller-only B11C | All **150/150** paired action sequences matched. Each solved **125/150** and B11C made zero model calls. |
+| DoorKey mission success, B3 vs. B1 | **8/30 vs. 4/30**, paired +13.3 percentage points (95% bootstrap interval [0, +30.0]). Reactive B0 solved **17/30**. |
+| GoToObj Maze mission success, B3 vs. B1 | **5/30 each** with matching paired outcomes. |
+| Hidden relocation, explicitly cited stale actions, B3 vs. B2 | **3 vs. 0** citations across 720 executed steps per arm. Revising memory did not reduce cited stale actions in this comparison. |
 
-The broad results compare complete policies on ten seeds per condition. The mechanism results use 30 matched seeds per condition and apply to the registered executor and tasks. The B11 archive preserves the single retried infrastructure attempt alongside all finalized episodes and includes a verified SHA-256 index.
+The stale-action measure captures explicit citations. The B3 vs. B2 contrast combines contradiction revision, aging and working memory. All 90 assigned relocations occurred. [Held-out report](reports/technical_report.md) · [Frozen protocol](experiments/manifests/frozen-protocol.md)
 
-[B11 protocol](experiments/manifests/b11-protocol.md) · [Combined report](outputs/b11-combined-20261116-181345/report/report.md) · [Paired comparisons](outputs/b11-combined-20261116-181345/report/comparisons.csv) · [Coverage](outputs/b11-combined-20261116-181345/report/coverage.json)
+### B11 follow-up
+
+The fresh-seed campaign completed **3,090 valid episodes**, with 10 matched seeds per broad condition and 30 per mechanism condition. The broad roster compares complete policies. The mechanism rosters compare memory representations, revision, verification and model use under a shared executor.
+
+| Comparison | Observed result |
+| --- | --- |
+| Revision under hidden relocation, B11R vs. B11P | **23/30 vs. 8/30** successes with fixed verification. Stale route commitments after re-observed absence fell from **543 to 0**. The B11T text-history arm solved **30/30** on the same roster. |
+| Observation dropout, B11P vs. B11T | **30/30 vs. 24/30** successes. The representation contrast includes how each arm supplies target facts to the controller. |
+| Adaptive vs. fixed verification | The revising arms matched executed action sequences in **150/150** pairs. Adaptive verification changed which actions were logged as explicit checks in dropout. |
+| Model-backed B11 vs. controller-only B11C | **150/150** paired executed action sequences matched. Both solved **125/150**. B11C issued zero model calls. This measures the model’s contribution relative to the fixed explore proposal on these tasks. |
+| Broad benchmark at 48 actions, B11 vs. B10 | Both solved **115/140**. B11 used **2.4% fewer total tokens**. MultiRoom also has a separate 80-action roster. |
+
+![Archived GoToShift success plot by intervention and agent arm](outputs/b11-rq-shift-20261116-181345/report/figures/success.png)
+
+*GoToShift mechanism roster. Each bar summarizes 30 assigned episodes for one arm and intervention. The report includes paired estimates and intervals.*
+
+[B11 protocol](experiments/manifests/b11-protocol.md) · [Combined report](outputs/b11-combined-20261116-181345/report/report.md) · [Paired comparisons](outputs/b11-combined-20261116-181345/report/comparisons.csv)
+
+## Architecture
+
+The policy sees the mission and a local symbolic observation. Memory variants use observable action outcomes and odometry to track evidence across decisions. The model can propose an action or, in later variants, a goal. B11C supplies a fixed explore proposal to the same executor. The controller can route, verify or interact using the observed map. The resulting observation starts the next decision. A separate evaluator records the full board and intervention events.
+
+```mermaid
+flowchart TB
+    E["Seeded MiniGrid / BabyAI"] --> O["Partial symbolic observation"]
+    O --> M["Memory and belief state"]
+    O --> P["Observation and memory prompt"]
+    M --> P
+    P --> L["Ollama inference · NVIDIA GPU"]
+    L --> R["Validate and resolve proposal"]
+    M -->|Grounded variants| R
+    R --> A["Primitive controller executes action"]
+    E -.-> V["Evaluator-only board and interventions"]
+    V -.-> T["Episode archive and metrics"]
+    A -.-> T
+```
+
+| Research role | Variants |
+| --- | --- |
+| Original memory comparison | **B0** reactive, **B1** bounded text history, **B2** passive structured evidence, **B3** structured memory with explicit revision. |
+| Retrieval and grounded planning | **B4** subgoal retrieval, **B5** observed-map planning, **B6** trace-derived DoorKey routine, **B7** handwritten routine. |
+| Task memory and deterministic control | **B8** hallway cue, **B9** verified subgoals and interaction state, **B10** mission roles, exploration and preconditions. |
+| Mechanism controls | **B11** revising semantic memory and adaptive verification, with text, passive, fixed-verification and controller-only arms. |
+
+[Architecture and ablations](docs/architecture.md) · [Agent implementation](src/embodiedmind/agents)
+
+## Experimental environments
+
+The 11 stock tasks cover object search, mazes, doors and keys, hallway cue recall, object placement, room navigation, and moving obstacles. The custom **GoToShift** task isolates information loss and hidden target relocation by pairing layouts across no-change, dropout and relocation conditions.
+
+| GoToShift · B11P | GoToShift · B11R | MemoryS13 · B11 |
+| --- | --- | --- |
+| [![Final evaluator board after the passive memory agent times out](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11P-r0/finish.png)](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11P-r0/replay.gif) | [![Revising memory agent reaches the relocated target](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11R-r0/finish.png)](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11R-r0/replay.gif) | [![B11 reaches the branch that matches the remembered hallway cue](outputs/b11-stock-20261116-181345/episodes/e03-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e03-s11001-none-B11-r0/replay.gif) |
+| Relocation seed 11101, 48-action cap | Same seed and intervention, success in 13 actions | Cue recall seed 11001, success in 11 actions |
+
+*Final evaluator frames from saved episodes. Select a frame to open its replay.*
+
+## Experiment viewer
+
+[![EmbodiedMind Replay comparing B11P and B11R on GoToShift seed 11101 with evaluator and agent views](docs/assets/viewer-replay.png)](docs/viewer.md)
+
+- **Replay** reconstructs saved episodes and compares policies side by side. The evaluator board and the agent’s partial view are shown separately. Inspect the observation, model input, retrieved facts, proposed action and executed action at each step.
+- **Live monitor** follows archived snapshots from runs started with `--monitor`.
+- **Sandbox** starts a seeded environment or branches before a saved action. Manual controls work offline. Agent moves and auto-play use local Ollama when the selected policy is model-backed.
+
+[Viewer walkthrough](docs/viewer.md)
 
 ## Quick start
 
-Use Ubuntu or Ubuntu on WSL and the locked Python 3.12 environment. These commands install dependencies, run the tests, and check a seeded environment without Ollama.
+### NVIDIA GPU Setup
+
+The development system uses a **GeForce RTX 5070 Ti Laptop GPU with 12 GB VRAM**, Windows 11 and Ubuntu 22.04.5 LTS under WSL2. CUDA-backed inference runs in Ollama. Python handles environment simulation, policy orchestration and analysis.
+
+On native Linux, install a CUDA-capable NVIDIA driver compatible with your GPU and Ollama. On WSL2, install the NVIDIA driver on Windows and run Ollama inside Ubuntu with the host-provided CUDA interface. Run `nvidia-smi` in the Linux shell that will host Ollama. See the [Ollama hardware guide](https://docs.ollama.com/gpu), [NVIDIA WSL guide](https://docs.nvidia.com/cuda/wsl-user-guide/) and [GPU troubleshooting](docs/reproducibility.md#gpu-troubleshooting).
+
+**1. Install the locked Python environment** from the repository root in Ubuntu.
 
 ```sh
 uv sync --locked --inexact
-.venv/bin/python -m pytest -q
-.venv/bin/embodiedmind smoke --env BabyAI-GoToObjS6-v1 --seed 42
 ```
 
-For model-backed runs, start local Ollama with the model and digest in [configs/models.yaml](configs/models.yaml). Keep `BABYAI_DONE_ACTIONS` unset and use one inference worker for the registered comparisons. This smoke run exercises inference and writes a new archive.
+**2. Start Ollama and verify GPU placement.** Use the existing local Ollama service if it is serving on port 11434 with one inference slot. To start Ollama in a shell, run:
 
 ```sh
-run="outputs/smoke-$(date +%Y%m%d-%H%M%S)"
+OLLAMA_HOST=127.0.0.1:11434 OLLAMA_NUM_PARALLEL=1 OLLAMA_MAX_LOADED_MODELS=1 ollama serve
+```
+
+In another shell, pull the tag if needed, warm the configured model at the experiment context size and check residency.
+
+```sh
+export OLLAMA_HOST=127.0.0.1:11434
+ollama list
+ollama show qwen2.5:3b-instruct >/dev/null 2>&1 || ollama pull qwen2.5:3b-instruct
+curl --fail --silent --show-error http://127.0.0.1:11434/api/generate \
+  --json '{"model":"qwen2.5:3b-instruct","prompt":"Reply READY","stream":false,"options":{"num_ctx":4096,"num_predict":8}}'
+ollama ps
+```
+
+Expect `100% GPU` in the processor column. The runner checks the full digest and `Q4_K_M` quantization in [models.yaml](configs/models.yaml). Heavier models or larger contexts can exceed 12 GB VRAM.
+
+**3. Run one GPU-backed smoke episode.** The smoke config uses B0 on BabyAI GoToObj at seed 42, with at most 24 actions and 24 model calls.
+
+```sh
+unset BABYAI_DONE_ACTIONS
+run="outputs/gpu-smoke-$(date +%Y%m%d-%H%M%S)"
 .venv/bin/embodiedmind run --config configs/smoke.yaml --output "$run" --monitor --parallel 1
 .venv/bin/embodiedmind status "$run"
 ```
 
-## Experiment viewer
+**4. Run lightweight tests and use saved evidence offline.** These commands work without Ollama or a GPU. `report` writes derived output to the path supplied.
 
-From the Ubuntu checkout, start the viewer and open <http://127.0.0.1:8765>.
+```sh
+.venv/bin/python -m pytest -q
+.venv/bin/embodiedmind smoke --env BabyAI-GoToObjS6-v1 --seed 42
+.venv/bin/embodiedmind report outputs/b11-rq-shift-20261116-181345 \
+  --output "${TMPDIR:-/tmp}/embodiedmind-shift-report"
+```
+
+**5. Launch the viewer** and open [localhost:8765](http://127.0.0.1:8765).
 
 ```sh
 .venv/bin/embodiedmind viewer
 ```
 
-In **Replay**, choose a game, run, and seed, then select agents to compare. One
-example from the checked-in evidence is GoToShift relocation seed `11101` in
-`b11-rq-shift-20261116-181345`, comparing **B11P** with **B11R**. At step 6 both
-agents saw the moved target. B11R completed the mission in 13 actions, while
-B11P timed out at 48.
+## Reproducibility
 
-The boards show the evaluator state and the logged agent observation separately.
-The action inspector shows the hint, chosen action, and outcome. Open
-**Model input and memory** and select a spatial fact to locate it on the
-evaluator board. Replay uses saved actions, checks reconstructed observations
-and outcomes against the trace, and runs without Ollama. Use
-`viewer --runs PATH` to browse a specific archive or archive directory.
+**From saved artifacts.** Replay episodes or regenerate metrics and figures from the archived trajectories. The B11 archives include manifests, rosters, per-attempt data, evaluator records and SHA-256 indexes. The original study’s raw bundle remains in its local study directory.
 
-To see a live run, keep the viewer open and run the monitored smoke example in another terminal.
+**From model-backed execution.** Use the source revision and settings in the run manifest, the locked Python environment, matched seeds and intervention schedules, pinned model digest and one active inference slot. The original held-out runner also checks the calibrated runtime profile and full GPU residency.
 
-Open **Live monitor** or add `#live` to the viewer URL. It automatically
-discovers and follows an active run. Select a run manually to pin it and use
-**Follow active run** to resume automatic selection. Open completed runs in
-**Replay**. The runner publishes evaluator snapshots alongside the run and continues if you close
-the browser. Use `--monitor` with `resume` to monitor a resumed run.
+[Reproduction commands and archive layout](docs/reproducibility.md) · [Study status and evidence](STATUS.md)
 
-In **Sandbox**, start a seeded environment or use **Take over before action**
-from either side of a replay. Use the buttons or arrow keys to move and turn.
-**Agent move** and **Auto-play** use the configured local Ollama model. Saved
-exploratory sessions go under `outputs/sandbox-…/` by default and can be
-opened from Replay. The archive reconstructs manual and branch-prefix actions
-and preserves model requests made in that browser session.
+## Research status and open questions
 
-For access from another device, forward only port 8765 through a **private**
-Microsoft Dev Tunnel. Restart the viewer with the exact HTTPS address printed
-for the forwarded port:
+The original held-out study and the B11 follow-up are complete. Open questions include when revision generalizes beyond GoToShift, when active verification changes decisions, and which tasks benefit from model reasoning given a strong deterministic controller. The current evidence comes from discrete symbolic simulation. PyBullet and physical robotics are possible future extensions. [Research proposal](RESEARCH_PROPOSAL.md) · [Current status](STATUS.md)
 
-```sh
-.venv/bin/embodiedmind viewer --tunnel-origin https://your-forwarded-host.devtunnels.ms
-```
+## References and citation
 
-Open that address on your phone and sign in with the tunnel owner's account.
-Keep the laptop awake, the viewer running, and the tunnel connected. Keep
-Ollama on loopback and leave port 11434 out of the tunnel.
+- Chevalier-Boisvert et al. (2019), [BabyAI: A Platform to Study the Sample Efficiency of Grounded Language Learning](https://arxiv.org/abs/1810.08272).
+- Chevalier-Boisvert et al. (2023), [MiniGrid & MiniWorld: Modular & Customizable Reinforcement Learning Environments for Goal-Oriented Tasks](https://proceedings.neurips.cc/paper_files/paper/2023/hash/e8916198466e8ef218a2185a491b49fa-Abstract.html) and the [MiniGrid source](https://github.com/Farama-Foundation/Minigrid).
+- Yao et al. (2023), [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629).
 
-## Run archives
-
-The `run` command creates a new directory under `outputs/` by default and
-prints the archive path. To checkpoint an active run, use
-`.venv/bin/embodiedmind stop "$run"` with that path and wait for active work to
-finish. Resume with the same config and the original archive path. This
-command resumes the smoke example above.
-
-```sh
-.venv/bin/embodiedmind resume --config configs/smoke.yaml --output "$run" --parallel 1
-```
-
-Each finalized episode has a directory under `episodes/`. Failed and
-interrupted attempts remain under `attempts/<episode-id>/<attempt-id>/`.
-The runner records request and response events separately from completed steps
-so a failed model call still has its inputs. Evaluator snapshots and native-size
-frames are saved separately from the policy's observations.
-
-After completion, a checkpoint, or an execution error, the runner builds
-per-step CSVs, episode screenshots and GIFs, and a report with episode metrics,
-coverage, comparisons, figures, and a SHA-256 index. Partial attempts get visuals
-for the frames they captured. Use `package` to rebuild the report and visuals
-from saved evidence without Ollama once the active runner has stopped.
-Run `.venv/bin/embodiedmind package "$run"` to package the smoke archive. A hard kill leaves the already-written raw
-files available for packaging or resume.
-
-`outputs/` is eligible for Git, including archives and logs. Review the files
-before staging them. The viewer discovers both `outputs/` and `results/runs/`.
-
-## Agent variants
-
-| Variants | Behavior |
-| --- | --- |
-| B0, B1, B2, B3 | Original reactive, bounded text-history, passive structured-memory, and belief-revision conditions. |
-| B0G, B3G | Apply the same visible-obstacle guard to B0 and B3. |
-| B4, B5 | Retrieve evidence for the current subgoal. B5 also resolves `approach`, `verify`, and `explore` proposals to primitive actions using the observed map. |
-| B6, B7 | Compare a DoorKey routine extracted from successful development traces with a handwritten routine. |
-| B8 | Remembers the observed hallway cue and uses guarded forward exploration. |
-| B9N, B9 | Add progress-aware navigation. B9 also tracks verified task subgoals and interactions. |
-| B10 | Grounds mission roles from observations, commits to exploration destinations, and verifies interactions such as opening a door or picking up an object. |
-| B11, B11T, B11P, B11R, B11PA, B11C | Compare text history, passive or revising structured memory, fixed or adaptive verification, and a controller-only mode. |
-
-B6 uses [configs/workflows.json](configs/workflows.json) by default. To build a
-library from another development archive, use
-`.venv/bin/embodiedmind learn-workflows RUN_DIR --output NEW_LIBRARY.json`.
-Keep source seeds disjoint from evaluation seeds. The library retains routine
-provenance and omits source-world coordinates from agent prompts.
-
-[Development comparisons](reports/memory-48-development-20261114/README.md) · [B9 failure audit](reports/b9-failure-analysis-20261114/README.md) · [Matched B9–B10 report](outputs/memory-b10-stock-20261114-202808/report/b10-comparison.md)
-
-## Reproduce the reports
-
-### B11 fresh-seed campaign
-
-The five source archives are checked in under `outputs/`. Rebuild the combined
-analysis from the existing episode records without running inference. Run the
-following from the repo root in Bash.
-
-```bash
-stamp=20261116-181345
-report_dir=$(mktemp -d)
-.venv/bin/embodiedmind report \
-  "outputs/b11-rq-shift-$stamp" "outputs/b11-rq-static-$stamp" \
-  "outputs/b11-stock-$stamp" "outputs/b11-shift-$stamp" \
-  "outputs/b11-multiroom-80-$stamp" --output "$report_dir"
-```
-
-The saved [finalization log](outputs/b11-combined-20261116-181345/finalize.log)
-records the coverage and checksum verification. Consult the five run manifests
-for the exact source revisions, model configuration, and rosters used for the
-published campaign. To start a new campaign with the current code, run
-`bash scripts/run-b11.sh "$(date +%Y%m%d-%H%M%S)"` from a clean checkout with
-the pinned Ollama model available. The script runs all five rosters. Reuse the
-same timestamp and source revision to resume that new campaign.
-
-### Original frozen B0–B3 study
-
-The repository includes the [held-out results summary](reports/technical_report.md).
-Resuming the original rosters requires their local `results/runs/` archive and
-a clean checkout at the frozen source revision
-`a44c34e0431322078a368453881366214993b900`. The study uses the locked environment,
-the configured loopback Ollama model with its verified digest and 4096-token
-context, one inference worker, and `BABYAI_DONE_ACTIONS` unset.
-
-```sh
-run=results/runs/embodiedmind-20261114-0428-ist
-bash scripts/run_benchmarks.sh "$run"
-.venv/bin/embodiedmind status "$run/static"
-.venv/bin/embodiedmind status "$run/dynamic"
-```
-
-Use `.venv/bin/embodiedmind stop "$run/static"` or the corresponding dynamic
-directory for a graceful checkpoint. Rerun the benchmark command at the
-registered revision to reuse checksummed episodes. For a fresh experiment under
-the original protocol, create the paired pilot under its own study directory
-before launching the benchmark script.
-
-See the [research proposal](RESEARCH_PROPOSAL.md) and [execution guide](AGENT_GUIDE.md)
-for study design and run procedures.
+When citing EmbodiedMind, cite the [repository](https://github.com/adithya-a-labs/embodiedmind) at the Git commit you used. For experimental results, include the registered protocol and run ID.
