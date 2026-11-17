@@ -6,7 +6,7 @@ EmbodiedMind studies how agents remember what they have seen, revise beliefs whe
 
 **Python 3.12** · **NVIDIA GPU** · **Local LLM inference** · **MiniGrid / BabyAI**
 
-[Results](#results) · [Experiment viewer](#experiment-viewer) · [Quick start](#quick-start) · [Documentation](docs/README.md)
+[Results](#results) · [Visualizations](docs/visualizations.md) · [Experiment viewer](#experiment-viewer) · [Quick start](#quick-start) · [Documentation](docs/README.md)
 
 ## Results
 
@@ -34,9 +34,9 @@ The fresh-seed campaign completed **3,090 valid episodes**, with 10 matched seed
 | Model-backed B11 vs. controller-only B11C | **150/150** paired executed action sequences matched. Both solved **125/150**. B11C issued zero model calls. This measures the model’s contribution relative to the fixed explore proposal on these tasks. |
 | Broad benchmark at 48 actions, B11 vs. B10 | Both solved **115/140**. B11 used **2.4% fewer total tokens**. MultiRoom also has a separate 80-action roster. |
 
-![Archived GoToShift success plot by intervention and agent arm](outputs/b11-rq-shift-20261116-181345/report/figures/success.png)
+[![B11 benchmark heatmap with mission success counts by policy and case](docs/figures/b11-benchmark.png)](docs/visualizations.md#b11-broad-benchmark)
 
-*GoToShift mechanism roster. Each bar summarizes 30 assigned episodes for one arm and intervention. The report includes paired estimates and intervals.*
+*Broad B11 benchmark. Each cell shows successes out of ten matched seeds. The gallery includes paired effects, mechanism results, inference cost, trajectories, and archive coverage.* [Research visualizations](docs/visualizations.md)
 
 [B11 protocol](experiments/manifests/b11-protocol.md) · [Combined report](outputs/b11-combined-20261116-181345/report/report.md) · [Paired comparisons](outputs/b11-combined-20261116-181345/report/comparisons.csv)
 
