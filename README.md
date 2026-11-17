@@ -77,21 +77,25 @@ The stock examples use B11 on seed 11001. GoToShift shows B11R under hidden relo
 | GoToObjS6 | GoToObj Maze | GoToShift |
 | --- | --- | --- |
 | [![Final evaluator frame for BabyAI-GoToObjS6-v1](outputs/b11-stock-20261116-181345/episodes/e00-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e00-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for BabyAI-GoToObjMazeS7-v0](outputs/b11-stock-20261116-181345/episodes/e02-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e02-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for EmbodiedMind-GoToShift-v0](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11R-r0/finish.png)](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11R-r0/replay.gif) |
+| Approach the named object in one room. Tests grounding a language instruction in the local view. | Find and approach the named object in connected rooms. Tests exploration and route finding with partial visibility. | Reach the named object when observations can be masked or the target can move out of sight. Tests memory and belief revision. |
 | Success · 6 actions | Budget reached · 48 actions | Success · 13 actions |
 
 | DoorKey | KeyCorridor | BlockedUnlockPickup |
 | --- | --- | --- |
 | [![Final evaluator frame for MiniGrid-DoorKey-8x8-v0](outputs/b11-stock-20261116-181345/episodes/e01-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e01-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for BabyAI-KeyCorridorS3R3-v0](outputs/b11-stock-20261116-181345/episodes/e06-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e06-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for BabyAI-BlockedUnlockPickup-v0](outputs/b11-stock-20261116-181345/episodes/e07-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e07-s11001-none-B11-r0/replay.gif) |
+| Collect the key, unlock the door, and reach the goal. Tests sequencing actions with prerequisites. | Unlock a door to pick up the target object. Tests searching for a key and navigating between rooms. | Clear the blocked doorway, unlock it, and pick up the box. Tests sequencing obstacle removal, key use, and pickup. |
 | Success · 15 actions | Success · 24 actions | Success · 24 actions |
 
 | MemoryS13 | MemoryS17 Random | MultiRoom N6 |
 | --- | --- | --- |
 | [![Final evaluator frame for MiniGrid-MemoryS13-v0](outputs/b11-stock-20261116-181345/episodes/e03-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e03-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for MiniGrid-MemoryS17Random-v0](outputs/b11-stock-20261116-181345/episodes/e04-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e04-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for MiniGrid-MultiRoom-N6-v0](outputs/b11-stock-20261116-181345/episodes/e05-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e05-s11001-none-B11-r0/replay.gif) |
+| Choose the object that matches the starting cue at the end of a fixed-length hallway. Tests recall after the cue leaves view. | Use the starting cue to choose the matching object after a hallway of random length. Tests recall across varying delays. | Open doors and cross six connected rooms to reach the goal. Tests route finding over multiple rooms. |
 | Success · 11 actions | Success · 11 actions | Success · 44 actions |
 
 | PutNext | Synth | Dynamic Obstacles |
 | --- | --- | --- |
 | [![Final evaluator frame for BabyAI-PutNextS5N2-v0](outputs/b11-stock-20261116-181345/episodes/e08-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e08-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for BabyAI-SynthS5R2-v0](outputs/b11-stock-20261116-181345/episodes/e10-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e10-s11001-none-B11-r0/replay.gif) | [![Final evaluator frame for MiniGrid-Dynamic-Obstacles-8x8-v0](outputs/b11-stock-20261116-181345/episodes/e09-s11001-none-B11-r0/finish.png)](outputs/b11-stock-20261116-181345/episodes/e09-s11001-none-B11-r0/replay.gif) |
+| Place the named object next to the specified reference object. Tests object identification, pickup, and spatial placement. | Follow a sampled navigation, door-opening, pickup, or placement instruction. Tests grounding varied instructions in a shared world. | Reach the green goal while avoiding moving obstacles. Tests collision avoidance as the scene changes. |
 | Success · 21 actions | Budget reached · 48 actions | Success · 14 actions |
 
 [GoToShift B11P replay](outputs/b11-rq-shift-20261116-181345/episodes/e00-s11101-relocation-B11P-r0/replay.gif) · [Paired relocation trajectories](docs/visualizations.md#relocation-trajectory)
