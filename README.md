@@ -164,4 +164,14 @@ The original held-out study and the B11 follow-up are complete. Open questions i
 - Chevalier-Boisvert et al. (2023), [MiniGrid & MiniWorld: Modular & Customizable Reinforcement Learning Environments for Goal-Oriented Tasks](https://proceedings.neurips.cc/paper_files/paper/2023/hash/e8916198466e8ef218a2185a491b49fa-Abstract.html) and the [MiniGrid source](https://github.com/Farama-Foundation/Minigrid).
 - Yao et al. (2023), [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629).
 
+### Max Planck and Tübingen related work
+
+The research proposal discusses these papers in the context of the CaCTüS research topics. [Proposal and literature review](RESEARCH_PROPOSAL.md#e-related-literature-and-verified-researcher-connections)
+
+- Sancaktar et al. (ICML 2025) use vision-language model feedback to guide exploration in model-based reinforcement learning. [SENSEI: Semantic Exploration Guided by Foundation Models to Learn Versatile World Models](https://proceedings.mlr.press/v267/sancaktar25a.html).
+- Wang, Kaufmann, and Dayan (PLOS Computational Biology, 2026) model human response inhibition as a partially observable decision process. [Decomposing response inhibition: A POMDP model](https://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1014068).
+- Geiping et al. (NeurIPS 2025) scale test-time computation by repeating a block within a language model. [Scaling up Test-Time Compute with Latent Reasoning: A Recurrent Depth Approach](https://proceedings.neurips.cc/paper_files/paper/2025/hash/3b01972cf31e6fa0fe29e4b8b5c2a0a1-Abstract-Conference.html).
+
+### Citing EmbodiedMind
+
 When citing EmbodiedMind, cite the [repository](https://github.com/adithya-a-labs/embodiedmind) at the Git commit you used. For experimental results, include the registered protocol and run ID.
